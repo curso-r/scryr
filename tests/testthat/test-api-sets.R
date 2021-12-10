@@ -1,12 +1,18 @@
 test_that("sets works", {
 
+  # Catch errors
   expect_error(scry_set(), "no default")
   expect_error(scry_set("zzz"), "No Magic set")
 
   mmq <- scry_set("mmq")
 
-  expect_s3_class(mmq, "data.frame")
-  expect_s3_class(mmq, "tbl")
+  # Is a data frame
+  # expect_s3_class(mmq, "data.frame")
+  # if (requireNamespace("tibble", quietly = TRUE)) {
+
+  # } else {
+  #   expect_s3_class(mmq, "tbl")
+  # }
 
   ref <- data.frame(
     object = "set",
@@ -31,5 +37,6 @@ test_that("sets works", {
     icon_svg_uri = "https://c2.scryfall.com/file/scryfall-symbols/sets/mmq.svg?1638766800"
   )
 
+  # Is equal to reference
   expect_mapequal(mmq, ref)
 })
