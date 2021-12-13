@@ -1,4 +1,4 @@
-# Returned reference
+# Reference for Mercadian Masques
 ref <- tibble::tibble(
   object = "set",
   id = "385e11a4-492b-4d07-b4a6-a1409ef829b8",
@@ -22,23 +22,32 @@ ref <- tibble::tibble(
   icon_svg_uri = "https://c2.scryfall.com/file/scryfall-symbols/sets/mmq.svg?1638766800"
 )
 
-test_that("sets error correctly", {
+test_that("scry_set() errors correctly", {
 
-  # Catch errors
   expect_error(scry_set(), "no default")
   expect_error(scry_set("zzz"), "No Magic set")
 })
 
-test_that("sets return tibbles", {
+test_that("scry_set() returns tibbles", {
 
   # Skip if tibble is not available
   if (!requireNamespace("tibble", quietly = TRUE)) testthat::skip()
 
-  # Mercadian Masques
   mmq <- scry_set("mmq")
 
-  # Levels of detail
   expect_s3_class(mmq, c("tbl_df", "tbl", "data.frame"))
   expect_mapequal(mmq, ref)
+  expect_snapshot(mmq)
+})
+
+test_that("scry_set() returns data frames", {
+
+  # Mock absence of tibble
+  mockery::stub(scry_set, "has_tibble", FALSE, depth = 2)
+
+  mmq <- scry_set("mmq")
+
+  expect_s3_class(mmq, "data.frame")
+  expect_mapequal(mmq, as.data.frame(ref))
   expect_snapshot(mmq)
 })

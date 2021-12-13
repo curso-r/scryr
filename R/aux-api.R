@@ -14,9 +14,9 @@ content_error <- function(content) {
 }
 
 as_df <- function(df) {
-  if (requireNamespace("tibble", quietly = TRUE)) {
-    tibble::as_tibble(df)
-   } else {
-     as.data.frame(df)
-   }
+  if (has_tibble()) tibble::as_tibble(df) else as.data.frame(df)
+}
+
+has_tibble <- function() {
+  requireNamespace("tibble", quietly = TRUE)
 }

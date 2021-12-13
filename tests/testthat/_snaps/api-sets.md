@@ -1,4 +1,4 @@
-# sets return tibbles
+# scry_set() returns tibbles
 
     Code
       mmq
@@ -11,4 +11,26 @@
       #   set_type <chr>, card_count <int>, printed_size <int>, digital <lgl>,
       #   nonfoil_only <lgl>, foil_only <lgl>, block_code <chr>, block <chr>,
       #   icon_svg_uri <chr>
+
+# scry_set() returns data frames
+
+    Code
+      mmq
+    Output
+        object                                   id code mtgo_code arena_code
+      1    set 385e11a4-492b-4d07-b4a6-a1409ef829b8  mmq        mm         mm
+        tcgplayer_id              name
+      1           73 Mercadian Masques
+                                                                       uri
+      1 https://api.scryfall.com/sets/385e11a4-492b-4d07-b4a6-a1409ef829b8
+                         scryfall_uri
+      1 https://scryfall.com/sets/mmq
+                                                                     search_uri
+      1 https://api.scryfall.com/cards/search?order=set&q=e%3Ammq&unique=prints
+        released_at  set_type card_count printed_size digital nonfoil_only foil_only
+      1  1999-10-04 expansion        350          350   FALSE        FALSE     FALSE
+        block_code   block
+      1        mmq Masques
+                                                                 icon_svg_uri
+      1 https://c2.scryfall.com/file/scryfall-symbols/sets/mmq.svg?1638766800
 
