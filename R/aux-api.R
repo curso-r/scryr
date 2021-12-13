@@ -4,12 +4,12 @@ scryfall <- function(endpoint) {
   resp <- httr::GET(paste0("https://api.scryfall.com", endpoint))
   content <- httr::content(resp)
 
-  if (resp$status_code != 200) content_error(content)
+  if (resp$status_code != 200) catch_content_error(content)
 
   as_df(content)
 }
 
-content_error <- function(content) {
+catch_content_error <- function(content) {
   stop(content$details)
 }
 

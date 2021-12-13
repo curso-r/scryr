@@ -6,14 +6,16 @@ Authors@R:
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
+Imports:
+    httr
+Suggests:
+    mockery (>= 0.4.2.9000),
+    testthat (>= 3.0.0),
+    tibble
+Remotes: 
+    r-lib/mockery
+Config/testthat/edition: 3
+Config/testthat/parallel: true
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Suggests:
-    mockery,
-    testthat (>= 3.0.0),
-    tibble
-Config/testthat/edition: 3
-Config/testthat/parallel: true
-Imports: 
-    httr
