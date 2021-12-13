@@ -1,4 +1,4 @@
-#' Returns a set with the given set code
+#' Retrieve information about a set
 #'
 #' @section Set types:
 #' An exhaustive list of `set_types` is listed below:
@@ -28,7 +28,9 @@
 #'
 #' @param code The three to five-letter set code. Can be either the `code` or
 #' the `mtgo_code` for the set.
+#' @param id The `tcgplayer_id` or `groupId`.
 #' @return A data frame with 1 row and the following columns:
+#' * `object` \[String\]: Set.
 #' * `id` \[UUID\]: A unique ID for this set on Scryfall that will not change.
 #' * `code` \[String\]: The unique three to five-letter code for this set.
 #' * `mtgo_code` \[String\]: The unique code for this set on MTGO, which may
@@ -65,6 +67,10 @@
 #'   change slightly over time. You should download it and use it locally for
 #'   your particular user interface needs.
 #'
+#' @name scry-sets
+NULL
+
+#' @rdname scry-sets
 #' @export
 scry_set <- function(code) {
   scryfall(paste0("/sets/", code))
