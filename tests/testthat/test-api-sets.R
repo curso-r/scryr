@@ -1,4 +1,5 @@
 # Reference for Mercadian Masques
+# Note: icon_svg_uri changes, so it's removed from tests
 ref <- tibble::tibble(
   object = "set",
   id = "385e11a4-492b-4d07-b4a6-a1409ef829b8",
@@ -18,8 +19,7 @@ ref <- tibble::tibble(
   nonfoil_only = FALSE,
   foil_only = FALSE,
   block_code = "mmq",
-  block = "Masques",
-  icon_svg_uri = "https://c2.scryfall.com/file/scryfall-symbols/sets/mmq.svg?1638766800"
+  block = "Masques"
 )
 
 test_that("scry_set() errors correctly", {
@@ -34,6 +34,7 @@ test_that("scry_set() returns tibbles", {
   if (!requireNamespace("tibble", quietly = TRUE)) testthat::skip()
 
   mmq <- scry_set("mmq")
+  mmq <- mmq[, -ncol(mmq)]
 
   expect_s3_class(mmq, c("tbl_df", "tbl", "data.frame"))
   expect_mapequal(mmq, ref)
@@ -46,6 +47,7 @@ test_that("scry_set() returns data frames", {
   mockery::stub(scry_set, "has_tibble", FALSE, depth = 2)
 
   mmq <- scry_set("mmq")
+  mmq <- mmq[, -ncol(mmq)]
 
   expect_s3_class(mmq, "data.frame")
   expect_mapequal(mmq, as.data.frame(ref))
