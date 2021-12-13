@@ -75,3 +75,9 @@ NULL
 scry_set <- function(code) {
   scryfall(paste0("/sets/", code))
 }
+
+#' @rdname scry-sets
+#' @export
+scry_set_tcgplayer <- function(id) {
+  scryfall(paste0("/sets/tcgplayer/", id))
+}

@@ -3,9 +3,12 @@
 \name{scry-sets}
 \alias{scry-sets}
 \alias{scry_set}
+\alias{scry_set_tcgplayer}
 \title{Retrieve information about a set}
 \usage{
 scry_set(code)
+
+scry_set_tcgplayer(id)
 }
 \arguments{
 \item{code}{The three to five-letter set code. Can be either the \code{code} or
