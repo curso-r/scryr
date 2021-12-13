@@ -2,14 +2,15 @@ scryfall <- function(endpoint) {
   Sys.sleep(0.1) # Good citizenship
 
   resp <- httr::GET(paste0("https://api.scryfall.com", endpoint))
-  resp <- content_error(resp)
 
-  return(as_df(resp))
+  content <- httr::content(resp)
+  content_error(content)
+
+  as_df(content)
 }
 
 content_error <- function(resp) {
-    content <- httr::content(resp)
-    if (resp$status_code == 404) stop(content$details) else content
+  if (resp$status_code != 200) stop(content$details)
 }
 
 as_df <- function(df) {
