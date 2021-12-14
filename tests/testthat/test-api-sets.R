@@ -1,6 +1,6 @@
 # Reference for Mercadian Masques
 # Note: icon_svg_uri changes, so it's removed from tests
-ref <- tibble::tibble(
+ref <- data.frame(
   object = "set",
   id = "385e11a4-492b-4d07-b4a6-a1409ef829b8",
   code = "mmq",
@@ -11,7 +11,7 @@ ref <- tibble::tibble(
   uri = "https://api.scryfall.com/sets/385e11a4-492b-4d07-b4a6-a1409ef829b8",
   scryfall_uri = "https://scryfall.com/sets/mmq",
   search_uri = "https://api.scryfall.com/cards/search?order=set&q=e%3Ammq&unique=prints",
-  released_at = "1999-10-04",
+  released_at = as.Date("1999-10-04"),
   set_type = "expansion",
   card_count = 350,
   printed_size = 350,
@@ -47,7 +47,7 @@ test_that("scry_set() returns tibbles", {
   mmq <- mmq[, -ncol(mmq)]
 
   expect_s3_class(mmq, c("tbl_df", "tbl", "data.frame"))
-  expect_mapequal(mmq, ref)
+  expect_mapequal(mmq, tibble::as_tibble(ref))
   expect_snapshot(mmq)
 })
 
@@ -62,7 +62,7 @@ test_that("scry_set_tcgplayer() returns tibbles", {
   print(mmq)
 
   expect_s3_class(mmq, c("tbl_df", "tbl", "data.frame"))
-  expect_mapequal(mmq, ref)
+  expect_mapequal(mmq, tibble::as_tibble(ref))
   expect_snapshot(mmq)
 })
 
@@ -77,7 +77,7 @@ test_that("scry_set() returns data frames", {
   mmq <- mmq[, -ncol(mmq)]
 
   expect_s3_class(mmq, "data.frame")
-  expect_mapequal(mmq, as.data.frame(ref))
+  expect_mapequal(mmq, ref)
   expect_snapshot(mmq)
 })
 
@@ -90,6 +90,6 @@ test_that("scry_set_tcgplayer() returns data frames", {
   mmq <- mmq[, -ncol(mmq)]
 
   expect_s3_class(mmq, "data.frame")
-  expect_mapequal(mmq, as.data.frame(ref))
+  expect_mapequal(mmq, ref)
   expect_snapshot(mmq)
 })

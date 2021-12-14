@@ -14,9 +14,17 @@ catch_content_error <- function(content) {
 }
 
 as_df <- function(df) {
-  if (has_tibble()) tibble::as_tibble(df) else as.data.frame(df)
+  df <- if (has_tibble()) tibble::as_tibble(df) else as.data.frame(df)
+  convert_date_cols(df)
 }
 
 has_tibble <- function() {
   requireNamespace("tibble", quietly = TRUE)
+}
+
+convert_date_cols <- function(df) {
+  is_date <- grepl("_at$", names(df))
+  df[, is_date] <- as.data.frame(lapply(df[, is_date], as.Date))
+
+  df
 }
