@@ -12,7 +12,7 @@ Suggests:
     mockery (>= 0.4.2.9000),
     testthat (>= 3.0.0),
     tibble
-Remotes: 
+Remotes:
     r-lib/mockery
 Config/testthat/edition: 3
 Config/testthat/parallel: true
