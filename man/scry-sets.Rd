@@ -32,8 +32,6 @@ differ from the regular code.
 \item \code{tcgplayer_id} [int]: This set’s ID on TCGplayer’s API, also known as the
 \code{groupId}.
 \item \code{name} [chr]: The English name of the set.
-\item \code{set_type} [chr]: A computer-readable classification for this set. See
-below.
 \item \code{uri} [chr]: A link to this set object on Scryfall’s API.
 \item \code{scryfall_uri} [chr]: A link to this set’s permapage on Scryfall’s
 \item \code{search_uri} [chr]: A Scryfall API URI that you can request to begin

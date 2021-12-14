@@ -48,8 +48,6 @@
 #' * `tcgplayer_id` \[int\]: This set’s ID on TCGplayer’s API, also known as the
 #'   `groupId`.
 #' * `name` \[chr\]: The English name of the set.
-#' * `set_type` \[chr\]: A computer-readable classification for this set. See
-#'   below.
 #' * `uri` \[chr\]: A link to this set object on Scryfall’s API.
 #' * `scryfall_uri` \[chr\]: A link to this set’s permapage on Scryfall’s
 #' * `search_uri` \[chr\]: A Scryfall API URI that you can request to begin
@@ -78,20 +76,24 @@
 #' @name scry-sets
 NULL
 
+scry_sets_impl <- function(endpoint) {
+  scryfall(paste0("/sets", endpoint), parse_sets)
+}
+
 #' @rdname scry-sets
 #' @export
 scry_sets <- function() {
-  scryfall("/sets/")
+  scry_sets_impl("/")
 }
 
 #' @rdname scry-sets
 #' @export
 scry_set <- function(code) {
-  scryfall(paste0("/sets/", code))
+  scry_sets_impl(paste0("/", code))
 }
 
 #' @rdname scry-sets
 #' @export
 scry_set_tcgplayer <- function(id) {
-  scryfall(paste0("/sets/tcgplayer/", id))
+  scry_sets_impl(paste0("/tcgplayer/", id))
 }
