@@ -6,7 +6,20 @@ scryfall <- function(endpoint) {
 
   if (resp$status_code != 200) catch_content_error(content)
 
-  as_df(content)
+  if (content$object == "list") bind_rows(content$data) else as_df(content)
+}
+
+bind_rows <- function(data) {
+  dfs <- lapply(data, as_df)
+
+  all_cols <- Reduce(union, lapply(dfs, names))
+  all_dfs <- lapply(dfs, function(d) {
+    d[, setdiff(all_cols, names(d))] <- NA
+    d[, all_cols]
+    return(d)
+  })
+
+  do.call(rbind, all_dfs)
 }
 
 catch_content_error <- function(content) {

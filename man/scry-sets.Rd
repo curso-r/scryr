@@ -2,10 +2,13 @@
 % Please edit documentation in R/api-sets.R
 \name{scry-sets}
 \alias{scry-sets}
+\alias{scry_sets}
 \alias{scry_set}
 \alias{scry_set_tcgplayer}
-\title{Retrieve information about a set}
+\title{Retrieve information about sets}
 \usage{
+scry_sets()
+
 scry_set(code)
 
 scry_set_tcgplayer(id)
@@ -17,7 +20,7 @@ code can be either the \code{code} or the \code{mtgo_code} for the set.}
 \item{id}{The \code{tcgplayer_id} or \code{groupId}.}
 }
 \value{
-A data frame with 1 row and the following columns:
+A data frame with 1 or more rows and the following columns:
 \itemize{
 \item \code{object} [chr]: Set.
 \item \code{id} [chr]: A unique ID for this set on Scryfall that will not change.
@@ -58,7 +61,7 @@ your particular user interface needs.
 }
 }
 \description{
-Retrieve information about a set
+Retrieve information about sets
 }
 \details{
 A Set object represents a group of related Magic cards. All Card

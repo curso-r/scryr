@@ -1,4 +1,4 @@
-#' Retrieve information about a set
+#' Retrieve information about sets
 #'
 #' @details A Set object represents a group of related Magic cards. All Card
 #' objects on Scryfall belong to exactly one set.
@@ -37,7 +37,7 @@
 #' @param code Either a three to five-letter set code or a Scryfall `id`. The
 #' code can be either the `code` or the `mtgo_code` for the set.
 #' @param id The `tcgplayer_id` or `groupId`.
-#' @return A data frame with 1 row and the following columns:
+#' @return A data frame with 1 or more rows and the following columns:
 #' * `object` \[chr\]: Set.
 #' * `id` \[chr\]: A unique ID for this set on Scryfall that will not change.
 #' * `code` \[chr\]: The unique three to five-letter code for this set.
@@ -77,6 +77,12 @@
 #'
 #' @name scry-sets
 NULL
+
+#' @rdname scry-sets
+#' @export
+scry_sets <- function() {
+  scryfall("/sets/")
+}
 
 #' @rdname scry-sets
 #' @export
