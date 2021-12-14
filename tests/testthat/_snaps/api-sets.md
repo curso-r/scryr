@@ -1,9 +1,9 @@
-# scry_sets() returns tibbles
+# scry-set returns tibbles
 
     Code
       sets
     Output
-      # A tibble: 717 x 19
+      # A tibble: 717 x 20
          object id    code  mtgo_code arena_code tcgplayer_id name  uri   scryfall_uri
          <chr>  <chr> <chr> <chr>     <chr>             <int> <chr> <chr> <chr>       
        1 set    b314~ unf   <NA>      <NA>               2958 Unfi~ http~ https://scr~
@@ -16,38 +16,40 @@
        8 set    e2b3~ ovoc  <NA>      <NA>                 NA Crim~ http~ https://scr~
        9 set    1316~ tvoc  <NA>      <NA>                 NA Crim~ http~ https://scr~
       10 set    381f~ tvow  <NA>      <NA>                 NA Inni~ http~ https://scr~
-      # ... with 707 more rows, and 10 more variables: search_uri <chr>,
+      # ... with 707 more rows, and 11 more variables: search_uri <chr>,
       #   released_at <date>, set_type <chr>, card_count <int>,
       #   parent_set_code <chr>, digital <lgl>, nonfoil_only <lgl>, foil_only <lgl>,
-      #   block_code <chr>, block <chr>
+      #   block_code <chr>, block <chr>, icon_svg_uri <chr>
 
-# scry_set() returns tibbles
+---
 
     Code
-      mmq
+      set
     Output
-      # A tibble: 1 x 19
+      # A tibble: 1 x 20
         object id     code  mtgo_code arena_code tcgplayer_id name  uri   scryfall_uri
         <chr>  <chr>  <chr> <chr>     <chr>             <int> <chr> <chr> <chr>       
       1 set    385e1~ mmq   mm        mm                   73 Merc~ http~ https://scr~
-      # ... with 10 more variables: search_uri <chr>, released_at <date>,
+      # ... with 11 more variables: search_uri <chr>, released_at <date>,
       #   set_type <chr>, card_count <int>, printed_size <int>, digital <lgl>,
-      #   nonfoil_only <lgl>, foil_only <lgl>, block_code <chr>, block <chr>
+      #   nonfoil_only <lgl>, foil_only <lgl>, block_code <chr>, block <chr>,
+      #   icon_svg_uri <chr>
 
-# scry_set_tcgplayer() returns tibbles
+---
 
     Code
-      mmq
+      set_tcgplayer
     Output
-      # A tibble: 1 x 19
+      # A tibble: 1 x 20
         object id     code  mtgo_code arena_code tcgplayer_id name  uri   scryfall_uri
         <chr>  <chr>  <chr> <chr>     <chr>             <int> <chr> <chr> <chr>       
       1 set    385e1~ mmq   mm        mm                   73 Merc~ http~ https://scr~
-      # ... with 10 more variables: search_uri <chr>, released_at <date>,
+      # ... with 11 more variables: search_uri <chr>, released_at <date>,
       #   set_type <chr>, card_count <int>, printed_size <int>, digital <lgl>,
-      #   nonfoil_only <lgl>, foil_only <lgl>, block_code <chr>, block <chr>
+      #   nonfoil_only <lgl>, foil_only <lgl>, block_code <chr>, block <chr>,
+      #   icon_svg_uri <chr>
 
-# scry_sets() returns data frames
+# scry-set returns data frames
 
     Code
       sets
@@ -4360,729 +4362,729 @@
       715  1993-12-01             core        302            <NA>   FALSE
       716  1993-10-04             core        302            <NA>   FALSE
       717  1993-08-05             core        295            <NA>   FALSE
-          nonfoil_only foil_only block_code                     block
-      1          FALSE     FALSE       <NA>                      <NA>
-      2           TRUE      TRUE       <NA>                      <NA>
-      3           TRUE      TRUE       <NA>                      <NA>
-      4          FALSE     FALSE       <NA>                      <NA>
-      5          FALSE     FALSE       <NA>                      <NA>
-      6          FALSE     FALSE       <NA>                      <NA>
-      7          FALSE      TRUE       <NA>                      <NA>
-      8          FALSE      TRUE        dbl Innistrad: Double Feature
-      9           TRUE     FALSE        dbl Innistrad: Double Feature
-      10          TRUE     FALSE        dbl Innistrad: Double Feature
-      11         FALSE     FALSE        dbl Innistrad: Double Feature
-      12         FALSE     FALSE        dbl Innistrad: Double Feature
-      13         FALSE     FALSE        cmd                 Commander
-      14          TRUE     FALSE       <NA>                      <NA>
-      15         FALSE     FALSE        dbl Innistrad: Double Feature
-      16         FALSE      TRUE        cmd                 Commander
-      17          TRUE     FALSE        cmd                 Commander
-      18         FALSE     FALSE        dbl Innistrad: Double Feature
-      19         FALSE     FALSE        dbl Innistrad: Double Feature
-      20         FALSE     FALSE        dbl Innistrad: Double Feature
-      21         FALSE     FALSE        cmd                 Commander
-      22         FALSE     FALSE        dbl Innistrad: Double Feature
-      23         FALSE     FALSE       <NA>                      <NA>
-      24          TRUE     FALSE       <NA>                      <NA>
-      25         FALSE     FALSE        htr       Heroes of the Realm
-      26         FALSE     FALSE       <NA>                      <NA>
-      27         FALSE      TRUE       <NA>                      <NA>
-      28         FALSE     FALSE       <NA>                      <NA>
-      29         FALSE     FALSE       <NA>                      <NA>
-      30         FALSE     FALSE       <NA>                      <NA>
-      31          TRUE     FALSE       <NA>                      <NA>
-      32         FALSE     FALSE       <NA>                      <NA>
-      33         FALSE     FALSE       <NA>                      <NA>
-      34         FALSE      TRUE       <NA>                      <NA>
-      35         FALSE      TRUE       <NA>                      <NA>
-      36         FALSE     FALSE       <NA>                      <NA>
-      37         FALSE     FALSE       <NA>                      <NA>
-      38         FALSE     FALSE       <NA>                      <NA>
-      39         FALSE      TRUE       <NA>                      <NA>
-      40         FALSE     FALSE       <NA>                      <NA>
-      41         FALSE     FALSE       <NA>                      <NA>
-      42         FALSE     FALSE       <NA>                      <NA>
-      43         FALSE     FALSE       <NA>                      <NA>
-      44         FALSE     FALSE       <NA>                      <NA>
-      45         FALSE     FALSE       <NA>                      <NA>
-      46         FALSE     FALSE       <NA>                      <NA>
-      47          TRUE      TRUE       <NA>                      <NA>
-      48         FALSE     FALSE       <NA>                      <NA>
-      49         FALSE     FALSE       <NA>                      <NA>
-      50         FALSE     FALSE       <NA>                      <NA>
-      51         FALSE     FALSE       <NA>                      <NA>
-      52         FALSE     FALSE       <NA>                      <NA>
-      53         FALSE     FALSE       <NA>                      <NA>
-      54          TRUE     FALSE       <NA>                      <NA>
-      55         FALSE     FALSE       <NA>                      <NA>
-      56         FALSE     FALSE       <NA>                      <NA>
-      57          TRUE     FALSE       <NA>                      <NA>
-      58         FALSE     FALSE       <NA>                      <NA>
-      59         FALSE     FALSE       <NA>                      <NA>
-      60         FALSE     FALSE       <NA>                      <NA>
-      61         FALSE     FALSE       <NA>                      <NA>
-      62         FALSE     FALSE       <NA>                      <NA>
-      63          TRUE     FALSE       <NA>                      <NA>
-      64         FALSE      TRUE        jgp          Judge Gift Cards
-      65         FALSE     FALSE       <NA>                      <NA>
-      66         FALSE     FALSE       <NA>                      <NA>
-      67         FALSE     FALSE       <NA>                      <NA>
-      68         FALSE     FALSE       <NA>                      <NA>
-      69         FALSE     FALSE       <NA>                      <NA>
-      70         FALSE     FALSE       <NA>                      <NA>
-      71          TRUE     FALSE       <NA>                      <NA>
-      72         FALSE     FALSE       <NA>                      <NA>
-      73         FALSE     FALSE       <NA>                      <NA>
-      74         FALSE     FALSE        cmd                 Commander
-      75         FALSE     FALSE       <NA>                      <NA>
-      76         FALSE     FALSE       <NA>                      <NA>
-      77         FALSE     FALSE       <NA>                      <NA>
-      78         FALSE     FALSE       <NA>                      <NA>
-      79         FALSE     FALSE       <NA>                      <NA>
-      80         FALSE     FALSE       <NA>                      <NA>
-      81         FALSE     FALSE       <NA>                      <NA>
-      82         FALSE     FALSE       <NA>                      <NA>
-      83         FALSE     FALSE        htr       Heroes of the Realm
-      84         FALSE     FALSE       <NA>                      <NA>
-      85         FALSE     FALSE       <NA>                      <NA>
-      86         FALSE     FALSE       <NA>                      <NA>
-      87         FALSE     FALSE       <NA>                      <NA>
-      88         FALSE     FALSE        lea                  Core Set
-      89         FALSE     FALSE       <NA>                      <NA>
-      90         FALSE     FALSE       <NA>                      <NA>
-      91         FALSE     FALSE       <NA>                      <NA>
-      92         FALSE     FALSE       <NA>                      <NA>
-      93         FALSE      TRUE       <NA>                      <NA>
-      94         FALSE     FALSE       <NA>                      <NA>
-      95         FALSE     FALSE       <NA>                      <NA>
-      96         FALSE     FALSE       <NA>                      <NA>
-      97          TRUE      TRUE       <NA>                      <NA>
-      98         FALSE     FALSE       <NA>                      <NA>
-      99         FALSE     FALSE        cmd                 Commander
-      100         TRUE     FALSE        cmd                 Commander
-      101        FALSE     FALSE       <NA>                      <NA>
-      102        FALSE      TRUE       <NA>                      <NA>
-      103         TRUE     FALSE       <NA>                      <NA>
-      104        FALSE     FALSE       <NA>                      <NA>
-      105        FALSE     FALSE       <NA>                      <NA>
-      106         TRUE     FALSE       <NA>                      <NA>
-      107        FALSE     FALSE       <NA>                      <NA>
-      108        FALSE      TRUE        jgp          Judge Gift Cards
-      109        FALSE     FALSE       <NA>                      <NA>
-      110        FALSE     FALSE       <NA>                      <NA>
-      111         TRUE     FALSE       <NA>                      <NA>
-      112         TRUE     FALSE       <NA>                      <NA>
-      113        FALSE     FALSE       <NA>                      <NA>
-      114         TRUE     FALSE       <NA>                      <NA>
-      115        FALSE     FALSE       <NA>                      <NA>
-      116        FALSE      TRUE       <NA>                      <NA>
-      117        FALSE     FALSE       <NA>                      <NA>
-      118        FALSE     FALSE       <NA>                      <NA>
-      119        FALSE     FALSE       <NA>                      <NA>
-      120        FALSE      TRUE        cmd                 Commander
-      121        FALSE     FALSE        cmd                 Commander
-      122         TRUE     FALSE        cmd                 Commander
-      123        FALSE     FALSE        htr       Heroes of the Realm
-      124         TRUE      TRUE       <NA>                      <NA>
-      125        FALSE     FALSE       <NA>                      <NA>
-      126         TRUE     FALSE       <NA>                      <NA>
-      127        FALSE     FALSE        lea                  Core Set
-      128        FALSE     FALSE        lea                  Core Set
-      129        FALSE     FALSE       <NA>                      <NA>
-      130        FALSE     FALSE       <NA>                      <NA>
-      131        FALSE     FALSE       <NA>                      <NA>
-      132         TRUE     FALSE       <NA>                      <NA>
-      133        FALSE     FALSE       <NA>                      <NA>
-      134        FALSE     FALSE       <NA>                      <NA>
-      135         TRUE     FALSE        grn         Guilds of Ravnica
-      136        FALSE     FALSE        grn         Guilds of Ravnica
-      137        FALSE      TRUE        jgp          Judge Gift Cards
-      138        FALSE      TRUE        grn         Guilds of Ravnica
-      139        FALSE     FALSE       <NA>                      <NA>
-      140         TRUE     FALSE       <NA>                      <NA>
-      141        FALSE     FALSE        grn         Guilds of Ravnica
-      142        FALSE     FALSE        grn         Guilds of Ravnica
-      143         TRUE     FALSE        grn         Guilds of Ravnica
-      144        FALSE     FALSE       <NA>                      <NA>
-      145         TRUE     FALSE       <NA>                      <NA>
-      146        FALSE      TRUE       <NA>                      <NA>
-      147         TRUE     FALSE       <NA>                      <NA>
-      148        FALSE     FALSE       <NA>                      <NA>
-      149         TRUE     FALSE       <NA>                      <NA>
-      150        FALSE      TRUE       <NA>                      <NA>
-      151        FALSE      TRUE        grn         Guilds of Ravnica
-      152        FALSE     FALSE       <NA>                      <NA>
-      153         TRUE     FALSE       <NA>                      <NA>
-      154         TRUE     FALSE        grn         Guilds of Ravnica
-      155        FALSE     FALSE        grn         Guilds of Ravnica
-      156        FALSE     FALSE        grn         Guilds of Ravnica
-      157         TRUE     FALSE       <NA>                      <NA>
-      158        FALSE      TRUE       <NA>                      <NA>
-      159        FALSE      TRUE        cmd                 Commander
-      160         TRUE     FALSE        cmd                 Commander
-      161        FALSE     FALSE        cmd                 Commander
-      162         TRUE     FALSE        htr       Heroes of the Realm
-      163        FALSE      TRUE       <NA>                      <NA>
-      164         TRUE     FALSE       <NA>                      <NA>
-      165        FALSE     FALSE       <NA>                      <NA>
-      166        FALSE     FALSE       <NA>                      <NA>
-      167         TRUE     FALSE       <NA>                      <NA>
-      168        FALSE     FALSE       <NA>                      <NA>
-      169        FALSE     FALSE        lea                  Core Set
-      170        FALSE      TRUE       <NA>                      <NA>
-      171         TRUE     FALSE       <NA>                      <NA>
-      172        FALSE     FALSE       <NA>                      <NA>
-      173        FALSE     FALSE       <NA>                      <NA>
-      174        FALSE      TRUE       <NA>                      <NA>
-      175         TRUE     FALSE       <NA>                      <NA>
-      176        FALSE     FALSE       <NA>                      <NA>
-      177        FALSE     FALSE        cmd                 Commander
-      178         TRUE     FALSE        cmd                 Commander
-      179        FALSE     FALSE       <NA>                      <NA>
-      180         TRUE     FALSE       <NA>                      <NA>
-      181        FALSE     FALSE       <NA>                      <NA>
-      182        FALSE     FALSE       <NA>                      <NA>
-      183         TRUE     FALSE       <NA>                      <NA>
-      184        FALSE     FALSE       <NA>                      <NA>
-      185         TRUE     FALSE       <NA>                      <NA>
-      186        FALSE      TRUE       <NA>                      <NA>
-      187        FALSE      TRUE       <NA>                      <NA>
-      188        FALSE     FALSE        xln                    Ixalan
-      189         TRUE     FALSE        xln                    Ixalan
-      190        FALSE     FALSE        xln                    Ixalan
-      191        FALSE      TRUE        jgp          Judge Gift Cards
-      192        FALSE      TRUE        fnm        Friday Night Magic
-      193        FALSE      TRUE       <NA>                      <NA>
-      194        FALSE      TRUE       <NA>                      <NA>
-      195        FALSE     FALSE       <NA>                      <NA>
-      196         TRUE     FALSE       <NA>                      <NA>
-      197        FALSE      TRUE       <NA>                      <NA>
-      198        FALSE      TRUE        xln                    Ixalan
-      199         TRUE     FALSE       <NA>                      <NA>
-      200        FALSE     FALSE       <NA>                      <NA>
-      201        FALSE     FALSE       <NA>                      <NA>
-      202         TRUE     FALSE       <NA>                      <NA>
-      203        FALSE      TRUE       <NA>                      <NA>
-      204        FALSE     FALSE        xln                    Ixalan
-      205        FALSE     FALSE        xln                    Ixalan
-      206         TRUE     FALSE        xln                    Ixalan
-      207        FALSE      TRUE        xln                    Ixalan
-      208        FALSE      TRUE       <NA>                      <NA>
-      209         TRUE     FALSE        htr       Heroes of the Realm
-      210         TRUE     FALSE       <NA>                      <NA>
-      211        FALSE      TRUE        cmd                 Commander
-      212         TRUE     FALSE        cmd                 Commander
-      213        FALSE     FALSE        cmd                 Commander
-      214        FALSE      TRUE       <NA>                      <NA>
-      215        FALSE     FALSE        akh                  Amonkhet
-      216        FALSE     FALSE        akh                  Amonkhet
-      217         TRUE     FALSE        akh                  Amonkhet
-      218         TRUE     FALSE       <NA>                      <NA>
-      219         TRUE     FALSE       <NA>                      <NA>
-      220         TRUE     FALSE        cmd                 Commander
-      221        FALSE     FALSE        cmd                 Commander
-      222        FALSE     FALSE        akh                  Amonkhet
-      223        FALSE     FALSE        akh                  Amonkhet
-      224         TRUE     FALSE        akh                  Amonkhet
-      225        FALSE      TRUE        akh                  Amonkhet
-      226         TRUE     FALSE       <NA>                      <NA>
-      227         TRUE     FALSE       <NA>                      <NA>
-      228        FALSE     FALSE       <NA>                      <NA>
-      229         TRUE     FALSE       <NA>                      <NA>
-      230        FALSE     FALSE       <NA>                      <NA>
-      231        FALSE     FALSE        kld                  Kaladesh
-      232         TRUE     FALSE        kld                  Kaladesh
-      233        FALSE     FALSE        kld                  Kaladesh
-      234        FALSE      TRUE       <NA>                      <NA>
-      235        FALSE      TRUE        fnm        Friday Night Magic
-      236        FALSE      TRUE        jgp          Judge Gift Cards
-      237         TRUE     FALSE       <NA>                      <NA>
-      238         TRUE     FALSE       <NA>                      <NA>
-      239        FALSE     FALSE       <NA>                      <NA>
-      240        FALSE      TRUE        cmd                 Commander
-      241         TRUE     FALSE        cmd                 Commander
-      242        FALSE     FALSE        cmd                 Commander
-      243        FALSE      TRUE       <NA>                      <NA>
-      244        FALSE     FALSE        kld                  Kaladesh
-      245        FALSE     FALSE        kld                  Kaladesh
-      246         TRUE     FALSE        kld                  Kaladesh
-      247        FALSE      TRUE        kld                  Kaladesh
-      248        FALSE     FALSE       <NA>                      <NA>
-      249         TRUE     FALSE        cns                Conspiracy
-      250        FALSE     FALSE        cns                Conspiracy
-      251        FALSE      TRUE       <NA>                      <NA>
-      252        FALSE     FALSE        soi    Shadows over Innistrad
-      253         TRUE     FALSE        soi    Shadows over Innistrad
-      254        FALSE     FALSE        soi    Shadows over Innistrad
-      255        FALSE     FALSE       <NA>                      <NA>
-      256         TRUE     FALSE       <NA>                      <NA>
-      257        FALSE     FALSE        soi    Shadows over Innistrad
-      258         TRUE     FALSE        soi    Shadows over Innistrad
-      259         TRUE     FALSE       <NA>                      <NA>
-      260        FALSE     FALSE        soi    Shadows over Innistrad
-      261        FALSE     FALSE       <NA>                      <NA>
-      262        FALSE     FALSE        bfz       Battle for Zendikar
-      263         TRUE     FALSE        bfz       Battle for Zendikar
-      264        FALSE     FALSE        bfz       Battle for Zendikar
-      265        FALSE      TRUE       <NA>                      <NA>
-      266        FALSE      TRUE        jgp          Judge Gift Cards
-      267        FALSE      TRUE        fnm        Friday Night Magic
-      268        FALSE     FALSE       <NA>                      <NA>
-      269         TRUE     FALSE        cmd                 Commander
-      270         TRUE     FALSE        cmd                 Commander
-      271        FALSE      TRUE        cmd                 Commander
-      272        FALSE     FALSE        bfz       Battle for Zendikar
-      273        FALSE     FALSE        bfz       Battle for Zendikar
-      274         TRUE     FALSE        bfz       Battle for Zendikar
-      275         TRUE     FALSE        bfz       Battle for Zendikar
-      276        FALSE      TRUE        bfz       Battle for Zendikar
-      277        FALSE     FALSE       <NA>                      <NA>
-      278        FALSE      TRUE       <NA>                      <NA>
-      279        FALSE      TRUE       <NA>                      <NA>
-      280        FALSE     FALSE       <NA>                      <NA>
-      281        FALSE     FALSE        lea                  Core Set
-      282         TRUE     FALSE       <NA>                      <NA>
-      283        FALSE      TRUE       <NA>                      <NA>
-      284        FALSE     FALSE       <NA>                      <NA>
-      285         TRUE     FALSE       <NA>                      <NA>
-      286        FALSE     FALSE       <NA>                      <NA>
-      287         TRUE     FALSE        ktk           Khans of Tarkir
-      288        FALSE     FALSE        ktk           Khans of Tarkir
-      289         TRUE     FALSE        ktk           Khans of Tarkir
-      290        FALSE     FALSE        ktk           Khans of Tarkir
-      291        FALSE     FALSE       <NA>                      <NA>
-      292        FALSE     FALSE        ktk           Khans of Tarkir
-      293        FALSE      TRUE        ktk           Khans of Tarkir
-      294         TRUE     FALSE        ktk           Khans of Tarkir
-      295        FALSE     FALSE        ktk           Khans of Tarkir
-      296         TRUE     FALSE        ktk           Khans of Tarkir
-      297         TRUE     FALSE       <NA>                      <NA>
-      298        FALSE      TRUE        fnm        Friday Night Magic
-      299        FALSE      TRUE        jgp          Judge Gift Cards
-      300         TRUE     FALSE       <NA>                      <NA>
-      301         TRUE     FALSE       <NA>                      <NA>
-      302         TRUE     FALSE       <NA>                      <NA>
-      303        FALSE     FALSE       <NA>                      <NA>
-      304         TRUE     FALSE       <NA>                      <NA>
-      305        FALSE     FALSE       <NA>                      <NA>
-      306        FALSE     FALSE       <NA>                      <NA>
-      307        FALSE     FALSE       <NA>                      <NA>
-      308        FALSE      TRUE        cmd                 Commander
-      309         TRUE     FALSE        cmd                 Commander
-      310         TRUE     FALSE        cmd                 Commander
-      311        FALSE     FALSE        ktk           Khans of Tarkir
-      312         TRUE     FALSE        ktk           Khans of Tarkir
-      313        FALSE     FALSE        ktk           Khans of Tarkir
-      314        FALSE     FALSE       <NA>                      <NA>
-      315        FALSE      TRUE       <NA>                      <NA>
-      316         TRUE     FALSE       <NA>                      <NA>
-      317        FALSE      TRUE       <NA>                      <NA>
-      318        FALSE     FALSE        lea                  Core Set
-      319        FALSE     FALSE       <NA>                      <NA>
-      320         TRUE     FALSE       <NA>                      <NA>
-      321        FALSE      TRUE       <NA>                      <NA>
-      322        FALSE     FALSE       <NA>                      <NA>
-      323        FALSE      TRUE        cns                Conspiracy
-      324         TRUE     FALSE        cns                Conspiracy
-      325        FALSE     FALSE        cns                Conspiracy
-      326         TRUE     FALSE       <NA>                      <NA>
-      327         TRUE     FALSE       <NA>                      <NA>
-      328         TRUE     FALSE        ths                    Theros
-      329         TRUE     FALSE        ths                    Theros
-      330        FALSE     FALSE        ths                    Theros
-      331         TRUE     FALSE        ths                    Theros
-      332        FALSE     FALSE        ths                    Theros
-      333        FALSE     FALSE       <NA>                      <NA>
-      334         TRUE     FALSE       <NA>                      <NA>
-      335         TRUE     FALSE        ths                    Theros
-      336         TRUE     FALSE        ths                    Theros
-      337         TRUE     FALSE        ths                    Theros
-      338        FALSE     FALSE        ths                    Theros
-      339        FALSE     FALSE        ths                    Theros
-      340        FALSE      TRUE       <NA>                      <NA>
-      341         TRUE     FALSE       <NA>                      <NA>
-      342         TRUE     FALSE       <NA>                      <NA>
-      343        FALSE      TRUE        fnm        Friday Night Magic
-      344        FALSE      TRUE        jgp          Judge Gift Cards
-      345        FALSE      TRUE        cmd                 Commander
-      346         TRUE     FALSE        cmd                 Commander
-      347         TRUE     FALSE        ths                    Theros
-      348        FALSE     FALSE        ths                    Theros
-      349         TRUE     FALSE        ths                    Theros
-      350         TRUE     FALSE        ths                    Theros
-      351        FALSE     FALSE        ths                    Theros
-      352        FALSE     FALSE       <NA>                      <NA>
-      353         TRUE     FALSE       <NA>                      <NA>
-      354        FALSE      TRUE       <NA>                      <NA>
-      355         TRUE     FALSE       <NA>                      <NA>
-      356        FALSE     FALSE        lea                  Core Set
-      357        FALSE     FALSE       <NA>                      <NA>
-      358        FALSE      TRUE       <NA>                      <NA>
-      359         TRUE     FALSE       <NA>                      <NA>
-      360        FALSE     FALSE       <NA>                      <NA>
-      361        FALSE     FALSE        rtr         Return to Ravnica
-      362         TRUE     FALSE        rtr         Return to Ravnica
-      363        FALSE     FALSE        rtr         Return to Ravnica
-      364        FALSE      TRUE       <NA>                      <NA>
-      365         TRUE     FALSE       <NA>                      <NA>
-      366        FALSE     FALSE       <NA>                      <NA>
-      367        FALSE     FALSE        rtr         Return to Ravnica
-      368         TRUE     FALSE        rtr         Return to Ravnica
-      369        FALSE     FALSE        rtr         Return to Ravnica
-      370        FALSE      TRUE       <NA>                      <NA>
-      371         TRUE     FALSE       <NA>                      <NA>
-      372         TRUE     FALSE       <NA>                      <NA>
-      373        FALSE     FALSE        jgp          Judge Gift Cards
-      374        FALSE      TRUE        fnm        Friday Night Magic
-      375        FALSE      TRUE        cmd                 Commander
-      376        FALSE      TRUE        cmd                 Commander
-      377        FALSE     FALSE        rtr         Return to Ravnica
-      378        FALSE     FALSE        rtr         Return to Ravnica
-      379         TRUE     FALSE        rtr         Return to Ravnica
-      380        FALSE     FALSE       <NA>                      <NA>
-      381         TRUE     FALSE       <NA>                      <NA>
-      382        FALSE      TRUE       <NA>                      <NA>
-      383        FALSE     FALSE        lea                  Core Set
-      384         TRUE     FALSE       <NA>                      <NA>
-      385        FALSE     FALSE       <NA>                      <NA>
-      386         TRUE     FALSE       <NA>                      <NA>
-      387         TRUE     FALSE       <NA>                      <NA>
-      388        FALSE     FALSE        isd                 Innistrad
-      389         TRUE     FALSE        isd                 Innistrad
-      390        FALSE     FALSE       <NA>                      <NA>
-      391        FALSE     FALSE        isd                 Innistrad
-      392         TRUE     FALSE       <NA>                      <NA>
-      393        FALSE     FALSE       <NA>                      <NA>
-      394        FALSE     FALSE        isd                 Innistrad
-      395         TRUE     FALSE        isd                 Innistrad
-      396        FALSE     FALSE        isd                 Innistrad
-      397         TRUE     FALSE       <NA>                      <NA>
-      398        FALSE      TRUE       <NA>                      <NA>
-      399         TRUE     FALSE       <NA>                      <NA>
-      400         TRUE     FALSE       <NA>                      <NA>
-      401        FALSE     FALSE        jgp          Judge Gift Cards
-      402        FALSE     FALSE        fnm        Friday Night Magic
-      403        FALSE      TRUE       <NA>                      <NA>
-      404         TRUE     FALSE        isd                 Innistrad
-      405        FALSE     FALSE        isd                 Innistrad
-      406        FALSE     FALSE        isd                 Innistrad
-      407        FALSE     FALSE       <NA>                      <NA>
-      408         TRUE     FALSE       <NA>                      <NA>
-      409        FALSE      TRUE       <NA>                      <NA>
-      410         TRUE     FALSE       <NA>                      <NA>
-      411        FALSE     FALSE        lea                  Core Set
-      412        FALSE     FALSE       <NA>                      <NA>
-      413        FALSE      TRUE        cmd                 Commander
-      414         TRUE     FALSE        cmd                 Commander
-      415        FALSE      TRUE        cmd                 Commander
-      416         TRUE     FALSE       <NA>                      <NA>
-      417        FALSE     FALSE        som         Scars of Mirrodin
-      418         TRUE     FALSE        som         Scars of Mirrodin
-      419        FALSE     FALSE        som         Scars of Mirrodin
-      420         TRUE     FALSE       <NA>                      <NA>
-      421        FALSE     FALSE       <NA>                      <NA>
-      422         TRUE     FALSE        som         Scars of Mirrodin
-      423        FALSE     FALSE        som         Scars of Mirrodin
-      424        FALSE     FALSE        som         Scars of Mirrodin
-      425        FALSE     FALSE       <NA>                      <NA>
-      426        FALSE     FALSE       <NA>                      <NA>
-      427        FALSE      TRUE       <NA>                      <NA>
-      428        FALSE      TRUE       <NA>                      <NA>
-      429        FALSE     FALSE        jgp          Judge Gift Cards
-      430        FALSE     FALSE        mpr      Magic Player Rewards
-      431        FALSE      TRUE        fnm        Friday Night Magic
-      432        FALSE     FALSE       <NA>                      <NA>
-      433         TRUE     FALSE       <NA>                      <NA>
-      434        FALSE      TRUE       <NA>                      <NA>
-      435         TRUE     FALSE       <NA>                      <NA>
-      436        FALSE     FALSE        som         Scars of Mirrodin
-      437         TRUE     FALSE        som         Scars of Mirrodin
-      438        FALSE     FALSE        som         Scars of Mirrodin
-      439        FALSE     FALSE       <NA>                      <NA>
-      440         TRUE     FALSE       <NA>                      <NA>
-      441        FALSE      TRUE       <NA>                      <NA>
-      442        FALSE     FALSE        lea                  Core Set
-      443         TRUE     FALSE       <NA>                      <NA>
-      444        FALSE     FALSE       <NA>                      <NA>
-      445         TRUE     FALSE       <NA>                      <NA>
-      446         TRUE     FALSE       <NA>                      <NA>
-      447         TRUE     FALSE       <NA>                      <NA>
-      448        FALSE     FALSE       <NA>                      <NA>
-      449        FALSE     FALSE        zen                  Zendikar
-      450        FALSE     FALSE        zen                  Zendikar
-      451         TRUE     FALSE        zen                  Zendikar
-      452        FALSE     FALSE       <NA>                      <NA>
-      453         TRUE     FALSE       <NA>                      <NA>
-      454        FALSE     FALSE        zen                  Zendikar
-      455        FALSE     FALSE        zen                  Zendikar
-      456         TRUE     FALSE        zen                  Zendikar
-      457        FALSE      TRUE       <NA>                      <NA>
-      458        FALSE      TRUE       <NA>                      <NA>
-      459        FALSE     FALSE       <NA>                      <NA>
-      460        FALSE      TRUE        fnm        Friday Night Magic
-      461        FALSE      TRUE        jgp          Judge Gift Cards
-      462        FALSE     FALSE        mpr      Magic Player Rewards
-      463        FALSE      TRUE       <NA>                      <NA>
-      464        FALSE     FALSE       <NA>                      <NA>
-      465         TRUE     FALSE       <NA>                      <NA>
-      466        FALSE     FALSE        zen                  Zendikar
-      467        FALSE     FALSE        zen                  Zendikar
-      468         TRUE     FALSE        zen                  Zendikar
-      469        FALSE     FALSE       <NA>                      <NA>
-      470         TRUE     FALSE       <NA>                      <NA>
-      471         TRUE     FALSE       <NA>                      <NA>
-      472         TRUE     FALSE       <NA>                      <NA>
-      473        FALSE      TRUE       <NA>                      <NA>
-      474        FALSE     FALSE        lea                  Core Set
-      475         TRUE     FALSE       <NA>                      <NA>
-      476        FALSE      TRUE       <NA>                      <NA>
-      477        FALSE      TRUE        ala                     Alara
-      478        FALSE     FALSE        ala                     Alara
-      479         TRUE     FALSE        ala                     Alara
-      480         TRUE     FALSE       <NA>                      <NA>
-      481        FALSE     FALSE       <NA>                      <NA>
-      482        FALSE      TRUE       <NA>                      <NA>
-      483        FALSE      TRUE        ala                     Alara
-      484        FALSE     FALSE        ala                     Alara
-      485         TRUE     FALSE        ala                     Alara
-      486         TRUE     FALSE       <NA>                      <NA>
-      487        FALSE      TRUE       <NA>                      <NA>
-      488        FALSE      TRUE       <NA>                      <NA>
-      489        FALSE     FALSE       <NA>                      <NA>
-      490        FALSE      TRUE        fnm        Friday Night Magic
-      491        FALSE      TRUE        jgp          Judge Gift Cards
-      492        FALSE     FALSE        mpr      Magic Player Rewards
-      493         TRUE     FALSE       <NA>                      <NA>
-      494        FALSE     FALSE       <NA>                      <NA>
-      495        FALSE      TRUE        ala                     Alara
-      496         TRUE     FALSE        ala                     Alara
-      497        FALSE     FALSE        ala                     Alara
-      498        FALSE      TRUE       <NA>                      <NA>
-      499        FALSE     FALSE       <NA>                      <NA>
-      500        FALSE      TRUE       <NA>                      <NA>
-      501        FALSE      TRUE        shm                Shadowmoor
-      502         TRUE     FALSE        shm                Shadowmoor
-      503        FALSE     FALSE        shm                Shadowmoor
-      504        FALSE      TRUE        shm                Shadowmoor
-      505         TRUE     FALSE        shm                Shadowmoor
-      506        FALSE     FALSE        shm                Shadowmoor
-      507        FALSE      TRUE       <NA>                      <NA>
-      508        FALSE      TRUE        lrw                    Lorwyn
-      509        FALSE     FALSE        lrw                    Lorwyn
-      510         TRUE     FALSE        lrw                    Lorwyn
-      511        FALSE     FALSE       <NA>                      <NA>
-      512        FALSE      TRUE       <NA>                      <NA>
-      513        FALSE      TRUE        jgp          Judge Gift Cards
-      514        FALSE      TRUE        fnm        Friday Night Magic
-      515        FALSE     FALSE        mpr      Magic Player Rewards
-      516        FALSE     FALSE       <NA>                      <NA>
-      517         TRUE     FALSE       <NA>                      <NA>
-      518        FALSE      TRUE        lrw                    Lorwyn
-      519         TRUE     FALSE        lrw                    Lorwyn
-      520        FALSE     FALSE        lrw                    Lorwyn
-      521        FALSE     FALSE       <NA>                      <NA>
-      522        FALSE      TRUE       <NA>                      <NA>
-      523        FALSE     FALSE        lea                  Core Set
-      524        FALSE      TRUE       <NA>                      <NA>
-      525         TRUE     FALSE       <NA>                      <NA>
-      526        FALSE      TRUE        tsp               Time Spiral
-      527        FALSE     FALSE        tsp               Time Spiral
-      528        FALSE      TRUE       <NA>                      <NA>
-      529        FALSE     FALSE       <NA>                      <NA>
-      530        FALSE      TRUE        tsp               Time Spiral
-      531        FALSE     FALSE        tsp               Time Spiral
-      532        FALSE     FALSE       <NA>                      <NA>
-      533        FALSE      TRUE       <NA>                      <NA>
-      534        FALSE     FALSE       <NA>                      <NA>
-      535        FALSE     FALSE        mpr      Magic Player Rewards
-      536        FALSE      TRUE        jgp          Judge Gift Cards
-      537        FALSE      TRUE        fnm        Friday Night Magic
-      538        FALSE      TRUE       <NA>                      <NA>
-      539        FALSE      TRUE        tsp               Time Spiral
-      540        FALSE     FALSE        tsp               Time Spiral
-      541        FALSE     FALSE        tsp               Time Spiral
-      542        FALSE      TRUE        ice                   Ice Age
-      543         TRUE     FALSE        ice                   Ice Age
-      544        FALSE     FALSE        ice                   Ice Age
-      545        FALSE      TRUE        rav                   Ravnica
-      546        FALSE     FALSE        rav                   Ravnica
-      547        FALSE     FALSE       <NA>                      <NA>
-      548        FALSE      TRUE        rav                   Ravnica
-      549        FALSE     FALSE        rav                   Ravnica
-      550        FALSE     FALSE       parl              Arena League
-      551        FALSE      TRUE       <NA>                      <NA>
-      552        FALSE      TRUE       <NA>                      <NA>
-      553        FALSE      TRUE        jgp          Judge Gift Cards
-      554        FALSE      TRUE        fnm        Friday Night Magic
-      555        FALSE      TRUE       <NA>                      <NA>
-      556        FALSE     FALSE        mpr      Magic Player Rewards
-      557         TRUE     FALSE       <NA>                      <NA>
-      558        FALSE      TRUE       <NA>                      <NA>
-      559        FALSE      TRUE        rav                   Ravnica
-      560        FALSE     FALSE        rav                   Ravnica
-      561         TRUE     FALSE       <NA>                      <NA>
-      562        FALSE      TRUE        lea                  Core Set
-      563        FALSE     FALSE        lea                  Core Set
-      564        FALSE      TRUE        chk                  Kamigawa
-      565        FALSE     FALSE        chk                  Kamigawa
-      566        FALSE      TRUE        chk                  Kamigawa
-      567        FALSE     FALSE        chk                  Kamigawa
-      568        FALSE     FALSE       parl              Arena League
-      569        FALSE      TRUE       <NA>                      <NA>
-      570        FALSE      TRUE       <NA>                      <NA>
-      571        FALSE      TRUE        jgp          Judge Gift Cards
-      572        FALSE      TRUE        fnm        Friday Night Magic
-      573        FALSE     FALSE        mpr      Magic Player Rewards
-      574        FALSE      TRUE       <NA>                      <NA>
-      575        FALSE     FALSE       <NA>                      <NA>
-      576        FALSE      TRUE        chk                  Kamigawa
-      577        FALSE     FALSE        chk                  Kamigawa
-      578        FALSE     FALSE       <NA>                      <NA>
-      579        FALSE      TRUE        mrd                  Mirrodin
-      580        FALSE      TRUE        mrd                  Mirrodin
-      581        FALSE      TRUE        mrd                  Mirrodin
-      582        FALSE     FALSE        mrd                  Mirrodin
-      583        FALSE     FALSE        mrd                  Mirrodin
-      584        FALSE     FALSE       parl              Arena League
-      585        FALSE     FALSE        mpr      Magic Player Rewards
-      586        FALSE      TRUE        fnm        Friday Night Magic
-      587        FALSE      TRUE        jgp          Judge Gift Cards
-      588        FALSE     FALSE        mrd                  Mirrodin
-      589        FALSE     FALSE       <NA>                      <NA>
-      590        FALSE      TRUE        lea                  Core Set
-      591        FALSE     FALSE        lea                  Core Set
-      592        FALSE      TRUE        ons                 Onslaught
-      593        FALSE     FALSE        ons                 Onslaught
-      594        FALSE      TRUE        ons                 Onslaught
-      595        FALSE      TRUE        ons                 Onslaught
-      596        FALSE     FALSE        ons                 Onslaught
-      597        FALSE     FALSE       <NA>                      <NA>
-      598        FALSE      TRUE       <NA>                      <NA>
-      599        FALSE     FALSE       parl              Arena League
-      600         TRUE     FALSE        mpr      Magic Player Rewards
-      601        FALSE      TRUE        jgp          Judge Gift Cards
-      602        FALSE     FALSE       <NA>                      <NA>
-      603        FALSE      TRUE        fnm        Friday Night Magic
-      604        FALSE     FALSE        ons                 Onslaught
-      605        FALSE     FALSE       <NA>                      <NA>
-      606         TRUE     FALSE       <NA>                      <NA>
-      607        FALSE     FALSE       <NA>                      <NA>
-      608        FALSE      TRUE        ody                   Odyssey
-      609        FALSE     FALSE        ody                   Odyssey
-      610        FALSE     FALSE        ody                   Odyssey
-      611        FALSE     FALSE        ody                   Odyssey
-      612        FALSE      TRUE       parl              Arena League
-      613         TRUE     FALSE        mpr      Magic Player Rewards
-      614        FALSE      TRUE        fnm        Friday Night Magic
-      615        FALSE      TRUE        jgp          Judge Gift Cards
-      616        FALSE     FALSE       <NA>                      <NA>
-      617        FALSE      TRUE        ody                   Odyssey
-      618        FALSE     FALSE        ody                   Odyssey
-      619        FALSE     FALSE       <NA>                      <NA>
-      620         TRUE     FALSE       <NA>                      <NA>
-      621        FALSE      TRUE        inv                  Invasion
-      622        FALSE     FALSE        inv                  Invasion
-      623        FALSE     FALSE        lea                  Core Set
-      624        FALSE      TRUE        inv                  Invasion
-      625        FALSE     FALSE        inv                  Invasion
-      626        FALSE      TRUE       parl              Arena League
-      627        FALSE     FALSE        mpr      Magic Player Rewards
-      628        FALSE      TRUE        fnm        Friday Night Magic
-      629        FALSE      TRUE        jgp          Judge Gift Cards
-      630        FALSE      TRUE        inv                  Invasion
-      631        FALSE     FALSE        inv                  Invasion
-      632        FALSE     FALSE       <NA>                      <NA>
-      633        FALSE     FALSE       <NA>                      <NA>
-      634        FALSE      TRUE        mmq                   Masques
-      635        FALSE     FALSE        mmq                   Masques
-      636        FALSE     FALSE       <NA>                      <NA>
-      637        FALSE      TRUE        mmq                   Masques
-      638        FALSE     FALSE        mmq                   Masques
-      639         TRUE     FALSE       <NA>                      <NA>
-      640        FALSE      TRUE       parl              Arena League
-      641        FALSE      TRUE        fnm        Friday Night Magic
-      642        FALSE      TRUE        jgp          Judge Gift Cards
-      643        FALSE      TRUE       <NA>                      <NA>
-      644         TRUE     FALSE       <NA>                      <NA>
-      645        FALSE      TRUE        mmq                   Masques
-      646        FALSE     FALSE        mmq                   Masques
-      647        FALSE      TRUE       <NA>                      <NA>
-      648        FALSE     FALSE       <NA>                      <NA>
-      649        FALSE      TRUE       <NA>                      <NA>
-      650         TRUE     FALSE       <NA>                      <NA>
-      651         TRUE     FALSE       <NA>                      <NA>
-      652         TRUE     FALSE       <NA>                      <NA>
-      653         TRUE     FALSE       <NA>                      <NA>
-      654        FALSE      TRUE        usg                      Urza
-      655        FALSE     FALSE        usg                      Urza
-      656         TRUE     FALSE        lea                  Core Set
-      657        FALSE      TRUE        usg                      Urza
-      658        FALSE     FALSE        usg                      Urza
-      659        FALSE     FALSE       parl              Arena League
-      660        FALSE      TRUE        jgp          Judge Gift Cards
-      661         TRUE     FALSE       <NA>                      <NA>
-      662        FALSE      TRUE        usg                      Urza
-      663         TRUE     FALSE        usg                      Urza
-      664         TRUE     FALSE       <NA>                      <NA>
-      665        FALSE     FALSE       <NA>                      <NA>
-      666         TRUE     FALSE       <NA>                      <NA>
-      667         TRUE     FALSE       <NA>                      <NA>
-      668         TRUE     FALSE       <NA>                      <NA>
-      669         TRUE     FALSE        tmp                   Tempest
-      670         TRUE     FALSE        tmp                   Tempest
-      671         TRUE     FALSE        tmp                   Tempest
-      672         TRUE     FALSE        tmp                   Tempest
-      673        FALSE      TRUE        jgp          Judge Gift Cards
-      674         TRUE     FALSE        tmp                   Tempest
-      675         TRUE     FALSE        tmp                   Tempest
-      676        FALSE     FALSE       <NA>                      <NA>
-      677         TRUE     FALSE        mir                    Mirage
-      678         TRUE     FALSE       <NA>                      <NA>
-      679         TRUE     FALSE       <NA>                      <NA>
-      680         TRUE     FALSE       <NA>                      <NA>
-      681         TRUE     FALSE       <NA>                      <NA>
-      682         TRUE     FALSE       <NA>                      <NA>
-      683         TRUE     FALSE        lea                  Core Set
-      684         TRUE     FALSE        mir                    Mirage
-      685         TRUE     FALSE       <NA>                      <NA>
-      686         TRUE     FALSE       <NA>                      <NA>
-      687         TRUE     FALSE        mir                    Mirage
-      688         TRUE     FALSE       <NA>                      <NA>
-      689         TRUE     FALSE       <NA>                      <NA>
-      690         TRUE     FALSE       parl              Arena League
-      691         TRUE     FALSE       <NA>                      <NA>
-      692         TRUE     FALSE        ice                   Ice Age
-      693        FALSE     FALSE       <NA>                      <NA>
-      694         TRUE     FALSE       <NA>                      <NA>
-      695         TRUE     FALSE       <NA>                      <NA>
-      696         TRUE     FALSE       <NA>                      <NA>
-      697         TRUE     FALSE       <NA>                      <NA>
-      698         TRUE     FALSE        ice                   Ice Age
-      699         TRUE     FALSE       <NA>                      <NA>
-      700         TRUE     FALSE        lea                  Core Set
-      701         TRUE     FALSE       <NA>                      <NA>
-      702        FALSE     FALSE       <NA>                      <NA>
-      703         TRUE     FALSE       <NA>                      <NA>
-      704         TRUE     FALSE       <NA>                      <NA>
-      705         TRUE     FALSE       <NA>                      <NA>
-      706         TRUE     FALSE       <NA>                      <NA>
-      707         TRUE     FALSE        lea                  Core Set
-      708         TRUE     FALSE       <NA>                      <NA>
-      709         TRUE     FALSE        lea                  Core Set
-      710         TRUE     FALSE        lea                  Core Set
-      711        FALSE     FALSE       <NA>                      <NA>
-      712         TRUE     FALSE       <NA>                      <NA>
-      713         TRUE     FALSE       <NA>                      <NA>
-      714         TRUE     FALSE       <NA>                      <NA>
-      715         TRUE     FALSE        lea                  Core Set
-      716         TRUE     FALSE        lea                  Core Set
-      717         TRUE     FALSE        lea                  Core Set
+          nonfoil_only foil_only block_code                     block icon_svg_uri
+      1          FALSE     FALSE       <NA>                      <NA>         <NA>
+      2           TRUE      TRUE       <NA>                      <NA>         <NA>
+      3           TRUE      TRUE       <NA>                      <NA>         <NA>
+      4          FALSE     FALSE       <NA>                      <NA>         <NA>
+      5          FALSE     FALSE       <NA>                      <NA>         <NA>
+      6          FALSE     FALSE       <NA>                      <NA>         <NA>
+      7          FALSE      TRUE       <NA>                      <NA>         <NA>
+      8          FALSE      TRUE        dbl Innistrad: Double Feature         <NA>
+      9           TRUE     FALSE        dbl Innistrad: Double Feature         <NA>
+      10          TRUE     FALSE        dbl Innistrad: Double Feature         <NA>
+      11         FALSE     FALSE        dbl Innistrad: Double Feature         <NA>
+      12         FALSE     FALSE        dbl Innistrad: Double Feature         <NA>
+      13         FALSE     FALSE        cmd                 Commander         <NA>
+      14          TRUE     FALSE       <NA>                      <NA>         <NA>
+      15         FALSE     FALSE        dbl Innistrad: Double Feature         <NA>
+      16         FALSE      TRUE        cmd                 Commander         <NA>
+      17          TRUE     FALSE        cmd                 Commander         <NA>
+      18         FALSE     FALSE        dbl Innistrad: Double Feature         <NA>
+      19         FALSE     FALSE        dbl Innistrad: Double Feature         <NA>
+      20         FALSE     FALSE        dbl Innistrad: Double Feature         <NA>
+      21         FALSE     FALSE        cmd                 Commander         <NA>
+      22         FALSE     FALSE        dbl Innistrad: Double Feature         <NA>
+      23         FALSE     FALSE       <NA>                      <NA>         <NA>
+      24          TRUE     FALSE       <NA>                      <NA>         <NA>
+      25         FALSE     FALSE        htr       Heroes of the Realm         <NA>
+      26         FALSE     FALSE       <NA>                      <NA>         <NA>
+      27         FALSE      TRUE       <NA>                      <NA>         <NA>
+      28         FALSE     FALSE       <NA>                      <NA>         <NA>
+      29         FALSE     FALSE       <NA>                      <NA>         <NA>
+      30         FALSE     FALSE       <NA>                      <NA>         <NA>
+      31          TRUE     FALSE       <NA>                      <NA>         <NA>
+      32         FALSE     FALSE       <NA>                      <NA>         <NA>
+      33         FALSE     FALSE       <NA>                      <NA>         <NA>
+      34         FALSE      TRUE       <NA>                      <NA>         <NA>
+      35         FALSE      TRUE       <NA>                      <NA>         <NA>
+      36         FALSE     FALSE       <NA>                      <NA>         <NA>
+      37         FALSE     FALSE       <NA>                      <NA>         <NA>
+      38         FALSE     FALSE       <NA>                      <NA>         <NA>
+      39         FALSE      TRUE       <NA>                      <NA>         <NA>
+      40         FALSE     FALSE       <NA>                      <NA>         <NA>
+      41         FALSE     FALSE       <NA>                      <NA>         <NA>
+      42         FALSE     FALSE       <NA>                      <NA>         <NA>
+      43         FALSE     FALSE       <NA>                      <NA>         <NA>
+      44         FALSE     FALSE       <NA>                      <NA>         <NA>
+      45         FALSE     FALSE       <NA>                      <NA>         <NA>
+      46         FALSE     FALSE       <NA>                      <NA>         <NA>
+      47          TRUE      TRUE       <NA>                      <NA>         <NA>
+      48         FALSE     FALSE       <NA>                      <NA>         <NA>
+      49         FALSE     FALSE       <NA>                      <NA>         <NA>
+      50         FALSE     FALSE       <NA>                      <NA>         <NA>
+      51         FALSE     FALSE       <NA>                      <NA>         <NA>
+      52         FALSE     FALSE       <NA>                      <NA>         <NA>
+      53         FALSE     FALSE       <NA>                      <NA>         <NA>
+      54          TRUE     FALSE       <NA>                      <NA>         <NA>
+      55         FALSE     FALSE       <NA>                      <NA>         <NA>
+      56         FALSE     FALSE       <NA>                      <NA>         <NA>
+      57          TRUE     FALSE       <NA>                      <NA>         <NA>
+      58         FALSE     FALSE       <NA>                      <NA>         <NA>
+      59         FALSE     FALSE       <NA>                      <NA>         <NA>
+      60         FALSE     FALSE       <NA>                      <NA>         <NA>
+      61         FALSE     FALSE       <NA>                      <NA>         <NA>
+      62         FALSE     FALSE       <NA>                      <NA>         <NA>
+      63          TRUE     FALSE       <NA>                      <NA>         <NA>
+      64         FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      65         FALSE     FALSE       <NA>                      <NA>         <NA>
+      66         FALSE     FALSE       <NA>                      <NA>         <NA>
+      67         FALSE     FALSE       <NA>                      <NA>         <NA>
+      68         FALSE     FALSE       <NA>                      <NA>         <NA>
+      69         FALSE     FALSE       <NA>                      <NA>         <NA>
+      70         FALSE     FALSE       <NA>                      <NA>         <NA>
+      71          TRUE     FALSE       <NA>                      <NA>         <NA>
+      72         FALSE     FALSE       <NA>                      <NA>         <NA>
+      73         FALSE     FALSE       <NA>                      <NA>         <NA>
+      74         FALSE     FALSE        cmd                 Commander         <NA>
+      75         FALSE     FALSE       <NA>                      <NA>         <NA>
+      76         FALSE     FALSE       <NA>                      <NA>         <NA>
+      77         FALSE     FALSE       <NA>                      <NA>         <NA>
+      78         FALSE     FALSE       <NA>                      <NA>         <NA>
+      79         FALSE     FALSE       <NA>                      <NA>         <NA>
+      80         FALSE     FALSE       <NA>                      <NA>         <NA>
+      81         FALSE     FALSE       <NA>                      <NA>         <NA>
+      82         FALSE     FALSE       <NA>                      <NA>         <NA>
+      83         FALSE     FALSE        htr       Heroes of the Realm         <NA>
+      84         FALSE     FALSE       <NA>                      <NA>         <NA>
+      85         FALSE     FALSE       <NA>                      <NA>         <NA>
+      86         FALSE     FALSE       <NA>                      <NA>         <NA>
+      87         FALSE     FALSE       <NA>                      <NA>         <NA>
+      88         FALSE     FALSE        lea                  Core Set         <NA>
+      89         FALSE     FALSE       <NA>                      <NA>         <NA>
+      90         FALSE     FALSE       <NA>                      <NA>         <NA>
+      91         FALSE     FALSE       <NA>                      <NA>         <NA>
+      92         FALSE     FALSE       <NA>                      <NA>         <NA>
+      93         FALSE      TRUE       <NA>                      <NA>         <NA>
+      94         FALSE     FALSE       <NA>                      <NA>         <NA>
+      95         FALSE     FALSE       <NA>                      <NA>         <NA>
+      96         FALSE     FALSE       <NA>                      <NA>         <NA>
+      97          TRUE      TRUE       <NA>                      <NA>         <NA>
+      98         FALSE     FALSE       <NA>                      <NA>         <NA>
+      99         FALSE     FALSE        cmd                 Commander         <NA>
+      100         TRUE     FALSE        cmd                 Commander         <NA>
+      101        FALSE     FALSE       <NA>                      <NA>         <NA>
+      102        FALSE      TRUE       <NA>                      <NA>         <NA>
+      103         TRUE     FALSE       <NA>                      <NA>         <NA>
+      104        FALSE     FALSE       <NA>                      <NA>         <NA>
+      105        FALSE     FALSE       <NA>                      <NA>         <NA>
+      106         TRUE     FALSE       <NA>                      <NA>         <NA>
+      107        FALSE     FALSE       <NA>                      <NA>         <NA>
+      108        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      109        FALSE     FALSE       <NA>                      <NA>         <NA>
+      110        FALSE     FALSE       <NA>                      <NA>         <NA>
+      111         TRUE     FALSE       <NA>                      <NA>         <NA>
+      112         TRUE     FALSE       <NA>                      <NA>         <NA>
+      113        FALSE     FALSE       <NA>                      <NA>         <NA>
+      114         TRUE     FALSE       <NA>                      <NA>         <NA>
+      115        FALSE     FALSE       <NA>                      <NA>         <NA>
+      116        FALSE      TRUE       <NA>                      <NA>         <NA>
+      117        FALSE     FALSE       <NA>                      <NA>         <NA>
+      118        FALSE     FALSE       <NA>                      <NA>         <NA>
+      119        FALSE     FALSE       <NA>                      <NA>         <NA>
+      120        FALSE      TRUE        cmd                 Commander         <NA>
+      121        FALSE     FALSE        cmd                 Commander         <NA>
+      122         TRUE     FALSE        cmd                 Commander         <NA>
+      123        FALSE     FALSE        htr       Heroes of the Realm         <NA>
+      124         TRUE      TRUE       <NA>                      <NA>         <NA>
+      125        FALSE     FALSE       <NA>                      <NA>         <NA>
+      126         TRUE     FALSE       <NA>                      <NA>         <NA>
+      127        FALSE     FALSE        lea                  Core Set         <NA>
+      128        FALSE     FALSE        lea                  Core Set         <NA>
+      129        FALSE     FALSE       <NA>                      <NA>         <NA>
+      130        FALSE     FALSE       <NA>                      <NA>         <NA>
+      131        FALSE     FALSE       <NA>                      <NA>         <NA>
+      132         TRUE     FALSE       <NA>                      <NA>         <NA>
+      133        FALSE     FALSE       <NA>                      <NA>         <NA>
+      134        FALSE     FALSE       <NA>                      <NA>         <NA>
+      135         TRUE     FALSE        grn         Guilds of Ravnica         <NA>
+      136        FALSE     FALSE        grn         Guilds of Ravnica         <NA>
+      137        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      138        FALSE      TRUE        grn         Guilds of Ravnica         <NA>
+      139        FALSE     FALSE       <NA>                      <NA>         <NA>
+      140         TRUE     FALSE       <NA>                      <NA>         <NA>
+      141        FALSE     FALSE        grn         Guilds of Ravnica         <NA>
+      142        FALSE     FALSE        grn         Guilds of Ravnica         <NA>
+      143         TRUE     FALSE        grn         Guilds of Ravnica         <NA>
+      144        FALSE     FALSE       <NA>                      <NA>         <NA>
+      145         TRUE     FALSE       <NA>                      <NA>         <NA>
+      146        FALSE      TRUE       <NA>                      <NA>         <NA>
+      147         TRUE     FALSE       <NA>                      <NA>         <NA>
+      148        FALSE     FALSE       <NA>                      <NA>         <NA>
+      149         TRUE     FALSE       <NA>                      <NA>         <NA>
+      150        FALSE      TRUE       <NA>                      <NA>         <NA>
+      151        FALSE      TRUE        grn         Guilds of Ravnica         <NA>
+      152        FALSE     FALSE       <NA>                      <NA>         <NA>
+      153         TRUE     FALSE       <NA>                      <NA>         <NA>
+      154         TRUE     FALSE        grn         Guilds of Ravnica         <NA>
+      155        FALSE     FALSE        grn         Guilds of Ravnica         <NA>
+      156        FALSE     FALSE        grn         Guilds of Ravnica         <NA>
+      157         TRUE     FALSE       <NA>                      <NA>         <NA>
+      158        FALSE      TRUE       <NA>                      <NA>         <NA>
+      159        FALSE      TRUE        cmd                 Commander         <NA>
+      160         TRUE     FALSE        cmd                 Commander         <NA>
+      161        FALSE     FALSE        cmd                 Commander         <NA>
+      162         TRUE     FALSE        htr       Heroes of the Realm         <NA>
+      163        FALSE      TRUE       <NA>                      <NA>         <NA>
+      164         TRUE     FALSE       <NA>                      <NA>         <NA>
+      165        FALSE     FALSE       <NA>                      <NA>         <NA>
+      166        FALSE     FALSE       <NA>                      <NA>         <NA>
+      167         TRUE     FALSE       <NA>                      <NA>         <NA>
+      168        FALSE     FALSE       <NA>                      <NA>         <NA>
+      169        FALSE     FALSE        lea                  Core Set         <NA>
+      170        FALSE      TRUE       <NA>                      <NA>         <NA>
+      171         TRUE     FALSE       <NA>                      <NA>         <NA>
+      172        FALSE     FALSE       <NA>                      <NA>         <NA>
+      173        FALSE     FALSE       <NA>                      <NA>         <NA>
+      174        FALSE      TRUE       <NA>                      <NA>         <NA>
+      175         TRUE     FALSE       <NA>                      <NA>         <NA>
+      176        FALSE     FALSE       <NA>                      <NA>         <NA>
+      177        FALSE     FALSE        cmd                 Commander         <NA>
+      178         TRUE     FALSE        cmd                 Commander         <NA>
+      179        FALSE     FALSE       <NA>                      <NA>         <NA>
+      180         TRUE     FALSE       <NA>                      <NA>         <NA>
+      181        FALSE     FALSE       <NA>                      <NA>         <NA>
+      182        FALSE     FALSE       <NA>                      <NA>         <NA>
+      183         TRUE     FALSE       <NA>                      <NA>         <NA>
+      184        FALSE     FALSE       <NA>                      <NA>         <NA>
+      185         TRUE     FALSE       <NA>                      <NA>         <NA>
+      186        FALSE      TRUE       <NA>                      <NA>         <NA>
+      187        FALSE      TRUE       <NA>                      <NA>         <NA>
+      188        FALSE     FALSE        xln                    Ixalan         <NA>
+      189         TRUE     FALSE        xln                    Ixalan         <NA>
+      190        FALSE     FALSE        xln                    Ixalan         <NA>
+      191        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      192        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      193        FALSE      TRUE       <NA>                      <NA>         <NA>
+      194        FALSE      TRUE       <NA>                      <NA>         <NA>
+      195        FALSE     FALSE       <NA>                      <NA>         <NA>
+      196         TRUE     FALSE       <NA>                      <NA>         <NA>
+      197        FALSE      TRUE       <NA>                      <NA>         <NA>
+      198        FALSE      TRUE        xln                    Ixalan         <NA>
+      199         TRUE     FALSE       <NA>                      <NA>         <NA>
+      200        FALSE     FALSE       <NA>                      <NA>         <NA>
+      201        FALSE     FALSE       <NA>                      <NA>         <NA>
+      202         TRUE     FALSE       <NA>                      <NA>         <NA>
+      203        FALSE      TRUE       <NA>                      <NA>         <NA>
+      204        FALSE     FALSE        xln                    Ixalan         <NA>
+      205        FALSE     FALSE        xln                    Ixalan         <NA>
+      206         TRUE     FALSE        xln                    Ixalan         <NA>
+      207        FALSE      TRUE        xln                    Ixalan         <NA>
+      208        FALSE      TRUE       <NA>                      <NA>         <NA>
+      209         TRUE     FALSE        htr       Heroes of the Realm         <NA>
+      210         TRUE     FALSE       <NA>                      <NA>         <NA>
+      211        FALSE      TRUE        cmd                 Commander         <NA>
+      212         TRUE     FALSE        cmd                 Commander         <NA>
+      213        FALSE     FALSE        cmd                 Commander         <NA>
+      214        FALSE      TRUE       <NA>                      <NA>         <NA>
+      215        FALSE     FALSE        akh                  Amonkhet         <NA>
+      216        FALSE     FALSE        akh                  Amonkhet         <NA>
+      217         TRUE     FALSE        akh                  Amonkhet         <NA>
+      218         TRUE     FALSE       <NA>                      <NA>         <NA>
+      219         TRUE     FALSE       <NA>                      <NA>         <NA>
+      220         TRUE     FALSE        cmd                 Commander         <NA>
+      221        FALSE     FALSE        cmd                 Commander         <NA>
+      222        FALSE     FALSE        akh                  Amonkhet         <NA>
+      223        FALSE     FALSE        akh                  Amonkhet         <NA>
+      224         TRUE     FALSE        akh                  Amonkhet         <NA>
+      225        FALSE      TRUE        akh                  Amonkhet         <NA>
+      226         TRUE     FALSE       <NA>                      <NA>         <NA>
+      227         TRUE     FALSE       <NA>                      <NA>         <NA>
+      228        FALSE     FALSE       <NA>                      <NA>         <NA>
+      229         TRUE     FALSE       <NA>                      <NA>         <NA>
+      230        FALSE     FALSE       <NA>                      <NA>         <NA>
+      231        FALSE     FALSE        kld                  Kaladesh         <NA>
+      232         TRUE     FALSE        kld                  Kaladesh         <NA>
+      233        FALSE     FALSE        kld                  Kaladesh         <NA>
+      234        FALSE      TRUE       <NA>                      <NA>         <NA>
+      235        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      236        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      237         TRUE     FALSE       <NA>                      <NA>         <NA>
+      238         TRUE     FALSE       <NA>                      <NA>         <NA>
+      239        FALSE     FALSE       <NA>                      <NA>         <NA>
+      240        FALSE      TRUE        cmd                 Commander         <NA>
+      241         TRUE     FALSE        cmd                 Commander         <NA>
+      242        FALSE     FALSE        cmd                 Commander         <NA>
+      243        FALSE      TRUE       <NA>                      <NA>         <NA>
+      244        FALSE     FALSE        kld                  Kaladesh         <NA>
+      245        FALSE     FALSE        kld                  Kaladesh         <NA>
+      246         TRUE     FALSE        kld                  Kaladesh         <NA>
+      247        FALSE      TRUE        kld                  Kaladesh         <NA>
+      248        FALSE     FALSE       <NA>                      <NA>         <NA>
+      249         TRUE     FALSE        cns                Conspiracy         <NA>
+      250        FALSE     FALSE        cns                Conspiracy         <NA>
+      251        FALSE      TRUE       <NA>                      <NA>         <NA>
+      252        FALSE     FALSE        soi    Shadows over Innistrad         <NA>
+      253         TRUE     FALSE        soi    Shadows over Innistrad         <NA>
+      254        FALSE     FALSE        soi    Shadows over Innistrad         <NA>
+      255        FALSE     FALSE       <NA>                      <NA>         <NA>
+      256         TRUE     FALSE       <NA>                      <NA>         <NA>
+      257        FALSE     FALSE        soi    Shadows over Innistrad         <NA>
+      258         TRUE     FALSE        soi    Shadows over Innistrad         <NA>
+      259         TRUE     FALSE       <NA>                      <NA>         <NA>
+      260        FALSE     FALSE        soi    Shadows over Innistrad         <NA>
+      261        FALSE     FALSE       <NA>                      <NA>         <NA>
+      262        FALSE     FALSE        bfz       Battle for Zendikar         <NA>
+      263         TRUE     FALSE        bfz       Battle for Zendikar         <NA>
+      264        FALSE     FALSE        bfz       Battle for Zendikar         <NA>
+      265        FALSE      TRUE       <NA>                      <NA>         <NA>
+      266        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      267        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      268        FALSE     FALSE       <NA>                      <NA>         <NA>
+      269         TRUE     FALSE        cmd                 Commander         <NA>
+      270         TRUE     FALSE        cmd                 Commander         <NA>
+      271        FALSE      TRUE        cmd                 Commander         <NA>
+      272        FALSE     FALSE        bfz       Battle for Zendikar         <NA>
+      273        FALSE     FALSE        bfz       Battle for Zendikar         <NA>
+      274         TRUE     FALSE        bfz       Battle for Zendikar         <NA>
+      275         TRUE     FALSE        bfz       Battle for Zendikar         <NA>
+      276        FALSE      TRUE        bfz       Battle for Zendikar         <NA>
+      277        FALSE     FALSE       <NA>                      <NA>         <NA>
+      278        FALSE      TRUE       <NA>                      <NA>         <NA>
+      279        FALSE      TRUE       <NA>                      <NA>         <NA>
+      280        FALSE     FALSE       <NA>                      <NA>         <NA>
+      281        FALSE     FALSE        lea                  Core Set         <NA>
+      282         TRUE     FALSE       <NA>                      <NA>         <NA>
+      283        FALSE      TRUE       <NA>                      <NA>         <NA>
+      284        FALSE     FALSE       <NA>                      <NA>         <NA>
+      285         TRUE     FALSE       <NA>                      <NA>         <NA>
+      286        FALSE     FALSE       <NA>                      <NA>         <NA>
+      287         TRUE     FALSE        ktk           Khans of Tarkir         <NA>
+      288        FALSE     FALSE        ktk           Khans of Tarkir         <NA>
+      289         TRUE     FALSE        ktk           Khans of Tarkir         <NA>
+      290        FALSE     FALSE        ktk           Khans of Tarkir         <NA>
+      291        FALSE     FALSE       <NA>                      <NA>         <NA>
+      292        FALSE     FALSE        ktk           Khans of Tarkir         <NA>
+      293        FALSE      TRUE        ktk           Khans of Tarkir         <NA>
+      294         TRUE     FALSE        ktk           Khans of Tarkir         <NA>
+      295        FALSE     FALSE        ktk           Khans of Tarkir         <NA>
+      296         TRUE     FALSE        ktk           Khans of Tarkir         <NA>
+      297         TRUE     FALSE       <NA>                      <NA>         <NA>
+      298        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      299        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      300         TRUE     FALSE       <NA>                      <NA>         <NA>
+      301         TRUE     FALSE       <NA>                      <NA>         <NA>
+      302         TRUE     FALSE       <NA>                      <NA>         <NA>
+      303        FALSE     FALSE       <NA>                      <NA>         <NA>
+      304         TRUE     FALSE       <NA>                      <NA>         <NA>
+      305        FALSE     FALSE       <NA>                      <NA>         <NA>
+      306        FALSE     FALSE       <NA>                      <NA>         <NA>
+      307        FALSE     FALSE       <NA>                      <NA>         <NA>
+      308        FALSE      TRUE        cmd                 Commander         <NA>
+      309         TRUE     FALSE        cmd                 Commander         <NA>
+      310         TRUE     FALSE        cmd                 Commander         <NA>
+      311        FALSE     FALSE        ktk           Khans of Tarkir         <NA>
+      312         TRUE     FALSE        ktk           Khans of Tarkir         <NA>
+      313        FALSE     FALSE        ktk           Khans of Tarkir         <NA>
+      314        FALSE     FALSE       <NA>                      <NA>         <NA>
+      315        FALSE      TRUE       <NA>                      <NA>         <NA>
+      316         TRUE     FALSE       <NA>                      <NA>         <NA>
+      317        FALSE      TRUE       <NA>                      <NA>         <NA>
+      318        FALSE     FALSE        lea                  Core Set         <NA>
+      319        FALSE     FALSE       <NA>                      <NA>         <NA>
+      320         TRUE     FALSE       <NA>                      <NA>         <NA>
+      321        FALSE      TRUE       <NA>                      <NA>         <NA>
+      322        FALSE     FALSE       <NA>                      <NA>         <NA>
+      323        FALSE      TRUE        cns                Conspiracy         <NA>
+      324         TRUE     FALSE        cns                Conspiracy         <NA>
+      325        FALSE     FALSE        cns                Conspiracy         <NA>
+      326         TRUE     FALSE       <NA>                      <NA>         <NA>
+      327         TRUE     FALSE       <NA>                      <NA>         <NA>
+      328         TRUE     FALSE        ths                    Theros         <NA>
+      329         TRUE     FALSE        ths                    Theros         <NA>
+      330        FALSE     FALSE        ths                    Theros         <NA>
+      331         TRUE     FALSE        ths                    Theros         <NA>
+      332        FALSE     FALSE        ths                    Theros         <NA>
+      333        FALSE     FALSE       <NA>                      <NA>         <NA>
+      334         TRUE     FALSE       <NA>                      <NA>         <NA>
+      335         TRUE     FALSE        ths                    Theros         <NA>
+      336         TRUE     FALSE        ths                    Theros         <NA>
+      337         TRUE     FALSE        ths                    Theros         <NA>
+      338        FALSE     FALSE        ths                    Theros         <NA>
+      339        FALSE     FALSE        ths                    Theros         <NA>
+      340        FALSE      TRUE       <NA>                      <NA>         <NA>
+      341         TRUE     FALSE       <NA>                      <NA>         <NA>
+      342         TRUE     FALSE       <NA>                      <NA>         <NA>
+      343        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      344        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      345        FALSE      TRUE        cmd                 Commander         <NA>
+      346         TRUE     FALSE        cmd                 Commander         <NA>
+      347         TRUE     FALSE        ths                    Theros         <NA>
+      348        FALSE     FALSE        ths                    Theros         <NA>
+      349         TRUE     FALSE        ths                    Theros         <NA>
+      350         TRUE     FALSE        ths                    Theros         <NA>
+      351        FALSE     FALSE        ths                    Theros         <NA>
+      352        FALSE     FALSE       <NA>                      <NA>         <NA>
+      353         TRUE     FALSE       <NA>                      <NA>         <NA>
+      354        FALSE      TRUE       <NA>                      <NA>         <NA>
+      355         TRUE     FALSE       <NA>                      <NA>         <NA>
+      356        FALSE     FALSE        lea                  Core Set         <NA>
+      357        FALSE     FALSE       <NA>                      <NA>         <NA>
+      358        FALSE      TRUE       <NA>                      <NA>         <NA>
+      359         TRUE     FALSE       <NA>                      <NA>         <NA>
+      360        FALSE     FALSE       <NA>                      <NA>         <NA>
+      361        FALSE     FALSE        rtr         Return to Ravnica         <NA>
+      362         TRUE     FALSE        rtr         Return to Ravnica         <NA>
+      363        FALSE     FALSE        rtr         Return to Ravnica         <NA>
+      364        FALSE      TRUE       <NA>                      <NA>         <NA>
+      365         TRUE     FALSE       <NA>                      <NA>         <NA>
+      366        FALSE     FALSE       <NA>                      <NA>         <NA>
+      367        FALSE     FALSE        rtr         Return to Ravnica         <NA>
+      368         TRUE     FALSE        rtr         Return to Ravnica         <NA>
+      369        FALSE     FALSE        rtr         Return to Ravnica         <NA>
+      370        FALSE      TRUE       <NA>                      <NA>         <NA>
+      371         TRUE     FALSE       <NA>                      <NA>         <NA>
+      372         TRUE     FALSE       <NA>                      <NA>         <NA>
+      373        FALSE     FALSE        jgp          Judge Gift Cards         <NA>
+      374        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      375        FALSE      TRUE        cmd                 Commander         <NA>
+      376        FALSE      TRUE        cmd                 Commander         <NA>
+      377        FALSE     FALSE        rtr         Return to Ravnica         <NA>
+      378        FALSE     FALSE        rtr         Return to Ravnica         <NA>
+      379         TRUE     FALSE        rtr         Return to Ravnica         <NA>
+      380        FALSE     FALSE       <NA>                      <NA>         <NA>
+      381         TRUE     FALSE       <NA>                      <NA>         <NA>
+      382        FALSE      TRUE       <NA>                      <NA>         <NA>
+      383        FALSE     FALSE        lea                  Core Set         <NA>
+      384         TRUE     FALSE       <NA>                      <NA>         <NA>
+      385        FALSE     FALSE       <NA>                      <NA>         <NA>
+      386         TRUE     FALSE       <NA>                      <NA>         <NA>
+      387         TRUE     FALSE       <NA>                      <NA>         <NA>
+      388        FALSE     FALSE        isd                 Innistrad         <NA>
+      389         TRUE     FALSE        isd                 Innistrad         <NA>
+      390        FALSE     FALSE       <NA>                      <NA>         <NA>
+      391        FALSE     FALSE        isd                 Innistrad         <NA>
+      392         TRUE     FALSE       <NA>                      <NA>         <NA>
+      393        FALSE     FALSE       <NA>                      <NA>         <NA>
+      394        FALSE     FALSE        isd                 Innistrad         <NA>
+      395         TRUE     FALSE        isd                 Innistrad         <NA>
+      396        FALSE     FALSE        isd                 Innistrad         <NA>
+      397         TRUE     FALSE       <NA>                      <NA>         <NA>
+      398        FALSE      TRUE       <NA>                      <NA>         <NA>
+      399         TRUE     FALSE       <NA>                      <NA>         <NA>
+      400         TRUE     FALSE       <NA>                      <NA>         <NA>
+      401        FALSE     FALSE        jgp          Judge Gift Cards         <NA>
+      402        FALSE     FALSE        fnm        Friday Night Magic         <NA>
+      403        FALSE      TRUE       <NA>                      <NA>         <NA>
+      404         TRUE     FALSE        isd                 Innistrad         <NA>
+      405        FALSE     FALSE        isd                 Innistrad         <NA>
+      406        FALSE     FALSE        isd                 Innistrad         <NA>
+      407        FALSE     FALSE       <NA>                      <NA>         <NA>
+      408         TRUE     FALSE       <NA>                      <NA>         <NA>
+      409        FALSE      TRUE       <NA>                      <NA>         <NA>
+      410         TRUE     FALSE       <NA>                      <NA>         <NA>
+      411        FALSE     FALSE        lea                  Core Set         <NA>
+      412        FALSE     FALSE       <NA>                      <NA>         <NA>
+      413        FALSE      TRUE        cmd                 Commander         <NA>
+      414         TRUE     FALSE        cmd                 Commander         <NA>
+      415        FALSE      TRUE        cmd                 Commander         <NA>
+      416         TRUE     FALSE       <NA>                      <NA>         <NA>
+      417        FALSE     FALSE        som         Scars of Mirrodin         <NA>
+      418         TRUE     FALSE        som         Scars of Mirrodin         <NA>
+      419        FALSE     FALSE        som         Scars of Mirrodin         <NA>
+      420         TRUE     FALSE       <NA>                      <NA>         <NA>
+      421        FALSE     FALSE       <NA>                      <NA>         <NA>
+      422         TRUE     FALSE        som         Scars of Mirrodin         <NA>
+      423        FALSE     FALSE        som         Scars of Mirrodin         <NA>
+      424        FALSE     FALSE        som         Scars of Mirrodin         <NA>
+      425        FALSE     FALSE       <NA>                      <NA>         <NA>
+      426        FALSE     FALSE       <NA>                      <NA>         <NA>
+      427        FALSE      TRUE       <NA>                      <NA>         <NA>
+      428        FALSE      TRUE       <NA>                      <NA>         <NA>
+      429        FALSE     FALSE        jgp          Judge Gift Cards         <NA>
+      430        FALSE     FALSE        mpr      Magic Player Rewards         <NA>
+      431        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      432        FALSE     FALSE       <NA>                      <NA>         <NA>
+      433         TRUE     FALSE       <NA>                      <NA>         <NA>
+      434        FALSE      TRUE       <NA>                      <NA>         <NA>
+      435         TRUE     FALSE       <NA>                      <NA>         <NA>
+      436        FALSE     FALSE        som         Scars of Mirrodin         <NA>
+      437         TRUE     FALSE        som         Scars of Mirrodin         <NA>
+      438        FALSE     FALSE        som         Scars of Mirrodin         <NA>
+      439        FALSE     FALSE       <NA>                      <NA>         <NA>
+      440         TRUE     FALSE       <NA>                      <NA>         <NA>
+      441        FALSE      TRUE       <NA>                      <NA>         <NA>
+      442        FALSE     FALSE        lea                  Core Set         <NA>
+      443         TRUE     FALSE       <NA>                      <NA>         <NA>
+      444        FALSE     FALSE       <NA>                      <NA>         <NA>
+      445         TRUE     FALSE       <NA>                      <NA>         <NA>
+      446         TRUE     FALSE       <NA>                      <NA>         <NA>
+      447         TRUE     FALSE       <NA>                      <NA>         <NA>
+      448        FALSE     FALSE       <NA>                      <NA>         <NA>
+      449        FALSE     FALSE        zen                  Zendikar         <NA>
+      450        FALSE     FALSE        zen                  Zendikar         <NA>
+      451         TRUE     FALSE        zen                  Zendikar         <NA>
+      452        FALSE     FALSE       <NA>                      <NA>         <NA>
+      453         TRUE     FALSE       <NA>                      <NA>         <NA>
+      454        FALSE     FALSE        zen                  Zendikar         <NA>
+      455        FALSE     FALSE        zen                  Zendikar         <NA>
+      456         TRUE     FALSE        zen                  Zendikar         <NA>
+      457        FALSE      TRUE       <NA>                      <NA>         <NA>
+      458        FALSE      TRUE       <NA>                      <NA>         <NA>
+      459        FALSE     FALSE       <NA>                      <NA>         <NA>
+      460        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      461        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      462        FALSE     FALSE        mpr      Magic Player Rewards         <NA>
+      463        FALSE      TRUE       <NA>                      <NA>         <NA>
+      464        FALSE     FALSE       <NA>                      <NA>         <NA>
+      465         TRUE     FALSE       <NA>                      <NA>         <NA>
+      466        FALSE     FALSE        zen                  Zendikar         <NA>
+      467        FALSE     FALSE        zen                  Zendikar         <NA>
+      468         TRUE     FALSE        zen                  Zendikar         <NA>
+      469        FALSE     FALSE       <NA>                      <NA>         <NA>
+      470         TRUE     FALSE       <NA>                      <NA>         <NA>
+      471         TRUE     FALSE       <NA>                      <NA>         <NA>
+      472         TRUE     FALSE       <NA>                      <NA>         <NA>
+      473        FALSE      TRUE       <NA>                      <NA>         <NA>
+      474        FALSE     FALSE        lea                  Core Set         <NA>
+      475         TRUE     FALSE       <NA>                      <NA>         <NA>
+      476        FALSE      TRUE       <NA>                      <NA>         <NA>
+      477        FALSE      TRUE        ala                     Alara         <NA>
+      478        FALSE     FALSE        ala                     Alara         <NA>
+      479         TRUE     FALSE        ala                     Alara         <NA>
+      480         TRUE     FALSE       <NA>                      <NA>         <NA>
+      481        FALSE     FALSE       <NA>                      <NA>         <NA>
+      482        FALSE      TRUE       <NA>                      <NA>         <NA>
+      483        FALSE      TRUE        ala                     Alara         <NA>
+      484        FALSE     FALSE        ala                     Alara         <NA>
+      485         TRUE     FALSE        ala                     Alara         <NA>
+      486         TRUE     FALSE       <NA>                      <NA>         <NA>
+      487        FALSE      TRUE       <NA>                      <NA>         <NA>
+      488        FALSE      TRUE       <NA>                      <NA>         <NA>
+      489        FALSE     FALSE       <NA>                      <NA>         <NA>
+      490        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      491        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      492        FALSE     FALSE        mpr      Magic Player Rewards         <NA>
+      493         TRUE     FALSE       <NA>                      <NA>         <NA>
+      494        FALSE     FALSE       <NA>                      <NA>         <NA>
+      495        FALSE      TRUE        ala                     Alara         <NA>
+      496         TRUE     FALSE        ala                     Alara         <NA>
+      497        FALSE     FALSE        ala                     Alara         <NA>
+      498        FALSE      TRUE       <NA>                      <NA>         <NA>
+      499        FALSE     FALSE       <NA>                      <NA>         <NA>
+      500        FALSE      TRUE       <NA>                      <NA>         <NA>
+      501        FALSE      TRUE        shm                Shadowmoor         <NA>
+      502         TRUE     FALSE        shm                Shadowmoor         <NA>
+      503        FALSE     FALSE        shm                Shadowmoor         <NA>
+      504        FALSE      TRUE        shm                Shadowmoor         <NA>
+      505         TRUE     FALSE        shm                Shadowmoor         <NA>
+      506        FALSE     FALSE        shm                Shadowmoor         <NA>
+      507        FALSE      TRUE       <NA>                      <NA>         <NA>
+      508        FALSE      TRUE        lrw                    Lorwyn         <NA>
+      509        FALSE     FALSE        lrw                    Lorwyn         <NA>
+      510         TRUE     FALSE        lrw                    Lorwyn         <NA>
+      511        FALSE     FALSE       <NA>                      <NA>         <NA>
+      512        FALSE      TRUE       <NA>                      <NA>         <NA>
+      513        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      514        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      515        FALSE     FALSE        mpr      Magic Player Rewards         <NA>
+      516        FALSE     FALSE       <NA>                      <NA>         <NA>
+      517         TRUE     FALSE       <NA>                      <NA>         <NA>
+      518        FALSE      TRUE        lrw                    Lorwyn         <NA>
+      519         TRUE     FALSE        lrw                    Lorwyn         <NA>
+      520        FALSE     FALSE        lrw                    Lorwyn         <NA>
+      521        FALSE     FALSE       <NA>                      <NA>         <NA>
+      522        FALSE      TRUE       <NA>                      <NA>         <NA>
+      523        FALSE     FALSE        lea                  Core Set         <NA>
+      524        FALSE      TRUE       <NA>                      <NA>         <NA>
+      525         TRUE     FALSE       <NA>                      <NA>         <NA>
+      526        FALSE      TRUE        tsp               Time Spiral         <NA>
+      527        FALSE     FALSE        tsp               Time Spiral         <NA>
+      528        FALSE      TRUE       <NA>                      <NA>         <NA>
+      529        FALSE     FALSE       <NA>                      <NA>         <NA>
+      530        FALSE      TRUE        tsp               Time Spiral         <NA>
+      531        FALSE     FALSE        tsp               Time Spiral         <NA>
+      532        FALSE     FALSE       <NA>                      <NA>         <NA>
+      533        FALSE      TRUE       <NA>                      <NA>         <NA>
+      534        FALSE     FALSE       <NA>                      <NA>         <NA>
+      535        FALSE     FALSE        mpr      Magic Player Rewards         <NA>
+      536        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      537        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      538        FALSE      TRUE       <NA>                      <NA>         <NA>
+      539        FALSE      TRUE        tsp               Time Spiral         <NA>
+      540        FALSE     FALSE        tsp               Time Spiral         <NA>
+      541        FALSE     FALSE        tsp               Time Spiral         <NA>
+      542        FALSE      TRUE        ice                   Ice Age         <NA>
+      543         TRUE     FALSE        ice                   Ice Age         <NA>
+      544        FALSE     FALSE        ice                   Ice Age         <NA>
+      545        FALSE      TRUE        rav                   Ravnica         <NA>
+      546        FALSE     FALSE        rav                   Ravnica         <NA>
+      547        FALSE     FALSE       <NA>                      <NA>         <NA>
+      548        FALSE      TRUE        rav                   Ravnica         <NA>
+      549        FALSE     FALSE        rav                   Ravnica         <NA>
+      550        FALSE     FALSE       parl              Arena League         <NA>
+      551        FALSE      TRUE       <NA>                      <NA>         <NA>
+      552        FALSE      TRUE       <NA>                      <NA>         <NA>
+      553        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      554        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      555        FALSE      TRUE       <NA>                      <NA>         <NA>
+      556        FALSE     FALSE        mpr      Magic Player Rewards         <NA>
+      557         TRUE     FALSE       <NA>                      <NA>         <NA>
+      558        FALSE      TRUE       <NA>                      <NA>         <NA>
+      559        FALSE      TRUE        rav                   Ravnica         <NA>
+      560        FALSE     FALSE        rav                   Ravnica         <NA>
+      561         TRUE     FALSE       <NA>                      <NA>         <NA>
+      562        FALSE      TRUE        lea                  Core Set         <NA>
+      563        FALSE     FALSE        lea                  Core Set         <NA>
+      564        FALSE      TRUE        chk                  Kamigawa         <NA>
+      565        FALSE     FALSE        chk                  Kamigawa         <NA>
+      566        FALSE      TRUE        chk                  Kamigawa         <NA>
+      567        FALSE     FALSE        chk                  Kamigawa         <NA>
+      568        FALSE     FALSE       parl              Arena League         <NA>
+      569        FALSE      TRUE       <NA>                      <NA>         <NA>
+      570        FALSE      TRUE       <NA>                      <NA>         <NA>
+      571        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      572        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      573        FALSE     FALSE        mpr      Magic Player Rewards         <NA>
+      574        FALSE      TRUE       <NA>                      <NA>         <NA>
+      575        FALSE     FALSE       <NA>                      <NA>         <NA>
+      576        FALSE      TRUE        chk                  Kamigawa         <NA>
+      577        FALSE     FALSE        chk                  Kamigawa         <NA>
+      578        FALSE     FALSE       <NA>                      <NA>         <NA>
+      579        FALSE      TRUE        mrd                  Mirrodin         <NA>
+      580        FALSE      TRUE        mrd                  Mirrodin         <NA>
+      581        FALSE      TRUE        mrd                  Mirrodin         <NA>
+      582        FALSE     FALSE        mrd                  Mirrodin         <NA>
+      583        FALSE     FALSE        mrd                  Mirrodin         <NA>
+      584        FALSE     FALSE       parl              Arena League         <NA>
+      585        FALSE     FALSE        mpr      Magic Player Rewards         <NA>
+      586        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      587        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      588        FALSE     FALSE        mrd                  Mirrodin         <NA>
+      589        FALSE     FALSE       <NA>                      <NA>         <NA>
+      590        FALSE      TRUE        lea                  Core Set         <NA>
+      591        FALSE     FALSE        lea                  Core Set         <NA>
+      592        FALSE      TRUE        ons                 Onslaught         <NA>
+      593        FALSE     FALSE        ons                 Onslaught         <NA>
+      594        FALSE      TRUE        ons                 Onslaught         <NA>
+      595        FALSE      TRUE        ons                 Onslaught         <NA>
+      596        FALSE     FALSE        ons                 Onslaught         <NA>
+      597        FALSE     FALSE       <NA>                      <NA>         <NA>
+      598        FALSE      TRUE       <NA>                      <NA>         <NA>
+      599        FALSE     FALSE       parl              Arena League         <NA>
+      600         TRUE     FALSE        mpr      Magic Player Rewards         <NA>
+      601        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      602        FALSE     FALSE       <NA>                      <NA>         <NA>
+      603        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      604        FALSE     FALSE        ons                 Onslaught         <NA>
+      605        FALSE     FALSE       <NA>                      <NA>         <NA>
+      606         TRUE     FALSE       <NA>                      <NA>         <NA>
+      607        FALSE     FALSE       <NA>                      <NA>         <NA>
+      608        FALSE      TRUE        ody                   Odyssey         <NA>
+      609        FALSE     FALSE        ody                   Odyssey         <NA>
+      610        FALSE     FALSE        ody                   Odyssey         <NA>
+      611        FALSE     FALSE        ody                   Odyssey         <NA>
+      612        FALSE      TRUE       parl              Arena League         <NA>
+      613         TRUE     FALSE        mpr      Magic Player Rewards         <NA>
+      614        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      615        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      616        FALSE     FALSE       <NA>                      <NA>         <NA>
+      617        FALSE      TRUE        ody                   Odyssey         <NA>
+      618        FALSE     FALSE        ody                   Odyssey         <NA>
+      619        FALSE     FALSE       <NA>                      <NA>         <NA>
+      620         TRUE     FALSE       <NA>                      <NA>         <NA>
+      621        FALSE      TRUE        inv                  Invasion         <NA>
+      622        FALSE     FALSE        inv                  Invasion         <NA>
+      623        FALSE     FALSE        lea                  Core Set         <NA>
+      624        FALSE      TRUE        inv                  Invasion         <NA>
+      625        FALSE     FALSE        inv                  Invasion         <NA>
+      626        FALSE      TRUE       parl              Arena League         <NA>
+      627        FALSE     FALSE        mpr      Magic Player Rewards         <NA>
+      628        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      629        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      630        FALSE      TRUE        inv                  Invasion         <NA>
+      631        FALSE     FALSE        inv                  Invasion         <NA>
+      632        FALSE     FALSE       <NA>                      <NA>         <NA>
+      633        FALSE     FALSE       <NA>                      <NA>         <NA>
+      634        FALSE      TRUE        mmq                   Masques         <NA>
+      635        FALSE     FALSE        mmq                   Masques         <NA>
+      636        FALSE     FALSE       <NA>                      <NA>         <NA>
+      637        FALSE      TRUE        mmq                   Masques         <NA>
+      638        FALSE     FALSE        mmq                   Masques         <NA>
+      639         TRUE     FALSE       <NA>                      <NA>         <NA>
+      640        FALSE      TRUE       parl              Arena League         <NA>
+      641        FALSE      TRUE        fnm        Friday Night Magic         <NA>
+      642        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      643        FALSE      TRUE       <NA>                      <NA>         <NA>
+      644         TRUE     FALSE       <NA>                      <NA>         <NA>
+      645        FALSE      TRUE        mmq                   Masques         <NA>
+      646        FALSE     FALSE        mmq                   Masques         <NA>
+      647        FALSE      TRUE       <NA>                      <NA>         <NA>
+      648        FALSE     FALSE       <NA>                      <NA>         <NA>
+      649        FALSE      TRUE       <NA>                      <NA>         <NA>
+      650         TRUE     FALSE       <NA>                      <NA>         <NA>
+      651         TRUE     FALSE       <NA>                      <NA>         <NA>
+      652         TRUE     FALSE       <NA>                      <NA>         <NA>
+      653         TRUE     FALSE       <NA>                      <NA>         <NA>
+      654        FALSE      TRUE        usg                      Urza         <NA>
+      655        FALSE     FALSE        usg                      Urza         <NA>
+      656         TRUE     FALSE        lea                  Core Set         <NA>
+      657        FALSE      TRUE        usg                      Urza         <NA>
+      658        FALSE     FALSE        usg                      Urza         <NA>
+      659        FALSE     FALSE       parl              Arena League         <NA>
+      660        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      661         TRUE     FALSE       <NA>                      <NA>         <NA>
+      662        FALSE      TRUE        usg                      Urza         <NA>
+      663         TRUE     FALSE        usg                      Urza         <NA>
+      664         TRUE     FALSE       <NA>                      <NA>         <NA>
+      665        FALSE     FALSE       <NA>                      <NA>         <NA>
+      666         TRUE     FALSE       <NA>                      <NA>         <NA>
+      667         TRUE     FALSE       <NA>                      <NA>         <NA>
+      668         TRUE     FALSE       <NA>                      <NA>         <NA>
+      669         TRUE     FALSE        tmp                   Tempest         <NA>
+      670         TRUE     FALSE        tmp                   Tempest         <NA>
+      671         TRUE     FALSE        tmp                   Tempest         <NA>
+      672         TRUE     FALSE        tmp                   Tempest         <NA>
+      673        FALSE      TRUE        jgp          Judge Gift Cards         <NA>
+      674         TRUE     FALSE        tmp                   Tempest         <NA>
+      675         TRUE     FALSE        tmp                   Tempest         <NA>
+      676        FALSE     FALSE       <NA>                      <NA>         <NA>
+      677         TRUE     FALSE        mir                    Mirage         <NA>
+      678         TRUE     FALSE       <NA>                      <NA>         <NA>
+      679         TRUE     FALSE       <NA>                      <NA>         <NA>
+      680         TRUE     FALSE       <NA>                      <NA>         <NA>
+      681         TRUE     FALSE       <NA>                      <NA>         <NA>
+      682         TRUE     FALSE       <NA>                      <NA>         <NA>
+      683         TRUE     FALSE        lea                  Core Set         <NA>
+      684         TRUE     FALSE        mir                    Mirage         <NA>
+      685         TRUE     FALSE       <NA>                      <NA>         <NA>
+      686         TRUE     FALSE       <NA>                      <NA>         <NA>
+      687         TRUE     FALSE        mir                    Mirage         <NA>
+      688         TRUE     FALSE       <NA>                      <NA>         <NA>
+      689         TRUE     FALSE       <NA>                      <NA>         <NA>
+      690         TRUE     FALSE       parl              Arena League         <NA>
+      691         TRUE     FALSE       <NA>                      <NA>         <NA>
+      692         TRUE     FALSE        ice                   Ice Age         <NA>
+      693        FALSE     FALSE       <NA>                      <NA>         <NA>
+      694         TRUE     FALSE       <NA>                      <NA>         <NA>
+      695         TRUE     FALSE       <NA>                      <NA>         <NA>
+      696         TRUE     FALSE       <NA>                      <NA>         <NA>
+      697         TRUE     FALSE       <NA>                      <NA>         <NA>
+      698         TRUE     FALSE        ice                   Ice Age         <NA>
+      699         TRUE     FALSE       <NA>                      <NA>         <NA>
+      700         TRUE     FALSE        lea                  Core Set         <NA>
+      701         TRUE     FALSE       <NA>                      <NA>         <NA>
+      702        FALSE     FALSE       <NA>                      <NA>         <NA>
+      703         TRUE     FALSE       <NA>                      <NA>         <NA>
+      704         TRUE     FALSE       <NA>                      <NA>         <NA>
+      705         TRUE     FALSE       <NA>                      <NA>         <NA>
+      706         TRUE     FALSE       <NA>                      <NA>         <NA>
+      707         TRUE     FALSE        lea                  Core Set         <NA>
+      708         TRUE     FALSE       <NA>                      <NA>         <NA>
+      709         TRUE     FALSE        lea                  Core Set         <NA>
+      710         TRUE     FALSE        lea                  Core Set         <NA>
+      711        FALSE     FALSE       <NA>                      <NA>         <NA>
+      712         TRUE     FALSE       <NA>                      <NA>         <NA>
+      713         TRUE     FALSE       <NA>                      <NA>         <NA>
+      714         TRUE     FALSE       <NA>                      <NA>         <NA>
+      715         TRUE     FALSE        lea                  Core Set         <NA>
+      716         TRUE     FALSE        lea                  Core Set         <NA>
+      717         TRUE     FALSE        lea                  Core Set         <NA>
 
-# scry_set() returns data frames
+---
 
     Code
-      mmq
+      set
     Output
         object                                   id code mtgo_code arena_code
       1    set 385e11a4-492b-4d07-b4a6-a1409ef829b8  mmq        mm         mm
@@ -5096,13 +5098,13 @@
       1 https://api.scryfall.com/cards/search?order=set&q=e%3Ammq&unique=prints
         released_at  set_type card_count printed_size digital nonfoil_only foil_only
       1  1999-10-04 expansion        350          350   FALSE        FALSE     FALSE
-        block_code   block
-      1        mmq Masques
+        block_code   block icon_svg_uri
+      1        mmq Masques         <NA>
 
-# scry_set_tcgplayer() returns data frames
+---
 
     Code
-      mmq
+      set_tcgplayer
     Output
         object                                   id code mtgo_code arena_code
       1    set 385e11a4-492b-4d07-b4a6-a1409ef829b8  mmq        mm         mm
@@ -5116,6 +5118,6 @@
       1 https://api.scryfall.com/cards/search?order=set&q=e%3Ammq&unique=prints
         released_at  set_type card_count printed_size digital nonfoil_only foil_only
       1  1999-10-04 expansion        350          350   FALSE        FALSE     FALSE
-        block_code   block
-      1        mmq Masques
+        block_code   block icon_svg_uri
+      1        mmq Masques         <NA>
 
