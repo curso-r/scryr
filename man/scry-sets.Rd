@@ -19,39 +19,39 @@ code can be either the \code{code} or the \code{mtgo_code} for the set.}
 \value{
 A data frame with 1 row and the following columns:
 \itemize{
-\item \code{object} [String]: Set.
-\item \code{id} [UUID]: A unique ID for this set on Scryfall that will not change.
-\item \code{code} [String]: The unique three to five-letter code for this set.
-\item \code{mtgo_code} [String]: The unique code for this set on MTGO, which may
+\item \code{object} [chr]: Set.
+\item \code{id} [chr]: A unique ID for this set on Scryfall that will not change.
+\item \code{code} [chr]: The unique three to five-letter code for this set.
+\item \code{mtgo_code} [chr]: The unique code for this set on MTGO, which may differ
+from the regular code.
+\item \code{arena_code} [chr]: The unique code for this set on MTG Arena, which may
 differ from the regular code.
-\item \code{arena_code} [String]: The unique code for this set on MTG Arena, which
-may differ from the regular code.
-\item \code{tcgplayer_id} [Integer]: This set’s ID on TCGplayer’s API, also known as
-the \code{groupId}.
-\item \code{name} [String]: The English name of the set.
-\item \code{set_type} [String]: A computer-readable classification for this set. See
+\item \code{tcgplayer_id} [int]: This set’s ID on TCGplayer’s API, also known as the
+\code{groupId}.
+\item \code{name} [chr]: The English name of the set.
+\item \code{set_type} [chr]: A computer-readable classification for this set. See
 below.
-\item \code{uri} [URI]: A link to this set object on Scryfall’s API.
-\item \code{scryfall_uri} [URI]: A link to this set’s permapage on Scryfall’s
-\item \code{search_uri} [URI]: A Scryfall API URI that you can request to begin
+\item \code{uri} [chr]: A link to this set object on Scryfall’s API.
+\item \code{scryfall_uri} [chr]: A link to this set’s permapage on Scryfall’s
+\item \code{search_uri} [chr]: A Scryfall API URI that you can request to begin
 paginating over the cards in this set.
-\item \code{released_at} [Date]: The date the set was released or the first card was
+\item \code{released_at} [date]: The date the set was released or the first card was
 printed in the set (in GMT-8 Pacific time).
-\item \code{set_type} [String]: Scryfall provides an overall categorization for each
+\item \code{set_type} [chr]: Scryfall provides an overall categorization for each
 Set in the \code{set_type} property. An exhaustive list of \code{set_types} is listed
 in a separate section below.
-\item \code{card_count} [Integer]: The number of cards in this set.
-\item \code{parent_set_code} [String]: The set code for the parent set, if any.
-\code{promo} and \code{token} sets often have a parent set.
-\item \code{printed_size} [Integer]: The denominator for the set’s printed collector
+\item \code{card_count} [int]: The number of cards in this set.
+\item \code{parent_set_code} [chr]: The set code for the parent set, if any. \code{promo}
+and \code{token} sets often have a parent set.
+\item \code{printed_size} [int]: The denominator for the set’s printed collector
 numbers.
-\item \code{digital} [Boolean]: True if this set was only released in a video game.
-\item \code{nonfoil_only} [Boolean]: True if this set contains only nonfoil cards.
+\item \code{digital} [lgl]: True if this set was only released in a video game.
+\item \code{nonfoil_only} [lgl]: True if this set contains only nonfoil cards.
 website.
-\item \code{foil_only} [Boolean]: True if this set contains only foil cards.
-\item \code{block_code} [String]: Nullable  The block code for this set, if any.
-\item \code{block} [String]: The block or group name code for this set, if any.
-\item \code{icon_svg_uri} [URI]: A URI to an SVG file for this set’s icon on
+\item \code{foil_only} [lgl]: True if this set contains only foil cards.
+\item \code{block_code} [chr]: Nullable  The block code for this set, if any.
+\item \code{block} [chr]: The block or group name code for this set, if any.
+\item \code{icon_svg_uri} [chr]: A URI to an SVG file for this set’s icon on
 Scryfall’s CDN. Hotlinking this image isn’t recommended, because it may
 change slightly over time. You should download it and use it locally for
 your particular user interface needs.
@@ -60,9 +60,18 @@ your particular user interface needs.
 \description{
 Retrieve information about a set
 }
+\details{
+A Set object represents a group of related Magic cards. All Card
+objects on Scryfall belong to exactly one set.
+
+Due to Magic's long and complicated history, Scryfall includes many
+un-official sets as a way to group promotional or outlier cards together.
+Such sets will likely have a code that begins with \code{p} or \code{t}, such as \code{pcel}
+or \code{tori}. Official sets always have a three-letter set code, such as \code{zen}.
+}
 \section{Set types}{
 
-An exhaustive list of \code{set_types} is listed below:
+An exhaustive list of \code{set_types} is reproduced below:
 \itemize{
 \item \code{core}: A yearly Magic core set (Tenth Edition, etc)
 \item \code{expansion}: A rotational expansion set in a block (Zendikar, etc)
