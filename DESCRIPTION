@@ -1,12 +1,13 @@
 Package: scry
-Title: What the Package Does (One Line, Title Case)
+Title: An Interface To Scryfall's API
 Version: 0.0.0.9000
-Authors@R:c(
+Authors@R: c(
     person("Caio", "Lente", , "clente@curso-r.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8473-069X")),
     person("Curso-R", role = c("cph", "fnd"))
   )
-Description: What the package does (one paragraph).
+Description: A simple, light, and robust interface between R and
+    Scryfall's card data API: <https://scryfall.com/docs/api>.
 License: MIT + file LICENSE
 Imports:
     httr
