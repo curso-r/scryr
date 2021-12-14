@@ -39,8 +39,8 @@ paginating over the cards in this set.
 \item \code{released_at} [date]: The date the set was released or the first card was
 printed in the set (in GMT-8 Pacific time).
 \item \code{set_type} [chr]: Scryfall provides an overall categorization for each
-Set in the \code{set_type} property. An exhaustive list of \code{set_types} is listed
-in a separate section below.
+Set in the \code{set_type} property. An exhaustive list of \code{set_types} can be
+found below.
 \item \code{card_count} [int]: The number of cards in this set.
 \item \code{parent_set_code} [chr]: The set code for the parent set, if any. \code{promo}
 and \code{token} sets often have a parent set.

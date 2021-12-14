@@ -55,8 +55,8 @@
 #' * `released_at` \[date\]: The date the set was released or the first card was
 #'   printed in the set (in GMT-8 Pacific time).
 #' * `set_type` \[chr\]: Scryfall provides an overall categorization for each
-#'   Set in the `set_type` property. An exhaustive list of `set_types` is listed
-#'   in a separate section below.
+#'   Set in the `set_type` property. An exhaustive list of `set_types` can be
+#'   found below.
 #' * `card_count` \[int\]: The number of cards in this set.
 #' * `parent_set_code` \[chr\]: The set code for the parent set, if any. `promo`
 #'   and `token` sets often have a parent set.
