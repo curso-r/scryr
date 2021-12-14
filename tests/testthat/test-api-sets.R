@@ -28,7 +28,7 @@ reference_sets_mmq$parent_set_code <- NA_character_
 
 # ERRORS -----------------------------------------------------------------------
 
-test_that("scry-set errors correctly", {
+test_that("scry-sets errors correctly", {
 
   expect_error(scry_sets("zzz"), "unused argument")
 
@@ -51,7 +51,7 @@ set_tcgplayer$icon_svg_uri <- NA_character_
 
 sets_mmq <- sets[sets$code == "mmq", ]
 
-test_that("scry-set returns tibbles", {
+test_that("scry-sets returns tibbles", {
 
   # Skip if tibble is not available
   if (!requireNamespace("tibble", quietly = TRUE)) testthat::skip()
@@ -85,7 +85,7 @@ set_tcgplayer$icon_svg_uri <- NA_character_
 sets_mmq <- sets[sets$code == "mmq", ]
 rownames(sets_mmq) <- NULL
 
-test_that("scry-set returns data frames", {
+test_that("scry-sets returns data frames", {
 
   expect_s3_class(sets, "data.frame")
   expect_mapequal(sets_mmq, reference_sets_mmq)

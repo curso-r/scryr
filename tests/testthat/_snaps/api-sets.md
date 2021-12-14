@@ -1,4 +1,4 @@
-# scry-set returns tibbles
+# scry-sets returns tibbles
 
     Code
       sets
@@ -49,7 +49,7 @@
       #   nonfoil_only <lgl>, foil_only <lgl>, block_code <chr>, block <chr>,
       #   icon_svg_uri <chr>
 
-# scry-set returns data frames
+# scry-sets returns data frames
 
     Code
       sets
