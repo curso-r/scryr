@@ -26,8 +26,8 @@
 #' * `memorabilia`: A set made up of gold-bordered, oversize, or trophy cards
 #'   that are not legal
 #'
-#' @param code The three to five-letter set code. Can be either the `code` or
-#' the `mtgo_code` for the set.
+#' @param code Either a three to five-letter set code or a Scryfall `id`. The
+#' code can be either the `code` or the `mtgo_code` for the set.
 #' @param id The `tcgplayer_id` or `groupId`.
 #' @return A data frame with 1 row and the following columns:
 #' * `object` \[String\]: Set.

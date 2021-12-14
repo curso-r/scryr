@@ -11,8 +11,8 @@ scry_set(code)
 scry_set_tcgplayer(id)
 }
 \arguments{
-\item{code}{The three to five-letter set code. Can be either the \code{code} or
-the \code{mtgo_code} for the set.}
+\item{code}{Either a three to five-letter set code or a Scryfall \code{id}. The
+code can be either the \code{code} or the \code{mtgo_code} for the set.}
 
 \item{id}{The \code{tcgplayer_id} or \code{groupId}.}
 }
