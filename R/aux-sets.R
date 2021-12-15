@@ -25,5 +25,5 @@ parse_sets <- function(content) {
 
   data <- if (content$object == "list") content$data else list(content)
 
-  bind_rows(data, names(template), template)
+  bind_rows(data, template)
 }

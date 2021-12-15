@@ -9,20 +9,17 @@ scryfall <- function(endpoint, parse_endpoint) {
   parse_endpoint(content)
 }
 
-bind_rows <- function(data, columns, convert) {
+bind_rows <- function(data, template) {
 
-  # Add missing columns as NA
-  make_cols <- function(d) {
-    d[, setdiff(columns, names(d))] <- NA
-    return(d)
-  }
+  df <- purrr::map_dfr(data, function(l) {
+    funs <- template[names(l)]
 
-  df_list <- purrr::map(data, tibble::as_tibble)
-  df_one <- purrr::map_dfr(df_list, make_cols)[, columns]
+    l <- purrr::map_if(l, is.list, purrr::compact)
+    tibble::as_tibble(purrr::map2(funs, l, ~.x(.y)))
+  })
 
-  df_one <- purrr::map2_dfr(convert, df_one, ~.x(.y))
-
-  purrr::discard(df_one, ~all(is.na(.x)))
+  col_order <- names(template)[names(template) %in% names(df)]
+  df[, col_order]
 }
 
 catch_content_error <- function(content) {
