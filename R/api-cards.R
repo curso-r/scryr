@@ -97,5 +97,5 @@ scry_cards <- function(q,
                        include_variations = FALSE,
                        page = 1) {
 
-  scryfall()
+  scryfall(q, parse_cards)
 }
