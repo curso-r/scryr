@@ -70,7 +70,7 @@ un-official sets as a way to group promotional or outlier cards together.
 Such sets will likely have a code that begins with \code{p} or \code{t}, such as \code{pcel}
 or \code{tori}. Official sets always have a three-letter set code, such as \code{zen}.
 }
-\section{Set types}{
+\section{Set Types}{
 
 An exhaustive list of \code{set_types} is reproduced below:
 \itemize{
