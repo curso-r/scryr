@@ -10,28 +10,21 @@ scryfall <- function(endpoint, parse_endpoint) {
 }
 
 bind_rows <- function(data, columns, convert) {
-  df_list <- lapply(data, tibble::as_tibble)
 
   # Add missing columns as NA
-  df_list <- lapply(df_list, function(d) {
+  make_cols <- function(d) {
     d[, setdiff(columns, names(d))] <- NA
     return(d)
-  })
-
-  one_df <- do.call(rbind, df_list)[, columns]
-  one_df[, columns] <- Map(function(f, x) f(x), convert, one_df)
-
-  for (column in columns) {
-    if (all(is.na(one_df[, column]))) one_df[, column] <- NULL
   }
 
-  return(one_df)
+  df_list <- purrr::map(data, tibble::as_tibble)
+  df_one <- purrr::map_dfr(df_list, make_cols)[, columns]
+
+  df_one <- purrr::map2_dfr(convert, df_one, ~.x(.y))
+
+  purrr::discard(df_one, ~all(is.na(.x)))
 }
 
 catch_content_error <- function(content) {
   stop(content$details)
-}
-
-has_tibble <- function() {
-  requireNamespace("tibble", quietly = TRUE)
 }
