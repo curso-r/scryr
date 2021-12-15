@@ -1,5 +1,7 @@
+# REFERENCES -------------------------------------------------------------------
+
 # Main reference
-reference <- data.frame(
+reference <- tibble::tibble(
   object = "set",
   id = "385e11a4-492b-4d07-b4a6-a1409ef829b8",
   code = "mmq",
@@ -26,6 +28,16 @@ reference_sets_mmq <- reference
 reference_sets_mmq$printed_size <- NULL
 reference_sets_mmq$parent_set_code <- NA_character_
 
+sets <- scry_sets()
+set <- scry_set("mmq")
+set_tcgplayer <- scry_set_tcgplayer(73)
+
+sets$icon_svg_uri <- NA_character_
+set$icon_svg_uri <- NA_character_
+set_tcgplayer$icon_svg_uri <- NA_character_
+
+sets_mmq <- sets[sets$code == "mmq", ]
+
 # ERRORS -----------------------------------------------------------------------
 
 test_that("scry-sets errors correctly", {
@@ -39,63 +51,19 @@ test_that("scry-sets errors correctly", {
   expect_error(scry_set_tcgplayer(0), "No Magic set")
 })
 
-# TIBBLES ----------------------------------------------------------------------
+# RETURNS ----------------------------------------------------------------------
 
-sets <- scry_sets()
-set <- scry_set("mmq")
-set_tcgplayer <- scry_set_tcgplayer(73)
-
-sets$icon_svg_uri <- NA_character_
-set$icon_svg_uri <- NA_character_
-set_tcgplayer$icon_svg_uri <- NA_character_
-
-sets_mmq <- sets[sets$code == "mmq", ]
-
-test_that("scry-sets returns tibbles", {
-
-  # Skip if tibble is not available
-  if (!requireNamespace("tibble", quietly = TRUE)) testthat::skip()
+test_that("scry-sets returns correctly", {
 
   expect_s3_class(sets, c("tbl_df", "tbl", "data.frame"))
-  expect_mapequal(sets_mmq, tibble::as_tibble(reference_sets_mmq))
-  expect_snapshot(sets)
-
-  expect_s3_class(set, c("tbl_df", "tbl", "data.frame"))
-  expect_mapequal(set, tibble::as_tibble(reference))
-  expect_snapshot(set)
-
-  expect_s3_class(set_tcgplayer, c("tbl_df", "tbl", "data.frame"))
-  expect_mapequal(set_tcgplayer, tibble::as_tibble(reference))
-  expect_snapshot(set_tcgplayer)
-})
-
-# DATA FRAMES ------------------------------------------------------------------
-
-# Mock absence of tibble
-mockery::stub(scry_sets_impl, "has_tibble", FALSE, depth = 2)
-
-sets <- scry_sets()
-set <- scry_set("mmq")
-set_tcgplayer <- scry_set_tcgplayer(73)
-
-sets$icon_svg_uri <- NA_character_
-set$icon_svg_uri <- NA_character_
-set_tcgplayer$icon_svg_uri <- NA_character_
-
-sets_mmq <- sets[sets$code == "mmq", ]
-rownames(sets_mmq) <- NULL
-
-test_that("scry-sets returns data frames", {
-
-  expect_s3_class(sets, "data.frame")
   expect_mapequal(sets_mmq, reference_sets_mmq)
   expect_snapshot(sets)
 
-  expect_s3_class(set, "data.frame")
+  expect_s3_class(set, c("tbl_df", "tbl", "data.frame"))
   expect_mapequal(set, reference)
   expect_snapshot(set)
 
-  expect_s3_class(set_tcgplayer, "data.frame")
+  expect_s3_class(set_tcgplayer, c("tbl_df", "tbl", "data.frame"))
   expect_mapequal(set_tcgplayer, reference)
   expect_snapshot(set_tcgplayer)
 })

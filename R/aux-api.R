@@ -2,7 +2,7 @@ scryfall <- function(endpoint, parse_endpoint) {
   Sys.sleep(0.1) # Good citizenship
 
   resp <- httr::GET(paste0("https://api.scryfall.com", endpoint))
-  content <- httr::content(resp)
+  content <- httr::content(resp, encoding = "UTF-8")
 
   if (resp$status_code != 200) catch_content_error(content)
 
@@ -10,7 +10,7 @@ scryfall <- function(endpoint, parse_endpoint) {
 }
 
 bind_rows <- function(data, columns, convert) {
-  df_list <- lapply(data, as_df)
+  df_list <- lapply(data, tibble::as_tibble)
 
   # Add missing columns as NA
   df_list <- lapply(df_list, function(d) {
@@ -30,10 +30,6 @@ bind_rows <- function(data, columns, convert) {
 
 catch_content_error <- function(content) {
   stop(content$details)
-}
-
-as_df <- function(df) {
-  if (has_tibble()) tibble::as_tibble(df) else as.data.frame(df)
 }
 
 has_tibble <- function() {
