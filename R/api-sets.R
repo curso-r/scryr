@@ -8,7 +8,7 @@
 #' Such sets will likely have a code that begins with `p` or `t`, such as `pcel`
 #' or `tori`. Official sets always have a three-letter set code, such as `zen`.
 #'
-#' @section Set types:
+#' @section Set Types:
 #' An exhaustive list of `set_types` is reproduced below:
 #' * `core`: A yearly Magic core set (Tenth Edition, etc)
 #' * `expansion`: A rotational expansion set in a block (Zendikar, etc)
