@@ -17,7 +17,7 @@ parse_cards <- function(content) {
     "scryfall_uri" = as.character,
     "uri" = as.character,
     "all_parts" = function(x) list(tibble::as_tibble(purrr::transpose(x))),
-    "card_faces" = function(x) list(unlist(x)),
+    "card_faces" = list,
     "cmc" = as.numeric,
     "color_identity" = function(x) list(unlist(x)),
     "color_indicator" = function(x) list(unlist(x)),
@@ -39,6 +39,7 @@ parse_cards <- function(content) {
     "toughness" = as.character,
     "type_line" = as.character,
     "artist" = as.character,
+    "artist_id" = as.character,
     "artist_ids" = function(x) list(unlist(x)),
     "booster" = as.logical,
     "border_color" = as.character,
@@ -89,5 +90,10 @@ parse_cards <- function(content) {
     "preview" = function(x) list(tibble::as_tibble(x))
   )
 
-  bind_rows(content$data, template)
+  df <- bind_rows(content$data, template)
+  df$card_faces <- purrr::map_if(
+    df$card_faces, ~!is.null(.x), bind_rows, template
+  )
+
+  return(df)
 }
