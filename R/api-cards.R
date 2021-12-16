@@ -7,7 +7,7 @@
 #' Cards are the API's most complex object. You are encouraged to thoroughly
 #' read this document and also `vignette("layouts")`.
 #'
-#' @section Card Names:
+#' ## Card Names
 #' Internally, Scryfall tracks the uniqueness of "Oracle names." (i.e. names you
 #' can pick when an effect asks you to "choose a card name"). Each unique Oracle
 #' name is separately available in [catalog_card_names()].
@@ -16,16 +16,17 @@
 #' other objects such as tokens and Unstable set variants which do not always
 #' have a unique name.
 #'
-#' @section Multiface Cards:
+#' ## Multiface Cards
 #' Magic cards can have multiple faces or multiple cards printed on one card
 #' stock. The faces could be shown divided on the front of the card as in split
 #' cards and flip cards, or the card can be double-faced as in transform cards
 #' and modal DFCs.
 #'
 #' Scryfall represents multi-face cards as a single object with a `card_faces`
-#' array describing the distinct faces.
+#' array describing the distinct faces. More details below.
 #'
-#' @section Unique (Rollup) Modes:
+#' @section Special Arguments:
+#' ## Unique (Rollup) Modes
 #' The `unique` parameter specifies if Scryfall should remove "duplicate"
 #' results in your query. The options are:
 #' * `cards`: Removes duplicate gameplay objects (cards that share a name and
@@ -39,9 +40,9 @@
 #'   example, if your search matches more than one print of Pacifism, all
 #'   matching prints will be returned.
 #'
-#' @section Sorting Cards:
+#' ## Sorting Cards
 #' The `order` parameter determines how Scryfall should sort the returned cards.
-#' * `name`: "Sort cards by name, A → Z".
+#' * `name`: Sort cards by name, A → Z.
 #' * `set`: Sort cards by their set and collector number: AAA/#1 → ZZZ/#999.
 #' * `released`: Sort cards by their release date: Newest → Oldest.
 #' * `rarity`: Sort cards by their rarity: Common → Mythic.
@@ -68,6 +69,50 @@
 #' * `asc`: Sort ascending (the direction of the arrows in the previous table).
 #' * `desc`: Sort descending (flip the direction of the arrows in the previous
 #'   table).
+#'
+#' @section Special Columns:
+#' ## Card Face Objects
+#' Multiface cards have a `card_faces` property containing at least two Card
+#' Face objects. Those objects have the following properties:
+#' * `object` \[chr\]: A content type for this object, always `card_face`.
+#' * `oracle_id` \[chr\]: The Oracle ID of this particular face, if the card is
+#'   reversible.
+#' * `cmc` \[dbl\]: The mana value of this particular face, if the card is
+#'   reversible.
+#' * `color_indicator` \[lst\]: The colors in this face's color indicator, if
+#'   any.
+#' * `colors` \[lst\]: This face's colors, if the game defines colors for the
+#'   individual face of this card.
+#' * `layout` \[chr\]: The layout of this card face, if the card is reversible.
+#' * `loyalty` \[chr\]: This face's loyalty, if any.
+#' * `mana_cost` \[chr\]: The mana cost for this face. This value will be any
+#'   empty string `""` if the cost is absent. Remember that per the game rules,
+#'   a missing mana cost and a mana cost of `{0}` are different values.
+#' * `name` \[chr\]: The name of this particular face.
+#' * `oracle_text` \[chr\]: The Oracle text for this face, if any.
+#' * `power` \[chr\]: This face's power, if any. Note that some cards have
+#'   powers that are not numeric, such as `*`.
+#' * `toughness` \[chr\]: This face's toughness, if any.
+#' * `type_line` \[chr\]: The type line of this particular face, if the card is
+#'   reversible.
+#' * `artist` \[chr\]: The name of the illustrator of this card face. Newly
+#'   spoiled cards may not have this field yet.
+#' * `artist_id` \[chr\]: The unique identifier of the illustrator of this card
+#'   face.
+#' * `flavor_name` \[chr\]: The just-for-fun name printed on this card face
+#'   (such as for Godzilla series cards).
+#' * `flavor_text` \[chr\]: The flavor text printed on this face, if any.
+#' * `illustration_id` \[chr\]: A unique identifier for the card face artwork
+#'   that remains consistent across reprints. Newly spoiled cards may not have
+#'   this field yet.
+#' * `image_uris` \[tbl\]: An object providing URIs to imagery for this face, if
+#'   this is a double-sided card. If this card is not double-sided, then the
+#'   `image_uris` property will be part of the parent object instead.
+#' * `printed_name` \[chr\]: The localized name printed on this face, if any.
+#' * `printed_text` \[chr\]: The localized text printed on this face, if any.
+#' * `printed_type_line` \[chr\]: The localized type line printed on this face,
+#'   if any.
+#' * `watermark` \[chr\]: The watermark on this particulary card face, if any.
 #'
 #' @param q A search query using the same [fulltext search
 #' system](https://scryfall.com/docs/syntax) that the main site uses. Maximum

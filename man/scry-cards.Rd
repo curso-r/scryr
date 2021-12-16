@@ -47,8 +47,7 @@ exceptions).
 
 Cards are the API's most complex object. You are encouraged to thoroughly
 read this document and also \code{vignette("layouts")}.
-}
-\section{Card Names}{
+\subsection{Card Names}{
 
 Internally, Scryfall tracks the uniqueness of "Oracle names." (i.e. names you
 can pick when an effect asks you to "choose a card name"). Each unique Oracle
@@ -59,7 +58,7 @@ other objects such as tokens and Unstable set variants which do not always
 have a unique name.
 }
 
-\section{Multiface Cards}{
+\subsection{Multiface Cards}{
 
 Magic cards can have multiple faces or multiple cards printed on one card
 stock. The faces could be shown divided on the front of the card as in split
@@ -67,10 +66,12 @@ cards and flip cards, or the card can be double-faced as in transform cards
 and modal DFCs.
 
 Scryfall represents multi-face cards as a single object with a \code{card_faces}
-array describing the distinct faces.
+array describing the distinct faces. More details below.
 }
+}
+\section{Special Arguments}{
 
-\section{Unique (Rollup) Modes}{
+\subsection{Unique (Rollup) Modes}{
 
 The \code{unique} parameter specifies if Scryfall should remove "duplicate"
 results in your query. The options are:
@@ -88,11 +89,11 @@ matching prints will be returned.
 }
 }
 
-\section{Sorting Cards}{
+\subsection{Sorting Cards}{
 
 The \code{order} parameter determines how Scryfall should sort the returned cards.
 \itemize{
-\item \code{name}: "Sort cards by name, A → Z".
+\item \code{name}: Sort cards by name, A → Z.
 \item \code{set}: Sort cards by their set and collector number: AAA/#1 → ZZZ/#999.
 \item \code{released}: Sort cards by their release date: Newest → Oldest.
 \item \code{rarity}: Sort cards by their rarity: Common → Mythic.
@@ -121,6 +122,57 @@ sort.
 \item \code{asc}: Sort ascending (the direction of the arrows in the previous table).
 \item \code{desc}: Sort descending (flip the direction of the arrows in the previous
 table).
+}
+}
+}
+
+\section{Special Columns}{
+
+\subsection{Card Face Objects}{
+
+Multiface cards have a \code{card_faces} property containing at least two Card
+Face objects. Those objects have the following properties:
+\itemize{
+\item \code{object} [chr]: A content type for this object, always \code{card_face}.
+\item \code{oracle_id} [chr]: The Oracle ID of this particular face, if the card is
+reversible.
+\item \code{cmc} [dbl]: The mana value of this particular face, if the card is
+reversible.
+\item \code{color_indicator} [lst]: The colors in this face's color indicator, if
+any.
+\item \code{colors} [lst]: This face's colors, if the game defines colors for the
+individual face of this card.
+\item \code{layout} [chr]: The layout of this card face, if the card is reversible.
+\item \code{loyalty} [chr]: This face's loyalty, if any.
+\item \code{mana_cost} [chr]: The mana cost for this face. This value will be any
+empty string \code{""} if the cost is absent. Remember that per the game rules,
+a missing mana cost and a mana cost of \code{{0}} are different values.
+\item \code{name} [chr]: The name of this particular face.
+\item \code{oracle_text} [chr]: The Oracle text for this face, if any.
+\item \code{power} [chr]: This face's power, if any. Note that some cards have
+powers that are not numeric, such as \code{*}.
+\item \code{toughness} [chr]: This face's toughness, if any.
+\item \code{type_line} [chr]: The type line of this particular face, if the card is
+reversible.
+\item \code{artist} [chr]: The name of the illustrator of this card face. Newly
+spoiled cards may not have this field yet.
+\item \code{artist_id} [chr]: The unique identifier of the illustrator of this card
+face.
+\item \code{flavor_name} [chr]: The just-for-fun name printed on this card face
+(such as for Godzilla series cards).
+\item \code{flavor_text} [chr]: The flavor text printed on this face, if any.
+\item \code{illustration_id} [chr]: A unique identifier for the card face artwork
+that remains consistent across reprints. Newly spoiled cards may not have
+this field yet.
+\item \code{image_uris} [tbl]: An object providing URIs to imagery for this face, if
+this is a double-sided card. If this card is not double-sided, then the
+\code{image_uris} property will be part of the parent object instead.
+\item \code{printed_name} [chr]: The localized name printed on this face, if any.
+\item \code{printed_text} [chr]: The localized text printed on this face, if any.
+\item \code{printed_type_line} [chr]: The localized type line printed on this face,
+if any.
+\item \code{watermark} [chr]: The watermark on this particulary card face, if any.
+}
 }
 }
 

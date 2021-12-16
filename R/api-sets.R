@@ -38,7 +38,7 @@
 #' code can be either the `code` or the `mtgo_code` for the set.
 #' @param id The `tcgplayer_id` or `groupId`.
 #' @return A data frame with 1 or more rows and the following columns:
-#' * `object` \[chr\]: Set.
+#' * `object` \[chr\]: A content type for this object, always `set`.
 #' * `id` \[chr\]: A unique ID for this set on Scryfall that will not change.
 #' * `code` \[chr\]: The unique three to five-letter code for this set.
 #' * `mtgo_code` \[chr\]: The unique code for this set on MTGO, which may differ

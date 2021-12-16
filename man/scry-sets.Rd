@@ -22,7 +22,7 @@ code can be either the \code{code} or the \code{mtgo_code} for the set.}
 \value{
 A data frame with 1 or more rows and the following columns:
 \itemize{
-\item \code{object} [chr]: Set.
+\item \code{object} [chr]: A content type for this object, always \code{set}.
 \item \code{id} [chr]: A unique ID for this set on Scryfall that will not change.
 \item \code{code} [chr]: The unique three to five-letter code for this set.
 \item \code{mtgo_code} [chr]: The unique code for this set on MTGO, which may differ

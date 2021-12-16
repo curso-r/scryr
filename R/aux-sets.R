@@ -1,7 +1,7 @@
 parse_sets <- function(content) {
 
   template <- list(
-    "object" = as.character, # TODO: REMOVE OBJECT FROM DF
+    "object" = as.character,
     "id" = as.character,
     "code" = as.character,
     "mtgo_code" = as.character,
