@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![check-full](https://github.com/curso-r/scry/workflows/check-full/badge.svg)](https://github.com/curso-r/scry/actions)
+[![R-CMD-check](https://github.com/curso-r/scry/workflows/R-CMD-check/badge.svg)](https://github.com/curso-r/scry/actions)
 <!-- badges: end -->
 
 The goal of scry is to …
