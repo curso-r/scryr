@@ -90,10 +90,20 @@ parse_cards <- function(content) {
     "preview" = function(x) list(tibble::as_tibble(x))
   )
 
-  df <- bind_rows(content$data, template)
-  df$card_faces <- purrr::map_if(
-    df$card_faces, ~!is.null(.x), bind_rows, template
-  )
+  if (content$object == "catalog") return(bind_lines(content$data))
+
+  data <- if (content$object == "list") {
+    content$data
+  } else {
+    list(content)
+  }
+
+  df <- bind_rows(data, template)
+  if (!is.null(df[["card_faces"]])) {
+    df$card_faces <- purrr::map_if(
+      df$card_faces, ~!is.null(.x), bind_rows, template
+    )
+  }
 
   return(df)
 }

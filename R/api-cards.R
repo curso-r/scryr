@@ -10,6 +10,22 @@
 #' @param q A search query using the same [fulltext search
 #' system](https://scryfall.com/docs/syntax) that the main site uses. Maximum
 #' length: 1000 Unicode characters.
+#' @param name A string with a card's name (or part of it).
+#' @param source Source to which `id` refers. Can be either `scryfall` or
+#' `tcgplayer`.
+#' @param mode Search mode. Can be either `fuzzy` (`name` may be part of a
+#' card's name, allows misspellings and partial words to be provided too) or
+#' `exact` (`name` has to match exactly, case insenstive).
+#' @param set The three to five-letter set code.
+#' @param number The collector number.
+#' @param lang The 2-3 character language code.
+#' @param id Unique card indentifier. May refer to distinct `source`s:
+#' * A Scryfall ID.
+#' * A multiverse ID.
+#' * A MTGO ID
+#' * Arena ID
+#' * A `tcgplayer_id` or `productId`.
+#' * A Cardmarket ID
 #' @param unique The strategy for omitting similar cards. The options are:
 #' * `cards`: Removes duplicate gameplay objects (cards that share a name and
 #'   have the same functionality). For example, if your search matches more than
@@ -266,7 +282,7 @@ scry_cards <- function(q,
                        include_extras = FALSE,
                        include_multilingual = FALSE,
                        include_variations = FALSE,
-                       page = 1) {
+                       page = NULL) {
 
   query <- make_query(
     q = q,
@@ -280,4 +296,45 @@ scry_cards <- function(q,
   )
 
   scry_cards_impl(paste0("/search", query))
+}
+
+#' @rdname scry-cards
+#' @export
+scry_cards_named <- function(name, mode = c("fuzzy", "exact"), set = NULL) {
+  mode <- match.arg(mode)
+
+  query <- make_query(replace_me = name, set = set)
+  query <- gsub("(?<=\\?)replace_me", mode, query, perl = TRUE)
+
+  scry_cards_impl(paste0("/named", query))
+}
+
+#' @rdname scry-cards
+#' @export
+scry_cards_autocomplete <- function(name, include_extras = FALSE) {
+  query <- make_query(q = name, include_extras = include_extras)
+  scry_cards_impl(paste0("/autocomplete", query))
+}
+
+#' @rdname scry-cards
+#' @export
+scry_cards_random <- function(q = NULL) {
+  query <- make_query(q = q)
+  scry_cards_impl(paste0("/random", query))
+}
+
+#' @rdname scry-cards
+#' @export
+scry_card_number <- function(number, set, lang = "en") {
+  scry_cards_impl(paste0("/", set, "/", number, "/", lang))
+}
+
+#' @rdname scry-cards
+#' @export
+scry_card <- function(id, source = c("scryfall", "multiverse", "mtgo", "arena",
+                                     "tcgplayer", "cardmarket")) {
+  source <- match.arg(source)
+
+  source <- if (source != "scryfall") paste0("/", source) else ""
+  scry_cards_impl(paste0(source, "/", id))
 }

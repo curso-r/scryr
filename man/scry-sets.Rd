@@ -11,10 +11,10 @@ scry_sets()
 scry_set(id, source = c("scryfall", "tcgplayer"))
 }
 \arguments{
-\item{id}{Unique set indentifier. May refer to:
+\item{id}{Unique set indentifier. May refer to distinct \code{source}s:
 \itemize{
 \item A three to five-letter set code.
-\item A Scryfall \code{id}.
+\item A Scryfall ID.
 \item A \code{tcgplayer_id} or \code{groupId} (if \code{source = "tcgplayer"}).
 }}
 

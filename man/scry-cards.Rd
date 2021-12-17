@@ -3,6 +3,11 @@
 \name{scry-cards}
 \alias{scry-cards}
 \alias{scry_cards}
+\alias{scry_cards_named}
+\alias{scry_cards_autocomplete}
+\alias{scry_cards_random}
+\alias{scry_card_number}
+\alias{scry_card}
 \title{Retrieve information about cards}
 \usage{
 scry_cards(
@@ -13,7 +18,20 @@ scry_cards(
   include_extras = FALSE,
   include_multilingual = FALSE,
   include_variations = FALSE,
-  page = 1
+  page = NULL
+)
+
+scry_cards_named(name, mode = c("fuzzy", "exact"), set = NULL)
+
+scry_cards_autocomplete(name, include_extras = FALSE)
+
+scry_cards_random(q = NULL)
+
+scry_card_number(number, set, lang = "en")
+
+scry_card(
+  id,
+  source = c("scryfall", "multiverse", "mtgo", "arena", "tcgplayer", "cardmarket")
 )
 }
 \arguments{
@@ -76,6 +94,31 @@ Scryfall will be included.}
 the \href{https://scryfall.com/card/drk/107\%E2\%80\%A0/runesword}{Hairy Runesword}.}
 
 \item{page}{The page number to return.}
+
+\item{name}{A string with a card's name (or part of it).}
+
+\item{mode}{Search mode. Can be either \code{fuzzy} (\code{name} may be part of a
+card's name, allows misspellings and partial words to be provided too) or
+\code{exact} (\code{name} has to match exactly, case insenstive).}
+
+\item{set}{The three to five-letter set code.}
+
+\item{number}{The collector number.}
+
+\item{lang}{The 2-3 character language code.}
+
+\item{id}{Unique card indentifier. May refer to distinct \code{source}s:
+\itemize{
+\item A Scryfall ID.
+\item A multiverse ID.
+\item A MTGO ID
+\item Arena ID
+\item A \code{tcgplayer_id} or \code{productId}.
+\item A Cardmarket ID
+}}
+
+\item{source}{Source to which \code{id} refers. Can be either \code{scryfall} or
+\code{tcgplayer}.}
 }
 \value{
 A data frame with 1 or more rows and the following columns:

@@ -22,18 +22,21 @@ bind_rows <- function(data, template) {
   df[, col_order]
 }
 
+bind_lines <- function(data) {
+  purrr::flatten_chr(data)
+}
+
 catch_content_error <- function(content) {
   stop(content$details)
 }
 
 make_query <- function(...) {
-  lower <- purrr::map(list(...), ~tolower(as.character(.x)))
-  chrs <- purrr::map_if(lower, is.character, URLencode, reserved = TRUE)
+  exist <- purrr::compact(list(...))
+  lower <- purrr::map(exist, ~tolower(as.character(.x)))
+  chrs <- purrr::map_if(lower, is.character, utils::URLencode, reserved = TRUE)
   args <- purrr::map(chrs, ~gsub("%2B", "+", .x))
   eqs <- purrr::imap(args, ~paste0(.y, "=", .x))
   query <- paste0(eqs, collapse = "&")
 
   paste0("?", query)
 }
-
-
