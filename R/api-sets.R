@@ -8,9 +8,12 @@
 #' Such sets will likely have a code that begins with `p` or `t`, such as `pcel`
 #' or `tori`. Official sets always have a three-letter set code, such as `zen`.
 #'
-#' @param code Either a three to five-letter set code or a Scryfall `id`. The
-#' code can be either the `code` or the `mtgo_code` for the set.
-#' @param id The `tcgplayer_id` or `groupId`.
+#' @param id Unique set indentifier. May refer to distinct `source`s:
+#' * A three to five-letter set code.
+#' * A Scryfall ID.
+#' * A `tcgplayer_id` or `groupId` (if `source = "tcgplayer"`).
+#' @param source Source to which `id` refers. Can be either `scryfall` or
+#' `tcgplayer`.
 #' @return A data frame with 1 or more rows and the following columns:
 #' * `object` \[chr\]: A content type for this object, always `set`.
 #' * `id` \[chr\]: A unique ID for this set on Scryfall that will not change.
@@ -84,12 +87,9 @@ scry_sets <- function() {
 
 #' @rdname scry-sets
 #' @export
-scry_set <- function(code) {
-  scry_sets_impl(paste0("/", code))
-}
+scry_set <- function(id, source = c("scryfall", "tcgplayer")) {
+  source <- match.arg(source)
 
-#' @rdname scry-sets
-#' @export
-scry_set_tcgplayer <- function(id) {
-  scry_sets_impl(paste0("/tcgplayer/", id))
+  source <- if (source != "scryfall") paste0("/", source) else ""
+  scry_sets_impl(paste0(source, "/", id))
 }

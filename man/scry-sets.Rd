@@ -4,20 +4,22 @@
 \alias{scry-sets}
 \alias{scry_sets}
 \alias{scry_set}
-\alias{scry_set_tcgplayer}
 \title{Retrieve information about sets}
 \usage{
 scry_sets()
 
-scry_set(code)
-
-scry_set_tcgplayer(id)
+scry_set(id, source = c("scryfall", "tcgplayer"))
 }
 \arguments{
-\item{code}{Either a three to five-letter set code or a Scryfall \code{id}. The
-code can be either the \code{code} or the \code{mtgo_code} for the set.}
+\item{id}{Unique set indentifier. May refer to:
+\itemize{
+\item A three to five-letter set code.
+\item A Scryfall \code{id}.
+\item A \code{tcgplayer_id} or \code{groupId} (if \code{source = "tcgplayer"}).
+}}
 
-\item{id}{The \code{tcgplayer_id} or \code{groupId}.}
+\item{source}{Source to which \code{id} refers. Can be either \code{scryfall} or
+\code{tcgplayer}.}
 }
 \value{
 A data frame with 1 or more rows and the following columns:

@@ -29,9 +29,9 @@ reference_sets_mmq$printed_size <- NULL
 reference_sets_mmq$parent_set_code <- NA_character_
 
 sets <- scry_sets()
-sets <- sets[sets$released_at < "2021-10-31", ]
+sets <- sets[sets$released_at < "2021-08-31", ]
 set <- scry_set("mmq")
-set_tcgplayer <- scry_set_tcgplayer(73)
+set_tcgplayer <- scry_set(73, "tcgplayer")
 
 sets$icon_svg_uri <- NA_character_
 set$icon_svg_uri <- NA_character_
@@ -48,8 +48,8 @@ test_that("scry-sets errors correctly", {
   expect_error(scry_set(), "no default")
   expect_error(scry_set("zzz"), "No Magic set")
 
-  expect_error(scry_set_tcgplayer(), "no default")
-  expect_error(scry_set_tcgplayer(0), "No Magic set")
+  expect_error(scry_set(source = "tcgplayer"), "no default")
+  expect_error(scry_set(0, "tcgplayer"), "No Magic set")
 })
 
 # RETURNS ----------------------------------------------------------------------
