@@ -39,8 +39,32 @@ paginating over the cards in this set.
 \item \code{released_at} [date]: The date the set was released or the first card was
 printed in the set (in GMT-8 Pacific time).
 \item \code{set_type} [chr]: Scryfall provides an overall categorization for each
-Set in the \code{set_type} property. An exhaustive list of \code{set_types} can be
-found below.
+Set in the \code{set_type} property. The options are:
+\itemize{
+\item \code{core}: A yearly Magic core set (Tenth Edition, etc)
+\item \code{expansion}: A rotational expansion set in a block (Zendikar, etc)
+\item \code{masters}: A reprint set that contains no new cards (Modern Masters, etc)
+\item \code{masterpiece}: Masterpiece Series premium foil cards
+\item \code{arsenal}: A Commander-oriented gift set
+\item \code{from_the_vault}: From the Vault gift sets
+\item \code{spellbook}: Spellbook series gift sets
+\item \code{premium_deck}: Premium Deck Series decks
+\item \code{duel_deck}: Duel Decks
+\item \code{draft_innovation}: Special draft sets, like Conspiracy and Battlebond
+\item \code{treasure_chest}: Magic Online treasure chest prize sets
+\item \code{commander}: Commander preconstructed decks
+\item \code{planechase}: Planechase sets
+\item \code{archenemy}: Archenemy sets
+\item \code{vanguard}: Vanguard card sets
+\item \code{funny}: A funny un-set or set with funny promos (Unglued, Happy
+Holidays, etc)
+\item \code{starter}: A starter/introductory set (Portal, etc)
+\item \code{box}: A gift box set
+\item \code{promo}: A set that contains purely promotional cards
+\item \code{token}: A set made up of tokens and emblems.
+\item \code{memorabilia}: A set made up of gold-bordered, oversize, or trophy cards
+that are not legal
+}
 \item \code{card_count} [int]: The number of cards in this set.
 \item \code{parent_set_code} [chr]: The set code for the parent set, if any. \code{promo}
 and \code{token} sets often have a parent set.
@@ -70,33 +94,3 @@ un-official sets as a way to group promotional or outlier cards together.
 Such sets will likely have a code that begins with \code{p} or \code{t}, such as \code{pcel}
 or \code{tori}. Official sets always have a three-letter set code, such as \code{zen}.
 }
-\section{Set Types}{
-
-An exhaustive list of \code{set_types} is reproduced below:
-\itemize{
-\item \code{core}: A yearly Magic core set (Tenth Edition, etc)
-\item \code{expansion}: A rotational expansion set in a block (Zendikar, etc)
-\item \code{masters}: A reprint set that contains no new cards (Modern Masters, etc)
-\item \code{masterpiece}: Masterpiece Series premium foil cards
-\item \code{arsenal}: A Commander-oriented gift set
-\item \code{from_the_vault}: From the Vault gift sets
-\item \code{spellbook}: Spellbook series gift sets
-\item \code{premium_deck}: Premium Deck Series decks
-\item \code{duel_deck}: Duel Decks
-\item \code{draft_innovation}: Special draft sets, like Conspiracy and Battlebond
-\item \code{treasure_chest}: Magic Online treasure chest prize sets
-\item \code{commander}: Commander preconstructed decks
-\item \code{planechase}: Planechase sets
-\item \code{archenemy}: Archenemy sets
-\item \code{vanguard}: Vanguard card sets
-\item \code{funny}: A funny un-set or set with funny promos (Unglued, Happy Holidays,
-etc)
-\item \code{starter}: A starter/introductory set (Portal, etc)
-\item \code{box}: A gift box set
-\item \code{promo}: A set that contains purely promotional cards
-\item \code{token}: A set made up of tokens and emblems.
-\item \code{memorabilia}: A set made up of gold-bordered, oversize, or trophy cards
-that are not legal
-}
-}
-
