@@ -1,4 +1,4 @@
-parse_sets <- function(content) {
+parse_sets <- function(data) {
 
   template <- list(
     "object" = as.character,
@@ -23,8 +23,6 @@ parse_sets <- function(content) {
     "block" = as.character,
     "icon_svg_uri" = as.character
   )
-
-  data <- if (content$object == "list") content$data else list(content)
 
   bind_rows(data, template)
 }

@@ -1,4 +1,4 @@
-scryfall <- function(endpoint, parse_endpoint) {
+scryfall <- function(endpoint, parse_endpoint, loop = FALSE) {
   Sys.sleep(0.1) # Good citizenship
 
   resp <- httr::GET(paste0("https://api.scryfall.com", endpoint))
@@ -6,7 +6,22 @@ scryfall <- function(endpoint, parse_endpoint) {
 
   if (resp$status_code != 200) catch_content_error(content)
 
-  parse_endpoint(content)
+  if (!is.null(content$data) && content$object != "catalog") {
+    data <- content$data
+
+    while (loop && content$has_more) {
+      resp <- httr::GET(content$next_page)
+      content <- httr::content(resp, encoding = "UTF-8")
+
+      data <- c(data, content$data)
+    }
+  } else if (!is.null(content$data) && content$object == "catalog") {
+    return(bind_lines(content$data))
+  } else {
+    data <- list(content)
+  }
+
+  parse_endpoint(data)
 }
 
 bind_rows <- function(data, template) {

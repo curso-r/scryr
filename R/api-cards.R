@@ -269,8 +269,8 @@
 #' @name scry-cards
 NULL
 
-scry_cards_impl <- function(endpoint) {
-  scryfall(paste0("/cards", endpoint), parse_cards)
+scry_cards_impl <- function(endpoint, loop = FALSE) {
+  scryfall(paste0("/cards", endpoint), parse_cards, loop)
 }
 
 #' @rdname scry-cards
@@ -295,7 +295,7 @@ scry_cards <- function(q,
     page = page
   )
 
-  scry_cards_impl(paste0("/search", query))
+  scry_cards_impl(paste0("/search", query), loop = is.null(page))
 }
 
 #' @rdname scry-cards

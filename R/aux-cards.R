@@ -1,4 +1,4 @@
-parse_cards <- function(content) {
+parse_cards <- function(data) {
 
   template <- list(
     "arena_id" = as.integer,
@@ -90,13 +90,7 @@ parse_cards <- function(content) {
     "preview" = function(x) list(tibble::as_tibble(x))
   )
 
-  if (content$object == "catalog") return(bind_lines(content$data))
-
-  data <- if (content$object == "list") {
-    content$data
-  } else {
-    list(content)
-  }
+  # if (content$object == "catalog") return(bind_lines(content$data))
 
   df <- bind_rows(data, template)
   if (!is.null(df[["card_faces"]])) {
