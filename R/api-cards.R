@@ -253,6 +253,10 @@
 #' @name scry-cards
 NULL
 
+scry_cards_impl <- function(endpoint) {
+  scryfall(paste0("/cards", endpoint), parse_cards)
+}
+
 #' @rdname scry-cards
 #' @export
 scry_cards <- function(q,
@@ -264,5 +268,16 @@ scry_cards <- function(q,
                        include_variations = FALSE,
                        page = 1) {
 
-  scryfall(q, parse_cards)
+  query <- make_query(
+    q = q,
+    unique = unique,
+    order = order,
+    dir = dir,
+    include_extras = include_extras,
+    include_multilingual = include_multilingual,
+    include_variations = include_variations,
+    page = page
+  )
+
+  scry_cards_impl(paste0("/search", query))
 }

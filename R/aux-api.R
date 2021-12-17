@@ -25,3 +25,15 @@ bind_rows <- function(data, template) {
 catch_content_error <- function(content) {
   stop(content$details)
 }
+
+make_query <- function(...) {
+  lower <- purrr::map(list(...), ~tolower(as.character(.x)))
+  chrs <- purrr::map_if(lower, is.character, URLencode, reserved = TRUE)
+  args <- purrr::map(chrs, ~gsub("%2B", "+", .x))
+  eqs <- purrr::imap(args, ~paste0(.y, "=", .x))
+  query <- paste0(eqs, collapse = "&")
+
+  paste0("?", query)
+}
+
+
