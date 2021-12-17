@@ -29,7 +29,7 @@ reference_sets_mmq$printed_size <- NULL
 reference_sets_mmq$parent_set_code <- NA_character_
 
 sets <- scry_sets()
-sets <- sets[sets$released_at < "2021-12-31", ]
+sets <- sets[sets$released_at < "2021-10-31", ]
 set <- scry_set("mmq")
 set_tcgplayer <- scry_set_tcgplayer(73)
 
