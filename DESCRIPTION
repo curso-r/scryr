@@ -10,6 +10,7 @@ Description: A simple, light, and robust interface between R and
     Scryfall's card data API: <https://scryfall.com/docs/api>.
 License: MIT + file LICENSE
 Imports:
+    dplyr,
     httr,
     purrr,
     tibble
