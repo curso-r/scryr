@@ -300,7 +300,7 @@ scry_cards <- function(q,
 
 #' @rdname scry-cards
 #' @export
-scry_cards_named <- function(name, mode = c("fuzzy", "exact"), set = NULL) {
+scry_card_named <- function(name, mode = c("fuzzy", "exact"), set = NULL) {
   mode <- match.arg(mode)
 
   query <- make_query(replace_me = name, set = set)
@@ -318,7 +318,7 @@ scry_cards_autocomplete <- function(name, include_extras = FALSE) {
 
 #' @rdname scry-cards
 #' @export
-scry_cards_random <- function(q = NULL) {
+scry_card_random <- function(q = NULL) {
   query <- make_query(q = q)
   scry_cards_impl(paste0("/random", query))
 }

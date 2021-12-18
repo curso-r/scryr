@@ -3,9 +3,9 @@
 \name{scry-cards}
 \alias{scry-cards}
 \alias{scry_cards}
-\alias{scry_cards_named}
+\alias{scry_card_named}
 \alias{scry_cards_autocomplete}
-\alias{scry_cards_random}
+\alias{scry_card_random}
 \alias{scry_card_number}
 \alias{scry_card}
 \title{Retrieve information about cards}
@@ -21,11 +21,11 @@ scry_cards(
   page = NULL
 )
 
-scry_cards_named(name, mode = c("fuzzy", "exact"), set = NULL)
+scry_card_named(name, mode = c("fuzzy", "exact"), set = NULL)
 
 scry_cards_autocomplete(name, include_extras = FALSE)
 
-scry_cards_random(q = NULL)
+scry_card_random(q = NULL)
 
 scry_card_number(number, set, lang = "en")
 
