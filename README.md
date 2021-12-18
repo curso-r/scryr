@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/curso-r/scry/workflows/R-CMD-check/badge.svg)](https://github.com/curso-r/scry/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/curso-r/scry/branch/main/graph/badge.svg)](https://app.codecov.io/gh/curso-r/scry?branch=main)
 <!-- badges: end -->
 
 The goal of scry is to …
