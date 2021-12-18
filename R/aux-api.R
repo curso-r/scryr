@@ -1,27 +1,36 @@
 scryfall <- function(endpoint, parse_endpoint, loop = FALSE) {
   Sys.sleep(0.1) # Good citizenship
 
-  resp <- httr::GET(paste0("https://api.scryfall.com", endpoint))
-  content <- httr::content(resp, encoding = "UTF-8")
+  content <- http_get(paste0("https://api.scryfall.com", endpoint))
 
-  if (resp$status_code != 200) catch_content_error(content)
-
-  if (!is.null(content$data) && content$object != "catalog") {
-    data <- content$data
-
-    while (loop && content$has_more) {
-      resp <- httr::GET(content$next_page)
-      content <- httr::content(resp, encoding = "UTF-8")
-
-      data <- c(data, content$data)
-    }
-  } else if (!is.null(content$data) && content$object == "catalog") {
-    return(bind_lines(content$data))
-  } else {
-    data <- list(content)
+  # Early stop
+  if (content$object == "catalog") {
+    return(purrr::flatten_chr(content$data))
+  } else if (is.null(content$data)) {
+    return(parse_endpoint(list(content)))
   }
 
-  parse_endpoint(data)
+  parse_endpoint(extract_data(content, loop))
+}
+
+http_get <- function(url) {
+  resp <- httr::GET(url)
+  content <- httr::content(resp, encoding = "UTF-8")
+
+  if (resp$status_code != 200) stop(content$details)
+
+  return(content)
+}
+
+extract_data <- function(content, loop) {
+  data <- content$data
+
+  while (loop && content$has_more) {
+    content <- http_get(content$next_page)
+    data <- c(data, content$data)
+  }
+
+  return(data)
 }
 
 bind_rows <- function(data, template) {
@@ -37,21 +46,14 @@ bind_rows <- function(data, template) {
   df[, col_order]
 }
 
-bind_lines <- function(data) {
-  purrr::flatten_chr(data)
-}
-
-catch_content_error <- function(content) {
-  stop(content$details)
-}
-
 make_query <- function(...) {
-  exist <- purrr::compact(list(...))
-  lower <- purrr::map(exist, ~tolower(as.character(.x)))
-  chrs <- purrr::map_if(lower, is.character, utils::URLencode, reserved = TRUE)
-  args <- purrr::map(chrs, ~gsub("%2B", "+", .x))
-  eqs <- purrr::imap(args, ~paste0(.y, "=", .x))
-  query <- paste0(eqs, collapse = "&")
+  dots <- purrr::compact(list(...))
+
+  query <- purrr::map(dots, ~tolower(as.character(.x)))
+  query <- purrr::map(query, utils::URLencode, reserved = TRUE)
+  query <- purrr::map(query, ~gsub("%2B", "+", .x))
+  query <- purrr::imap(query, ~paste0(.y, "=", .x))
+  query <- paste0(query, collapse = "&")
 
   paste0("?", query)
 }

@@ -93,7 +93,8 @@ parse_cards <- function(data) {
   df <- bind_rows(data, template)
   if (!is.null(df[["card_faces"]])) {
     df$card_faces <- purrr::map_if(
-      df$card_faces, ~!is.null(.x), bind_rows, template
+      df$card_faces, ~!is.null(.x),
+      bind_rows, template
     )
   }
 
