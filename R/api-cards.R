@@ -11,21 +11,15 @@
 #' system](https://scryfall.com/docs/syntax) that the main site uses. Maximum
 #' length: 1000 Unicode characters.
 #' @param name A string with a card's name (or part of it).
-#' @param source Source to which `id` refers. Can be either `scryfall` or
-#' `tcgplayer`.
+#' @param source Source to which `id` refers. Can be any one of `scryfall`,
+#' `multiverse`, `mtgo`, `arena`, `tcgplayer` or `cardmarket`.
 #' @param mode Search mode. Can be either `fuzzy` (`name` may be part of a
 #' card's name, allows misspellings and partial words to be provided too) or
 #' `exact` (`name` has to match exactly, case insenstive).
 #' @param set The three to five-letter set code.
 #' @param number The collector number.
 #' @param lang The 2-3 character language code.
-#' @param id Unique card indentifier. May refer to distinct `source`s:
-#' * A Scryfall ID.
-#' * A multiverse ID.
-#' * A MTGO ID
-#' * Arena ID
-#' * A `tcgplayer_id` or `productId`.
-#' * A Cardmarket ID
+#' @param id Unique card indentifier. May refer to distinct `source`s.
 #' @param unique The strategy for omitting similar cards. The options are:
 #' * `cards`: Removes duplicate gameplay objects (cards that share a name and
 #'   have the same functionality). For example, if your search matches more than

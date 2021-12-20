@@ -107,18 +107,10 @@ card's name, allows misspellings and partial words to be provided too) or
 
 \item{lang}{The 2-3 character language code.}
 
-\item{id}{Unique card indentifier. May refer to distinct \code{source}s:
-\itemize{
-\item A Scryfall ID.
-\item A multiverse ID.
-\item A MTGO ID
-\item Arena ID
-\item A \code{tcgplayer_id} or \code{productId}.
-\item A Cardmarket ID
-}}
+\item{id}{Unique card indentifier. May refer to distinct \code{source}s.}
 
-\item{source}{Source to which \code{id} refers. Can be either \code{scryfall} or
-\code{tcgplayer}.}
+\item{source}{Source to which \code{id} refers. Can be any one of \code{scryfall},
+\code{multiverse}, \code{mtgo}, \code{arena}, \code{tcgplayer} or \code{cardmarket}.}
 }
 \value{
 A data frame with 1 or more rows and the following columns:
