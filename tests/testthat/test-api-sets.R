@@ -21,7 +21,7 @@ test_that("scry-sets returns correctly", {
   }
 
   sets <- scry_sets()
-  sets <- sets[sets$released_at < "2021-08-31", ]
+  sets <- sets[sets$released_at < "2021-06-30", ]
   expect_snapshot(rm_icon(sets))
 
   expect_snapshot(rm_icon(scry_set("mmq")))

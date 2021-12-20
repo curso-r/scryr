@@ -35,11 +35,9 @@ extract_data <- function(content, loop) {
 
 bind_rows <- function(data, template) {
 
-  df <- purrr::map_dfr(data, function(l) {
-    funs <- template[names(l)]
-
-    l <- purrr::map_if(l, is.list, purrr::compact)
-    tibble::as_tibble(purrr::map2(funs, l, ~.x(.y)))
+  df <- purrr::map_dfr(data, function(ls) {
+    ls <- purrr::map_if(ls, is.list, purrr::compact)
+    purrr::map2(template[names(ls)], ls, ~.x(.y))
   })
 
   col_order <- names(template)[names(template) %in% names(df)]
