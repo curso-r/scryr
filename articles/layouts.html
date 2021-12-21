@@ -193,75 +193,316 @@
 <p>Magic cards can include multiple faces on a single piece of card stock. Scryfall includes information about each of these card faces using the <code>card_faces</code> property on API objects. Please note the following types of multi-face cards and how Scryfall will describe them:</p>
 <p><strong>Split cards</strong> <em>(Comp. rules term)</em>: Split cards are sorceries or instant cards that include two faces and the caster can choose which face to cast. The back of a split card is the normal Magic back.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/scry-cards.html">scry_card</a></span><span class="op">(</span><span class="st">"0f279560-7e9f-4a6d-9fd6-6c8c6bd94a1b"</span><span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 58</span></span>
-<span class="co">#&gt;   id    lang  mtgo_id multiverse_ids tcgplayer_id cardmarket_id object oracle_id</span>
-<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> 0f27… en      <span style="text-decoration: underline;">85</span>730 <span style="color: #949494;">&lt;int [1]&gt;</span>            <span style="text-decoration: underline;">227</span>383        <span style="text-decoration: underline;">514</span>789 card   9842734c…</span>
-<span class="co">#&gt; <span style="color: #949494;"># … with 50 more variables: prints_search_uri &lt;chr&gt;, rulings_uri &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   scryfall_uri &lt;chr&gt;, uri &lt;chr&gt;, card_faces &lt;list&gt;, cmc &lt;dbl&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   color_identity &lt;list&gt;, colors &lt;list&gt;, keywords &lt;list&gt;, layout &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   legalities &lt;list&gt;, mana_cost &lt;chr&gt;, name &lt;chr&gt;, oversized &lt;lgl&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   reserved &lt;lgl&gt;, type_line &lt;chr&gt;, artist &lt;chr&gt;, artist_ids &lt;list&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   booster &lt;lgl&gt;, border_color &lt;chr&gt;, card_back_id &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   collector_number &lt;chr&gt;, digital &lt;lgl&gt;, foil &lt;lgl&gt;, nonfoil &lt;lgl&gt;, …</span></span></code></pre></div>
+<code class="sourceCode R"><span class="fu">glimpse</span><span class="op">(</span><span class="fu"><a href="../reference/scry-cards.html">scry_card</a></span><span class="op">(</span><span class="st">"0f279560-7e9f-4a6d-9fd6-6c8c6bd94a1b"</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; Rows: 1</span>
+<span class="co">#&gt; Columns: 58</span>
+<span class="co">#&gt; $ id                <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "0f279560-7e9f-4a6d-9fd6-6c8c6bd94a1b"</span>
+<span class="co">#&gt; $ lang              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "en"</span>
+<span class="co">#&gt; $ mtgo_id           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 85730</span>
+<span class="co">#&gt; $ multiverse_ids    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> 500936</span>
+<span class="co">#&gt; $ tcgplayer_id      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 227383</span>
+<span class="co">#&gt; $ cardmarket_id     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 514789</span>
+<span class="co">#&gt; $ object            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "card"</span>
+<span class="co">#&gt; $ oracle_id         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "9842734c-1eac-4509-a731-4c22017ae586"</span>
+<span class="co">#&gt; $ prints_search_uri <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/search?order=release…</span>
+<span class="co">#&gt; $ rulings_uri       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/0f279560-7e9f-4a6d-9…</span>
+<span class="co">#&gt; $ scryfall_uri      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://scryfall.com/card/cmr/456/wear-tear?utm_sou…</span>
+<span class="co">#&gt; $ uri               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/0f279560-7e9f-4a6d-…</span>
+<span class="co">#&gt; $ card_faces        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[2 x 9]&gt;]</span>
+<span class="co">#&gt; $ cmc               <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 3</span>
+<span class="co">#&gt; $ color_identity    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"R", "W"&gt;</span>
+<span class="co">#&gt; $ colors            <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"R", "W"&gt;</span>
+<span class="co">#&gt; $ keywords          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "Fuse"</span>
+<span class="co">#&gt; $ layout            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "split"</span>
+<span class="co">#&gt; $ legalities        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 18]&gt;]</span>
+<span class="co">#&gt; $ mana_cost         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "{1}{R} // {W}"</span>
+<span class="co">#&gt; $ name              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Wear // Tear"</span>
+<span class="co">#&gt; $ oversized         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ reserved          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ type_line         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Instant // Instant"</span>
+<span class="co">#&gt; $ artist            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Ryan Pancoast"</span>
+<span class="co">#&gt; $ artist_ids        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "89cc9475-dda2-4d13-bf88-54b92867a25c"</span>
+<span class="co">#&gt; $ booster           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ border_color      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "black"</span>
+<span class="co">#&gt; $ card_back_id      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "0aeebaf5-8c7d-4636-9e82-8c27447861f7"</span>
+<span class="co">#&gt; $ collector_number  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "456"</span>
+<span class="co">#&gt; $ digital           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ foil              <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ nonfoil           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ finishes          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"nonfoil", "foil"&gt;</span>
+<span class="co">#&gt; $ frame             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2015"</span>
+<span class="co">#&gt; $ full_art          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ games             <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"paper", "mtgo"&gt;</span>
+<span class="co">#&gt; $ highres_image     <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ illustration_id   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "35dc8f1e-5c26-4f3f-98eb-62123968a04f"</span>
+<span class="co">#&gt; $ image_status      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "highres_scan"</span>
+<span class="co">#&gt; $ image_uris        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 6]&gt;]</span>
+<span class="co">#&gt; $ prices            <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 3]&gt;]</span>
+<span class="co">#&gt; $ promo             <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ purchase_uris     <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 3]&gt;]</span>
+<span class="co">#&gt; $ rarity            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "uncommon"</span>
+<span class="co">#&gt; $ related_uris      <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 5]&gt;]</span>
+<span class="co">#&gt; $ released_at       <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> 2020-11-20</span>
+<span class="co">#&gt; $ reprint           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ scryfall_set_uri  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://scryfall.com/sets/cmr?utm_source=api"</span>
+<span class="co">#&gt; $ set_name          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Commander Legends"</span>
+<span class="co">#&gt; $ set_search_uri    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/search?order=set&amp;q=e…</span>
+<span class="co">#&gt; $ set_type          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "draft_innovation"</span>
+<span class="co">#&gt; $ set_uri           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/sets/39de6fbf-1f11-48d0-8f…</span>
+<span class="co">#&gt; $ set               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "cmr"</span>
+<span class="co">#&gt; $ set_id            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "39de6fbf-1f11-48d0-8f04-f0407f6a0732"</span>
+<span class="co">#&gt; $ story_spotlight   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ textless          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ variation         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span></code></pre></div>
 <p><strong>Flip cards</strong> <em>(Comp. rules term)</em>: Flip cards have two parts of a permanent printed vertically on one side of the card. During play, an ability on the card causes the permanent to flip (rotate 180°) to the other side. The back of a flip card is the normal Magic back.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/scry-cards.html">scry_card</a></span><span class="op">(</span><span class="st">"0b61d772-2d8b-4acf-9dd2-b2e8b03538c8"</span><span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 61</span></span>
-<span class="co">#&gt;   id        lang  mtgo_id mtgo_foil_id multiverse_ids tcgplayer_id cardmarket_id</span>
-<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> 0b61d772… en      <span style="text-decoration: underline;">22</span>176        <span style="text-decoration: underline;">22</span>177 <span style="color: #949494;">&lt;int [1]&gt;</span>             <span style="text-decoration: underline;">12</span>430         <span style="text-decoration: underline;">12</span>658</span>
-<span class="co">#&gt; <span style="color: #949494;"># … with 54 more variables: object &lt;chr&gt;, oracle_id &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   prints_search_uri &lt;chr&gt;, rulings_uri &lt;chr&gt;, scryfall_uri &lt;chr&gt;, uri &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   card_faces &lt;list&gt;, cmc &lt;dbl&gt;, color_identity &lt;list&gt;, colors &lt;list&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   keywords &lt;list&gt;, layout &lt;chr&gt;, legalities &lt;list&gt;, mana_cost &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   name &lt;chr&gt;, oversized &lt;lgl&gt;, power &lt;chr&gt;, reserved &lt;lgl&gt;, toughness &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   type_line &lt;chr&gt;, artist &lt;chr&gt;, artist_ids &lt;list&gt;, booster &lt;lgl&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   border_color &lt;chr&gt;, card_back_id &lt;chr&gt;, collector_number &lt;chr&gt;, …</span></span></code></pre></div>
+<code class="sourceCode R"><span class="fu">glimpse</span><span class="op">(</span><span class="fu"><a href="../reference/scry-cards.html">scry_card</a></span><span class="op">(</span><span class="st">"0b61d772-2d8b-4acf-9dd2-b2e8b03538c8"</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; Rows: 1</span>
+<span class="co">#&gt; Columns: 61</span>
+<span class="co">#&gt; $ id                <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "0b61d772-2d8b-4acf-9dd2-b2e8b03538c8"</span>
+<span class="co">#&gt; $ lang              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "en"</span>
+<span class="co">#&gt; $ mtgo_id           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 22176</span>
+<span class="co">#&gt; $ mtgo_foil_id      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 22177</span>
+<span class="co">#&gt; $ multiverse_ids    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> 87599</span>
+<span class="co">#&gt; $ tcgplayer_id      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 12430</span>
+<span class="co">#&gt; $ cardmarket_id     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 12658</span>
+<span class="co">#&gt; $ object            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "card"</span>
+<span class="co">#&gt; $ oracle_id         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "d83bb32d-f409-421a-9d93-bd7ea3240b47"</span>
+<span class="co">#&gt; $ prints_search_uri <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/search?order=release…</span>
+<span class="co">#&gt; $ rulings_uri       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/0b61d772-2d8b-4acf-9…</span>
+<span class="co">#&gt; $ scryfall_uri      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://scryfall.com/card/sok/35/erayo-soratami-asc…</span>
+<span class="co">#&gt; $ uri               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/0b61d772-2d8b-4acf-9…</span>
+<span class="co">#&gt; $ card_faces        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[2 x 11]&gt;]</span>
+<span class="co">#&gt; $ cmc               <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 2</span>
+<span class="co">#&gt; $ color_identity    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "U"</span>
+<span class="co">#&gt; $ colors            <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "U"</span>
+<span class="co">#&gt; $ keywords          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "Flying"</span>
+<span class="co">#&gt; $ layout            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "flip"</span>
+<span class="co">#&gt; $ legalities        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 18]&gt;]</span>
+<span class="co">#&gt; $ mana_cost         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "{1}{U}"</span>
+<span class="co">#&gt; $ name              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Erayo, Soratami Ascendant // Erayo's Essence"</span>
+<span class="co">#&gt; $ oversized         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ power             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1"</span>
+<span class="co">#&gt; $ reserved          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ toughness         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1"</span>
+<span class="co">#&gt; $ type_line         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Legendary Creature — Moonfolk Monk // Legendary En…</span>
+<span class="co">#&gt; $ artist            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Matt Cavotta"</span>
+<span class="co">#&gt; $ artist_ids        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "2e6a0611-9411-4ba4-98e3-c0e18cbf9f83"</span>
+<span class="co">#&gt; $ booster           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ border_color      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "black"</span>
+<span class="co">#&gt; $ card_back_id      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "0aeebaf5-8c7d-4636-9e82-8c27447861f7"</span>
+<span class="co">#&gt; $ collector_number  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "35"</span>
+<span class="co">#&gt; $ digital           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ foil              <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ nonfoil           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ finishes          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"nonfoil", "foil"&gt;</span>
+<span class="co">#&gt; $ frame             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2003"</span>
+<span class="co">#&gt; $ full_art          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ games             <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"paper", "mtgo"&gt;</span>
+<span class="co">#&gt; $ highres_image     <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ illustration_id   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "99cab97a-9861-4a5a-8578-6c742d192183"</span>
+<span class="co">#&gt; $ image_status      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "highres_scan"</span>
+<span class="co">#&gt; $ image_uris        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 6]&gt;]</span>
+<span class="co">#&gt; $ prices            <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 5]&gt;]</span>
+<span class="co">#&gt; $ promo             <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ purchase_uris     <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 3]&gt;]</span>
+<span class="co">#&gt; $ rarity            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "rare"</span>
+<span class="co">#&gt; $ related_uris      <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 5]&gt;]</span>
+<span class="co">#&gt; $ released_at       <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> 2005-06-03</span>
+<span class="co">#&gt; $ reprint           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ scryfall_set_uri  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://scryfall.com/sets/sok?utm_source=api"</span>
+<span class="co">#&gt; $ set_name          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Saviors of Kamigawa"</span>
+<span class="co">#&gt; $ set_search_uri    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/search?order=set&amp;q=e…</span>
+<span class="co">#&gt; $ set_type          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "expansion"</span>
+<span class="co">#&gt; $ set_uri           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/sets/4db16ad3-2b95-442f-bb…</span>
+<span class="co">#&gt; $ set               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "sok"</span>
+<span class="co">#&gt; $ set_id            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "4db16ad3-2b95-442f-bb6b-e9aa7fe7f769"</span>
+<span class="co">#&gt; $ story_spotlight   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ textless          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ variation         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span></code></pre></div>
 <p><strong>Double-faced cards</strong> <em>(Comp. rules term)</em>: These cards have two faces on different sides of the cardstock that are related to each other. The whole card is a single legal or deckbuilding object. Double-faced cards can either be transforming or modal.</p>
 <p><strong>Transforming double-faced cards</strong> <em>(Comp. rules term)</em>: These cards can either transform after entering the battlefield, or can be put onto the battlefield already transformed. Scryfall will use the card_faces object to describe the two different transformed modes of the card, while the root object will contain data that applies to both sides. These cards have their layout field set to “transform”.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/scry-cards.html">scry_card</a></span><span class="op">(</span><span class="st">"b37aa12c-a6b3-4cf8-b5a4-0a999ff12d02"</span><span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 58</span></span>
-<span class="co">#&gt;   id        lang  mtgo_id mtgo_foil_id multiverse_ids tcgplayer_id cardmarket_id</span>
-<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> b37aa12c… en      <span style="text-decoration: underline;">59</span>762        <span style="text-decoration: underline;">59</span>763 <span style="color: #949494;">&lt;int [2]&gt;</span>            <span style="text-decoration: underline;">115</span>432        <span style="text-decoration: underline;">288</span>952</span>
-<span class="co">#&gt; <span style="color: #949494;"># … with 51 more variables: object &lt;chr&gt;, oracle_id &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   prints_search_uri &lt;chr&gt;, rulings_uri &lt;chr&gt;, scryfall_uri &lt;chr&gt;, uri &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   all_parts &lt;list&gt;, card_faces &lt;list&gt;, cmc &lt;dbl&gt;, color_identity &lt;list&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   edhrec_rank &lt;int&gt;, keywords &lt;list&gt;, layout &lt;chr&gt;, legalities &lt;list&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   name &lt;chr&gt;, oversized &lt;lgl&gt;, reserved &lt;lgl&gt;, type_line &lt;chr&gt;, artist &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   artist_ids &lt;list&gt;, booster &lt;lgl&gt;, border_color &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   collector_number &lt;chr&gt;, digital &lt;lgl&gt;, foil &lt;lgl&gt;, nonfoil &lt;lgl&gt;, …</span></span></code></pre></div>
+<code class="sourceCode R"><span class="fu">glimpse</span><span class="op">(</span><span class="fu"><a href="../reference/scry-cards.html">scry_card</a></span><span class="op">(</span><span class="st">"b37aa12c-a6b3-4cf8-b5a4-0a999ff12d02"</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; Rows: 1</span>
+<span class="co">#&gt; Columns: 58</span>
+<span class="co">#&gt; $ id                <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "b37aa12c-a6b3-4cf8-b5a4-0a999ff12d02"</span>
+<span class="co">#&gt; $ lang              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "en"</span>
+<span class="co">#&gt; $ mtgo_id           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 59762</span>
+<span class="co">#&gt; $ mtgo_foil_id      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 59763</span>
+<span class="co">#&gt; $ multiverse_ids    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;410007, 410008&gt;</span>
+<span class="co">#&gt; $ tcgplayer_id      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 115432</span>
+<span class="co">#&gt; $ cardmarket_id     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 288952</span>
+<span class="co">#&gt; $ object            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "card"</span>
+<span class="co">#&gt; $ oracle_id         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "6bb7d0df-7a9f-4e17-8c31-7628c4b12356"</span>
+<span class="co">#&gt; $ prints_search_uri <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/search?order=release…</span>
+<span class="co">#&gt; $ rulings_uri       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/b37aa12c-a6b3-4cf8-b…</span>
+<span class="co">#&gt; $ scryfall_uri      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://scryfall.com/card/soi/243/arlinn-kord-arlin…</span>
+<span class="co">#&gt; $ uri               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/b37aa12c-a6b3-4cf8-b…</span>
+<span class="co">#&gt; $ all_parts         <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[3 x 6]&gt;]</span>
+<span class="co">#&gt; $ card_faces        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[2 x 13]&gt;]</span>
+<span class="co">#&gt; $ cmc               <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 4</span>
+<span class="co">#&gt; $ color_identity    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"G", "R"&gt;</span>
+<span class="co">#&gt; $ edhrec_rank       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 4092</span>
+<span class="co">#&gt; $ keywords          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "Transform"</span>
+<span class="co">#&gt; $ layout            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "transform"</span>
+<span class="co">#&gt; $ legalities        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 18]&gt;]</span>
+<span class="co">#&gt; $ name              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Arlinn Kord // Arlinn, Embraced by the Moon"</span>
+<span class="co">#&gt; $ oversized         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ reserved          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ type_line         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Legendary Planeswalker — Arlinn // Legendary Plane…</span>
+<span class="co">#&gt; $ artist            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Winona Nelson"</span>
+<span class="co">#&gt; $ artist_ids        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "e45fe8d3-75d6-42c9-a2df-e945ad81ea27"</span>
+<span class="co">#&gt; $ booster           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ border_color      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "black"</span>
+<span class="co">#&gt; $ collector_number  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "243"</span>
+<span class="co">#&gt; $ digital           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ foil              <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ nonfoil           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ finishes          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"nonfoil", "foil"&gt;</span>
+<span class="co">#&gt; $ frame_effects     <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "sunmoondfc"</span>
+<span class="co">#&gt; $ frame             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2015"</span>
+<span class="co">#&gt; $ full_art          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ games             <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"paper", "mtgo"&gt;</span>
+<span class="co">#&gt; $ highres_image     <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ image_status      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "highres_scan"</span>
+<span class="co">#&gt; $ prices            <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 5]&gt;]</span>
+<span class="co">#&gt; $ promo             <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ purchase_uris     <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 3]&gt;]</span>
+<span class="co">#&gt; $ rarity            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "mythic"</span>
+<span class="co">#&gt; $ related_uris      <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 5]&gt;]</span>
+<span class="co">#&gt; $ released_at       <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> 2016-04-08</span>
+<span class="co">#&gt; $ reprint           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ scryfall_set_uri  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://scryfall.com/sets/soi?utm_source=api"</span>
+<span class="co">#&gt; $ set_name          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Shadows over Innistrad"</span>
+<span class="co">#&gt; $ set_search_uri    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/search?order=set&amp;q=e…</span>
+<span class="co">#&gt; $ set_type          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "expansion"</span>
+<span class="co">#&gt; $ set_uri           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/sets/5e914d7e-c1e9-446c-a3…</span>
+<span class="co">#&gt; $ set               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "soi"</span>
+<span class="co">#&gt; $ set_id            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "5e914d7e-c1e9-446c-a33d-d093c02b2743"</span>
+<span class="co">#&gt; $ story_spotlight   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ textless          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ variation         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ security_stamp    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "oval"</span></code></pre></div>
 <p><strong>Modal double-faced cards</strong> <em>(Comp. rules term)</em>: Modal DFCs be cast or played as either half of the card. Scryfall will use the card_faces object to describe the two different modes of the card, while the root object will contain data that applies to both sides (such as the color_identity). These cards have their layout field set to “modal_dfc”.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/scry-cards.html">scry_card</a></span><span class="op">(</span><span class="st">"ba09360a-067e-48a5-bdc5-a19fd066a785"</span><span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 59</span></span>
-<span class="co">#&gt;   arena_id id     lang  mtgo_id multiverse_ids tcgplayer_id cardmarket_id object</span>
-<span class="co">#&gt;      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span>    <span style="text-decoration: underline;">76</span>544 ba093… en      <span style="text-decoration: underline;">88</span>779 <span style="color: #949494;">&lt;int [2]&gt;</span>            <span style="text-decoration: underline;">235</span>673        <span style="text-decoration: underline;">557</span>492 card  </span>
-<span class="co">#&gt; <span style="color: #949494;"># … with 51 more variables: oracle_id &lt;chr&gt;, prints_search_uri &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   rulings_uri &lt;chr&gt;, scryfall_uri &lt;chr&gt;, uri &lt;chr&gt;, all_parts &lt;list&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   card_faces &lt;list&gt;, cmc &lt;dbl&gt;, color_identity &lt;list&gt;, edhrec_rank &lt;int&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   keywords &lt;list&gt;, layout &lt;chr&gt;, legalities &lt;list&gt;, name &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   oversized &lt;lgl&gt;, reserved &lt;lgl&gt;, type_line &lt;chr&gt;, artist &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   artist_ids &lt;list&gt;, booster &lt;lgl&gt;, border_color &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   collector_number &lt;chr&gt;, digital &lt;lgl&gt;, foil &lt;lgl&gt;, nonfoil &lt;lgl&gt;, …</span></span></code></pre></div>
+<code class="sourceCode R"><span class="fu">glimpse</span><span class="op">(</span><span class="fu"><a href="../reference/scry-cards.html">scry_card</a></span><span class="op">(</span><span class="st">"ba09360a-067e-48a5-bdc5-a19fd066a785"</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; Rows: 1</span>
+<span class="co">#&gt; Columns: 59</span>
+<span class="co">#&gt; $ arena_id          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 76544</span>
+<span class="co">#&gt; $ id                <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "ba09360a-067e-48a5-bdc5-a19fd066a785"</span>
+<span class="co">#&gt; $ lang              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "en"</span>
+<span class="co">#&gt; $ mtgo_id           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 88779</span>
+<span class="co">#&gt; $ multiverse_ids    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;516912, 516913&gt;</span>
+<span class="co">#&gt; $ tcgplayer_id      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 235673</span>
+<span class="co">#&gt; $ cardmarket_id     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 557492</span>
+<span class="co">#&gt; $ object            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "card"</span>
+<span class="co">#&gt; $ oracle_id         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "0b299983-9f0f-404a-acd1-8f142572b1f1"</span>
+<span class="co">#&gt; $ prints_search_uri <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/search?order=release…</span>
+<span class="co">#&gt; $ rulings_uri       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/ba09360a-067e-48a5-b…</span>
+<span class="co">#&gt; $ scryfall_uri      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://scryfall.com/card/stx/149/extus-oriq-overlo…</span>
+<span class="co">#&gt; $ uri               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/ba09360a-067e-48a5-b…</span>
+<span class="co">#&gt; $ all_parts         <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[2 x 6]&gt;]</span>
+<span class="co">#&gt; $ card_faces        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[2 x 14]&gt;]</span>
+<span class="co">#&gt; $ cmc               <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 4</span>
+<span class="co">#&gt; $ color_identity    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"B", "R", "W"&gt;</span>
+<span class="co">#&gt; $ edhrec_rank       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 4994</span>
+<span class="co">#&gt; $ keywords          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"Magecraft", "Double strike"&gt;</span>
+<span class="co">#&gt; $ layout            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "modal_dfc"</span>
+<span class="co">#&gt; $ legalities        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 18]&gt;]</span>
+<span class="co">#&gt; $ name              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Extus, Oriq Overlord // Awaken the Blood Avatar"</span>
+<span class="co">#&gt; $ oversized         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ reserved          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ type_line         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Legendary Creature — Human Warlock // Sorcery"</span>
+<span class="co">#&gt; $ artist            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Chase Stone &amp; Kekai Kotaki"</span>
+<span class="co">#&gt; $ artist_ids        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"2d753f61-5f5b-468e-97ea-8e0fdd347340", "4b771085-…</span>
+<span class="co">#&gt; $ booster           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ border_color      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "black"</span>
+<span class="co">#&gt; $ collector_number  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "149"</span>
+<span class="co">#&gt; $ digital           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ foil              <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ nonfoil           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ finishes          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"nonfoil", "foil"&gt;</span>
+<span class="co">#&gt; $ frame_effects     <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "legendary"</span>
+<span class="co">#&gt; $ frame             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2015"</span>
+<span class="co">#&gt; $ full_art          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ games             <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"arena", "paper", "mtgo"&gt;</span>
+<span class="co">#&gt; $ highres_image     <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ image_status      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "highres_scan"</span>
+<span class="co">#&gt; $ prices            <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 5]&gt;]</span>
+<span class="co">#&gt; $ promo             <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ purchase_uris     <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 3]&gt;]</span>
+<span class="co">#&gt; $ rarity            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "mythic"</span>
+<span class="co">#&gt; $ related_uris      <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 5]&gt;]</span>
+<span class="co">#&gt; $ released_at       <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> 2021-04-23</span>
+<span class="co">#&gt; $ reprint           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ scryfall_set_uri  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://scryfall.com/sets/stx?utm_source=api"</span>
+<span class="co">#&gt; $ set_name          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Strixhaven: School of Mages"</span>
+<span class="co">#&gt; $ set_search_uri    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/search?order=set&amp;q=e…</span>
+<span class="co">#&gt; $ set_type          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "expansion"</span>
+<span class="co">#&gt; $ set_uri           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/sets/541c3c28-8747-40e5-a2…</span>
+<span class="co">#&gt; $ set               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "stx"</span>
+<span class="co">#&gt; $ set_id            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "541c3c28-8747-40e5-a231-8e8f33234859"</span>
+<span class="co">#&gt; $ story_spotlight   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ textless          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ variation         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ security_stamp    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "oval"</span>
+<span class="co">#&gt; $ preview           <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 3]&gt;]</span></code></pre></div>
 <p><strong>Reversible cards</strong> <em>(casual term)</em>: This term is used by both Scryfall and WotC to describe a piece of cardstock with two distinct Magic cards or tokens printed on opposite sides. The two halves of the card are not related to each other in any way and are treated as two separate objects for gameplay or deckbuilding. The overall Card object will have its layout field set to “reversible_card”, while the individual card_face objects will have their own layout fields describing the distinct printings on both sides. Many other fields for a reversible card move into the card_face objects to describe the distinct face.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/scry-cards.html">scry_card</a></span><span class="op">(</span><span class="st">"3e3f0bcd-0796-494d-bf51-94b33c1671e9"</span><span class="op">)</span>
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 50</span></span>
-<span class="co">#&gt;   id     lang  multiverse_ids object prints_search_uri rulings_uri  scryfall_uri</span>
-<span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">1</span> 3e3f0… en    <span style="color: #949494;">&lt;NULL&gt;</span>         card   https://api.scry… https://api… https://scr…</span>
-<span class="co">#&gt; <span style="color: #949494;"># … with 43 more variables: uri &lt;chr&gt;, card_faces &lt;list&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   color_identity &lt;list&gt;, edhrec_rank &lt;int&gt;, keywords &lt;list&gt;, layout &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   legalities &lt;list&gt;, name &lt;chr&gt;, oversized &lt;lgl&gt;, reserved &lt;lgl&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   artist &lt;chr&gt;, artist_ids &lt;list&gt;, booster &lt;lgl&gt;, border_color &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   collector_number &lt;chr&gt;, digital &lt;lgl&gt;, foil &lt;lgl&gt;, nonfoil &lt;lgl&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   finishes &lt;list&gt;, frame_effects &lt;list&gt;, frame &lt;chr&gt;, full_art &lt;lgl&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   games &lt;list&gt;, highres_image &lt;lgl&gt;, image_status &lt;chr&gt;, prices &lt;list&gt;, …</span></span></code></pre></div>
+<code class="sourceCode R"><span class="fu">glimpse</span><span class="op">(</span><span class="fu"><a href="../reference/scry-cards.html">scry_card</a></span><span class="op">(</span><span class="st">"3e3f0bcd-0796-494d-bf51-94b33c1671e9"</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; Rows: 1</span>
+<span class="co">#&gt; Columns: 50</span>
+<span class="co">#&gt; $ id                <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3e3f0bcd-0796-494d-bf51-94b33c1671e9"</span>
+<span class="co">#&gt; $ lang              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "en"</span>
+<span class="co">#&gt; $ multiverse_ids    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;NULL&gt;</span>
+<span class="co">#&gt; $ object            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "card"</span>
+<span class="co">#&gt; $ prints_search_uri <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/search?order=release…</span>
+<span class="co">#&gt; $ rulings_uri       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/3e3f0bcd-0796-494d-b…</span>
+<span class="co">#&gt; $ scryfall_uri      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://scryfall.com/card/sld/381/propaganda-propa…</span>
+<span class="co">#&gt; $ uri               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/3e3f0bcd-0796-494d-b…</span>
+<span class="co">#&gt; $ card_faces        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[2 x 15]&gt;]</span>
+<span class="co">#&gt; $ color_identity    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "U"</span>
+<span class="co">#&gt; $ edhrec_rank       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 193</span>
+<span class="co">#&gt; $ keywords          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;NULL&gt;</span>
+<span class="co">#&gt; $ layout            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "reversible_card"</span>
+<span class="co">#&gt; $ legalities        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 18]&gt;]</span>
+<span class="co">#&gt; $ name              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Propaganda // Propaganda"</span>
+<span class="co">#&gt; $ oversized         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ reserved          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ artist            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Scott Balmer"</span>
+<span class="co">#&gt; $ artist_ids        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "c26dd9c9-54f9-4a8c-9d54-caac6be0161d"</span>
+<span class="co">#&gt; $ booster           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ border_color      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "black"</span>
+<span class="co">#&gt; $ collector_number  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "381"</span>
+<span class="co">#&gt; $ digital           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ foil              <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ nonfoil           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ finishes          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"nonfoil", "foil"&gt;</span>
+<span class="co">#&gt; $ frame_effects     <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "inverted"</span>
+<span class="co">#&gt; $ frame             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2015"</span>
+<span class="co">#&gt; $ full_art          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ games             <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "paper"</span>
+<span class="co">#&gt; $ highres_image     <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ image_status      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "lowres"</span>
+<span class="co">#&gt; $ prices            <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[0 x 0]&gt;]</span>
+<span class="co">#&gt; $ promo             <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ purchase_uris     <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 3]&gt;]</span>
+<span class="co">#&gt; $ rarity            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "rare"</span>
+<span class="co">#&gt; $ related_uris      <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 4]&gt;]</span>
+<span class="co">#&gt; $ released_at       <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> 2022-04-22</span>
+<span class="co">#&gt; $ reprint           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> TRUE</span>
+<span class="co">#&gt; $ scryfall_set_uri  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://scryfall.com/sets/sld?utm_source=api"</span>
+<span class="co">#&gt; $ set_name          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Secret Lair Drop"</span>
+<span class="co">#&gt; $ set_search_uri    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/search?order=set&amp;q=e…</span>
+<span class="co">#&gt; $ set_type          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "box"</span>
+<span class="co">#&gt; $ set_uri           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/sets/4d92a8a7-ccb0-437d-ab…</span>
+<span class="co">#&gt; $ set               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "sld"</span>
+<span class="co">#&gt; $ set_id            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "4d92a8a7-ccb0-437d-abdc-9d70fc5ed672"</span>
+<span class="co">#&gt; $ story_spotlight   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ textless          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ variation         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
+<span class="co">#&gt; $ security_stamp    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "oval"</span></code></pre></div>
 <p><strong>Multi-faced cards</strong> <em>(casual term)</em>: This term has no rules meaning and is used by Scryfall to describe any object with the nested card_faces property.</p>
 <p><strong>Double-sided cards</strong> <em>(casual term)</em>: This term has no rules meaning and is used only casually to refer to any cards with gameplay information on both sides.</p>
 </div>
