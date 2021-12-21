@@ -10,6 +10,7 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 library(scry)
+glimpse <- dplyr::glimpse
 ```
 
 The `layout` property categorizes the arrangement of card parts, faces, and
@@ -58,7 +59,7 @@ that include two faces and the caster can choose which face to cast. The back of
 a split card is the normal Magic back.
 
 ```{r}
-scry_card("0f279560-7e9f-4a6d-9fd6-6c8c6bd94a1b")
+glimpse(scry_card("0f279560-7e9f-4a6d-9fd6-6c8c6bd94a1b"))
 ```
 
 **Flip cards** _(Comp. rules term)_: Flip cards have two parts of a permanent
@@ -67,7 +68,7 @@ causes the permanent to flip (rotate 180°) to the other side. The back of a fli
 card is the normal Magic back.
 
 ```{r}
-scry_card("0b61d772-2d8b-4acf-9dd2-b2e8b03538c8")
+glimpse(scry_card("0b61d772-2d8b-4acf-9dd2-b2e8b03538c8"))
 ```
 
 **Double-faced cards** _(Comp. rules term)_: These cards have two faces on
@@ -83,7 +84,7 @@ that applies to both sides. These cards have their layout field set to
 "transform".
 
 ```{r}
-scry_card("b37aa12c-a6b3-4cf8-b5a4-0a999ff12d02")
+glimpse(scry_card("b37aa12c-a6b3-4cf8-b5a4-0a999ff12d02"))
 ```
 
 **Modal double-faced cards** _(Comp. rules term)_: Modal DFCs be cast or played
@@ -93,7 +94,7 @@ that applies to both sides (such as the color_identity). These cards have their
 layout field set to "modal_dfc".
 
 ```{r}
-scry_card("ba09360a-067e-48a5-bdc5-a19fd066a785")
+glimpse(scry_card("ba09360a-067e-48a5-bdc5-a19fd066a785"))
 ```
 
 **Reversible cards** _(casual term)_: This term is used by both Scryfall and
@@ -107,7 +108,7 @@ for a reversible card move into the card_face objects to describe the distinct
 face.
 
 ```{r}
-scry_card("3e3f0bcd-0796-494d-bf51-94b33c1671e9")
+glimpse(scry_card("3e3f0bcd-0796-494d-bf51-94b33c1671e9"))
 ```
 
 **Multi-faced cards** _(casual term)_: This term has no rules meaning and is
