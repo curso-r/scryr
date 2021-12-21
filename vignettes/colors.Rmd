@@ -32,13 +32,13 @@ Color arrays are not guaranteed to be in a particular order.
 
 A list of color representations is provided below:
 
-| Abbr. | Color | Basic Land                                                                  | Mana Symbol | Examples                                                                                     |
-| ----- | ----- | --------------------------------------------------------------------------- | ----------- | -------------------------------------------------------------------------------------------- |
-| `W`   | White | [Plains](https://scryfall.com/search?q=%21%22Plains%22+unique%3Aprints)     | {W}         | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BW%7D%22+OR+m%3A%7BW%7D) |
-| `U`   | Blue  | [Island](https://scryfall.com/search?q=%21%22Island%22+unique%3Aprints)     | {U}         | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BU%7D%22+OR+m%3A%7BU%7D) |
-| `B`   | Black | [Swamp](https://scryfall.com/search?q=%21%22Swamp%22+unique%3Aprints)       | {B}         | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BB%7D%22+OR+m%3A%7BB%7D) |
-| `R`   | Red   | [Mountain](https://scryfall.com/search?q=%21%22Mountain%22+unique%3Aprints) | {R}         | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BR%7D%22+OR+m%3A%7BR%7D) |
-| `G`   | Green | [Forest](https://scryfall.com/search?q=%21%22Forest%22+unique%3Aprints)     | {G}         | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BG%7D%22+OR+m%3A%7BG%7D) |
+| Abbr. | Color | Basic Land                                                                  | Mana Symbol                | Examples                                                                                     |
+| ----- | ----- | --------------------------------------------------------------------------- | -------------------------- | -------------------------------------------------------------------------------------------- |
+| `W`   | White | [Plains](https://scryfall.com/search?q=%21%22Plains%22+unique%3Aprints)     | ![](symbols/W.png)         | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BW%7D%22+OR+m%3A%7BW%7D) |
+| `U`   | Blue  | [Island](https://scryfall.com/search?q=%21%22Island%22+unique%3Aprints)     | ![](symbols/U.png)         | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BU%7D%22+OR+m%3A%7BU%7D) |
+| `B`   | Black | [Swamp](https://scryfall.com/search?q=%21%22Swamp%22+unique%3Aprints)       | ![](symbols/B.png)         | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BB%7D%22+OR+m%3A%7BB%7D) |
+| `R`   | Red   | [Mountain](https://scryfall.com/search?q=%21%22Mountain%22+unique%3Aprints) | ![](symbols/R.png)         | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BR%7D%22+OR+m%3A%7BR%7D) |
+| `G`   | Green | [Forest](https://scryfall.com/search?q=%21%22Forest%22+unique%3Aprints)     | ![](symbols/G.png)         | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BG%7D%22+OR+m%3A%7BG%7D) |
 
 ## Mana Costs and Other Symbology
 
