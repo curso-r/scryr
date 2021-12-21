@@ -10,6 +10,9 @@
     <loc>https://curso-r.github.io/scry/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://curso-r.github.io/scry/articles/colors.html</loc>
+  </url>
+  <url>
     <loc>https://curso-r.github.io/scry/articles/index.html</loc>
   </url>
   <url>
@@ -35,5 +38,8 @@
   </url>
   <url>
     <loc>https://curso-r.github.io/scry/reference/scry-sets.html</loc>
+  </url>
+  <url>
+    <loc>https://curso-r.github.io/scry/reference/scry-symbology.html</loc>
   </url>
 </urlset>
