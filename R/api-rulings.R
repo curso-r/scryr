@@ -12,7 +12,7 @@
 #' @param source Source to which `id` refers. Can be any one of `scryfall`,
 #' `multiverse`, `mtgo`, or `arena`.
 #' @param set The three to five-letter set code.
-#' @return  A data frame with 1 or more rows and the following columns:
+#' @return A data frame with 1 or more rows and the following columns:
 #' * `object` \[chr\]: A content type for this object, always `ruling`.
 #' * `oracle_id` \[chr\]: Unique identifier on the Oracle database.
 #' * `source` \[chr\]: A computer-readable string indicating which company
