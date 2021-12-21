@@ -45,78 +45,77 @@ A list of color representations is provided below:
 Whenever the API presents mana costs and other card symbols, it does so using
 the official plaintext notation for that symbol set forth in the
 [Comprehensive Rules](http://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules).
-For example, “<abbr class="card-symbol card-symbol-2W" title="two generic mana
-or one white mana">{2/W}</abbr>, <abbr class="card-symbol card-symbol-T"
-title="tap this permanent">{T}</abbr>” is written as `{2/W}, {T}`.
+For example, "![](symbols/2W.png), ![](symbols/T.png)" is written as
+`{2/W}, {T}`.
 
 An exhaustive list of all symbology is provided below. You can also retrieve
 this information programmatically using the `scry_symbology()` method.
 
 Note that some symbols use UTF-8 characters outside the ASCII range.
 
-| Symbol      | Printed   | Mana? | CMC         | Description                        | Examples                                                                                                           |
-| ----------- | --------- | ----- | ----------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `{T}`       | {T}       | No    |             | Tap this permanent                 | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BT%7D%22)                                      |
-| `{Q}`       | {Q}       | No    |             | Untap this permanent               | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BQ%7D%22)                                      |
-| `{E}`       | {E}       | No    |             | An energy counter                  | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BE%7D%22)                                      |
-| `{PW}`      | {PW}      | No    |             | Planeswalker                       | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BPW%7D%22)                                     |
-| `{CHAOS}`   | {CHAOS}   | No    |             | Chaos                              | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BCHAOS%7D%22)                                  |
-| `{A}`       | {A}       | No    |             | An acorn counter                   | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BA%7D%22)                                      |
-| `{X}`       | {X}       | Yes   | `0.0`       | X generic mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BX%7D%22+OR+o%3A%22%7BX%7D%22)                 |
-| `{Y}`       | {Y}       | Yes   | `0.0`       | Y generic mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BY%7D%22+OR+o%3A%22%7BY%7D%22)                 |
-| `{Z}`       | {Z}       | Yes   | `0.0`       | Z generic mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BZ%7D%22+OR+o%3A%22%7BZ%7D%22)                 |
-| `{0}`       | {0}       | Yes   | `0.0`       | Zero mana                          | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B0%7D%22+OR+o%3A%22%7B0%7D%22)                 |
-| `{½}`       | {½}       | Yes   | `0.5`       | One-half generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B%C2%BD%7D%22+OR+o%3A%22%7B%C2%BD%7D%22)       |
-| `{1}`       | {1}       | Yes   | `1.0`       | One generic mana                   | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B1%7D%22+OR+o%3A%22%7B1%7D%22)                 |
-| `{2}`       | {2}       | Yes   | `2.0`       | Two generic mana                   | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%7D%22+OR+o%3A%22%7B2%7D%22)                 |
-| `{3}`       | {3}       | Yes   | `3.0`       | Three generic mana                 | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B3%7D%22+OR+o%3A%22%7B3%7D%22)                 |
-| `{4}`       | {4}       | Yes   | `4.0`       | Four generic mana                  | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B4%7D%22+OR+o%3A%22%7B4%7D%22)                 |
-| `{5}`       | {5}       | Yes   | `5.0`       | Five generic mana                  | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B5%7D%22+OR+o%3A%22%7B5%7D%22)                 |
-| `{6}`       | {6}       | Yes   | `6.0`       | Six generic mana                   | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B6%7D%22+OR+o%3A%22%7B6%7D%22)                 |
-| `{7}`       | {7}       | Yes   | `7.0`       | Seven generic mana                 | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B7%7D%22+OR+o%3A%22%7B7%7D%22)                 |
-| `{8}`       | {8}       | Yes   | `8.0`       | Eight generic mana                 | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B8%7D%22+OR+o%3A%22%7B8%7D%22)                 |
-| `{9}`       | {9}       | Yes   | `9.0`       | Nine generic mana                  | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B9%7D%22+OR+o%3A%22%7B9%7D%22)                 |
-| `{10}`      | {10}      | Yes   | `10.0`      | Ten generic mana                   | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B10%7D%22+OR+o%3A%22%7B10%7D%22)               |
-| `{11}`      | {11}      | Yes   | `11.0`      | Eleven generic mana                | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B11%7D%22+OR+o%3A%22%7B11%7D%22)               |
-| `{12}`      | {12}      | Yes   | `12.0`      | Twelve generic mana                | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B12%7D%22+OR+o%3A%22%7B12%7D%22)               |
-| `{13}`      | {13}      | Yes   | `13.0`      | Thirteen generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B13%7D%22+OR+o%3A%22%7B13%7D%22)               |
-| `{14}`      | {14}      | Yes   | `14.0`      | Fourteen generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B14%7D%22+OR+o%3A%22%7B14%7D%22)               |
-| `{15}`      | {15}      | Yes   | `15.0`      | Fifteen generic mana               | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B15%7D%22+OR+o%3A%22%7B15%7D%22)               |
-| `{16}`      | {16}      | Yes   | `16.0`      | Sixteen generic mana               | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B16%7D%22+OR+o%3A%22%7B16%7D%22)               |
-| `{17}`      | {17}      | Yes   | `17.0`      | Seventeen generic mana             | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B17%7D%22+OR+o%3A%22%7B17%7D%22)               |
-| `{18}`      | {18}      | Yes   | `18.0`      | Eighteen generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B18%7D%22+OR+o%3A%22%7B18%7D%22)               |
-| `{19}`      | {19}      | Yes   | `19.0`      | Nineteen generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B19%7D%22+OR+o%3A%22%7B19%7D%22)               |
-| `{20}`      | {20}      | Yes   | `20.0`      | Twenty generic mana                | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B20%7D%22+OR+o%3A%22%7B20%7D%22)               |
-| `{100}`     | {100}     | Yes   | `100.0`     | One hundred generic mana           | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B100%7D%22+OR+o%3A%22%7B100%7D%22)             |
-| `{1000000}` | {1000000} | Yes   | `1000000.0` | One million generic mana           | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B1000000%7D%22+OR+o%3A%22%7B1000000%7D%22)     |
-| `{∞}`       | {∞}       | Yes   | `Infinity`  | Infinite generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B%E2%88%9E%7D%22+OR+o%3A%22%7B%E2%88%9E%7D%22) |
-| `{W/U}`     | {W/U}     | Yes   | `1.0`       | One white or blue mana             | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BW%2FU%7D%22+OR+o%3A%22%7BW%2FU%7D%22)         |
-| `{W/B}`     | {W/B}     | Yes   | `1.0`       | One white or black mana            | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BW%2FB%7D%22+OR+o%3A%22%7BW%2FB%7D%22)         |
-| `{B/R}`     | {B/R}     | Yes   | `1.0`       | One black or red mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BB%2FR%7D%22+OR+o%3A%22%7BB%2FR%7D%22)         |
-| `{B/G}`     | {B/G}     | Yes   | `1.0`       | One black or green mana            | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BB%2FG%7D%22+OR+o%3A%22%7BB%2FG%7D%22)         |
-| `{U/B}`     | {U/B}     | Yes   | `1.0`       | One blue or black mana             | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BU%2FB%7D%22+OR+o%3A%22%7BU%2FB%7D%22)         |
-| `{U/R}`     | {U/R}     | Yes   | `1.0`       | One blue or red mana               | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BU%2FR%7D%22+OR+o%3A%22%7BU%2FR%7D%22)         |
-| `{R/G}`     | {R/G}     | Yes   | `1.0`       | One red or green mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BR%2FG%7D%22+OR+o%3A%22%7BR%2FG%7D%22)         |
-| `{R/W}`     | {R/W}     | Yes   | `1.0`       | One red or white mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BR%2FW%7D%22+OR+o%3A%22%7BR%2FW%7D%22)         |
-| `{G/W}`     | {G/W}     | Yes   | `1.0`       | One green or white mana            | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BG%2FW%7D%22+OR+o%3A%22%7BG%2FW%7D%22)         |
-| `{G/U}`     | {G/U}     | Yes   | `1.0`       | One green or blue mana             | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BG%2FU%7D%22+OR+o%3A%22%7BG%2FU%7D%22)         |
-| `{2/W}`     | {2/W}     | Yes   | `2.0`       | Two generic mana or one white mana | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%2FW%7D%22+OR+o%3A%22%7B2%2FW%7D%22)         |
-| `{2/U}`     | {2/U}     | Yes   | `2.0`       | Two generic mana or one blue mana  | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%2FU%7D%22+OR+o%3A%22%7B2%2FU%7D%22)         |
-| `{2/B}`     | {2/B}     | Yes   | `2.0`       | Two generic mana or one black mana | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%2FB%7D%22+OR+o%3A%22%7B2%2FB%7D%22)         |
-| `{2/R}`     | {2/R}     | Yes   | `2.0`       | Two generic mana or one red mana   | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%2FR%7D%22+OR+o%3A%22%7B2%2FR%7D%22)         |
-| `{2/G}`     | {2/G}     | Yes   | `2.0`       | Two generic mana or one green mana | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%2FG%7D%22+OR+o%3A%22%7B2%2FG%7D%22)         |
-| `{P}`       | {P}       | Yes   | `1.0`       | One colored mana or two life       | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BP%7D%22+OR+o%3A%22%7BP%7D%22)                 |
-| `{W/P}`     | {W/P}     | Yes   | `1.0`       | One white mana or two life         | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BW%2FP%7D%22+OR+o%3A%22%7BW%2FP%7D%22)         |
-| `{U/P}`     | {U/P}     | Yes   | `1.0`       | One blue mana or two life          | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BU%2FP%7D%22+OR+o%3A%22%7BU%2FP%7D%22)         |
-| `{B/P}`     | {B/P}     | Yes   | `1.0`       | One black mana or two life         | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BB%2FP%7D%22+OR+o%3A%22%7BB%2FP%7D%22)         |
-| `{R/P}`     | {R/P}     | Yes   | `1.0`       | One red mana or two life           | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BR%2FP%7D%22+OR+o%3A%22%7BR%2FP%7D%22)         |
-| `{G/P}`     | {G/P}     | Yes   | `1.0`       | One green mana or two life         | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BG%2FP%7D%22+OR+o%3A%22%7BG%2FP%7D%22)         |
-| `{HW}`      | {HW}      | Yes   | `0.5`       | One-half white mana                | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BHW%7D%22+OR+o%3A%22%7BHW%7D%22)               |
-| `{HR}`      | {HR}      | Yes   | `0.5`       | One-half red mana                  | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BHR%7D%22+OR+o%3A%22%7BHR%7D%22)               |
-| `{W}`       | {W}       | Yes   | `1.0`       | One white mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BW%7D%22+OR+o%3A%22%7BW%7D%22)                 |
-| `{U}`       | {U}       | Yes   | `1.0`       | One blue mana                      | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BU%7D%22+OR+o%3A%22%7BU%7D%22)                 |
-| `{B}`       | {B}       | Yes   | `1.0`       | One black mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BB%7D%22+OR+o%3A%22%7BB%7D%22)                 |
-| `{R}`       | {R}       | Yes   | `1.0`       | One red mana                       | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BR%7D%22+OR+o%3A%22%7BR%7D%22)                 |
-| `{G}`       | {G}       | Yes   | `1.0`       | One green mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BG%7D%22+OR+o%3A%22%7BG%7D%22)                 |
-| `{C}`       | {C}       | Yes   | `1.0`       | One colorless mana                 | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BC%7D%22+OR+o%3A%22%7BC%7D%22)                 |
-| `{S}`       | {S}       | Yes   | `1.0`       | One snow mana                      | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BS%7D%22+OR+o%3A%22%7BS%7D%22)                 |
+| Symbol      | Printed                   | Mana? | CMC         | Description                        | Examples                                                                                                           |
+| ----------- | ------------------------- | ----- | ----------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `{T}`       | ![](symbols/T.png)        | No    |             | Tap this permanent                 | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BT%7D%22)                                      |
+| `{Q}`       | ![](symbols/Q.png)        | No    |             | Untap this permanent               | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BQ%7D%22)                                      |
+| `{E}`       | ![](symbols/E.png)        | No    |             | An energy counter                  | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BE%7D%22)                                      |
+| `{PW}`      | ![](symbols/PW.png)       | No    |             | Planeswalker                       | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BPW%7D%22)                                     |
+| `{CHAOS}`   | ![](symbols/CHAOS.png)    | No    |             | Chaos                              | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BCHAOS%7D%22)                                  |
+| `{A}`       | ![](symbols/A.png)        | No    |             | An acorn counter                   | [Example Cards](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BA%7D%22)                                      |
+| `{X}`       | ![](symbols/X.png)        | Yes   | `0.0`       | X generic mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BX%7D%22+OR+o%3A%22%7BX%7D%22)                 |
+| `{Y}`       | ![](symbols/Y.png)        | Yes   | `0.0`       | Y generic mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BY%7D%22+OR+o%3A%22%7BY%7D%22)                 |
+| `{Z}`       | ![](symbols/Z.png)        | Yes   | `0.0`       | Z generic mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BZ%7D%22+OR+o%3A%22%7BZ%7D%22)                 |
+| `{0}`       | ![](symbols/0.png)        | Yes   | `0.0`       | Zero mana                          | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B0%7D%22+OR+o%3A%22%7B0%7D%22)                 |
+| `{½}`       | ![](symbols/HALF.png)     | Yes   | `0.5`       | One-half generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B%C2%BD%7D%22+OR+o%3A%22%7B%C2%BD%7D%22)       |
+| `{1}`       | ![](symbols/1.png)        | Yes   | `1.0`       | One generic mana                   | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B1%7D%22+OR+o%3A%22%7B1%7D%22)                 |
+| `{2}`       | ![](symbols/2.png)        | Yes   | `2.0`       | Two generic mana                   | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%7D%22+OR+o%3A%22%7B2%7D%22)                 |
+| `{3}`       | ![](symbols/3.png)        | Yes   | `3.0`       | Three generic mana                 | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B3%7D%22+OR+o%3A%22%7B3%7D%22)                 |
+| `{4}`       | ![](symbols/4.png)        | Yes   | `4.0`       | Four generic mana                  | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B4%7D%22+OR+o%3A%22%7B4%7D%22)                 |
+| `{5}`       | ![](symbols/5.png)        | Yes   | `5.0`       | Five generic mana                  | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B5%7D%22+OR+o%3A%22%7B5%7D%22)                 |
+| `{6}`       | ![](symbols/6.png)        | Yes   | `6.0`       | Six generic mana                   | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B6%7D%22+OR+o%3A%22%7B6%7D%22)                 |
+| `{7}`       | ![](symbols/7.png)        | Yes   | `7.0`       | Seven generic mana                 | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B7%7D%22+OR+o%3A%22%7B7%7D%22)                 |
+| `{8}`       | ![](symbols/8.png)        | Yes   | `8.0`       | Eight generic mana                 | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B8%7D%22+OR+o%3A%22%7B8%7D%22)                 |
+| `{9}`       | ![](symbols/9.png)        | Yes   | `9.0`       | Nine generic mana                  | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B9%7D%22+OR+o%3A%22%7B9%7D%22)                 |
+| `{10}`      | ![](symbols/10.png)       | Yes   | `10.0`      | Ten generic mana                   | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B10%7D%22+OR+o%3A%22%7B10%7D%22)               |
+| `{11}`      | ![](symbols/11.png)       | Yes   | `11.0`      | Eleven generic mana                | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B11%7D%22+OR+o%3A%22%7B11%7D%22)               |
+| `{12}`      | ![](symbols/12.png)       | Yes   | `12.0`      | Twelve generic mana                | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B12%7D%22+OR+o%3A%22%7B12%7D%22)               |
+| `{13}`      | ![](symbols/13.png)       | Yes   | `13.0`      | Thirteen generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B13%7D%22+OR+o%3A%22%7B13%7D%22)               |
+| `{14}`      | ![](symbols/14.png)       | Yes   | `14.0`      | Fourteen generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B14%7D%22+OR+o%3A%22%7B14%7D%22)               |
+| `{15}`      | ![](symbols/15.png)       | Yes   | `15.0`      | Fifteen generic mana               | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B15%7D%22+OR+o%3A%22%7B15%7D%22)               |
+| `{16}`      | ![](symbols/16.png)       | Yes   | `16.0`      | Sixteen generic mana               | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B16%7D%22+OR+o%3A%22%7B16%7D%22)               |
+| `{17}`      | ![](symbols/17.png)       | Yes   | `17.0`      | Seventeen generic mana             | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B17%7D%22+OR+o%3A%22%7B17%7D%22)               |
+| `{18}`      | ![](symbols/18.png)       | Yes   | `18.0`      | Eighteen generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B18%7D%22+OR+o%3A%22%7B18%7D%22)               |
+| `{19}`      | ![](symbols/19.png)       | Yes   | `19.0`      | Nineteen generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B19%7D%22+OR+o%3A%22%7B19%7D%22)               |
+| `{20}`      | ![](symbols/20.png)       | Yes   | `20.0`      | Twenty generic mana                | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B20%7D%22+OR+o%3A%22%7B20%7D%22)               |
+| `{100}`     | ![](symbols/100.png)      | Yes   | `100.0`     | One hundred generic mana           | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B100%7D%22+OR+o%3A%22%7B100%7D%22)             |
+| `{1000000}` | ![](symbols/1000000.png)  | Yes   | `1000000.0` | One million generic mana           | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B1000000%7D%22+OR+o%3A%22%7B1000000%7D%22)     |
+| `{∞}`       | ![](symbols/INFINITY.png) | Yes   | `Infinity`  | Infinite generic mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B%E2%88%9E%7D%22+OR+o%3A%22%7B%E2%88%9E%7D%22) |
+| `{W/U}`     | ![](symbols/WU.png)       | Yes   | `1.0`       | One white or blue mana             | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BW%2FU%7D%22+OR+o%3A%22%7BW%2FU%7D%22)         |
+| `{W/B}`     | ![](symbols/WB.png)       | Yes   | `1.0`       | One white or black mana            | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BW%2FB%7D%22+OR+o%3A%22%7BW%2FB%7D%22)         |
+| `{B/R}`     | ![](symbols/BR.png)       | Yes   | `1.0`       | One black or red mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BB%2FR%7D%22+OR+o%3A%22%7BB%2FR%7D%22)         |
+| `{B/G}`     | ![](symbols/BG.png)       | Yes   | `1.0`       | One black or green mana            | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BB%2FG%7D%22+OR+o%3A%22%7BB%2FG%7D%22)         |
+| `{U/B}`     | ![](symbols/UB.png)       | Yes   | `1.0`       | One blue or black mana             | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BU%2FB%7D%22+OR+o%3A%22%7BU%2FB%7D%22)         |
+| `{U/R}`     | ![](symbols/UR.png)       | Yes   | `1.0`       | One blue or red mana               | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BU%2FR%7D%22+OR+o%3A%22%7BU%2FR%7D%22)         |
+| `{R/G}`     | ![](symbols/RG.png)       | Yes   | `1.0`       | One red or green mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BR%2FG%7D%22+OR+o%3A%22%7BR%2FG%7D%22)         |
+| `{R/W}`     | ![](symbols/RW.png)       | Yes   | `1.0`       | One red or white mana              | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BR%2FW%7D%22+OR+o%3A%22%7BR%2FW%7D%22)         |
+| `{G/W}`     | ![](symbols/GW.png)       | Yes   | `1.0`       | One green or white mana            | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BG%2FW%7D%22+OR+o%3A%22%7BG%2FW%7D%22)         |
+| `{G/U}`     | ![](symbols/GU.png)       | Yes   | `1.0`       | One green or blue mana             | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BG%2FU%7D%22+OR+o%3A%22%7BG%2FU%7D%22)         |
+| `{2/W}`     | ![](symbols/2W.png)       | Yes   | `2.0`       | Two generic mana or one white mana | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%2FW%7D%22+OR+o%3A%22%7B2%2FW%7D%22)         |
+| `{2/U}`     | ![](symbols/2U.png)       | Yes   | `2.0`       | Two generic mana or one blue mana  | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%2FU%7D%22+OR+o%3A%22%7B2%2FU%7D%22)         |
+| `{2/B}`     | ![](symbols/2B.png)       | Yes   | `2.0`       | Two generic mana or one black mana | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%2FB%7D%22+OR+o%3A%22%7B2%2FB%7D%22)         |
+| `{2/R}`     | ![](symbols/2R.png)       | Yes   | `2.0`       | Two generic mana or one red mana   | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%2FR%7D%22+OR+o%3A%22%7B2%2FR%7D%22)         |
+| `{2/G}`     | ![](symbols/2G.png)       | Yes   | `2.0`       | Two generic mana or one green mana | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7B2%2FG%7D%22+OR+o%3A%22%7B2%2FG%7D%22)         |
+| `{P}`       | ![](symbols/P.png)        | Yes   | `1.0`       | One colored mana or two life       | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BP%7D%22+OR+o%3A%22%7BP%7D%22)                 |
+| `{W/P}`     | ![](symbols/WP.png)       | Yes   | `1.0`       | One white mana or two life         | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BW%2FP%7D%22+OR+o%3A%22%7BW%2FP%7D%22)         |
+| `{U/P}`     | ![](symbols/UP.png)       | Yes   | `1.0`       | One blue mana or two life          | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BU%2FP%7D%22+OR+o%3A%22%7BU%2FP%7D%22)         |
+| `{B/P}`     | ![](symbols/BP.png)       | Yes   | `1.0`       | One black mana or two life         | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BB%2FP%7D%22+OR+o%3A%22%7BB%2FP%7D%22)         |
+| `{R/P}`     | ![](symbols/RP.png)       | Yes   | `1.0`       | One red mana or two life           | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BR%2FP%7D%22+OR+o%3A%22%7BR%2FP%7D%22)         |
+| `{G/P}`     | ![](symbols/GP.png)       | Yes   | `1.0`       | One green mana or two life         | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BG%2FP%7D%22+OR+o%3A%22%7BG%2FP%7D%22)         |
+| `{HW}`      | ![](symbols/HW.png)       | Yes   | `0.5`       | One-half white mana                | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BHW%7D%22+OR+o%3A%22%7BHW%7D%22)               |
+| `{HR}`      | ![](symbols/HR.png)       | Yes   | `0.5`       | One-half red mana                  | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BHR%7D%22+OR+o%3A%22%7BHR%7D%22)               |
+| `{W}`       | ![](symbols/W.png)        | Yes   | `1.0`       | One white mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BW%7D%22+OR+o%3A%22%7BW%7D%22)                 |
+| `{U}`       | ![](symbols/U.png)        | Yes   | `1.0`       | One blue mana                      | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BU%7D%22+OR+o%3A%22%7BU%7D%22)                 |
+| `{B}`       | ![](symbols/B.png)        | Yes   | `1.0`       | One black mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BB%7D%22+OR+o%3A%22%7BB%7D%22)                 |
+| `{R}`       | ![](symbols/R.png)        | Yes   | `1.0`       | One red mana                       | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BR%7D%22+OR+o%3A%22%7BR%7D%22)                 |
+| `{G}`       | ![](symbols/G.png)        | Yes   | `1.0`       | One green mana                     | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BG%7D%22+OR+o%3A%22%7BG%7D%22)                 |
+| `{C}`       | ![](symbols/C.png)        | Yes   | `1.0`       | One colorless mana                 | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BC%7D%22+OR+o%3A%22%7BC%7D%22)                 |
+| `{S}`       | ![](symbols/S.png)        | Yes   | `1.0`       | One snow mana                      | [Example Cards](https://scryfall.com/search?order=edhrec&q=m%3A%22%7BS%7D%22+OR+o%3A%22%7BS%7D%22)                 |
