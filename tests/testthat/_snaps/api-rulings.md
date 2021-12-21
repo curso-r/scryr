@@ -1,6 +1,17 @@
 # scry-rulings returns correctly
 
     Code
+      scry_ruling_number(65, "ima")
+    Output
+      # A tibble: 2 x 5
+        object oracle_id                            source published_at comment       
+        <chr>  <chr>                                <chr>  <date>       <chr>         
+      1 ruling 74d3277a-38e5-4732-afed-084a56148f20 wotc   2020-11-10   If the target~
+      2 ruling 74d3277a-38e5-4732-afed-084a56148f20 wotc   2020-11-10   Mana Drain’s ~
+
+---
+
+    Code
       scry_ruling(3255, "multiverse")
     Output
       # A tibble: 1 x 5

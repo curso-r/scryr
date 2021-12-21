@@ -15,7 +15,7 @@ test_that("scry-rulings errors correctly", {
 
 test_that("scry-rulings returns correctly", {
 
-  expect_snapshot(scry_ruling(65, "ima"))
+  expect_snapshot(scry_ruling_number(65, "ima"))
 
   expect_snapshot(scry_ruling(3255, "multiverse"))
   expect_snapshot(scry_ruling(57934, "mtgo"))
