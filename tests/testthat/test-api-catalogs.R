@@ -1,0 +1,21 @@
+# RETURNS ----------------------------------------------------------------------
+
+test_that("scry-catalogs returns correctly", {
+
+  expect_gte(length(scry_catalogs_card_names()), 23390)
+  expect_gte(length(scry_catalogs_artist_names()), 1151)
+  expect_gte(length(scry_catalogs_word_bank()), 15721)
+  expect_gte(length(scry_catalogs_creature_types()), 267)
+  expect_gte(length(scry_catalogs_planeswalker_types()), 76)
+  expect_gte(length(scry_catalogs_land_types()), 13)
+  expect_gte(length(scry_catalogs_artifact_types()), 9)
+  expect_gte(length(scry_catalogs_enchantment_types()), 8)
+  expect_gte(length(scry_catalogs_spell_types()), 4)
+  expect_gte(length(scry_catalogs_powers()), 34)
+  expect_gte(length(scry_catalogs_toughnesses()), 38)
+  expect_gte(length(scry_catalogs_loyalties()), 11)
+  expect_gte(length(scry_catalogs_watermarks()), 66)
+  expect_gte(length(scry_catalogs_keyword_abilities()), 174)
+  expect_gte(length(scry_catalogs_keyword_actions()), 46)
+  expect_gte(length(scry_catalogs_ability_words()), 49)
+})
