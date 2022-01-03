@@ -25,7 +25,12 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/colors.html">Colors and Costs</a>
+    <a class="dropdown-item" href="../articles/frames.html">Frames</a>
+    <a class="dropdown-item" href="../articles/imagery.html">Card Imagery</a>
+    <a class="dropdown-item" href="../articles/languages.html">Languages</a>
     <a class="dropdown-item" href="../articles/layouts.html">Layouts and Faces</a>
+    <a class="dropdown-item" href="../articles/regex.html">Regular Expressions</a>
+    <a class="dropdown-item" href="../articles/syntax.html">Search Reference</a>
   </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
@@ -47,11 +52,17 @@
     <p>Retrieve information about symbols</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">scry_symbology</span><span class="op">(</span><span class="op">)</span></code></pre></div>
+    </div>
 
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A data frame with 1 or more rows and the following columns:</p><ul><li><p><code>symbol</code> [chr]: The plaintext symbol. Often surrounded with curly braces
+    <p>A data frame with 1 row and the following columns:</p><ul><li><p><code>object</code> [chr]: A content type for this object, always <code>card_symbol</code>.</p></li>
+<li><p><code>symbol</code> [chr]: The plaintext symbol. Often surrounded with curly braces
 <code><a href="https://rdrr.io/r/base/Paren.html" class="external-link">{}</a></code>. Note that not all symbols are ASCII text (for example, <code>{∞}</code>).</p></li>
+<li><p><code>svg_uri</code> [chr]: A URI to an SVG image of this symbol on Scryfall’s CDNs.</p></li>
 <li><p><code>loose_variant</code> [chr]: An alternate version of this symbol, if it is
 possible to write it without curly braces.</p></li>
 <li><p><code>english</code> [chr]: An English snippet that describes this symbol.
@@ -69,13 +80,13 @@ mana costs.</p></li>
 <li><p><code>appears_in_mana_costs</code> [lgl]: True if this symbol appears in a mana cost
 on any Magic card. For example <code>{20}</code> has this field set to <code>false</code> because
 <code>{20}</code> only appears in Oracle text, not mana costs.</p></li>
+<li><p><code>cmc</code> [dbl]: The mana value of this symbol.</p></li>
 <li><p><code>funny</code> [lgl]: True if this symbol is only used on funny cards or
 Un-cards.</p></li>
 <li><p><code>colors</code> [list]: An array of colors that this symbol represents.</p></li>
-<li><p><code>gatherer_alternates</code> [chr]: An array of plaintext versions of this
+<li><p><code>gatherer_alternates</code> [list]: An array of plaintext versions of this
 symbol that Gatherer uses on old cards to describe original printed text.
 For example: <code>{W}</code> has <code>["oW", "ooW"]</code> as alternates.</p></li>
-<li><p><code>svg_uri</code> [chr]: A URI to an SVG image of this symbol on Scryfall’s CDNs.</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>

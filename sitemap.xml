@@ -13,10 +13,25 @@
     <loc>https://curso-r.github.io/scry/articles/colors.html</loc>
   </url>
   <url>
+    <loc>https://curso-r.github.io/scry/articles/frames.html</loc>
+  </url>
+  <url>
+    <loc>https://curso-r.github.io/scry/articles/imagery.html</loc>
+  </url>
+  <url>
     <loc>https://curso-r.github.io/scry/articles/index.html</loc>
   </url>
   <url>
+    <loc>https://curso-r.github.io/scry/articles/languages.html</loc>
+  </url>
+  <url>
     <loc>https://curso-r.github.io/scry/articles/layouts.html</loc>
+  </url>
+  <url>
+    <loc>https://curso-r.github.io/scry/articles/regex.html</loc>
+  </url>
+  <url>
+    <loc>https://curso-r.github.io/scry/articles/syntax.html</loc>
   </url>
   <url>
     <loc>https://curso-r.github.io/scry/authors.html</loc>
@@ -25,13 +40,16 @@
     <loc>https://curso-r.github.io/scry/index.html</loc>
   </url>
   <url>
-    <loc>https://curso-r.github.io/scry/reference/catalog_card_names.html</loc>
-  </url>
-  <url>
     <loc>https://curso-r.github.io/scry/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://curso-r.github.io/scry/reference/parse_cost.html</loc>
+  </url>
+  <url>
     <loc>https://curso-r.github.io/scry/reference/scry-cards.html</loc>
+  </url>
+  <url>
+    <loc>https://curso-r.github.io/scry/reference/scry-catalogs.html</loc>
   </url>
   <url>
     <loc>https://curso-r.github.io/scry/reference/scry-rulings.html</loc>
@@ -41,5 +59,8 @@
   </url>
   <url>
     <loc>https://curso-r.github.io/scry/reference/scry-symbology.html</loc>
+  </url>
+  <url>
+    <loc>https://curso-r.github.io/scry/reference/scry_bulk_data.html</loc>
   </url>
 </urlset>

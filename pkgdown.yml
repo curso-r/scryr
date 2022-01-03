@@ -3,8 +3,13 @@ pkgdown: 2.0.1
 pkgdown_sha: ~
 articles:
   colors: colors.html
+  frames: frames.html
+  imagery: imagery.html
+  languages: languages.html
   layouts: layouts.html
-last_built: 2021-12-21T20:11Z
+  regex: regex.html
+  syntax: syntax.html
+last_built: 2022-01-03T23:21Z
 urls:
   reference: https://curso-r.github.io/scry/reference
   article: https://curso-r.github.io/scry/articles
