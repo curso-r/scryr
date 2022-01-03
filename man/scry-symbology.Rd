@@ -2,12 +2,18 @@
 % Please edit documentation in R/api-symbology.R
 \name{scry-symbology}
 \alias{scry-symbology}
+\alias{scry_symbology}
 \title{Retrieve information about symbols}
+\usage{
+scry_symbology()
+}
 \value{
-A data frame with 1 or more rows and the following columns:
+A data frame with 1 row and the following columns:
 \itemize{
+\item \code{object} [chr]: A content type for this object, always \code{card_symbol}.
 \item \code{symbol} [chr]: The plaintext symbol. Often surrounded with curly braces
 \code{{}}. Note that not all symbols are ASCII text (for example, \verb{\{∞\}}).
+\item \code{svg_uri} [chr]: A URI to an SVG image of this symbol on Scryfall’s CDNs.
 \item \code{loose_variant} [chr]: An alternate version of this symbol, if it is
 possible to write it without curly braces.
 \item \code{english} [chr]: An English snippet that describes this symbol.
@@ -25,13 +31,13 @@ mana costs.
 \item \code{appears_in_mana_costs} [lgl]: True if this symbol appears in a mana cost
 on any Magic card. For example \code{{20}} has this field set to \code{false} because
 \code{{20}} only appears in Oracle text, not mana costs.
+\item \code{cmc} [dbl]: The mana value of this symbol.
 \item \code{funny} [lgl]: True if this symbol is only used on funny cards or
 Un-cards.
 \item \code{colors} [list]: An array of colors that this symbol represents.
-\item \code{gatherer_alternates} [chr]: An array of plaintext versions of this
+\item \code{gatherer_alternates} [list]: An array of plaintext versions of this
 symbol that Gatherer uses on old cards to describe original printed text.
 For example: \code{{W}} has \verb{["oW", "ooW"]} as alternates.
-\item \code{svg_uri} [chr]: A URI to an SVG image of this symbol on Scryfall’s CDNs.
 }
 }
 \description{

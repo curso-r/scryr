@@ -17,7 +17,7 @@ http_get <- function(url) {
   resp <- httr::GET(url)
   content <- httr::content(resp, encoding = "UTF-8")
 
-  if (resp$status_code != 200) stop(content$details)
+  if (resp$status_code != 200) stop(content$details, call. = FALSE)
 
   return(content)
 }
