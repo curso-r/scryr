@@ -6,16 +6,16 @@
       # A tibble: 653 x 20
          object id    code  mtgo_code arena_code tcgplayer_id name  uri   scryfall_uri
          <chr>  <chr> <chr> <chr>     <chr>             <int> <chr> <chr> <chr>       
-       1 set    4de7~ cc1   <NA>      <NA>               2699 Comm~ http~ https://scr~
-       2 set    39de~ cmr   cmr       cmr                2708 Comm~ http~ https://scr~
-       3 set    6bcd~ tcmr  <NA>      <NA>               2708 Comm~ http~ https://scr~
-       4 set    cff9~ klr   <NA>      <NA>                 NA Kala~ http~ https://scr~
-       5 set    67e4~ plist <NA>      <NA>               2715 The ~ http~ https://scr~
-       6 set    76c6~ pznr  <NA>      <NA>                 NA Zend~ http~ https://scr~
-       7 set    cfb7~ tznc  <NA>      <NA>                 NA Zend~ http~ https://scr~
-       8 set    40f2~ mznr  <NA>      <NA>                 NA Zend~ http~ https://scr~
-       9 set    f4e0~ znr   znr       znr                2648 Zend~ http~ https://scr~
-      10 set    24e6~ zne   <NA>      <NA>               2713 Zend~ http~ https://scr~
+       1 set    005f~ tdd1  <NA>      <NA>                 33 Duel~ http~ https://scr~
+       2 set    01e3~ ddu   ddu       ddu                2207 Duel~ http~ https://scr~
+       3 set    01f0~ pal99 <NA>      <NA>                 NA Aren~ http~ https://scr~
+       4 set    025f~ pg07  <NA>      <NA>                 NA Gate~ http~ https://scr~
+       5 set    0262~ mm3   mm3       mm3                1879 Mode~ http~ https://scr~
+       6 set    02a6~ dvd   <NA>      <NA>                 NA Duel~ http~ https://scr~
+       7 set    02d1~ akh   akh       akh                1882 Amon~ http~ https://scr~
+       8 set    0354~ oc13  <NA>      <NA>                 NA Comm~ http~ https://scr~
+       9 set    035a~ gtc   gtc       gtc                 569 Gate~ http~ https://scr~
+      10 set    0398~ avr   avr       avr                 362 Avac~ http~ https://scr~
       # ... with 643 more rows, and 11 more variables: search_uri <chr>,
       #   released_at <date>, set_type <chr>, card_count <int>,
       #   parent_set_code <chr>, digital <lgl>, nonfoil_only <lgl>, foil_only <lgl>,
