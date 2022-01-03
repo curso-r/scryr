@@ -1,0 +1,65 @@
+---
+title: "Card Imagery"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Card Imagery}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Scryfall produces multiple sizes of images and image crops for each Card object.
+Links to these images are available in each Card objects' `image_uris`
+properties.
+
+The image formats are:
+
+| Image         | Size       | Format | Description                                                                                                                                            | Example                                                                                                                                |
+| ------------- | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `png`         | 745 x 1040 | PNG    | A transparent, rounded full card PNG. This is the best image to use for videos or other high-quality content.                                          | [Example Image](https://c1.scryfall.com/file/scryfall-cards/png/front/6/d/6da045f8-6278-4c84-9d39-025adf0789c1.png?1562404626)         |
+| `border_crop` | 480 x 680  | JPG    | A full card image with the rounded corners and the majority of the border cropped off. Designed for dated contexts where rounded images can't be used. | [Example Image](https://c1.scryfall.com/file/scryfall-cards/border_crop/front/6/d/6da045f8-6278-4c84-9d39-025adf0789c1.jpg?1562404626) |
+| `art_crop`    | Varies     | JPG    | A rectangular crop of the card's art only. Not guaranteed to be perfect for cards with outlier designs or strange frame arrangements                   | [Example Image](https://c1.scryfall.com/file/scryfall-cards/art_crop/front/6/d/6da045f8-6278-4c84-9d39-025adf0789c1.jpg?1562404626)    |
+| `large`       | 672 x 936  | JPG    | A large full card image                                                                                                                                | [Example Image](https://c1.scryfall.com/file/scryfall-cards/large/front/6/d/6da045f8-6278-4c84-9d39-025adf0789c1.jpg?1562404626)       |
+| `normal`      | 488 x 680  | JPG    | A medium-sized full card image                                                                                                                         | [Example Image](https://c1.scryfall.com/file/scryfall-cards/normal/front/6/d/6da045f8-6278-4c84-9d39-025adf0789c1.jpg?1562404626)      |
+| `small`       | 146 x 204  | JPG    | A small full card image. Designed for use as thumbnail or list icon.                                                                                   | [Example Image](https://c1.scryfall.com/file/scryfall-cards/small/front/6/d/6da045f8-6278-4c84-9d39-025adf0789c1.jpg?1562404626)       |
+
+## Image Statuses
+
+As a card goes through spoiler season or other data entry, it may have no
+imagery for a period, or low-quality imagery. You can get a computer-readable
+value of the image's state using the `image_status` field on card objects.
+
+The statuses are:
+
+| Status         | Meaning                                                                                                                                                              |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `missing`      | The card has no image, or the image is being processed. This value should only be temporary for very new cards.                                                      |
+| `placeholder`  | Scryfall doesn't have an image of this card, but we know it exists and we have uploaded a placeholder in the meantime. This value is most common on localized cards. |
+| `lowres`       | The card's image is low-quality, either because it was just spoiled or we don't have better photography for it yet.                                                  |
+| `highres_scan` | This card has a full-resolution scanner image. Crisp and glossy!                                                                                                     |
+
+## Image Guidelines
+
+Card images on Scryfall are copyright Wizards of the Coast (and/or their artist,
+for very old sets) and they are provided for the purpose of creating additional
+_Magic_ software, or creating community content (such as videos, set reviews,
+etc) about _Magic_ and related products.
+
+When using images from Scryfall, please adhere to the following guidelines:
+
+* **Do not** cover, crop, or clip off the copyright or artist name on card
+images.
+* **Do not** distort, skew, or stretch card images.
+* **Do not** blur, sharpen, desaturate, or color-shift card images.
+* **Do not** add your own watermarks, stamps, or logos to card images.
+* **Do not** place card images in a way that implies someone other than Wizards
+of the Coast created the card or that it is from another game besides _Magic:
+The Gathering_.
+
+In particular, when using the `art_crop`:
+
+* List the artist name and copyright elsewhere in the same interface presenting
+the art crop, or use the full card image elsewhere in the same interface. Users
+should be able to identify the artist and source of the image somehow.
+
+If you believe there is a problem with a card image we have provided, please use
+the "Report Card Issue" button at the bottom of every card page.

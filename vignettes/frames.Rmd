@@ -1,0 +1,53 @@
+---
+title: "Frames"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Frames}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Scryfall tracks the appearance of card's bounding frame programmatically with
+the `frame` and `frame_effects` fields.
+
+## Frames
+
+The `frame` field tracks the edition of the card frame of used for the re/print
+in question. The overall Magic frame has gone though several major revisions in
+the game's lifetime.
+
+| Frame    | Description                                                                                                          | Examples                                                      |
+| -------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `1993`   | The original Magic card frame, starting from Limited Edition Alpha.                                                  | [Example Cards](https://scryfall.com/search?q=frame%3A1993)   |
+| `1997`   | The updated classic frame starting from Mirage block                                                                 | [Example Cards](https://scryfall.com/search?q=frame%3A1997)   |
+| `2003`   | The “modern” Magic card frame, introduced in Eighth Edition and Mirrodin block.                                      | [Example Cards](https://scryfall.com/search?q=frame%3A2003)   |
+| `2015`   | The holofoil-stamp Magic card frame, introduced in Magic 2015.                                                       | [Example Cards](https://scryfall.com/search?q=frame%3A2015)   |
+| `future` | The frame used on cards [from the future](http://mtgsalvation.gamepedia.com/Timeshifted#Timeshifted_in_Future_Sight) | [Example Cards](https://scryfall.com/search?q=frame%3Afuture) |
+
+## Frame Effects
+
+The `frame_effects` field tracks additional frame artwork applied over a
+particular frame. For example, there are both 2003 and 2015-frame cards with the
+Nyx-touched effect.
+
+| Effect                   | Description                                         | Examples                                                                      |
+| ------------------------ | --------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `legendary`              | The cards have a legendary crown                    | [Example Cards](https://scryfall.com/search?q=frame%3Alegendary)              |
+| `miracle`                | The miracle frame effect                            | [Example Cards](https://scryfall.com/search?q=frame%3Amiracle)                |
+| `nyxtouched`             | The Nyx-touched frame effect                        | [Example Cards](https://scryfall.com/search?q=frame%3Anyxtouched)             |
+| `draft`                  | The draft-matters frame effect                      | [Example Cards](https://scryfall.com/search?q=frame%3Adraft)                  |
+| `devoid`                 | The Devoid frame effect                             | [Example Cards](https://scryfall.com/search?q=frame%3Adevoid)                 |
+| `tombstone`              | The Odyssey tombstone mark                          | [Example Cards](https://scryfall.com/search?q=frame%3Atombstone)              |
+| `colorshifted`           | A colorshifted frame                                | [Example Cards](https://scryfall.com/search?q=frame%3Acolorshifted)           |
+| `inverted`               | The FNM-style inverted frame                        | [Example Cards](https://scryfall.com/search?q=frame%3Ainverted)               |
+| `sunmoondfc`             | The sun and moon transform marks                    | [Example Cards](https://scryfall.com/search?q=frame%3Asunmoondfc)             |
+| `compasslanddfc`         | The compass and land transform marks                | [Example Cards](https://scryfall.com/search?q=frame%3Acompasslanddfc)         |
+| `originpwdfc`            | The Origins and planeswalker transform marks        | [Example Cards](https://scryfall.com/search?q=frame%3Aoriginpwdfc)            |
+| `mooneldrazidfc`         | The moon and Eldrazi transform marks                | [Example Cards](https://scryfall.com/search?q=frame%3Amooneldrazidfc)         |
+| `waxingandwaningmoondfc` | The waxing and waning crescent moon transform marks | [Example Cards](https://scryfall.com/search?q=frame%3Awaxingandwaningmoondfc) |
+| `showcase`               | A custom Showcase frame                             | [Example Cards](https://scryfall.com/search?q=frame%3Ashowcase)               |
+| `extendedart`            | An extended art frame                               | [Example Cards](https://scryfall.com/search?q=frame%3Aextendedart)            |
+| `companion`              | The cards have a companion frame                    | [Example Cards](https://scryfall.com/search?q=frame%3Acompanion)              |
+| `etched`                 | The cards have an etched foil treatment             | [Example Cards](https://scryfall.com/search?q=frame%3Aetched)                 |
+| `snow`                   | The cards have the snowy frame effect               | [Example Cards](https://scryfall.com/search?q=frame%3Asnow)                   |
+| `lesson`                 | The cards have the Lesson frame effect              | [Example Cards](https://scryfall.com/search?q=frame%3Alesson)                 |
