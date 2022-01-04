@@ -55,7 +55,14 @@
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
 </form>
 
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/curso-r/scry/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 
     
@@ -66,7 +73,7 @@
       <img src="" class="logo" alt=""><h1>Frames</h1>
             
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/curso-r/scry/blob/HEAD/vignettes/frames.Rmd" class="external-link"><code>vignettes/frames.Rmd</code></a></small>
       <div class="d-none name"><code>frames.Rmd</code></div>
     </div>
 
@@ -79,41 +86,34 @@
 <p>The <code>frame</code> field tracks the edition of the card frame of used for the re/print in question. The overall Magic frame has gone though several major revisions in the game’s lifetime.</p>
 <table class="table">
 <colgroup>
-<col width="4%">
-<col width="62%">
-<col width="32%">
+<col width="33%">
+<col width="66%">
 </colgroup>
 <thead><tr class="header">
 <th>Frame</th>
 <th>Description</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>1993</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3A1993" class="external-link"><code>1993</code></a></td>
 <td>The original Magic card frame, starting from Limited Edition Alpha.</td>
-<td><a href="https://scryfall.com/search?q=frame%3A1993" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>1997</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3A1997" class="external-link"><code>1997</code></a></td>
 <td>The updated classic frame starting from Mirage block</td>
-<td><a href="https://scryfall.com/search?q=frame%3A1997" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>2003</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3A2003" class="external-link"><code>2003</code></a></td>
 <td>The “modern” Magic card frame, introduced in Eighth Edition and Mirrodin block.</td>
-<td><a href="https://scryfall.com/search?q=frame%3A2003" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>2015</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3A2015" class="external-link"><code>2015</code></a></td>
 <td>The holofoil-stamp Magic card frame, introduced in Magic 2015.</td>
-<td><a href="https://scryfall.com/search?q=frame%3A2015" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>future</code></td>
-<td>The frame used on cards <a href="http://mtgsalvation.gamepedia.com/Timeshifted#Timeshifted_in_Future_Sight" class="external-link">from the future</a>
+<td><a href="https://scryfall.com/search?q=frame%3Afuture" class="external-link"><code>future</code></a></td>
+<td>The frame used on cards <a href="https://mtg.fandom.com/wiki/Timeshifted#Timeshifted_in_Future_Sight" class="external-link">from the future</a>
 </td>
-<td><a href="https://scryfall.com/search?q=frame%3Afuture" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -124,110 +124,89 @@
 <p>The <code>frame_effects</code> field tracks additional frame artwork applied over a particular frame. For example, there are both 2003 and 2015-frame cards with the Nyx-touched effect.</p>
 <table class="table">
 <colgroup>
-<col width="15%">
-<col width="33%">
-<col width="50%">
+<col width="63%">
+<col width="36%">
 </colgroup>
 <thead><tr class="header">
 <th>Effect</th>
 <th>Description</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>legendary</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Alegendary" class="external-link"><code>legendary</code></a></td>
 <td>The cards have a legendary crown</td>
-<td><a href="https://scryfall.com/search?q=frame%3Alegendary" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>miracle</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Amiracle" class="external-link"><code>miracle</code></a></td>
 <td>The miracle frame effect</td>
-<td><a href="https://scryfall.com/search?q=frame%3Amiracle" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>nyxtouched</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Anyxtouched" class="external-link"><code>nyxtouched</code></a></td>
 <td>The Nyx-touched frame effect</td>
-<td><a href="https://scryfall.com/search?q=frame%3Anyxtouched" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>draft</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Adraft" class="external-link"><code>draft</code></a></td>
 <td>The draft-matters frame effect</td>
-<td><a href="https://scryfall.com/search?q=frame%3Adraft" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>devoid</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Adevoid" class="external-link"><code>devoid</code></a></td>
 <td>The Devoid frame effect</td>
-<td><a href="https://scryfall.com/search?q=frame%3Adevoid" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>tombstone</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Atombstone" class="external-link"><code>tombstone</code></a></td>
 <td>The Odyssey tombstone mark</td>
-<td><a href="https://scryfall.com/search?q=frame%3Atombstone" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>colorshifted</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Acolorshifted" class="external-link"><code>colorshifted</code></a></td>
 <td>A colorshifted frame</td>
-<td><a href="https://scryfall.com/search?q=frame%3Acolorshifted" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>inverted</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Ainverted" class="external-link"><code>inverted</code></a></td>
 <td>The FNM-style inverted frame</td>
-<td><a href="https://scryfall.com/search?q=frame%3Ainverted" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>sunmoondfc</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Asunmoondfc" class="external-link"><code>sunmoondfc</code></a></td>
 <td>The sun and moon transform marks</td>
-<td><a href="https://scryfall.com/search?q=frame%3Asunmoondfc" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>compasslanddfc</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Acompasslanddfc" class="external-link"><code>compasslanddfc</code></a></td>
 <td>The compass and land transform marks</td>
-<td><a href="https://scryfall.com/search?q=frame%3Acompasslanddfc" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>originpwdfc</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Aoriginpwdfc" class="external-link"><code>originpwdfc</code></a></td>
 <td>The Origins and planeswalker transform marks</td>
-<td><a href="https://scryfall.com/search?q=frame%3Aoriginpwdfc" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>mooneldrazidfc</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Amooneldrazidfc" class="external-link"><code>mooneldrazidfc</code></a></td>
 <td>The moon and Eldrazi transform marks</td>
-<td><a href="https://scryfall.com/search?q=frame%3Amooneldrazidfc" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>waxingandwaningmoondfc</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Awaxingandwaningmoondfc" class="external-link"><code>waxingandwaningmoondfc</code></a></td>
 <td>The waxing and waning crescent moon transform marks</td>
-<td><a href="https://scryfall.com/search?q=frame%3Awaxingandwaningmoondfc" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>showcase</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Ashowcase" class="external-link"><code>showcase</code></a></td>
 <td>A custom Showcase frame</td>
-<td><a href="https://scryfall.com/search?q=frame%3Ashowcase" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>extendedart</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Aextendedart" class="external-link"><code>extendedart</code></a></td>
 <td>An extended art frame</td>
-<td><a href="https://scryfall.com/search?q=frame%3Aextendedart" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>companion</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Acompanion" class="external-link"><code>companion</code></a></td>
 <td>The cards have a companion frame</td>
-<td><a href="https://scryfall.com/search?q=frame%3Acompanion" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>etched</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Aetched" class="external-link"><code>etched</code></a></td>
 <td>The cards have an etched foil treatment</td>
-<td><a href="https://scryfall.com/search?q=frame%3Aetched" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>snow</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Asnow" class="external-link"><code>snow</code></a></td>
 <td>The cards have the snowy frame effect</td>
-<td><a href="https://scryfall.com/search?q=frame%3Asnow" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>lesson</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3Alesson" class="external-link"><code>lesson</code></a></td>
 <td>The cards have the Lesson frame effect</td>
-<td><a href="https://scryfall.com/search?q=frame%3Alesson" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -240,7 +219,7 @@
 
     <footer><div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by Caio Lente, Curso-R.</p>
+<p>Developed by <a href="https://lente.dev" class="external-link">Caio Lente</a>, <a href="https://curso-r.com" class="external-link"><img src="reference/figures/curso-r.png" width="80"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">

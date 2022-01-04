@@ -55,7 +55,14 @@
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
 </form>
 
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/curso-r/scry/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 
     
@@ -66,7 +73,7 @@
       <img src="" class="logo" alt=""><h1>Search Reference</h1>
             
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/curso-r/scry/blob/HEAD/vignettes/syntax.Rmd" class="external-link"><code>vignettes/syntax.Rmd</code></a></small>
       <div class="d-none name"><code>syntax.Rmd</code></div>
     </div>
 
@@ -83,36 +90,26 @@
 <p>You can use comparison expressions (<code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, and <code>!=</code>) to check against <em>ranges</em> of colors.</p>
 <p>Find cards that have a color indicator with <code>has:indicator</code>.</p>
 <table class="table">
-<colgroup>
-<col width="14%">
-<col width="35%">
-<col width="50%">
-</colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>c:rg</code></td>
+<td><a href="https://scryfall.com/search?q=c%3Arg" class="external-link"><code>c:rg</code></a></td>
 <td>Cards that are red and green</td>
-<td><a href="https://scryfall.com/search?q=c%3Arg" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>color&gt;=uw -c:red</code></td>
+<td><a href="https://scryfall.com/search?q=color%3E%3Duw+-c%3Ared" class="external-link"><code>color&gt;=uw -c:red</code></a></td>
 <td>Cards that are at least white and blue, but not red</td>
-<td><a href="https://scryfall.com/search?q=color%3E%3Duw+-c%3Ared" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>id&lt;=esper t:instant</code></td>
+<td><a href="https://scryfall.com/search?q=id%3C%3Desper+t%3Ainstant" class="external-link"><code>id&lt;=esper t:instant</code></a></td>
 <td>Instants you can play with an Esper commander</td>
-<td><a href="https://scryfall.com/search?q=id%3C%3Desper+t%3Ainstant" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>id:c t:land</code></td>
+<td><a href="https://scryfall.com/search?q=id%3Ac+t%3Aland" class="external-link"><code>id:c t:land</code></a></td>
 <td>Land cards with colorless identity</td>
-<td><a href="https://scryfall.com/search?q=id%3Ac+t%3Aland" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -126,18 +123,15 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>t:merfolk t:legend</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Amerfolk+t%3Alegend" class="external-link"><code>t:merfolk t:legend</code></a></td>
 <td>Legendary merfolk cards</td>
-<td><a href="https://scryfall.com/search?q=t%3Amerfolk+t%3Alegend" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>t:goblin -t:creature</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Agoblin+-t%3Acreature" class="external-link"><code>t:goblin -t:creature</code></a></td>
 <td>Goblin cards that aren’t creatures</td>
-<td><a href="https://scryfall.com/search?q=t%3Agoblin+-t%3Acreature" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -153,25 +147,21 @@
 <p>You can also use <code>keyword:</code> to search for cards with a specific keyword ability.</p>
 <table class="table">
 <colgroup>
-<col width="22%">
-<col width="23%">
-<col width="53%">
+<col width="74%">
+<col width="25%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>o:draw t:creature</code></td>
+<td><a href="https://scryfall.com/search?q=o%3Adraw+t%3Acreature" class="external-link"><code>o:draw t:creature</code></a></td>
 <td>Creatures that deal with drawing cards</td>
-<td><a href="https://scryfall.com/search?q=o%3Adraw+t%3Acreature" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>o:"~ enters the battlefield tapped"</code></td>
+<td><a href="https://scryfall.com/search?q=o%3A%22~+enters+the+battlefield+tapped%22" class="external-link"><code>o:"~ enters the battlefield tapped"</code></a></td>
 <td>Cards that enter the battlefield tapped</td>
-<td><a href="https://scryfall.com/search?q=o%3A%22~+enters+the+battlefield+tapped%22" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -180,7 +170,7 @@
 <h2 id="mana-costs">Mana Costs<a class="anchor" aria-label="anchor" href="#mana-costs"></a>
 </h2>
 <p>Use the <code>m:</code> or <code>mana</code>: keyword to search for cards that have certain symbols in their mana costs.</p>
-<p>This keyword uses the official text version of mana costs set forth in the <a href="http://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules" class="external-link">Comprehensive Rules</a>. For example, <code>{G}</code> represents a green mana.</p>
+<p>This keyword uses the official text version of mana costs set forth in the <a href="https://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules" class="external-link">Comprehensive Rules</a>. For example, <code>{G}</code> represents a green mana.</p>
 <p>Shorthand for is allowed for symbols that aren’t split: <code>G</code> is the same as <code>{G}</code></p>
 <p>However, you must always wrap complex/split symbols like <code>{2/G}</code> in braces.</p>
 <p>You can search for mana costs using comparison operators; a mana cost is greater than another if it includes all the same symbols and more, and it’s less if it includes only a subset of symbols.</p>
@@ -190,50 +180,41 @@
 <p>You can also find cards that produce specific types of mana, with <code>produces:</code></p>
 <table class="table">
 <colgroup>
-<col width="13%">
-<col width="37%">
-<col width="48%">
+<col width="60%">
+<col width="39%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>mana:{G}{U}</code></td>
+<td><a href="https://scryfall.com/search?q=mana%3A%7BG%7D%7BU%7D" class="external-link"><code>mana:{G}{U}</code></a></td>
 <td>Cards with one green and blue mana in their costs</td>
-<td><a href="https://scryfall.com/search?q=mana%3A%7BG%7D%7BU%7D" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>m:2WW</code></td>
+<td><a href="https://scryfall.com/search?q=m%3A2WW" class="external-link"><code>m:2WW</code></a></td>
 <td>Cards with two generic and two white mana in their cost</td>
-<td><a href="https://scryfall.com/search?q=m%3A2WW" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>m&gt;3WU</code></td>
+<td><a href="https://scryfall.com/search?q=m%3E3WU" class="external-link"><code>m&gt;3WU</code></a></td>
 <td>Cards that cost more than three generic, one white, and one blue mana</td>
-<td><a href="https://scryfall.com/search?q=m%3E3WU" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>m:{R/P}</code></td>
+<td><a href="https://scryfall.com/search?q=m%3A%7BR%2FP%7D" class="external-link"><code>m:{R/P}</code></a></td>
 <td>Cards with one Phyrexian red mana in their cost</td>
-<td><a href="https://scryfall.com/search?q=m%3A%7BR%2FP%7D" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>c:u cmc=5</code></td>
+<td><a href="https://scryfall.com/search?q=c%3Au+cmc%3D5" class="external-link"><code>c:u cmc=5</code></a></td>
 <td>Blue cards with converted mana cost 5</td>
-<td><a href="https://scryfall.com/search?q=c%3Au+cmc%3D5" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>devotion:{u/b}{u/b}{u/b}</code></td>
+<td><a href="https://scryfall.com/search?q=devotion%3A%7Bu%2Fb%7D%7Bu%2Fb%7D%7Bu%2Fb%7D" class="external-link"><code>devotion:{u/b}{u/b}{u/b}</code></a></td>
 <td>Cards that contribute 3 to devotion to black and blue</td>
-<td><a href="https://scryfall.com/search?q=devotion%3A%7Bu%2Fb%7D%7Bu%2Fb%7D%7Bu%2Fb%7D" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>produces=wu</code></td>
+<td><a href="https://scryfall.com/search?q=produces%3Dwu" class="external-link"><code>produces=wu</code></a></td>
 <td>Cards that produce blue and white mana</td>
-<td><a href="https://scryfall.com/search?q=produces%3Dwu" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -247,23 +228,19 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>pow&gt;=8</code></td>
+<td><a href="https://scryfall.com/search?q=pow%3E%3D8" class="external-link"><code>pow&gt;=8</code></a></td>
 <td>Cards with 8 or more power</td>
-<td><a href="https://scryfall.com/search?q=pow%3E%3D8" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>pow&gt;tou c:w t:creature</code></td>
+<td><a href="https://scryfall.com/search?q=pow%3Etou+c%3Aw+t%3Acreature" class="external-link"><code>pow&gt;tou c:w t:creature</code></a></td>
 <td>White creatures that are top-heavy</td>
-<td><a href="https://scryfall.com/search?q=pow%3Etou+c%3Aw+t%3Acreature" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>t:planeswalker loy=3</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Aplaneswalker+loy%3D3" class="external-link"><code>t:planeswalker loy=3</code></a></td>
 <td>Planeswalkers that start at 3 loyalty</td>
-<td><a href="https://scryfall.com/search?q=t%3Aplaneswalker+loy%3D3" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -276,18 +253,15 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>is:meld</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Ameld" class="external-link"><code>is:meld</code></a></td>
 <td>Cards that meld</td>
-<td><a href="https://scryfall.com/search?q=is%3Ameld" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>is:split</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Asplit" class="external-link"><code>is:split</code></a></td>
 <td>Split-faced cards</td>
-<td><a href="https://scryfall.com/search?q=is%3Asplit" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -298,31 +272,22 @@
 <p>Find cards that are cast as spells with <code>is:spell</code>.</p>
 <p>Find permanent cards with <code>is:permanent</code>, historic cards with <code>is:historic</code>, creatures that can be in your party with <code>is:party</code>, modal effects with <code>is:modal</code>, vanilla creatures with <code>is:vanilla</code>, or French vanilla cards with <code>is:frenchvanilla</code>.</p>
 <table class="table">
-<colgroup>
-<col width="15%">
-<col width="33%">
-<col width="51%">
-</colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>c&gt;=br is:spell f:duel</code></td>
+<td><a href="https://scryfall.com/search?q=c%3E%3Dbr+is%3Aspell+f%3Aduel" class="external-link"><code>c&gt;=br is:spell f:duel</code></a></td>
 <td>Black and red multicolor spells in Duel Commander</td>
-<td><a href="https://scryfall.com/search?q=c%3E%3Dbr+is%3Aspell+f%3Aduel" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>is:permanent t:rebel</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Apermanent+t%3Arebel" class="external-link"><code>is:permanent t:rebel</code></a></td>
 <td>Rebel permanents</td>
-<td><a href="https://scryfall.com/search?q=is%3Apermanent+t%3Arebel" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>is:vanilla</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Avanilla" class="external-link"><code>is:vanilla</code></a></td>
 <td>Vanilla creatures</td>
-<td><a href="https://scryfall.com/search?q=is%3Avanilla" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -334,31 +299,22 @@
 <p>Un-cards, holiday cards, and other funny cards are findable with <code>is:funny</code> or mentioning their set.</p>
 <p>You may also use <code>include:extras</code> to reveal absolutely every card when you search.</p>
 <table class="table">
-<colgroup>
-<col width="15%">
-<col width="35%">
-<col width="48%">
-</colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>is:funny</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Afunny" class="external-link"><code>is:funny</code></a></td>
 <td>All funny cards</td>
-<td><a href="https://scryfall.com/search?q=is%3Afunny" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>t:scheme</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Ascheme" class="external-link"><code>t:scheme</code></a></td>
 <td>Scheme cards</td>
-<td><a href="https://scryfall.com/search?q=t%3Ascheme" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>power include:extras</code></td>
+<td><a href="https://scryfall.com/search?q=power+include%3Aextras" class="external-link"><code>power include:extras</code></a></td>
 <td>Cards with “power” in their name, including extras</td>
-<td><a href="https://scryfall.com/search?q=power+include%3Aextras" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -370,35 +326,29 @@
 <p>Use <code>new:rarity</code> to find reprint cards printed at a new rarity for the first time. You can find cards that have ever been printed in a given rarity using <code>in:</code> (for example, <code>in:rare</code> to find cards that have ever been printed at rare.)</p>
 <table class="table">
 <colgroup>
-<col width="18%">
-<col width="34%">
-<col width="47%">
+<col width="62%">
+<col width="37%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>r:common t:artifact</code></td>
+<td><a href="https://scryfall.com/search?q=r%3Acommon+t%3Aartifact" class="external-link"><code>r:common t:artifact</code></a></td>
 <td>Common artifacts</td>
-<td><a href="https://scryfall.com/search?q=r%3Acommon+t%3Aartifact" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>r&gt;=r</code></td>
+<td><a href="https://scryfall.com/search?q=r%3E%3Dr" class="external-link"><code>r&gt;=r</code></a></td>
 <td>Cards at rare rarity or above (i.e., rares and mythics)</td>
-<td><a href="https://scryfall.com/search?q=r%3E%3Dr" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>rarity:common e:ima new:rarity</code></td>
+<td><a href="https://scryfall.com/search?q=rarity%3Acommon+e%3Aima+new%3Ararity" class="external-link"><code>rarity:common e:ima new:rarity</code></a></td>
 <td>Cards printed as commons for the first time in Iconic Masters</td>
-<td><a href="https://scryfall.com/search?q=rarity%3Acommon+e%3Aima+new%3Ararity" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>in:rare -rarity:rare</code></td>
+<td><a href="https://scryfall.com/search?q=in%3Arare+-rarity%3Arare" class="external-link"><code>in:rare -rarity:rare</code></a></td>
 <td>Non-rare printings of cards that have been printed at rare</td>
-<td><a href="https://scryfall.com/search?q=in%3Arare+-rarity%3Arare" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -415,45 +365,37 @@
 <p>You can also search for individual cards that were sold in certain places with <code>is:booster</code> or <code>is:planeswalker_deck</code>, or specific types of set promos with <code>is:league</code>, <code>is:buyabox</code>, <code>is:giftbox</code>, <code>is:intro_pack</code>, <code>is:gameday</code>, <code>is:prerelease</code>, or <code>is:release</code>, among others.</p>
 <table class="table">
 <colgroup>
-<col width="17%">
-<col width="35%">
-<col width="46%">
+<col width="61%">
+<col width="38%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>e:war</code></td>
+<td><a href="https://scryfall.com/sets/war?as=grid&amp;order=set" class="external-link"><code>e:war</code></a></td>
 <td>Cards from War of the Spark</td>
-<td><a href="https://scryfall.com/search?q=e%3Awar" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>e:war is:booster</code></td>
+<td><a href="https://scryfall.com/search?q=e%3Awar+is%3Abooster" class="external-link"><code>e:war is:booster</code></a></td>
 <td>Cards available inside War of the Spark booster boxes</td>
-<td><a href="https://scryfall.com/search?q=e%3Awar+is%3Abooster" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>b:wwk</code></td>
+<td><a href="https://scryfall.com/search?q=b%3Awwk" class="external-link"><code>b:wwk</code></a></td>
 <td>Cards in Zendikar Block (but using the Worldwake code)</td>
-<td><a href="https://scryfall.com/search?q=b%3Awwk" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>in:lea in:m15</code></td>
+<td><a href="https://scryfall.com/search?q=in%3Alea+in%3Am15" class="external-link"><code>in:lea in:m15</code></a></td>
 <td>Cards that were in both Alpha and Magic 2015</td>
-<td><a href="https://scryfall.com/search?q=in%3Alea+in%3Am15" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>t:legendary -in:booster</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Alegendary+-in%3Abooster" class="external-link"><code>t:legendary -in:booster</code></a></td>
 <td>Legendary cards that have never been printed in a booster set</td>
-<td><a href="https://scryfall.com/search?q=t%3Alegendary+-in%3Abooster" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>is:datestamped is:prerelease</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Adatestamped+is%3Aprerelease" class="external-link"><code>is:datestamped is:prerelease</code></a></td>
 <td>Prerelease promos with a date stamp</td>
-<td><a href="https://scryfall.com/search?q=is%3Adatestamped+is%3Aprerelease" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -466,18 +408,15 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>cube:vintage</code></td>
+<td><a href="https://scryfall.com/cubes/vintage?as=grid&amp;order=name" class="external-link"><code>cube:vintage</code></a></td>
 <td>Cards in the Vintage Cube</td>
-<td><a href="https://scryfall.com/search?q=cube%3Avintage" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>cube:modern t:planeswalker</code></td>
+<td><a href="https://scryfall.com/search?q=cube%3Amodern+t%3Aplaneswalker" class="external-link"><code>cube:modern t:planeswalker</code></a></td>
 <td>Planeswalkers in the Modern Cube</td>
-<td><a href="https://scryfall.com/search?q=cube%3Amodern+t%3Aplaneswalker" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -494,28 +433,23 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>c:g t:creature f:pauper</code></td>
+<td><a href="https://scryfall.com/search?q=c%3Ag+t%3Acreature+f%3Apauper" class="external-link"><code>c:g t:creature f:pauper</code></a></td>
 <td>Green creatures in Pauper format</td>
-<td><a href="https://scryfall.com/search?q=c%3Ag+t%3Acreature+f%3Apauper" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>banned:legacy</code></td>
+<td><a href="https://scryfall.com/search?q=banned%3Alegacy" class="external-link"><code>banned:legacy</code></a></td>
 <td>Cards banned in Legacy format</td>
-<td><a href="https://scryfall.com/search?q=banned%3Alegacy" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>is:commander</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Acommander" class="external-link"><code>is:commander</code></a></td>
 <td>Cards that can be your commander</td>
-<td><a href="https://scryfall.com/search?q=is%3Acommander" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>is:reserved</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Areserved" class="external-link"><code>is:reserved</code></a></td>
 <td>Cards on the Reserved List</td>
-<td><a href="https://scryfall.com/search?q=is%3Areserved" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -529,18 +463,15 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>tix&gt;15.00</code></td>
+<td><a href="https://scryfall.com/search?as=checklist&amp;order=tix&amp;q=tix%3E15.00" class="external-link"><code>tix&gt;15.00</code></a></td>
 <td>Cards that cost more than 15 TIX at MTGO stores</td>
-<td><a href="https://scryfall.com/search?as=checklist&amp;order=tix&amp;q=tix%3E15.00" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>usd&gt;=0.50 e:ema</code></td>
+<td><a href="https://scryfall.com/search?as=checklist&amp;order=usd&amp;q=usd%3E%3D0.50+e%3Aema" class="external-link"><code>usd&gt;=0.50 e:ema</code></a></td>
 <td>Cards worth 50¢ or more in Eternal Masters</td>
-<td><a href="https://scryfall.com/search?as=checklist&amp;order=usd&amp;q=usd%3E%3D0.50+e%3Aema" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -556,50 +487,41 @@
 <p>You can compare how many different illustrations a give card has with things like <code>illustrations&gt;1</code>.</p>
 <table class="table">
 <colgroup>
-<col width="22%">
-<col width="27%">
-<col width="49%">
+<col width="70%">
+<col width="30%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>a:"proce"</code></td>
+<td><a href="https://scryfall.com/search?q=a%3A%22proce%22" class="external-link"><code>a:"proce"</code></a></td>
 <td>Cards illustrated by Vincent Proce</td>
-<td><a href="https://scryfall.com/search?q=a%3A%22proce%22" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>ft:mishra</code></td>
+<td><a href="https://scryfall.com/search?q=ft%3Amishra" class="external-link"><code>ft:mishra</code></a></td>
 <td>Cards that mention Mishra in their flavor text</td>
-<td><a href="https://scryfall.com/search?q=ft%3Amishra" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>ft:designed e:m15</code></td>
+<td><a href="https://scryfall.com/search?q=ft%3Adesigned+e%3Am15" class="external-link"><code>ft:designed e:m15</code></a></td>
 <td>Cards created by guest designers in Magic 2015</td>
-<td><a href="https://scryfall.com/search?q=ft%3Adesigned+e%3Am15" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>wm:orzhov</code></td>
+<td><a href="https://scryfall.com/search?q=wm%3Aorzhov" class="external-link"><code>wm:orzhov</code></a></td>
 <td>Cards with Orzhov guild watermark</td>
-<td><a href="https://scryfall.com/search?q=wm%3Aorzhov" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>e:m10 new:art is:reprint</code></td>
+<td><a href="https://scryfall.com/search?q=e%3Am10+new%3Aart+is%3Areprint" class="external-link"><code>e:m10 new:art is:reprint</code></a></td>
 <td>Reprints with new art in Magic 2010</td>
-<td><a href="https://scryfall.com/search?q=e%3Am10+new%3Aart+is%3Areprint" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>new:art -new:artist st:masters game:paper</code></td>
+<td><a href="https://scryfall.com/search?q=new%3Aart+-new%3Aartist+st%3Amasters+game%3Apaper" class="external-link"><code>new:art -new:artist st:masters game:paper</code></a></td>
 <td>Cards in masters sets with new art by the same artist</td>
-<td><a href="https://scryfall.com/search?q=new%3Aart+-new%3Aartist+st%3Amasters+game%3Apaper" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>new:flavor e:m15 is:reprint</code></td>
+<td><a href="https://scryfall.com/search?q=new%3Aflavor+e%3Am15+is%3Areprint" class="external-link"><code>new:flavor e:m15 is:reprint</code></a></td>
 <td>Reprint cards in Magic 2015 which have new flavor text</td>
-<td><a href="https://scryfall.com/search?q=new%3Aflavor+e%3Am15+is%3Areprint" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -616,45 +538,37 @@
 <p>Search for a card’s security stamp with <code>stamp:oval</code>, <code>stamp:acorn</code>, <code>stamp:triangle</code>, or <code>stamp:arena</code></p>
 <table class="table">
 <colgroup>
-<col width="20%">
-<col width="33%">
-<col width="46%">
+<col width="64%">
+<col width="35%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>border:white t:creature</code></td>
+<td><a href="https://scryfall.com/search?q=border%3Awhite+t%3Acreature" class="external-link"><code>border:white t:creature</code></a></td>
 <td>White-bordered creature cards</td>
-<td><a href="https://scryfall.com/search?q=border%3Awhite+t%3Acreature" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>is:new r:mythic</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Anew+r%3Amythic" class="external-link"><code>is:new r:mythic</code></a></td>
 <td>Mythic cards with the 2015 holofoil-stamp frame</td>
-<td><a href="https://scryfall.com/search?q=is%3Anew+r%3Amythic" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>is:old t:artifact</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Aold+t%3Aartifact" class="external-link"><code>is:old t:artifact</code></a></td>
 <td>Artifacts in either the 1993 or 1997 variant of the ‘classic’ frame</td>
-<td><a href="https://scryfall.com/search?q=is%3Aold+t%3Aartifact" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>is:hires</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Ahires" class="external-link"><code>is:hires</code></a></td>
 <td>Cards with high-resolution scans</td>
-<td><a href="https://scryfall.com/search?q=is%3Ahires" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>is:foil e:c16</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Afoil+e%3Ac16" class="external-link"><code>is:foil e:c16</code></a></td>
 <td>Commander 2016 cards printed in foil</td>
-<td><a href="https://scryfall.com/search?q=is%3Afoil+e%3Ac16" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>frame:2003 new:frame in:fut is:reprint</code></td>
+<td><a href="https://scryfall.com/search?q=frame%3A2003+new%3Aframe+in%3Afut+is%3Areprint" class="external-link"><code>frame:2003 new:frame in:fut is:reprint</code></a></td>
 <td>Future cards printed later in other frames</td>
-<td><a href="https://scryfall.com/search?q=frame%3A2003+new%3Aframe+in%3Afut+is%3Areprint" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -672,28 +586,23 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>game:arena</code></td>
+<td><a href="https://scryfall.com/search?q=game%3Aarena" class="external-link"><code>game:arena</code></a></td>
 <td>Cards available on MTG:Arena</td>
-<td><a href="https://scryfall.com/search?q=game%3Aarena" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>-in:mtgo f:legacy</code></td>
+<td><a href="https://scryfall.com/search?q=-in%3Amtgo+f%3Alegacy" class="external-link"><code>-in:mtgo f:legacy</code></a></td>
 <td>Legacy legal cards not available on MTGO</td>
-<td><a href="https://scryfall.com/search?q=-in%3Amtgo+f%3Alegacy" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>is:promo</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Apromo" class="external-link"><code>is:promo</code></a></td>
 <td>Promotional cards</td>
-<td><a href="https://scryfall.com/search?q=is%3Apromo" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>is:spotlight</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Aspotlight" class="external-link"><code>is:spotlight</code></a></td>
 <td>Story Spotlight cards</td>
-<td><a href="https://scryfall.com/search?q=is%3Aspotlight" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -706,28 +615,23 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>year&lt;=1994</code></td>
+<td><a href="https://scryfall.com/search?q=year%3C%3D1994" class="external-link"><code>year&lt;=1994</code></a></td>
 <td>Cards from 1994 and before</td>
-<td><a href="https://scryfall.com/search?q=year%3C%3D1994" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>year=2022</code></td>
+<td><a href="https://scryfall.com/search?q=year%3D2022" class="external-link"><code>year=2022</code></a></td>
 <td>Cards released this year</td>
-<td><a href="https://scryfall.com/search?q=year%3D2022" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>date&gt;=2015-08-18</code></td>
+<td><a href="https://scryfall.com/search?q=date%3E%3D2015-08-18" class="external-link"><code>date&gt;=2015-08-18</code></a></td>
 <td>Cards printed on or after August 18, 2015</td>
-<td><a href="https://scryfall.com/search?q=date%3E%3D2015-08-18" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>date&gt;ori</code></td>
+<td><a href="https://scryfall.com/search?q=date%3Eori" class="external-link"><code>date&gt;ori</code></a></td>
 <td>cards printed in sets released after Magic Origins</td>
-<td><a href="https://scryfall.com/search?q=date%3Eori" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -742,18 +646,15 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>art:squirrel</code></td>
+<td><a href="https://scryfall.com/search?q=art%3Asquirrel" class="external-link"><code>art:squirrel</code></a></td>
 <td>Art that contains a squirrel</td>
-<td><a href="https://scryfall.com/search?q=art%3Asquirrel" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>function:removal</code></td>
+<td><a href="https://scryfall.com/search?q=function%3Aremoval" class="external-link"><code>function:removal</code></a></td>
 <td>Cards that cause removal</td>
-<td><a href="https://scryfall.com/search?q=function%3Aremoval" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -764,35 +665,29 @@
 <p>You can find reprints with <code>is:reprint</code>, cards that were new in their set with <code>not:reprint</code>, and cards that have only been in a single set with <code>is:unique</code>. You can also compare the number of times a card has been printed with syntax like <code>prints=1</code>, or the number of sets a card has been in with <code>sets=1</code>. These can also be compared including only paper sets with <code>paperprints=1</code> and <code>papersets=1</code>.</p>
 <table class="table">
 <colgroup>
-<col width="12%">
-<col width="44%">
-<col width="43%">
+<col width="51%">
+<col width="48%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>e:c16 not:reprint</code></td>
+<td><a href="https://scryfall.com/search?q=e%3Ac16+not%3Areprint" class="external-link"><code>e:c16 not:reprint</code></a></td>
 <td>Cards that were new in Commander 2016</td>
-<td><a href="https://scryfall.com/search?q=e%3Ac16+not%3Areprint" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>e:ktk is:unique</code></td>
+<td><a href="https://scryfall.com/search?q=e%3Aktk+is%3Aunique" class="external-link"><code>e:ktk is:unique</code></a></td>
 <td>Cards that were in Khans of Tarkir and not printed in any other set</td>
-<td><a href="https://scryfall.com/search?q=e%3Aktk+is%3Aunique" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>sets&gt;=20</code></td>
+<td><a href="https://scryfall.com/search?q=sets%3E%3D20" class="external-link"><code>sets&gt;=20</code></a></td>
 <td>Cards that have been printed in 20 or more distinct sets</td>
-<td><a href="https://scryfall.com/search?q=sets%3E%3D20" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>e:arn papersets=1</code></td>
+<td><a href="https://scryfall.com/search?q=e%3Aarn+papersets%3D1" class="external-link"><code>e:arn papersets=1</code></a></td>
 <td>Cards that were printed in Arabian Nights but never reprinted in paper</td>
-<td><a href="https://scryfall.com/search?q=e%3Aarn+papersets%3D1" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -805,35 +700,29 @@
 <p>You can also find the first printing of a card in each language using <code>new:language</code> and all printings of a card that’s been printed in a language at least once with <code>in:</code> (e.g. <code>in:ru</code> will find cards that have ever been printed in Russian.)</p>
 <table class="table">
 <colgroup>
-<col width="19%">
-<col width="34%">
-<col width="45%">
+<col width="63%">
+<col width="36%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>lang:japanese</code></td>
+<td><a href="https://scryfall.com/search?q=lang%3Ajapanese" class="external-link"><code>lang:japanese</code></a></td>
 <td>Cards in Japanese</td>
-<td><a href="https://scryfall.com/search?q=lang%3Ajapanese" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>lang:any t:planeswalker unique:prints</code></td>
+<td><a href="https://scryfall.com/search?q=lang%3Aany+t%3Aplaneswalker+unique%3Aprints" class="external-link"><code>lang:any t:planeswalker unique:prints</code></a></td>
 <td>Planeswalkers in any language</td>
-<td><a href="https://scryfall.com/search?q=lang%3Aany+t%3Aplaneswalker+unique%3Aprints" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>lang:ko new:language t:goblin</code></td>
+<td><a href="https://scryfall.com/search?q=lang%3Ako+new%3Alanguage+t%3Agoblin" class="external-link"><code>lang:ko new:language t:goblin</code></a></td>
 <td>The first printings of goblin cards in the Korean language</td>
-<td><a href="https://scryfall.com/search?q=lang%3Ako+new%3Alanguage+t%3Agoblin" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>in:ru in:zhs</code></td>
+<td><a href="https://scryfall.com/search?q=in%3Aru+in%3Azhs" class="external-link"><code>in:ru in:zhs</code></a></td>
 <td>Cards that have been printed in both Russian and Simplified Chinese</td>
-<td><a href="https://scryfall.com/search?q=in%3Aru+in%3Azhs" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -848,23 +737,19 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>is:dual</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Adual" class="external-link"><code>is:dual</code></a></td>
 <td>Cards that are dual lands</td>
-<td><a href="https://scryfall.com/search?q=is%3Adual" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>is:fetchland</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Afetchland" class="external-link"><code>is:fetchland</code></a></td>
 <td>Cards that are fetchlands</td>
-<td><a href="https://scryfall.com/search?q=is%3Afetchland" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>is:colorshifted</code></td>
+<td><a href="https://scryfall.com/search?q=is%3Acolorshifted" class="external-link"><code>is:colorshifted</code></a></td>
 <td>Colorshifted cards</td>
-<td><a href="https://scryfall.com/search?q=is%3Acolorshifted" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -876,31 +761,22 @@
 <p>The <code>is:</code> keyword has a convenient inverted mode <code>not:</code> which is the same as <code>-is:</code>. Conversely, <code>-not:</code> is the same as <code>is:</code>.</p>
 <p>Loose name words can also be inverted with <code>-</code></p>
 <table class="table">
-<colgroup>
-<col width="17%">
-<col width="33%">
-<col width="49%">
-</colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>-fire c:r t:instant</code></td>
+<td><a href="https://scryfall.com/search?q=-fire+c%3Ar+t%3Ainstant" class="external-link"><code>-fire c:r t:instant</code></a></td>
 <td>Red instants without the word “fire” in their name</td>
-<td><a href="https://scryfall.com/search?q=-fire+c%3Ar+t%3Ainstant" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>o:changeling -t:creature</code></td>
+<td><a href="https://scryfall.com/search?q=o%3Achangeling+-t%3Acreature" class="external-link"><code>o:changeling -t:creature</code></a></td>
 <td>Changeling cards that aren’t creatures</td>
-<td><a href="https://scryfall.com/search?q=o%3Achangeling+-t%3Acreature" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>not:reprint e:c16</code></td>
+<td><a href="https://scryfall.com/search?q=not%3Areprint+e%3Ac16" class="external-link"><code>not:reprint e:c16</code></a></td>
 <td>Cards in Commander 2016 that aren’t reprints</td>
-<td><a href="https://scryfall.com/search?q=not%3Areprint+e%3Ac16" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -911,33 +787,24 @@
 <p>You can use forward slashes <code>//</code> instead of quotes with the <code>type:</code>, <code>t:</code>, <code>oracle:</code>, <code>o:</code>, <code>flavor:</code>, <code>ft:</code>, and <code>name:</code> keywords to match those parts of a card with a regular expression.</p>
 <p>Scryfall supports many regex features such as <code>.*?</code>, option groups <code>(a|b)</code>, brackets <code>[ab]</code>, character classes <code>\d</code>, <code>\w</code>, and anchors <code>(?!)</code>, <code>\b</code>, <code>^</code>, and <code>$</code>.</p>
 <p>Forward slashes inside your regex must be escaped with <code>\/</code>.</p>
-<p>Full documentation for this keyword is available on in [vignette(“regex”)].</p>
+<p>Full documentation for this keyword is available on in <code><a href="../articles/regex.html">vignette("regex")</a></code>.</p>
 <table class="table">
-<colgroup>
-<col width="14%">
-<col width="32%">
-<col width="53%">
-</colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>t:creature o:/^{T}:/</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Acreature+o%3A%2F%5E%7BT%7D%3A%2F" class="external-link"><code>t:creature o:/^{T}:/</code></a></td>
 <td>Creatures that tap with no other payment</td>
-<td><a href="https://scryfall.com/search?q=t%3Acreature+o%3A%2F%5E%7BT%7D%3A%2F" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>t:instant o:/\spp/</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Ainstant+o%3A%2F%5Cspp%2F" class="external-link"><code>t:instant o:/\spp/</code></a></td>
 <td>Instants that provide +X/+X effects</td>
-<td><a href="https://scryfall.com/search?q=t%3Ainstant+o%3A%2F%5Cspp%2F" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>name:/\bizzet\b/</code></td>
+<td><a href="https://scryfall.com/search?q=name%3A%2F%5Cbizzet%5Cb%2F" class="external-link"><code>name:/\bizzet\b/</code></a></td>
 <td>Card names with “izzet” but not words like “mizzet”</td>
-<td><a href="https://scryfall.com/search?q=name%3A%2F%5Cbizzet%5Cb%2F" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -951,18 +818,15 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>!fire</code></td>
+<td><a href="https://scryfall.com/search?q=%21fire" class="external-link"><code>!fire</code></a></td>
 <td>The card Fire</td>
-<td><a href="https://scryfall.com/search?q=%21fire" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>!"sift through sands"</code></td>
+<td><a href="https://scryfall.com/search?q=%21%22sift+through+sands%22" class="external-link"><code>!"sift through sands"</code></a></td>
 <td>The card Sift Through Sands</td>
-<td><a href="https://scryfall.com/search?q=%21%22sift+through+sands%22" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -973,26 +837,18 @@
 <p>By default every search term you enter is combined. All of them must match to find a card.</p>
 <p>If you want to search over a set of options or choices, you can put the special word <code>or</code>/<code>OR</code> between terms.</p>
 <table class="table">
-<colgroup>
-<col width="17%">
-<col width="29%">
-<col width="52%">
-</colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>t:fish or t:bird</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Afish+or+t%3Abird" class="external-link"><code>t:fish or t:bird</code></a></td>
 <td>Cards that are Fish or Birds</td>
-<td><a href="https://scryfall.com/search?q=t%3Afish+or+t%3Abird" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>t:land (a:titus or a:avon)</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Aland+%28a%3Atitus+or+a%3Aavon%29" class="external-link"><code>t:land (a:titus or a:avon)</code></a></td>
 <td>Lands illustrated by Titus Lunter or John Avon</td>
-<td><a href="https://scryfall.com/search?q=t%3Aland+%28a%3Atitus+or+a%3Aavon%29" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -1006,18 +862,15 @@
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>t:legendary (t:goblin or t:elf)</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Alegendary+%28t%3Agoblin+or+t%3Aelf%29" class="external-link"><code>t:legendary (t:goblin or t:elf)</code></a></td>
 <td>Legendary goblins or elves</td>
-<td><a href="https://scryfall.com/search?q=t%3Alegendary+%28t%3Agoblin+or+t%3Aelf%29" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>through (depths or sands or mists)</code></td>
+<td><a href="https://scryfall.com/search?q=through+%28depths+or+sands+or+mists%29" class="external-link"><code>through (depths or sands or mists)</code></a></td>
 <td>The Unspeakable combo</td>
-<td><a href="https://scryfall.com/search?q=through+%28depths+or+sands+or+mists%29" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -1033,40 +886,33 @@
 <p>Change the order of the sorted data with <code>direction:asc</code> or <code>direction:desc</code>.</p>
 <table class="table">
 <colgroup>
-<col width="19%">
-<col width="33%">
-<col width="47%">
+<col width="64%">
+<col width="35%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
 <th>Meaning</th>
-<th>Examples</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>!"Lightning Bolt" unique:prints</code></td>
+<td><a href="https://scryfall.com/search?q=%21%22Lightning+Bolt%22+unique%3Aprints" class="external-link"><code>!"Lightning Bolt" unique:prints</code></a></td>
 <td>Every printing of Lightning Bolt</td>
-<td><a href="https://scryfall.com/search?q=%21%22Lightning+Bolt%22+unique%3Aprints" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>t:forest a:avon unique:art</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Aforest+a%3Aavon+unique%3Aart" class="external-link"><code>t:forest a:avon unique:art</code></a></td>
 <td>Every unique Forest illustration by John Avon</td>
-<td><a href="https://scryfall.com/search?q=t%3Aforest+a%3Aavon+unique%3Aart" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>f:modern order:rarity direction:asc</code></td>
+<td><a href="https://scryfall.com/search?q=f%3Amodern+order%3Ararity+direction%3Aasc" class="external-link"><code>f:modern order:rarity direction:asc</code></a></td>
 <td>Modern legal cards sorted by rarity, commons first</td>
-<td><a href="https://scryfall.com/search?q=f%3Amodern+order%3Ararity+direction%3Aasc" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="even">
-<td><code>t:human display:text</code></td>
+<td><a href="https://scryfall.com/search?q=t%3Ahuman+display%3Atext" class="external-link"><code>t:human display:text</code></a></td>
 <td>Every Human card as text-only</td>
-<td><a href="https://scryfall.com/search?q=t%3Ahuman+display%3Atext" class="external-link">Example Cards</a></td>
 </tr>
 <tr class="odd">
-<td><code>in:leb game:paper prefer:newest</code></td>
+<td><a href="https://scryfall.com/search?q=in%3Aleb+game%3Apaper+prefer%3Anewest" class="external-link"><code>in:leb game:paper prefer:newest</code></a></td>
 <td>The newest paper printing of each card in Limited Edition Beta</td>
-<td><a href="https://scryfall.com/search?q=in%3Aleb+game%3Apaper+prefer%3Anewest" class="external-link">Example Cards</a></td>
 </tr>
 </tbody>
 </table>
@@ -1079,7 +925,7 @@
 
     <footer><div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by Caio Lente, Curso-R.</p>
+<p>Developed by <a href="https://lente.dev" class="external-link">Caio Lente</a>, <a href="https://curso-r.com" class="external-link"><img src="reference/figures/curso-r.png" width="80"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
