@@ -58,7 +58,7 @@ cards |>
 #> 4 uncommon     4
 
 # Summary of full data
-glimpse(cards, width = 72)
+glimpse(cards)
 #> Rows: 52
 #> Columns: 73
 #> $ arena_id          <int> NA, NA, NA, 72399, NA, NA, NA, NA, NA, 70655…
