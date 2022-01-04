@@ -3,11 +3,10 @@
 \name{scry-cards}
 \alias{scry-cards}
 \alias{scry_cards}
+\alias{scry_card}
 \alias{scry_card_named}
-\alias{scry_cards_autocomplete}
 \alias{scry_card_random}
 \alias{scry_card_number}
-\alias{scry_card}
 \title{Retrieve information about cards}
 \usage{
 scry_cards(
@@ -21,22 +20,17 @@ scry_cards(
   page = NULL
 )
 
-scry_card_named(name, mode = c("fuzzy", "exact"), set = NULL)
+scry_card(id, source = "scryfall")
 
-scry_cards_autocomplete(name, include_extras = FALSE)
+scry_card_named(name, mode = c("fuzzy", "exact"), set = NULL)
 
 scry_card_random(q = NULL)
 
 scry_card_number(number, set, lang = "en")
-
-scry_card(
-  id,
-  source = c("scryfall", "multiverse", "mtgo", "arena", "tcgplayer", "cardmarket")
-)
 }
 \arguments{
-\item{q}{A search query using the same \href{https://scryfall.com/docs/syntax}{fulltext search system} that the main site uses. Maximum
-length: 1000 Unicode characters.}
+\item{q}{A search query using the same fulltext search system that Scryfall
+uses. For more information see \code{vignette("syntax")}.}
 
 \item{unique}{The strategy for omitting similar cards. The options are:
 \itemize{
@@ -60,15 +54,15 @@ matching prints will be returned.
 \item \code{rarity}: Sort cards by their rarity: Common → Mythic.
 \item \code{color}: Sort cards by their color and color identity: WUBRG → multicolor →
 colorless.
-\item \code{usd}: "Sort cards by their lowest known U.S. Dollar price: 0.01 → highest,
-null last".
-\item \code{tix}: "Sort cards by their lowest known TIX price: 0.01 → highest, null
-last".
-\item \code{eur}: "Sort cards by their lowest known Euro price: 0.01 → highest, null
-last".
+\item \code{usd}: Sort cards by their lowest known U.S. Dollar price: 0.01 → highest,
+\code{NA} last.
+\item \code{tix}: Sort cards by their lowest known TIX price: 0.01 → highest, \code{NA}
+last.
+\item \code{eur}: Sort cards by their lowest known Euro price: 0.01 → highest, \code{NA}
+last.
 \item \code{cmc}: Sort cards by their converted mana cost: 0 → highest.
-\item \code{power}: Sort cards by their power: null → highest.
-\item \code{toughness}: Sort cards by their toughness: null → highest.
+\item \code{power}: Sort cards by their power: \code{NA} → highest.
+\item \code{toughness}: Sort cards by their toughness: \code{NA} → highest.
 \item \code{edhrec}: Sort cards by their EDHREC ranking: lowest → highest.
 \item \code{artist}: Sort cards by their front-side artist name: A → Z.
 \item \code{review}: Sort cards how podcasts review sets, usually color & CMC, lowest
@@ -79,21 +73,29 @@ last".
 \itemize{
 \item \code{auto}: Scryfall will automatically choose the most inuitive direction to
 sort.
-\item \code{asc}: Sort ascending (the direction of the arrows in the previous table).
+\item \code{asc}: Sort ascending (the direction of the arrows in the previous
+argument).
 \item \code{desc}: Sort descending (flip the direction of the arrows in the previous
-table).
+argument).
 }}
 
-\item{include_extras}{If true, extra cards (tokens, planes, etc) will be
-included. Equivalent to adding include:extras to the fulltext search.}
+\item{include_extras}{If \code{TRUE}, extra cards (tokens, planes, etc) will be
+included. Equivalent to adding \code{include:extras} to the search query.}
 
-\item{include_multilingual}{If true, cards in every language supported by
+\item{include_multilingual}{If \code{TRUE}, cards in every language supported by
 Scryfall will be included.}
 
-\item{include_variations}{If true, rare care variants will be included, like
-the \href{https://scryfall.com/card/drk/107\%E2\%80\%A0/runesword}{Hairy Runesword}.}
+\item{include_variations}{If \code{TRUE}, rare care variants will be included,
+like the
+\href{https://scryfall.com/card/drk/107\%E2\%80\%A0/runesword}{Hairy Runesword}.}
 
-\item{page}{The page number to return.}
+\item{page}{The results' page number to return. If \code{NULL} (the default), all
+available results will be returned.}
+
+\item{id}{Unique card indentifier. May refer to any supported \code{source}.}
+
+\item{source}{Source to which \code{id} refers. Can be any one of \code{scryfall},
+\code{multiverse}, \code{mtgo}, \code{arena}, \code{tcgplayer} or \code{cardmarket}.}
 
 \item{name}{A string with a card's name (or part of it).}
 
@@ -105,138 +107,135 @@ card's name, allows misspellings and partial words to be provided too) or
 
 \item{number}{The collector number.}
 
-\item{lang}{The 2-3 character language code.}
-
-\item{id}{Unique card indentifier. May refer to distinct \code{source}s.}
-
-\item{source}{Source to which \code{id} refers. Can be any one of \code{scryfall},
-\code{multiverse}, \code{mtgo}, \code{arena}, \code{tcgplayer} or \code{cardmarket}.}
+\item{lang}{The 2-3 character language code. For more information, see
+\code{vignette("languages")}}
 }
 \value{
 A data frame with 1 or more rows and the following columns:
 \itemize{
-\item \code{arena_id} [int]: This card's Arena ID, if any. A large percentage of
-cards are not available on Arena and do not have this ID.
 \item \code{id} [chr]: A unique ID for this card in Scryfall's database.
-\item \code{lang} [chr]: A \href{https://scryfall.com/docs/api/languages}{language} code
-for this printing.
-\item \code{mtgo_id} [int]: This card's Magic Online ID (also known as the Catalog
-ID), if any. A large percentage of cards are not available on Magic Online
-and do not have this ID.
-\item \code{mtgo_foil_id} [int]: This card's foil Magic Online ID (also known as the
-Catalog ID), if any. A large percentage of cards are not available on Magic
-Online and do not have this ID.
-\item \code{multiverse_ids} [list]: This card's multiverse IDs on Gatherer, if any,
-as an array of integers. Note that Scryfall includes many promo cards,
-tokens, and other esoteric objects that do not have these identifiers.
-\item \code{tcgplayer_id} [int]: This card's ID on \href{https://docs.tcgplayer.com/docs}{TCGplayer's API}, also known as the \code{productId}.
-\item \code{tcgplayer_etched_id} [int]: This card's ID on \href{https://docs.tcgplayer.com/docs}{TCGplayer's API}, for its etched version if that
-version is a separate product.
-\item \code{cardmarket_id} [int]: This card's ID on Cardmarket's API, also known as
-the \code{idProduct}.
-\item \code{object} [chr]: A content type for this object, always \code{card}.
+\item \code{name} [chr]: The name of this card. If this card has multiple faces,
+this column will contain both names separated by \verb{␣//␣}.
+\item \code{set} [chr]: This card's set code.
+\item \code{lang} [chr]: A language code for this printing. For more information,
+see \code{vignette("languages")}
+\item \code{colors} [list]: This card's colors, if the overall card has colors
+defined by the rules. Otherwise the colors will be on the \code{card_faces}
+column, see below.
+\item \code{color_identity} [list]: This card's color identity.
+\item \code{color_indicator} [list]: The colors in this card's color indicator, if
+any. A \code{NULL} value for this column indicates the card does not have one.
+\item \code{mana_cost} [chr]: The mana cost for this card. This value will be any
+empty string \code{""} if the cost is absent. Remember that per the game rules,
+a missing mana cost and a mana cost of \code{{0}} are different values.
+Multi-faced cards will report this value in \code{card_faces}, see below.
+\item \code{cmc} [dbl]: The card's converted mana cost. Note that some funny cards
+have fractional mana costs.
+\item \code{oracle_text} [chr]: The Oracle text for this card, if any.
+\item \code{power} [chr]: This card's power, if any. Note that some cards have
+powers that are not numeric, such as \code{*}.
+\item \code{toughness} [chr]: This card's toughness, if any. Note that some cards
+have toughnesses that are not numeric, such as \code{*}.
+\item \code{type_line} [chr]: The type line of this card.
+\item \code{edhrec_rank} [int]: This card's overall rank/popularity on EDHREC. Not
+all cards are ranked.
+\item \code{hand_modifier} [chr]: This card's hand modifier, if it is Vanguard card.
+This value will contain a delta, such as \code{-1}.
+\item \code{keywords} [list]: A vector of keywords that this card uses, such as
+\code{Flying} and \verb{Cumulative upkeep}.
+\item \code{layout} [chr]: A code for this card's layout. For more information see
+\code{vignette("layouts")}
+\item \code{legalities} [list]: A data frame describing the legality of this card
+across play formats. Possible legalities are \code{legal}, \code{not_legal},
+\code{restricted}, and \code{banned}.
+\item \code{life_modifier} [chr]: This card's life modifier, if it is Vanguard card.
+This value will contain a delta, such as \code{+2}.
+\item \code{loyalty} [chr]: This loyalty if any. Note that some cards have loyalties
+that are not numeric, such as \code{X}.
+\item \code{oversized} [lgl]: Whether this card is oversized.
+\item \code{produced_mana} [list]: Colors of mana that this card could produce.
+\item \code{reserved} [lgl]: Whether this card is on the Reserved List.
 \item \code{oracle_id} [chr]: A unique ID for this card's oracle identity. This
 value is consistent across reprinted card editions, and unique among
 different cards with the same name (tokens, Unstable variants, etc).
+\item \code{arena_id} [int]: This card's Arena ID, if any. A large percentage of
+cards are not available on Arena and do not have this ID.
+\item \code{mtgo_id}, \code{mtgo_foil_id} [int]: This card's Magic Online ID (also known
+as the Catalog ID), if any. A large percentage of cards are not available
+on Magic Online and do not have this ID.
+\item \code{multiverse_ids} [list]: This card's multiverse IDs on Gatherer, if any,
+as a vector of integers. Note that Scryfall includes many promo cards,
+tokens, and other esoteric objects that do not have these identifiers.
+\item \code{tcgplayer_id}, \code{tcgplayer_etched_id} [int]: This card's ID on
+\href{https://docs.tcgplayer.com/docs}{TCGplayer's API}, also known as the
+\code{productId}.
+\item \code{cardmarket_id} [int]: This card's ID on Cardmarket's API, also known as
+the \code{idProduct}.
+\item \code{uri} [chr]: A link to this card object on Scryfall's API.
+\item \code{scryfall_uri} [chr]: A link to this card's permapage on Scryfall's
+\item \code{rulings_uri} [chr]: A link to this card's rulings list on Scryfall's
+API. For more information see \code{\link[=scry_ruling]{scry_ruling()}}
 \item \code{prints_search_uri} [chr]: A link to where you can begin paginating all
 re/prints for this card on Scryfall's API.
-\item \code{rulings_uri} [chr]: A link to this card's \href{https://scryfall.com/docs/api/rulings}{rulings list} on Scryfall's API.
-\item \code{scryfall_uri} [chr]: A link to this card's permapage on Scryfall's
 website.
-\item \code{uri} [chr]: A link to this card object on Scryfall's API.
 \item \code{all_parts} [list]: If this card is closely related to other cards, this
-property will be an array with \href{https://scryfall.com/docs/api/cards#related-card-objects}{Related Card Objects}.
+column will be a data frame with the following columns:
 \itemize{
 \item \code{id} [chr]: An unique ID for this card in Scryfall's database.
 \item \code{object} [chr]: A content type for this object, always \code{related_card}.
-\item \code{component} [chr]: A field explaining what role this card plays in this
-relationship, one of \code{token}, \code{meld_part}, \code{meld_result}, or
+\item \code{component} [chr]: A column explaining what role this card plays in
+this relationship, one of \code{token}, \code{meld_part}, \code{meld_result}, or
 \code{combo_piece}.
 \item \code{name} [chr]: The name of this particular related card.
 \item \code{type_line} [chr]: The type line of this card.
 \item \code{uri} [chr]: A URI where you can retrieve a full object describing this
 card on Scryfall's API.
 }
-\item \code{card_faces} [list]: An array of \href{https://scryfall.com/docs/api/cards#card-face-objects}{Card Face} objects, if
-this card is multifaced.
+\item \code{card_faces} [list]: A data frame of card faces (if this card is
+multifaced) with the following columns. For more information see
+\code{vignette("layouts")}.
 \itemize{
-\item \code{artist} [chr]: The name of the illustrator of this card face. Newly
-spoiled cards may not have this field yet.
-\item \code{cmc} [dbl]: The mana value of this particular face, if the card is
-reversible.
-\item \code{color_indicator} [list]: The colors in this face's color indicator, if
-any.
+\item \code{name} [chr]: The name of this particular face.
 \item \code{colors} [list]: This face's colors, if the game defines colors for the
 individual face of this card.
-\item \code{flavor_text} [chr]: The flavor text printed on this face, if any.
-\item \code{illustration_id} [chr]: A unique identifier for the card face artwork
-that remains consistent across reprints. Newly spoiled cards may not have
-this field yet.
-\item \code{image_uris} [tbl]: An object providing URIs to imagery for this face,
-if this is a double-sided card. If this card is not double-sided, then
-the \code{image_uris} property will be part of the parent object instead.
-\item \code{layout} [chr]: The layout of this card face, if the card is
-reversible.
-\item \code{loyalty} [chr]: This face's loyalty, if any.
+\item \code{color_indicator} [list]: The colors in this face's color indicator, if
+any.
 \item \code{mana_cost} [chr]: The mana cost for this face. This value will be any
 empty string \code{""} if the cost is absent. Remember that per the game
 rules, a missing mana cost and a mana cost of \code{{0}} are different values.
-\item \code{name} [chr]: The name of this particular face.
-\item \code{object} [chr]: A content type for this object, always \code{card_face}.
-\item \code{oracle_id} [chr]: The Oracle ID of this particular face, if the card
-is reversible.
+\item \code{cmc} [dbl]: The mana value of this particular face, if the card is
+reversible.
 \item \code{oracle_text} [chr]: The Oracle text for this face, if any.
 \item \code{power} [chr]: This face's power, if any. Note that some cards have
 powers that are not numeric, such as \code{*}.
+\item \code{toughness} [chr]: This face's toughness, if any.
+\item \code{type_line} [chr]: The type line of this particular face, if the card
+is reversible.
+\item \code{layout} [chr]: The layout of this card face, if the card is
+reversible.
+\item \code{loyalty} [chr]: This face's loyalty, if any.
+\item \code{oracle_id} [chr]: The Oracle ID of this particular face, if the card
+is reversible.
+\item \code{artist} [chr]: The name of the illustrator of this card face. Newly
+spoiled cards may not have this column yet.
+\item \code{artist_id} [chr]: This faces's illustrator's unique identifier.
+\item \code{flavor_name} [chr]: The just-for-fun name printed on the card (such as
+for Godzilla series cards).
+\item \code{flavor_text} [chr]: The flavor text printed on this face, if any.
+\item \code{illustration_id} [chr]: A unique identifier for the card face artwork
+that remains consistent across reprints. Newly spoiled cards may not have
+this column yet.
+\item \code{image_uris} [list]: A data frame providing URIs to imagery for this
+face, if this is a double-sided card. If this card is not double-sided,
+then the \code{image_uris} column will be part of the parent object instead.
 \item \code{printed_name} [chr]: The localized name printed on this face, if any.
 \item \code{printed_text} [chr]: The localized text printed on this face, if any.
 \item \code{printed_type_line} [chr]: The localized type line printed on this
 face, if any.
-\item \code{toughness} [chr]: This face's toughness, if any.
-\item \code{type_line} [chr]: The type line of this particular face, if the card
-is reversible.
 \item \code{watermark} [chr]: The watermark on this particulary card face, if any.
 }
-\item \code{cmc} [Decimal]: The card's converted mana cost. Note that some funny
-cards have fractional mana costs.
-\item \code{color_identity} [list]: This card's color identity.
-\item \code{color_indicator} [list]: The colors in this card's color indicator, if
-any. A null value for this field indicates the card does not have one.
-\item \code{colors} [list]: This card's colors, if the overall card has colors
-defined by the rules. Otherwise the colors will be on the \code{card_faces}
-objects, see below.
-\item \code{edhrec_rank} [int]: This card's overall rank/popularity on EDHREC. Not
-all cards are ranked.
-\item \code{hand_modifier} [chr]: This card's hand modifier, if it is Vanguard card.
-This value will contain a delta, such as \code{-1}.
-\item \code{keywords} [list]: An array of keywords that this card uses, such as
-\code{'Flying'} and \code{'Cumulative upkeep'}.
-\item \code{layout} [chr]: A code for this card's
-\href{https://scryfall.com/docs/api/layouts}{layout}.
-\item \code{legalities} [tbl]: An object describing the legality of this card across
-play formats. Possible legalities are \code{legal}, \code{not_legal}, \code{restricted},
-and \code{banned}.
-\item \code{life_modifier} [chr]: This card's life modifier, if it is Vanguard card.
-This value will contain a delta, such as \code{+2}.
-\item \code{loyalty} [chr]: This loyalty if any. Note that some cards have loyalties
-that are not numeric, such as \code{X}.
-\item \code{mana_cost} [chr]: The mana cost for this card. This value will be any
-empty string \code{""} if the cost is absent. Remember that per the game rules,
-a missing mana cost and a mana cost of \code{{0}} are different values.
-Multi-faced cards will report this value in \href{https://scryfall.com/docs/api/cards#card-face-objects}{card faces}.
-\item \code{name} [chr]: The name of this card. If this card has multiple faces,
-this field will contain both names separated by \verb{␣//␣}.
-\item \code{oracle_text} [chr]: The Oracle text for this card, if any.
-\item \code{oversized} [lgl]: True if this card is oversized.
-\item \code{power} [chr]: This card's power, if any. Note that some cards have
-powers that are not numeric, such as \code{*}.
-\item \code{produced_mana} [list]: Colors of mana that this card could produce.
-\item \code{reserved} [lgl]: True if this card is on the Reserved List.
-\item \code{toughness} [chr]: This card's toughness, if any. Note that some cards
-have toughnesses that are not numeric, such as \code{*}.
-\item \code{type_line} [chr]: The type line of this card.
 \item \code{artist} [chr]: The name of the illustrator of this card. Newly spoiled
-cards may not have this field yet.
+cards may not have this column yet.
 \item \code{booster} [lgl]: Whether this card is found in boosters.
 \item \code{border_color} [chr]: This card's border color: \code{black}, \code{white},
 \code{borderless}, \code{silver}, or \code{gold}.
@@ -245,69 +244,70 @@ this card.
 \item \code{collector_number} [chr]: This card's collector number. Note that
 collector numbers can contain non-numeric characters, such as letters or
 \verb{★}.
-\item \code{content_warning} [lgl]: True if you should consider \href{https://scryfall.com/blog/regarding-wotc-s-recent-statement-on-depictions-of-racism-220}{avoiding use of this print}
+\item \code{content_warning} [lgl]: \code{TRUE} if you should consider \href{https://scryfall.com/blog/regarding-wotc-s-recent-statement-on-depictions-of-racism-220}{avoiding use of this print}
 downstream.
-\item \code{digital} [lgl]: True if this card was only released in a video game.
-\item \code{finishes} [list]: An array of computer-readable flags that indicate if
+\item \code{digital} [lgl]: Whether this card was only released in a video game.
+\item \code{finishes} [list]: A vector of computer-readable flags that indicate if
 this card can come in \code{foil}, \code{nonfoil}, \code{etched}, or \code{glossy} finishes.
 \item \code{flavor_name} [chr]: The just-for-fun name printed on the card (such as
 for Godzilla series cards).
 \item \code{flavor_text} [chr]: The flavor text, if any.
-\item \code{frame_effects} [list]: This card's \href{https://scryfall.com/docs/api/layouts}{frame effects}, if any.
-\item \code{frame} [chr]: This card's \href{https://scryfall.com/docs/api/layouts}{frame layout}.
-\item \code{full_art} [lgl]: True if this card's artwork is larger than normal.
-\item \code{games} [list]: A list of games that this card print is available in,
+\item \code{frame_effects} [list]: This card's frame effects, if any. For more
+information see \code{vignette("frames")}.
+\item \code{frame} [chr]: This card's frame layout. For more information see
+\code{vignette("frames")}.
+\item \code{full_art} [lgl]: Whether this card's artwork is larger than normal.
+\item \code{games} [list]: A vector of games that this card print is available in,
 \code{paper}, \code{arena}, and/or \code{mtgo}.
-\item \code{highres_image} [lgl]: True if this card's imagery is high resolution.
+\item \code{highres_image} [lgl]: Whether this card's imagery is high resolution.
 \item \code{illustration_id} [chr]: A unique identifier for the card artwork that
 remains consistent across reprints. Newly spoiled cards may not have this
-field yet.
+column yet.
 \item \code{image_status} [chr]: A computer-readable indicator for the state of this
 card's image, one of \code{missing}, \code{placeholder}, \code{lowres}, or \code{highres_scan}.
-\item \code{image_uris} [tbl]: An object listing available imagery for this card.
-See the \href{https://scryfall.com/docs/api/images}{Card Imagery} article for
-more information.
-\item \code{prices} [tbl]: An object containing daily price information for this
+\item \code{image_uris} [list]: A data frame listing available imagery for this
+card. For more information see \code{vignette("imagery")}.
+\item \code{preview} [list]: A data frame providing information about this card's
+preview.
+\item \code{prices} [list]: A data frame containing daily price information for this
 card, including \code{usd}, \code{usd_foil}, \code{usd_etched}, \code{eur}, and \code{tix} prices,
 as strings.
 \item \code{printed_name} [chr]: The localized name printed on this card, if any.
 \item \code{printed_text} [chr]: The localized text printed on this card, if any.
 \item \code{printed_type_line} [chr]: The localized type line printed on this card,
 if any.
-\item \code{promo} [lgl]: True if this card is a promotional print.
-\item \code{promo_types} [list]: An array of strings describing what categories of
+\item \code{promo} [lgl]: Whether this card is a promotional print.
+\item \code{promo_types} [list]: A vector of strings describing what categories of
 promo cards this card falls into.
-\item \code{purchase_uris} [tbl]: An object providing URIs to this card's listing on
-major marketplaces.
+\item \code{purchase_uris} [list]: A data frame providing URIs to this card's
+listing on major marketplaces.
 \item \code{rarity} [chr]: This card's rarity. One of \code{common}, \code{uncommon}, \code{rare},
 \code{special}, \code{mythic}, or \code{bonus}.
-\item \code{related_uris} [tbl]: An object providing URIs to this card's listing on
-other \emph{Magic: The Gathering} online resources.
+\item \code{related_uris} [list]: A data frame providing URIs to this card's listing
+on other \emph{Magic: The Gathering} online resources.
 \item \code{released_at} [date]: The date this card was first released.
-\item \code{reprint} [lgl]: True if this card is a reprint.
+\item \code{reprint} [lgl]: Whether this card is a reprint.
 \item \code{scryfall_set_uri} [chr]: A link to this card's set on Scryfall's
 website.
 \item \code{set_name} [chr]: This card's full set name.
 \item \code{set_search_uri} [chr]: A link to where you can begin paginating this
 card's set on the Scryfall API.
 \item \code{set_type} [chr]: The type of set this printing is in.
-\item \code{set_uri} [chr]: A link to this card's \href{https://scryfall.com/docs/api/sets}{set object} on Scryfall's API.
-\item \code{set} [chr]: This card's set code.
-\item \code{set_id} [chr]: This card's Set object UUID.
-\item \code{story_spotlight} [lgl]: True if this card is a Story Spotlight.
-\item \code{textless} [lgl]: True if the card is printed without text.
+\item \code{set_uri} [chr]: A link to this card's set object on Scryfall's API. For
+more information see \code{?scry_sets()}.
+\item \code{set_id} [chr]: This card's set Scryfall ID.
+\item \code{story_spotlight} [lgl]: Whether this card is a Story Spotlight.
+\item \code{textless} [lgl]: Whether the card is printed without text.
 \item \code{variation} [lgl]: Whether this card is a variation of another printing.
 \item \code{variation_of} [chr]: The printing ID of the printing this card is a
 variation of.
 \item \code{security_stamp} [chr]: The security stamp on this card, if any. One of
 \code{oval}, \code{triangle}, \code{acorn}, or \code{arena}.
 \item \code{watermark} [chr]: This card's watermark, if any.
-\item \code{preview} [tbl]: An object providing information about this card's
-preview.
 }
 }
 \description{
-Card objects represent individual Magic: The Gathering cards that players
+Cards represent individual \emph{Magic: The Gathering} playing cards that players
 could obtain and add to their collection (with a few minor exceptions).
 
 Cards are the API's most complex object. You are encouraged to thoroughly

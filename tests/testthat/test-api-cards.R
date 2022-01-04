@@ -7,8 +7,8 @@ test_that("scry-cards errors correctly", {
   expect_error(scry_card_named("aust"), "Too many")
   expect_error(scry_card_named("asdf"), "No cards")
 
-  expect_length(scry_cards_autocomplete("t"), 0)
-  expect_length(scry_cards_autocomplete("asdf"), 0)
+  expect_length(autocomplete_name("t"), 0)
+  expect_length(autocomplete_name("asdf"), 0)
 
   expect_error(scry_card_random("asdf"), "0 cards")
 
@@ -34,7 +34,7 @@ test_that("scry-cards returns correctly", {
   expect_s3_class(cards_page, c("tbl_df", "tbl", "data.frame"))
   expect_equal(nrow(cards_page), 175)
 
-  cards_autocomplete <- scry_cards_autocomplete("thal")
+  cards_autocomplete <- autocomplete_name("thal")
   expect_equal(class(cards_autocomplete), "character")
   expect_length(cards_autocomplete, 20)
 
