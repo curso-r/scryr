@@ -1,5 +1,4 @@
 parse_sets <- function(data) {
-
   template <- list(
     "object" = as.character,
     "id" = as.character,

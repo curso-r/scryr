@@ -1,7 +1,6 @@
 # ERRORS -----------------------------------------------------------------------
 
 test_that("scry-rulings errors correctly", {
-
   expect_error(scry_ruling_number(12344, "xln"), "No card")
   expect_error(scry_ruling_number(98, "abc"), "No card")
 
@@ -14,7 +13,6 @@ test_that("scry-rulings errors correctly", {
 # RETURNS ----------------------------------------------------------------------
 
 test_that("scry-rulings returns correctly", {
-
   expect_snapshot(scry_ruling_number(65, "ima"))
 
   expect_snapshot(scry_ruling(3255, "multiverse"))

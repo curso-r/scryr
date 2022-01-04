@@ -1,7 +1,6 @@
 # ERRORS -----------------------------------------------------------------------
 
 test_that("scry-sets errors correctly", {
-
   expect_error(scry_sets("zzz"), "unused argument")
 
   expect_error(scry_set(), "no default")
@@ -14,7 +13,6 @@ test_that("scry-sets errors correctly", {
 # RETURNS ----------------------------------------------------------------------
 
 test_that("scry-sets returns correctly", {
-
   rm_icon <- function(df) {
     df$icon_svg_uri <- NA_character_
     return(df)

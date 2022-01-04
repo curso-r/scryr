@@ -198,7 +198,9 @@
 #'   collector numbers can contain non-numeric characters, such as letters or
 #'   `★`.
 #' * `content_warning` \[lgl\]: True if you should consider [avoiding use of
-#'   this print](https://scryfall.com/blog/220) downstream.
+#'   this
+#'   print](https://scryfall.com/blog/regarding-wotc-s-recent-statement-on-depictions-of-racism-220)
+#'   downstream.
 #' * `digital` \[lgl\]: True if this card was only released in a video game.
 #' * `finishes` \[list\]: An array of computer-readable flags that indicate if
 #'   this card can come in `foil`, `nonfoil`, `etched`, or `glossy` finishes.
@@ -277,7 +279,6 @@ scry_cards <- function(q,
                        include_multilingual = FALSE,
                        include_variations = FALSE,
                        page = NULL) {
-
   query <- make_query(
     q = q,
     unique = unique,
@@ -325,8 +326,10 @@ scry_card_number <- function(number, set, lang = "en") {
 
 #' @rdname scry-cards
 #' @export
-scry_card <- function(id, source = c("scryfall", "multiverse", "mtgo", "arena",
-                                     "tcgplayer", "cardmarket")) {
+scry_card <- function(id, source = c(
+                        "scryfall", "multiverse", "mtgo", "arena",
+                        "tcgplayer", "cardmarket"
+                      )) {
   source <- match.arg(source)
 
   source <- if (source != "scryfall") paste0("/", source) else ""

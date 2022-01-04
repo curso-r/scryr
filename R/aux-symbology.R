@@ -1,5 +1,4 @@
 parse_symbology <- function(data) {
-
   template <- list(
     "object" = as.character,
     "cost" = as.character,

@@ -29,8 +29,10 @@ scry_rulings_impl <- function(endpoint) {
 
 #' @rdname scry-rulings
 #' @export
-scry_ruling <- function(id, source = c("scryfall", "multiverse",
-                                       "mtgo", "arena")) {
+scry_ruling <- function(id, source = c(
+                          "scryfall", "multiverse",
+                          "mtgo", "arena"
+                        )) {
   source <- match.arg(source)
 
   source <- if (source != "scryfall") paste0("/", source) else ""

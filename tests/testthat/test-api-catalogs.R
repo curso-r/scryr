@@ -1,7 +1,6 @@
 # RETURNS ----------------------------------------------------------------------
 
 test_that("scry-catalogs returns correctly", {
-
   expect_gte(length(scry_catalogs_card_names()), 23390)
   expect_gte(length(scry_catalogs_artist_names()), 1151)
   expect_gte(length(scry_catalogs_word_bank()), 15721)

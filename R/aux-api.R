@@ -34,10 +34,9 @@ extract_data <- function(content, loop) {
 }
 
 bind_rows <- function(data, template) {
-
   df <- purrr::map_dfr(data, function(ls) {
     ls <- purrr::map_if(ls, is.list, purrr::compact)
-    purrr::map2(template[names(ls)], ls, ~.x(.y))
+    purrr::map2(template[names(ls)], ls, ~ .x(.y))
   })
 
   col_order <- names(template)[names(template) %in% names(df)]
@@ -47,10 +46,10 @@ bind_rows <- function(data, template) {
 make_query <- function(...) {
   dots <- purrr::compact(list(...))
 
-  query <- purrr::map(dots, ~tolower(as.character(.x)))
+  query <- purrr::map(dots, ~ tolower(as.character(.x)))
   query <- purrr::map(query, utils::URLencode, reserved = TRUE)
-  query <- purrr::map(query, ~gsub("%2B", "+", .x))
-  query <- purrr::imap(query, ~paste0(.y, "=", .x))
+  query <- purrr::map(query, ~ gsub("%2B", "+", .x))
+  query <- purrr::imap(query, ~ paste0(.y, "=", .x))
   query <- paste0(query, collapse = "&")
 
   paste0("?", query)

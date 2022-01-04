@@ -1,7 +1,6 @@
 # ERRORS -----------------------------------------------------------------------
 
 test_that("scry-symbology errors correctly", {
-
   expect_error(scry_symbology("R"), "unused")
 
   expect_error(parse_cost("K"), "understood")
@@ -10,7 +9,6 @@ test_that("scry-symbology errors correctly", {
 # RETURNS ----------------------------------------------------------------------
 
 test_that("scry-symbology returns correctly", {
-
   rm_icon <- function(df) {
     df$svg_uri <- NA_character_
     return(df)

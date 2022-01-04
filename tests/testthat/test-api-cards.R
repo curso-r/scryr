@@ -1,7 +1,6 @@
 # ERRORS -----------------------------------------------------------------------
 
 test_that("scry-cards errors correctly", {
-
   expect_error(scry_cards("mm:123"), "ignored")
   expect_error(scry_cards("asdf"), "any cards")
 
@@ -27,7 +26,6 @@ test_that("scry-cards errors correctly", {
 # RETURNS ----------------------------------------------------------------------
 
 test_that("scry-cards returns correctly", {
-
   cards <- scry_cards("c:red+pow=3")
   expect_s3_class(cards, c("tbl_df", "tbl", "data.frame"))
   expect_gte(nrow(cards), 500)
