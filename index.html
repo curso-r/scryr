@@ -76,41 +76,78 @@
 </h1></div>
 <!-- badges: start -->
 
-<p>The goal of scry is to …</p>
+<p>scry is a simple, light, and robust interface between R and <a href="https://scryfall.com/" class="external-link">Scryfall</a>’s powerful <em>Magic: The Gathering</em> card search engine. It wraps the <a href="https://scryfall.com/docs/api" class="external-link">Scryfall API</a> and makes all endpoints available as simple functions that any R programmer can use; results are also wrapped as data frames for maximum compatibility with common data wrangling techniques.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of scry from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Install released version from CRAN</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"scry"</span><span class="op">)</span></code></pre></div>
+<p>You can install the development version of scry from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"curso-r/scry"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://curso-r.github.io/scry/">scry</a></span><span class="op">)</span>
-<span class="co">## basic example code</span></code></pre></div>
-<p>What is special about using <code>README.Rmd</code> instead of just <code>README.md</code>? You can include R chunks like so:</p>
+<p>scry makes it easy to process <em>Magic</em> cards’ data programatically.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">cars</span><span class="op">)</span>
-<span class="co">#&gt;      speed           dist       </span>
-<span class="co">#&gt;  Min.   : 4.0   Min.   :  2.00  </span>
-<span class="co">#&gt;  1st Qu.:12.0   1st Qu.: 26.00  </span>
-<span class="co">#&gt;  Median :15.0   Median : 36.00  </span>
-<span class="co">#&gt;  Mean   :15.4   Mean   : 42.98  </span>
-<span class="co">#&gt;  3rd Qu.:19.0   3rd Qu.: 56.00  </span>
-<span class="co">#&gt;  Max.   :25.0   Max.   :120.00</span></code></pre></div>
-<p>You’ll still need to render <code>README.Rmd</code> regularly, to keep <code>README.md</code> up-to-date. <code>devtools::build_readme()</code> is handy for this. You could also use GitHub Actions to re-render <code>README.Rmd</code> every time you push. An example workflow can be found here: <a href="https://github.com/r-lib/actions/tree/v1/examples" class="external-link uri">https://github.com/r-lib/actions/tree/v1/examples</a>.</p>
-<p>You can also embed plots, for example:</p>
-<p><img src="reference/figures/README-pressure-1.png" width="100%"></p>
-<p>In that case, don’t forget to commit and push the resulting figure files, so they display on GitHub and CRAN.</p>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://curso-r.github.io/scry/">scry</a></span><span class="op">)</span>
+
+<span class="co"># Find red creatures with 7 power, sorted by converted mana cost</span>
+<span class="op">(</span><span class="va">cards</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/scry-cards.html">scry_cards</a></span><span class="op">(</span><span class="st">"c:red+pow=7"</span>, order <span class="op">=</span> <span class="st">"cmc"</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; # A tibble: 52 × 73</span>
+<span class="co">#&gt;    arena_id id            lang  mtgo_id mtgo_foil_id multiverse_ids tcgplayer_id</span>
+<span class="co">#&gt;       &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;   &lt;int&gt;        &lt;int&gt; &lt;list&gt;                &lt;int&gt;</span>
+<span class="co">#&gt;  1       NA deaa0b9b-258… en      20656        20657 &lt;int [1]&gt;             11871</span>
+<span class="co">#&gt;  2       NA e0ddcf4a-194… en      18075        18076 &lt;int [1]&gt;             10357</span>
+<span class="co">#&gt;  3       NA cbe3a68e-c29… en      29603        29604 &lt;int [1]&gt;             18605</span>
+<span class="co">#&gt;  4    72399 6c59a4db-580… en         NA           NA &lt;int [1]&gt;            216652</span>
+<span class="co">#&gt;  5       NA b4036bb7-835… en         NA           NA &lt;int [1]&gt;            124134</span>
+<span class="co">#&gt;  6       NA 2a0417bf-b73… en      51743        51744 &lt;int [1]&gt;             78745</span>
+<span class="co">#&gt;  7       NA 7fa40fde-2c1… en      40641        40961 &lt;int [1]&gt;             46945</span>
+<span class="co">#&gt;  8       NA 0b4a16be-ab3… en      32254        32255 &lt;int [1]&gt;             31704</span>
+<span class="co">#&gt;  9       NA bff49651-367… en      43678        43679 &lt;int [1]&gt;             58088</span>
+<span class="co">#&gt; 10    70655 05bc4236-566… en      79412           NA &lt;int [1]&gt;            207134</span>
+<span class="co">#&gt; # … with 42 more rows, and 66 more variables: cardmarket_id &lt;int&gt;,</span>
+<span class="co">#&gt; #   object &lt;chr&gt;, oracle_id &lt;chr&gt;, prints_search_uri &lt;chr&gt;, rulings_uri &lt;chr&gt;,</span>
+<span class="co">#&gt; #   scryfall_uri &lt;chr&gt;, uri &lt;chr&gt;, all_parts &lt;list&gt;, cmc &lt;dbl&gt;,</span>
+<span class="co">#&gt; #   color_identity &lt;list&gt;, colors &lt;list&gt;, edhrec_rank &lt;int&gt;, keywords &lt;list&gt;,</span>
+<span class="co">#&gt; #   layout &lt;chr&gt;, legalities &lt;list&gt;, mana_cost &lt;chr&gt;, name &lt;chr&gt;,</span>
+<span class="co">#&gt; #   oracle_text &lt;chr&gt;, oversized &lt;lgl&gt;, power &lt;chr&gt;, produced_mana &lt;list&gt;,</span>
+<span class="co">#&gt; #   reserved &lt;lgl&gt;, toughness &lt;chr&gt;, type_line &lt;chr&gt;, artist &lt;chr&gt;, …</span>
+
+<span class="co"># Simple pipeline that counts how many cards of each rarity have a price</span>
+<span class="va">cards</span> |&gt;
+  <span class="fu">unnest</span><span class="op">(</span><span class="va">prices</span><span class="op">)</span> |&gt;
+  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">usd</span><span class="op">)</span><span class="op">)</span> |&gt;
+  <span class="fu">count</span><span class="op">(</span><span class="va">rarity</span><span class="op">)</span>
+<span class="co">#&gt; # A tibble: 4 × 2</span>
+<span class="co">#&gt;   rarity       n</span>
+<span class="co">#&gt;   &lt;chr&gt;    &lt;int&gt;</span>
+<span class="co">#&gt; 1 common       5</span>
+<span class="co">#&gt; 2 mythic      16</span>
+<span class="co">#&gt; 3 rare        22</span>
+<span class="co">#&gt; 4 uncommon     4</span></code></pre></div>
+<p>There are many other endpoints that also support fully tidyverse compatible analyses. A complete list can be found on scry’s <a href="https://curso-r.github.io/scry/">documentation</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
 </h2>
 <p>Please note that the scry project is released with a <a href="https://curso-r.github.io/scry/CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+</div>
+<div class="section level2">
+<h2 id="copyright-notice">Copyright Notice<a class="anchor" aria-label="anchor" href="#copyright-notice"></a>
+</h2>
+<p>Portions of scry are unofficial Fan Content permitted under the <a href="https://company.wizards.com/en/legal/fancontentpolicy" class="external-link">Wizards of the Coast Fan Content Policy</a>. The literal and graphical information presented on this package and its documentation pages about <em>Magic: The Gathering</em>, including card images, the mana symbols, and Oracle text, is copyright of Wizards of the Coast, LLC, a subsidiary of Hasbro, Inc. This software is not produced by, endorsed by, supported by, or affiliated with Wizards of the Coast, LLC.</p>
+<p>Most of scry’s documentation is taken from Scryfall’s developer docs and are only included in the package for self-containedness’ sake. Scryfall’s website, API, and other related content are copyright of Scryfall, LLC. This software is not produced by, endorsed by, supported by, or affiliated with Scryfall, LLC.</p>
+<p>As per Scryfall’s <a href="https://scryfall.com/docs/terms" class="external-link">terms of service</a>, card data and images are provided free of charge for the primary purpose of creating additional <em>Magic</em> software, performing research, or creating community content about <em>Magic</em> and related products. When using scry, you must, therefore, adhere to both Scryfall’s and Wizards of the Coast’s guidelines:</p>
+<ul>
+<li><p>You may not require anyone to make payments, take surveys, agree to subscriptions, rate your content, or create accounts in exchange for access to <em>Magic</em> data.</p></li>
+<li><p>You may not use <em>Magic</em> data to create new games, or to imply the information and images are from any other game besides <em>Magic: The Gathering</em>.</p></li>
+<li><p>You may not claim any products or content made with <em>Magic</em> data as official. You must make it clear that your creation is not endorsed or sponsored by Wizards and/or Scryfall, i.e., unofficial.</p></li>
+</ul>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -150,7 +187,7 @@
 <li>
 <a href="https://lente.dev" class="external-link">Caio Lente</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-8473-069X" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>
-<a href="https://curso-r.com" class="external-link"><img src="reference/figures/curso-r.png" width="80"></a> <br><small class="roles"> Copyright holder, funder </small>  </li>
+<a href="https://curso-r.com" class="external-link"><img src="https://github.com/curso-r/scry/blob/main/reference/figures/curso-r.png" width="80"></a> <br><small class="roles"> Copyright holder, funder </small>  </li>
 </ul>
 </div>
 
@@ -168,7 +205,7 @@
 
     <footer><div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by <a href="https://lente.dev" class="external-link">Caio Lente</a>, <a href="https://curso-r.com" class="external-link"><img src="reference/figures/curso-r.png" width="80"></a>.</p>
+<p>Developed by <a href="https://lente.dev" class="external-link">Caio Lente</a>, <a href="https://curso-r.com" class="external-link"><img src="https://github.com/curso-r/scry/blob/main/reference/figures/curso-r.png" width="80"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
