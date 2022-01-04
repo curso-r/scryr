@@ -1,0 +1,21 @@
+url: https://curso-r.github.io/scry/
+
+home:
+  title: An Interface To Scryfall's API
+
+authors:
+  Caio Lente:
+    href: https://lente.dev
+  Curso-R:
+    href: https://curso-r.com
+    html: "<img src='man/figures/curso-r.png' width=80>"
+
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#0054AD"
+    border-radius: 0.5rem
+    btn-border-radius: 0.25rem
+
+code:
+  width: 72

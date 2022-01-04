@@ -9,7 +9,7 @@ Authors@R: c(
 Description: A simple, light, and robust interface between R and
     Scryfall's card data API: <https://scryfall.com/docs/api>.
 License: MIT + file LICENSE
-URL: https://curso-r.github.io/scry/
+URL: https://curso-r.github.io/scry/, https://github.com/curso-r/scry
 Imports:
     dplyr,
     httr,
@@ -20,7 +20,7 @@ Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
-VignetteBuilder: 
+VignetteBuilder:
     knitr
 Config/testthat/edition: 3
 Config/testthat/parallel: true

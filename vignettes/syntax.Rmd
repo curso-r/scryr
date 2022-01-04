@@ -81,7 +81,7 @@ their mana costs.
 
 This keyword uses the official text version of mana costs set forth in the
 [Comprehensive
-Rules](http://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules).
+Rules](https://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules).
 For example, `{G}` represents a green mana.
 
 Shorthand for is allowed for symbols that aren't split: `G` is the same as `{G}`
@@ -230,7 +230,7 @@ You can also search for individual cards that were sold in certain places with
 
 | Expression                                                                                       | Meaning                                                       |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| [`e:war`](https://scryfall.com/search?q=e%3Awar)                                                 | Cards from War of the Spark                                   |
+| [`e:war`](https://scryfall.com/sets/war?as=grid&order=set)                                       | Cards from War of the Spark                                   |
 | [`e:war is:booster`](https://scryfall.com/search?q=e%3Awar+is%3Abooster)                         | Cards available inside War of the Spark booster boxes         |
 | [`b:wwk`](https://scryfall.com/search?q=b%3Awwk)                                                 | Cards in Zendikar Block (but using the Worldwake code)        |
 | [`in:lea in:m15`](https://scryfall.com/search?q=in%3Alea+in%3Am15)                               | Cards that were in both Alpha and Magic 2015                  |
@@ -246,7 +246,7 @@ and `vintage`.
 
 | Expression                                                                                   | Meaning                          |
 | -------------------------------------------------------------------------------------------- | -------------------------------- |
-| [`cube:vintage`](https://scryfall.com/search?q=cube%3Avintage)                               | Cards in the Vintage Cube        |
+| [`cube:vintage`](https://scryfall.com/cubes/vintage?as=grid&order=name)                      | Cards in the Vintage Cube        |
 | [`cube:modern t:planeswalker`](https://scryfall.com/search?q=cube%3Amodern+t%3Aplaneswalker) | Planeswalkers in the Modern Cube |
 
 ## Format Legality

@@ -13,7 +13,7 @@ library(scry)
 ```
 
 While Magic cards can represent costs and colors using printed symbols, the
-[Comprehensive Rules](http://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules)
+[Comprehensive Rules](https://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules)
 and Scryfall's API use a text representation of these values.
 
 ## Color Arrays
@@ -44,7 +44,7 @@ A list of color representations is provided below:
 
 Whenever the API presents mana costs and other card symbols, it does so using
 the official plaintext notation for that symbol set forth in the
-[Comprehensive Rules](http://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules).
+[Comprehensive Rules](https://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules).
 For example,
 "<img src="symbols/2W.svg" style="width: auto;height: 20px;">,
 <img src="symbols/T.svg" style="width: auto;height: 20px;">" is
