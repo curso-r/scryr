@@ -56,6 +56,8 @@
 #' * `content_encoding` \[chr\]: The Content-Encoding encoding that will be used
 #'   to transmit this file when you download it.
 #'
+#' @references <https://scryfall.com/docs/api/bulk-data>
+#'
 #' @export
 scry_bulk_data <- function() {
   scryfall("/bulk-data/", parse_bulk)

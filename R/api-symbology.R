@@ -32,6 +32,8 @@
 #'   Un-cards.
 #' * `svg_uri` \[chr\]: A URI to an SVG image of this symbol on Scryfall’s CDNs.
 #'
+#' @references <https://scryfall.com/docs/api/card-symbols>
+#'
 #' @name scry-symbology
 NULL
 

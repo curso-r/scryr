@@ -74,6 +74,8 @@
 #'   change slightly over time. You should download it and use it locally for
 #'   your particular user interface needs.
 #'
+#' @references <https://scryfall.com/docs/api/sets>
+#'
 #' @name scry-sets
 NULL
 

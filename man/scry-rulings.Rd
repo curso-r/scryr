@@ -38,3 +38,6 @@ Rulings with a \code{scryfall} source have been added by the Scryfall team, eith
 to provide additional context for the card, or explain how the card works in
 an unofficial format (such as Duel Commander).
 }
+\references{
+\url{https://scryfall.com/docs/api/rulings}
+}

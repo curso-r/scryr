@@ -65,3 +65,6 @@ documentation for \code{\link[=scry_cards]{scry_cards()}}.
 Bulk data is only collected once every 12 hours. You can use \code{\link[=scry_cards]{scry_cards()}}
 to retrieve fresh objects instead.
 }
+\references{
+\url{https://scryfall.com/docs/api/bulk-data}
+}

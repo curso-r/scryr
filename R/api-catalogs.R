@@ -7,6 +7,8 @@
 #'
 #' @return A string vector.
 #'
+#' @references <https://scryfall.com/docs/api/catalogs>
+#'
 #' @name scry-catalogs
 NULL
 

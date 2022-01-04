@@ -262,6 +262,8 @@
 #' * `preview` \[tbl\]: An object providing information about this card's
 #'   preview.
 #'
+#' @references <https://scryfall.com/docs/api/cards>
+#'
 #' @name scry-cards
 NULL
 

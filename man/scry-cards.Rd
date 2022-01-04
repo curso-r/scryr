@@ -313,3 +313,6 @@ could obtain and add to their collection (with a few minor exceptions).
 Cards are the API's most complex object. You are encouraged to thoroughly
 read this document and also \code{vignette("layouts")}.
 }
+\references{
+\url{https://scryfall.com/docs/api/cards}
+}

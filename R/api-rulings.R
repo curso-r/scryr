@@ -21,6 +21,8 @@
 #' * `published_at` \[date\]: The date when the ruling or note was published.
 #' * `comment` \[tbl\]: The text of the ruling.
 #'
+#' @references <https://scryfall.com/docs/api/rulings>
+#'
 #' @name scry-rulings
 NULL
 
