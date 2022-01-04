@@ -23,8 +23,8 @@ this data slowly over time.
 
 The current languages are:
 
-| Code                                                                           | Printed Code | Language            | Cards  |
-| ------------------------------------------------------------------------------ | ------------ | ------------------- | ------ |
+| Code    | Printed Code | Language            | Cards  |
+| ------- | ------------ | ------------------- | ------ |
 | [`en`](https://scryfall.com/search?order=released&q=lang%3Aen&unique=prints)   | en           | English             | 63,650 |
 | [`es`](https://scryfall.com/search?order=released&q=lang%3Aes&unique=prints)   | sp           | Spanish             | 33,722 |
 | [`fr`](https://scryfall.com/search?order=released&q=lang%3Afr&unique=prints)   | fr           | French              | 34,481 |

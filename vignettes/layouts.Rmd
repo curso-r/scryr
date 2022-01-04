@@ -10,10 +10,7 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 library(scry)
-glimpse <- dplyr::glimpse
-
-old <- options(pillar.width = 60)
-on.exit(options(old))
+glimpse <- purrr::partial(dplyr::glimpse, width = 72)
 ```
 
 The `layout` property categorizes the arrangement of card parts, faces, and
@@ -27,8 +24,8 @@ Specifically:
 - Cards with the layout `meld` will always have a `related_cards` property
   pointing to the other meld parts.
 
-| Layout                                                                            | Description                                        |
-| --------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Layout                 | Description                                        |
+| ---------------------- | -------------------------------------------------- |
 | [`normal`](https://scryfall.com/search?q=layout%3Anormal)                         | A standard Magic card with one face                |
 | [`split`](https://scryfall.com/search?q=layout%3Asplit)                           | A split-faced card                                 |
 | [`flip`](https://scryfall.com/search?q=layout%3Aflip)                             | Cards that invert vertically with the flip keyword |

@@ -1,8 +1,8 @@
 ---
-title: "Search Reference"
+title: "Search Syntax"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Search Reference}
+  %\VignetteIndexEntry{Search Syntax}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -32,8 +32,8 @@ against _ranges_ of colors.
 
 Find cards that have a color indicator with `has:indicator`.
 
-| Expression                                                                       | Meaning                                             |
-| -------------------------------------------------------------------------------- | --------------------------------------------------- |
+| Expression              | Meaning                                             |
+| ----------------------- | --------------------------------------------------- |
 | [`c:rg`](https://scryfall.com/search?q=c%3Arg)                                   | Cards that are red and green                        |
 | [`color>=uw -c:red`](https://scryfall.com/search?q=color%3E%3Duw+-c%3Ared)       | Cards that are at least white and blue, but not red |
 | [`id<=esper t:instant`](https://scryfall.com/search?q=id%3C%3Desper+t%3Ainstant) | Instants you can play with an Esper commander       |
@@ -46,8 +46,8 @@ search for any supertype, card type, or subtype.
 
 Using only partial words is allowed.
 
-| Expression                                                                       | Meaning                            |
-| -------------------------------------------------------------------------------- | ---------------------------------- |
+| Expression               | Meaning                            |
+| ------------------------ | ---------------------------------- |
 | [`t:merfolk t:legend`](https://scryfall.com/search?q=t%3Amerfolk+t%3Alegend)     | Legendary merfolk cards            |
 | [`t:goblin -t:creature`](https://scryfall.com/search?q=t%3Agoblin+-t%3Acreature) | Goblin cards that aren't creatures |
 
@@ -69,8 +69,8 @@ text.
 
 You can also use `keyword:` to search for cards with a specific keyword ability.
 
-| Expression                                                                                                       | Meaning                                 |
-| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| Expression                              | Meaning                                 |
+| :-------------------------------------- | --------------------------------------- |
 | [`o:draw t:creature`](https://scryfall.com/search?q=o%3Adraw+t%3Acreature)                                       | Creatures that deal with drawing cards  |
 | [`o:"~ enters the battlefield tapped"`](https://scryfall.com/search?q=o%3A%22~+enters+the+battlefield+tapped%22) | Cards that enter the battlefield tapped |
 
@@ -105,8 +105,8 @@ devotion to two, with `devotion:` or a comparison operator.
 
 You can also find cards that produce specific types of mana, with `produces:`
 
-| Expression                                                                                               | Meaning                                                               |
-| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Expression                   | Meaning                                                               |
+| ---------------------------- | --------------------------------------------------------------------- |
 | [`mana:{G}{U}`](https://scryfall.com/search?q=mana%3A%7BG%7D%7BU%7D)                                     | Cards with one green and blue mana in their costs                     |
 | [`m:2WW`](https://scryfall.com/search?q=m%3A2WW)                                                         | Cards with two generic and two white mana in their cost               |
 | [`m>3WU`](https://scryfall.com/search?q=m%3E3WU)                                                         | Cards that cost more than three generic, one white, and one blue mana |
@@ -123,8 +123,8 @@ power and toughness, `pt`/`powtou`, or starting loyalty, `loyalty`/`loy`.
 
 You can compare the values with each other or with a provided number.
 
-| Expression                                                                             | Meaning                               |
-| -------------------------------------------------------------------------------------- | ------------------------------------- |
+| Expression                 | Meaning                               |
+| -------------------------- | ------------------------------------- |
 | [`pow>=8`](https://scryfall.com/search?q=pow%3E%3D8)                                   | Cards with 8 or more power            |
 | [`pow>tou c:w t:creature`](https://scryfall.com/search?q=pow%3Etou+c%3Aw+t%3Acreature) | White creatures that are top-heavy    |
 | [`t:planeswalker loy=3`](https://scryfall.com/search?q=t%3Aplaneswalker+loy%3D3)       | Planeswalkers that start at 3 loyalty |
@@ -136,8 +136,8 @@ You can find cards that have more than one face with `is:split` (split cards),
 that meld), `is:leveler` (cards with Level Up), `is:dfc` (double-faced cards),
 and `is:mdfc` (modal double-faced cards).
 
-| Expression                                              | Meaning           |
-| ------------------------------------------------------- | ----------------- |
+| Expression   | Meaning           |
+| ------------ | ----------------- |
 | [`is:meld`](https://scryfall.com/search?q=is%3Ameld)    | Cards that meld   |
 | [`is:split`](https://scryfall.com/search?q=is%3Asplit)  | Split-faced cards |
 
@@ -150,8 +150,8 @@ creatures that can be in your party with `is:party`, modal effects with
 `is:modal`, vanilla creatures with `is:vanilla`, or French vanilla cards with
 `is:frenchvanilla`.
 
-| Expression                                                                             | Meaning                                           |
-| -------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Expression                | Meaning                                           |
+| ------------------------- | ------------------------------------------------- |
 | [`c>=br is:spell f:duel`](https://scryfall.com/search?q=c%3E%3Dbr+is%3Aspell+f%3Aduel) | Black and red multicolor spells in Duel Commander |
 | [`is:permanent t:rebel`](https://scryfall.com/search?q=is%3Apermanent+t%3Arebel)       | Rebel permanents                                  |
 | [`is:vanilla`](https://scryfall.com/search?q=is%3Avanilla)                             | Vanilla creatures                                 |
@@ -172,8 +172,8 @@ mentioning their set.
 You may also use `include:extras` to reveal absolutely every card when you
 search.
 
-| Expression                                                                     | Meaning                                            |
-| ------------------------------------------------------------------------------ | -------------------------------------------------- |
+| Expression               | Meaning                                            |
+| ------------------------ | -------------------------------------------------- |
 | [`is:funny`](https://scryfall.com/search?q=is%3Afunny)                         | All funny cards                                    |
 | [`t:scheme`](https://scryfall.com/search?q=t%3Ascheme)                         | Scheme cards                                       |
 | [`power include:extras`](https://scryfall.com/search?q=power+include%3Aextras) | Cards with “power” in their name, including extras |
@@ -189,8 +189,8 @@ time. You can find cards that have ever been printed in a given rarity using
 `in:` (for example, `in:rare` to find cards that have ever been printed at
 rare.)
 
-| Expression                                                                                             | Meaning                                                       |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| Expression                         | Meaning                                                       |
+| ---------------------------------- | ------------------------------------------------------------- |
 | [`r:common t:artifact`](https://scryfall.com/search?q=r%3Acommon+t%3Aartifact)                         | Common artifacts                                              |
 | [`r>=r`](https://scryfall.com/search?q=r%3E%3Dr)                                                       | Cards at rare rarity or above (i.e., rares and mythics)       |
 | [`rarity:common e:ima new:rarity`](https://scryfall.com/search?q=rarity%3Acommon+e%3Aima+new%3Ararity) | Cards printed as commons for the first time in Iconic Masters |
@@ -228,8 +228,8 @@ You can also search for individual cards that were sold in certain places with
 `is:league`, `is:buyabox`, `is:giftbox`, `is:intro_pack`, `is:gameday`,
 `is:prerelease`, or `is:release`, among others.
 
-| Expression                                                                                       | Meaning                                                       |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| Expression                       | Meaning                                                       |
+| -------------------------------- | ------------------------------------------------------------- |
 | [`e:war`](https://scryfall.com/sets/war?as=grid&order=set)                                       | Cards from War of the Spark                                   |
 | [`e:war is:booster`](https://scryfall.com/search?q=e%3Awar+is%3Abooster)                         | Cards available inside War of the Spark booster boxes         |
 | [`b:wwk`](https://scryfall.com/search?q=b%3Awwk)                                                 | Cards in Zendikar Block (but using the Worldwake code)        |
@@ -244,8 +244,8 @@ supported cubes are `arena`, `grixis`, `legacy`, `chuck`, `twisted`, `protour`,
 `uncommon`, `april`, `modern`, `amaz`, `tinkerer`, `livethedream`, `chromatic`,
 and `vintage`.
 
-| Expression                                                                                   | Meaning                          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- |
+| Expression                     | Meaning                          |
+| ------------------------------ | -------------------------------- |
 | [`cube:vintage`](https://scryfall.com/cubes/vintage?as=grid&order=name)                      | Cards in the Vintage Cube        |
 | [`cube:modern t:planeswalker`](https://scryfall.com/search?q=cube%3Amodern+t%3Aplaneswalker) | Planeswalkers in the Modern Cube |
 
@@ -270,8 +270,8 @@ Duel Commander.
 
 Finally, you can find cards on the Reserved List with `is:reserved`.
 
-| Expression                                                                               | Meaning                          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
+| Expression                  | Meaning                          |
+| --------------------------- | -------------------------------- |
 | [`c:g t:creature f:pauper`](https://scryfall.com/search?q=c%3Ag+t%3Acreature+f%3Apauper) | Green creatures in Pauper format |
 | [`banned:legacy`](https://scryfall.com/search?q=banned%3Alegacy)                         | Cards banned in Legacy format    |
 | [`is:commander`](https://scryfall.com/search?q=is%3Acommander)                           | Cards that can be your commander |
@@ -285,8 +285,8 @@ them with a numeric expression (`>`, `<`, `=`, `>=`, `<=`, and `!=`).
 You can find the cheapest print of each card with `cheapest:usd`,
 `cheapest:eur`, and `cheapest:tix`.
 
-| Expression                                                                                      | Meaning                                         |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| Expression          | Meaning                                         |
+| ------------------- | ----------------------------------------------- |
 | [`tix>15.00`](https://scryfall.com/search?as=checklist&order=tix&q=tix%3E15.00)                 | Cards that cost more than 15 TIX at MTGO stores |
 | [`usd>=0.50 e:ema`](https://scryfall.com/search?as=checklist&order=usd&q=usd%3E%3D0.50+e%3Aema) | Cards worth 50¢ or more in Eternal Masters      |
 
@@ -311,8 +311,8 @@ with brand-new flavor text using `new:flavor`.
 You can compare how many different illustrations a give card has with things
 like `illustrations>1`.
 
-| Expression                                                                                                                     | Meaning                                                |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
+| Expression                                    | Meaning                                                |
+| --------------------------------------------- | ------------------------------------------------------ |
 | [`a:"proce"`](https://scryfall.com/search?q=a%3A%22proce%22)                                                                   | Cards illustrated by Vincent Proce                     |
 | [`ft:mishra`](https://scryfall.com/search?q=ft%3Amishra)                                                                       | Cards that mention Mishra in their flavor text         |
 | [`ft:designed e:m15`](https://scryfall.com/search?q=ft%3Adesigned+e%3Am15)                                                     | Cards created by guest designers in Magic 2015         |
@@ -345,8 +345,8 @@ You can find cards in our database with high-resolution images using `is:hires`.
 Search for a card's security stamp with `stamp:oval`, `stamp:acorn`,
 `stamp:triangle`, or `stamp:arena`
 
-| Expression                                                                                                               | Meaning                                                             |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| Expression                                 | Meaning                                                             |
+| ------------------------------------------ | ------------------------------------------------------------------- |
 | [`border:white t:creature`](https://scryfall.com/search?q=border%3Awhite+t%3Acreature)                                   | White-bordered creature cards                                       |
 | [`is:new r:mythic`](https://scryfall.com/search?q=is%3Anew+r%3Amythic)                                                   | Mythic cards with the 2015 holofoil-stamp frame                     |
 | [`is:old t:artifact`](https://scryfall.com/search?q=is%3Aold+t%3Aartifact)                                               | Artifacts in either the 1993 or 1997 variant of the 'classic' frame |
@@ -372,8 +372,8 @@ Find cards that are Story Spotlights with `is:spotlight`.
 Find cards that Scryfall has had the honor of previewing with
 `is:scryfallpreview`.
 
-| Expression                                                                 | Meaning                                  |
-| -------------------------------------------------------------------------- | ---------------------------------------- |
+| Expression            | Meaning                                  |
+| --------------------- | ---------------------------------------- |
 | [`game:arena`](https://scryfall.com/search?q=game%3Aarena)                 | Cards available on MTG:Arena             |
 | [`-in:mtgo f:legacy`](https://scryfall.com/search?q=-in%3Amtgo+f%3Alegacy) | Legacy legal cards not available on MTGO |
 | [`is:promo`](https://scryfall.com/search?q=is%3Apromo)                     | Promotional cards                        |
@@ -385,8 +385,8 @@ You can use numeric expressions (`>`, `<`, `=`, `>=`, `<=`, and `!=`) to find
 cards that were released relative to a certain year or a `yyyy-mm-dd` date. You
 can also use any set code to stand in for the set's release date.
 
-| Expression                                                               | Meaning                                            |
-| ------------------------------------------------------------------------ | -------------------------------------------------- |
+| Expression           | Meaning                                            |
+| -------------------- | -------------------------------------------------- |
 | [`year<=1994`](https://scryfall.com/search?q=year%3C%3D1994)             | Cards from 1994 and before                         |
 | [`year=2022`](https://scryfall.com/search?q=year%3D2022)                 | Cards released this year                           |
 | [`date>=2015-08-18`](https://scryfall.com/search?q=date%3E%3D2015-08-18) | Cards printed on or after August 18, 2015          |
@@ -403,8 +403,8 @@ describe the function of the card.
 Data for these two features comes from the [Tagger
 project](https://scryfall.com/docs/tagger-tags).
 
-| Expression                                                             | Meaning                      |
-| ---------------------------------------------------------------------- | ---------------------------- |
+| Expression           | Meaning                      |
+| -------------------- | ---------------------------- |
 | [`art:squirrel`](https://scryfall.com/search?q=art%3Asquirrel)         | Art that contains a squirrel |
 | [`function:removal`](https://scryfall.com/search?q=function%3Aremoval) | Cards that cause removal     |
 
@@ -417,8 +417,8 @@ like `prints=1`, or the number of sets a card has been in with `sets=1`. These
 can also be compared including only paper sets with `paperprints=1` and
 `papersets=1`.
 
-| Expression                                                                 | Meaning                                                                |
-| -------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Expression            | Meaning                                                                |
+| --------------------- | ---------------------------------------------------------------------- |
 | [`e:c16 not:reprint`](https://scryfall.com/search?q=e%3Ac16+not%3Areprint) | Cards that were new in Commander 2016                                  |
 | [`e:ktk is:unique`](https://scryfall.com/search?q=e%3Aktk+is%3Aunique)     | Cards that were in Khans of Tarkir and not printed in any other set    |
 | [`sets>=20`](https://scryfall.com/search?q=sets%3E%3D20)                   | Cards that have been printed in 20 or more distinct sets               |
@@ -436,8 +436,8 @@ You can also find the first printing of a card in each language using
 least once with `in:` (e.g. `in:ru` will find cards that have ever been printed
 in Russian.)
 
-| Expression                                                                                                           | Meaning                                                             |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| Expression                                | Meaning                                                             |
+| ----------------------------------------- | ------------------------------------------------------------------- |
 | [`lang:japanese`](https://scryfall.com/search?q=lang%3Ajapanese)                                                     | Cards in Japanese                                                   |
 | [`lang:any t:planeswalker unique:prints`](https://scryfall.com/search?q=lang%3Aany+t%3Aplaneswalker+unique%3Aprints) | Planeswalkers in any language                                       |
 | [`lang:ko new:language t:goblin`](https://scryfall.com/search?q=lang%3Ako+new%3Alanguage+t%3Agoblin)                 | The first printings of goblin cards in the Korean language          |
@@ -456,8 +456,8 @@ You can find some interesting land groups with `is:bikeland` (alias `cycleland`,
 
 You can find all Masterpiece Series cards with `is:masterpiece`
 
-| Expression                                                           | Meaning                   |
-| -------------------------------------------------------------------- | ------------------------- |
+| Expression          | Meaning                   |
+| ------------------- | ------------------------- |
 | [`is:dual`](https://scryfall.com/search?q=is%3Adual)                 | Cards that are dual lands |
 | [`is:fetchland`](https://scryfall.com/search?q=is%3Afetchland)       | Cards that are fetchlands |
 | [`is:colorshifted`](https://scryfall.com/search?q=is%3Acolorshifted) | Colorshifted cards        |
@@ -473,8 +473,8 @@ The `is:` keyword has a convenient inverted mode `not:` which is the same as
 
 Loose name words can also be inverted with `-`
 
-| Expression                                                                               | Meaning                                            |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Expression                   | Meaning                                            |
+| ---------------------------- | -------------------------------------------------- |
 | [`-fire c:r t:instant`](https://scryfall.com/search?q=-fire+c%3Ar+t%3Ainstant)           | Red instants without the word “fire” in their name |
 | [`o:changeling -t:creature`](https://scryfall.com/search?q=o%3Achangeling+-t%3Acreature) | Changeling cards that aren't creatures             |
 | [`not:reprint e:c16`](https://scryfall.com/search?q=not%3Areprint+e%3Ac16)               | Cards in Commander 2016 that aren't reprints       |
@@ -493,8 +493,8 @@ Forward slashes inside your regex must be escaped with `\/`.
 
 Full documentation for this keyword is available on in `vignette("regex")`.
 
-| Expression                                                                                   | Meaning                                             |
-| -------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| Expression               | Meaning                                             |
+| ------------------------ | --------------------------------------------------- |
 | [`t:creature o:/^{T}:/`](https://scryfall.com/search?q=t%3Acreature+o%3A%2F%5E%7BT%7D%3A%2F) | Creatures that tap with no other payment            |
 | [`t:instant o:/\spp/`](https://scryfall.com/search?q=t%3Ainstant+o%3A%2F%5Cspp%2F)           | Instants that provide +X/+X effects                 |
 | [`name:/\bizzet\b/`](https://scryfall.com/search?q=name%3A%2F%5Cbizzet%5Cb%2F)               | Card names with “izzet” but not words like “mizzet” |
@@ -506,8 +506,8 @@ exact name only.
 
 This is still case-insensitive.
 
-| Expression                                                                           | Meaning                     |
-| ------------------------------------------------------------------------------------ | --------------------------- |
+| Expression                | Meaning                     |
+| ------------------------- | --------------------------- |
 | [`!fire`](https://scryfall.com/search?q=%21fire)                                     | The card Fire               |
 | [`!"sift through sands"`](https://scryfall.com/search?q=%21%22sift+through+sands%22) | The card Sift Through Sands |
 
@@ -519,8 +519,8 @@ find a card.
 If you want to search over a set of options or choices, you can put the special
 word `or`/`OR` between terms.
 
-| Expression                                                                                         | Meaning                                        |
-| -------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Expression                     | Meaning                                        |
+| ------------------------------ | ---------------------------------------------- |
 | [`t:fish or t:bird`](https://scryfall.com/search?q=t%3Afish+or+t%3Abird)                           | Cards that are Fish or Birds                   |
 | [`t:land (a:titus or a:avon)`](https://scryfall.com/search?q=t%3Aland+%28a%3Atitus+or+a%3Aavon%29) | Lands illustrated by Titus Lunter or John Avon |
 
@@ -531,8 +531,8 @@ most useful when combined with the `OR` keyword.
 
 Remember that terms that are _not_ separated by `OR` are still combined.
 
-| Expression                                                                                                   | Meaning                    |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| Expression                             | Meaning                    |
+| -------------------------------------- | -------------------------- |
 | [`t:legendary (t:goblin or t:elf)`](https://scryfall.com/search?q=t%3Alegendary+%28t%3Agoblin+or+t%3Aelf%29) | Legendary goblins or elves |
 | [`through (depths or sands or mists)`](https://scryfall.com/search?q=through+%28depths+or+sands+or+mists%29) | The Unspeakable combo      |
 
@@ -558,8 +558,8 @@ Select what printings of cards to preferentially show with `prefer:oldest`,
 
 Change the order of the sorted data with `direction:asc` or `direction:desc`.
 
-| Expression                                                                                                       | Meaning                                                        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| Expression                              | Meaning                                                        |
+| --------------------------------------- | -------------------------------------------------------------- |
 | [`!"Lightning Bolt" unique:prints`](https://scryfall.com/search?q=%21%22Lightning+Bolt%22+unique%3Aprints)       | Every printing of Lightning Bolt                               |
 | [`t:forest a:avon unique:art`](https://scryfall.com/search?q=t%3Aforest+a%3Aavon+unique%3Aart)                   | Every unique Forest illustration by John Avon                  |
 | [`f:modern order:rarity direction:asc`](https://scryfall.com/search?q=f%3Amodern+order%3Ararity+direction%3Aasc) | Modern legal cards sorted by rarity, commons first             |

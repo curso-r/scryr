@@ -13,8 +13,8 @@ properties.
 
 The image formats are:
 
-| Image                                                                                                                                  | Size       | Format | Description                                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Image           | Size                                     | Format | Description                                                                                                                                            |
+| --------------- | ---------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [`png`](https://c1.scryfall.com/file/scryfall-cards/png/front/6/d/6da045f8-6278-4c84-9d39-025adf0789c1.png?1562404626)                 | 745 x 1040 | PNG    | A transparent, rounded full card PNG. This is the best image to use for videos or other high-quality content.                                          |
 | [`border_crop`](https://c1.scryfall.com/file/scryfall-cards/border_crop/front/6/d/6da045f8-6278-4c84-9d39-025adf0789c1.jpg?1562404626) | 480 x 680  | JPG    | A full card image with the rounded corners and the majority of the border cropped off. Designed for dated contexts where rounded images can't be used. |
 | [`art_crop`](https://c1.scryfall.com/file/scryfall-cards/art_crop/front/6/d/6da045f8-6278-4c84-9d39-025adf0789c1.jpg?1562404626)       | Varies     | JPG    | A rectangular crop of the card's art only. Not guaranteed to be perfect for cards with outlier designs or strange frame arrangements                   |

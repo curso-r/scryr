@@ -15,14 +15,10 @@ expressions](https://en.wikipedia.org/wiki/Regular_expression).
 Regular expressions are very powerful, here are some examples of fancy searches
 you can make with regular expressions:
 
-* [Instants that grant +X/+X
-boosts](https://scryfall.com/search?q=t%3Ainstant+o%3A%2F%5Cspp%2F)
-* [Creatures that have a tap ability with no other
-payment](https://scryfall.com/search?q=t%3Acreature+o%3A%2F%5E%7BT%7D%3A%2F)
-* [Cards that mention orcs, but not other words like sORCery or
-ORChard](https://scryfall.com/search?q=o%3A%2F%5Cb%28orc%7Corcs%29%5Cb%2F+or+name%3A%2F%5Cb%28orc%7Corcs%29%5Cb%2F+or+ft%3A%2F%5Cb%28orc%7Corcs%29%5Cb%2F)
-* [The Thingling
-cycle](https://scryfall.com/search?q=name%3A%2F%5E%5B%5E%5Cs%5D%2Bling%24%2F+t%3Ashapeshifter)
+* [Instants that grant +X/+X boosts](https://scryfall.com/search?q=t%3Ainstant+o%3A%2F%5Cspp%2F)
+* [Creatures that have a tap ability with no other payment](https://scryfall.com/search?q=t%3Acreature+o%3A%2F%5E%7BT%7D%3A%2F)
+* [Cards that mention orcs, but not other words like sORCery or ORChard](https://scryfall.com/search?q=o%3A%2F%5Cb%28orc%7Corcs%29%5Cb%2F+or+name%3A%2F%5Cb%28orc%7Corcs%29%5Cb%2F+or+ft%3A%2F%5Cb%28orc%7Corcs%29%5Cb%2F)
+* [The Thingling cycle](https://scryfall.com/search?q=name%3A%2F%5E%5B%5E%5Cs%5D%2Bling%24%2F+t%3Ashapeshifter)
 
 ## Scryfall Regex Flavor
 
@@ -31,21 +27,21 @@ below. Our regular expressions have the following configuration and limits:
 
 * If your expression includes forward slashes `/` they must be escaped: `\/`
 * Scryfall regular expressions are Unicode-aware. The `.` will match characters
-beyond the ASCII range.
+  beyond the ASCII range.
 * Backreferences are not supported (`\1`, `\2`, etc)
 * All regular expressions are case-insensitive (`i`).
 * All regular expressions are “multiline” mode (`m`). Line anchors will match
-paragraphs in Oracle text, instead of the entire block
+  paragraphs in Oracle text, instead of the entire block
 * All characters in your expression are significant and whitespace will be
-matched (sometimes listed as “tight mode”)
+  matched (sometimes listed as “tight mode”)
 * You cannot add configuration to regular expressions on Scryfall. For example
-`o:/tap/` will work while `o:/tap/gi` will not.
+  `o:/tap/` will work while `o:/tap/gi` will not.
 * Scryfall regular expressions are match-only. Scryfall does not support
-extracting data from capture groups or performing substitutions.
+  extracting data from capture groups or performing substitutions.
 * Scryfall uses only the `\n` character for newlines in all text fields across
-our entire database. No fields include `\r` or `\f`.
+  our entire database. No fields include `\r` or `\f`.
 * The Scryfall database does not include bells (`\a`), null-bytes (`\0`), or
-other esoteric control characters.
+  other esoteric control characters.
 
 ## Scryfall Extensions
 

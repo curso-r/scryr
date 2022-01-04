@@ -16,8 +16,8 @@ The `frame` field tracks the edition of the card frame of used for the re/print
 in question. The overall Magic frame has gone though several major revisions in
 the game's lifetime.
 
-| Frame                                                    | Description                                                                                                    |
-| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Frame    | Description                                                                                                    |
+| -------- | -------------------------------------------------------------------------------------------------------------- |
 | [`1993`](https://scryfall.com/search?q=frame%3A1993)     | The original Magic card frame, starting from Limited Edition Alpha.                                            |
 | [`1997`](https://scryfall.com/search?q=frame%3A1997)     | The updated classic frame starting from Mirage block                                                           |
 | [`2003`](https://scryfall.com/search?q=frame%3A2003)     | The “modern” Magic card frame, introduced in Eighth Edition and Mirrodin block.                                |
@@ -30,8 +30,8 @@ The `frame_effects` field tracks additional frame artwork applied over a
 particular frame. For example, there are both 2003 and 2015-frame cards with the
 Nyx-touched effect.
 
-| Effect                                                                                   | Description                                         |
-| ---------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| Effect                     | Description                                         |
+| -------------------------- | --------------------------------------------------- |
 | [`legendary`](https://scryfall.com/search?q=frame%3Alegendary)                           | The cards have a legendary crown                    |
 | [`miracle`](https://scryfall.com/search?q=frame%3Amiracle)                               | The miracle frame effect                            |
 | [`nyxtouched`](https://scryfall.com/search?q=frame%3Anyxtouched)                         | The Nyx-touched frame effect                        |

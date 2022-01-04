@@ -32,13 +32,13 @@ Color arrays are not guaranteed to be in a particular order.
 
 A list of color representations is provided below:
 
-| Abbr.                                                                              | Color | Basic Land                                                                  | Mana Symbol                                                 |
-| ---------------------------------------------------------------------------------- | ----- | --------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| [`W`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BW%7D%22+OR+m%3A%7BW%7D) | White | [Plains](https://scryfall.com/search?q=%21%22Plains%22+unique%3Aprints)     | <img src="symbols/W.svg" style="width: auto;height: 20px;"> |
-| [`U`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BU%7D%22+OR+m%3A%7BU%7D) | Blue  | [Island](https://scryfall.com/search?q=%21%22Island%22+unique%3Aprints)     | <img src="symbols/U.svg" style="width: auto;height: 20px;"> |
-| [`B`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BB%7D%22+OR+m%3A%7BB%7D) | Black | [Swamp](https://scryfall.com/search?q=%21%22Swamp%22+unique%3Aprints)       | <img src="symbols/B.svg" style="width: auto;height: 20px;"> |
-| [`R`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BR%7D%22+OR+m%3A%7BR%7D) | Red   | [Mountain](https://scryfall.com/search?q=%21%22Mountain%22+unique%3Aprints) | <img src="symbols/R.svg" style="width: auto;height: 20px;"> |
-| [`G`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BG%7D%22+OR+m%3A%7BG%7D) | Green | [Forest](https://scryfall.com/search?q=%21%22Forest%22+unique%3Aprints)     | <img src="symbols/G.svg" style="width: auto;height: 20px;"> |
+| Abbr. | Color | Basic Land | Mana Symbol                                                 |
+| ----- | ----- | ---------- | ----------------------------------------------------------- |
+| [`W`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BW%7D%22+OR+m%3A%7BW%7D) | White | Plains     | <img src="symbols/W.svg" style="width: auto;height: 20px;"> |
+| [`U`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BU%7D%22+OR+m%3A%7BU%7D) | Blue  | Island     | <img src="symbols/U.svg" style="width: auto;height: 20px;"> |
+| [`B`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BB%7D%22+OR+m%3A%7BB%7D) | Black | Swamp      | <img src="symbols/B.svg" style="width: auto;height: 20px;"> |
+| [`R`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BR%7D%22+OR+m%3A%7BR%7D) | Red   | Mountain   | <img src="symbols/R.svg" style="width: auto;height: 20px;"> |
+| [`G`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BG%7D%22+OR+m%3A%7BG%7D) | Green | Forest     | <img src="symbols/G.svg" style="width: auto;height: 20px;"> |
 
 ## Mana Costs and Other Symbology
 
@@ -55,8 +55,8 @@ this information programmatically using the `scry_symbology()` method.
 
 Note that some symbols use UTF-8 characters outside the ASCII range.
 
-| Symbol                                                                                                       | Printed                                                            | Description                        |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ | ---------------------------------- |
+| Symbol        | Printed                                                            | Description                        |
+| ------------- | ------------------------------------------------------------------ | ---------------------------------- |
 | [`{T}`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BT%7D%22)                                        | <img src="symbols/T.svg" style="width: auto;height: 20px;">        | Tap this permanent                 |
 | [`{Q}`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BQ%7D%22)                                        | <img src="symbols/Q.svg" style="width: auto;height: 20px;">        | Untap this permanent               |
 | [`{E}`](https://scryfall.com/search?order=edhrec&q=o%3A%22%7BE%7D%22)                                        | <img src="symbols/E.svg" style="width: auto;height: 20px;">        | An energy counter                  |
