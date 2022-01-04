@@ -25,12 +25,9 @@ this decimal could include fractional parts.
 }
 }
 \description{
-Parse mana costs
+Parses the given mana \code{cost} parameter and returns Scryfall's interpretation.
 }
 \details{
-Parses the given mana \code{cost} parameter and returns Scryfall's
-interpretation.
-
 The server understands most community shorthand for mana costs (such as 2WW
 for {2}{W}{W}). Symbols can also be out of order, lowercase, or have multiple
 colorless costs (such as 2{g}2 for {4}{G}).

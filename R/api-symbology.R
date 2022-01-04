@@ -1,8 +1,9 @@
 #' Retrieve information about symbols
 #'
-#' @details A Card Symbol object represents an illustrated symbol that may
-#' appear in card's mana cost or Oracle text. Symbols are based on the notation
-#' used in the Comprehensive Rules.
+#' @description
+#' A Card Symbol object represents an illustrated symbol that may appear in
+#' card's mana cost or Oracle text. Symbols are based on the notation used in
+#' the Comprehensive Rules.
 #'
 #' For more information about how the Scryfall API represents mana and costs,
 #' see `vignette("colors")`.
@@ -52,9 +53,10 @@ scry_symbology <- function() {
 
 #' Parse mana costs
 #'
-#' @details Parses the given mana `cost` parameter and returns Scryfall's
-#' interpretation.
+#' @description
+#' Parses the given mana `cost` parameter and returns Scryfall's interpretation.
 #'
+#' @details
 #' The server understands most community shorthand for mana costs (such as 2WW
 #' for {2}{W}{W}). Symbols can also be out of order, lowercase, or have multiple
 #' colorless costs (such as 2{g}2 for {4}{G}).

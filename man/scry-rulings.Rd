@@ -32,11 +32,8 @@ produced this ruling, either wotc or scryfall.
 }
 }
 \description{
-Retrieve information about rulings
-}
-\details{
-Rulings represent Oracle rulings, Wizards of the Coast set release
-notes, or Scryfall notes for a particular card.
+Rulings represent Oracle rulings, Wizards of the Coast set release notes, or
+Scryfall notes for a particular card.
 Rulings with a \code{scryfall} source have been added by the Scryfall team, either
 to provide additional context for the card, or explain how the card works in
 an unofficial format (such as Duel Commander).

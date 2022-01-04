@@ -1,9 +1,9 @@
 #' Retrieve catalog objects
 #'
-#' @details A Catalog object contains an array of Magic datapoints (words, card
-#' values, etc). Catalog objects are provided by the API as aids for building
-#' other Magic software and understanding possible values for a field on Card
-#' objects.
+#' @description
+#' A Catalog object contains an array of Magic datapoints (words, card values,
+#' etc). Catalog objects are provided by the API as aids for building other
+#' Magic software and understanding possible values for a field on Card objects.
 #'
 #' @return A string vector.
 #'

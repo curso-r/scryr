@@ -1,9 +1,12 @@
 #' Retrieve information about bulk data files
 #'
-#' @details Scryfall provides daily exports of our card data in bulk files. Each
-#' of these files is represented as a `bulk_data` object via the API. URLs for
-#' files change their timestamp each day, and can be fetched programmatically.
-#' The currently available files are the following:
+#' @description
+#' Scryfall provides daily exports of our card data in bulk files. Each of these
+#' files is represented as a `bulk_data` object via the API.
+#'
+#' @details
+#' URLs for files change their timestamp each day, and can be fetched
+#' programmatically. The currently available files are the following:
 #'
 #' * Oracle Cards: A JSON file containing one Scryfall card object for each
 #'   Oracle ID on Scryfall. The chosen sets for the cards are an attempt to

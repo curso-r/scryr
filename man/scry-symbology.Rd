@@ -41,12 +41,9 @@ For example: \code{{W}} has \verb{["oW", "ooW"]} as alternates.
 }
 }
 \description{
-Retrieve information about symbols
-}
-\details{
-A Card Symbol object represents an illustrated symbol that may
-appear in card's mana cost or Oracle text. Symbols are based on the notation
-used in the Comprehensive Rules.
+A Card Symbol object represents an illustrated symbol that may appear in
+card's mana cost or Oracle text. Symbols are based on the notation used in
+the Comprehensive Rules.
 
 For more information about how the Scryfall API represents mana and costs,
 see \code{vignette("colors")}.
