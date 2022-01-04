@@ -64,7 +64,7 @@
 #' card's name, allows misspellings and partial words to be provided too) or
 #' `exact` (`name` has to match exactly, case insenstive).
 #' @param set The three to five-letter set code.
-#' @param number The collector number.
+#' @param number The card's collector number for a set.
 #' @param lang The 2-3 character language code. For more information, see
 #' `vignette("languages")`
 #'

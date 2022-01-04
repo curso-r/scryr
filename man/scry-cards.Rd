@@ -105,7 +105,7 @@ card's name, allows misspellings and partial words to be provided too) or
 
 \item{set}{The three to five-letter set code.}
 
-\item{number}{The collector number.}
+\item{number}{The card's collector number for a set.}
 
 \item{lang}{The 2-3 character language code. For more information, see
 \code{vignette("languages")}}
