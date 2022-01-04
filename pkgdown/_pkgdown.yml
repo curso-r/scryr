@@ -8,7 +8,7 @@ authors:
     href: https://lente.dev
   Curso-R:
     href: https://curso-r.com
-    html: "<img src='/reference/figures/curso-r.png' width=80>"
+    html: "<img src='/scry/reference/figures/curso-r.png' width=80>"
 
 template:
   bootstrap: 5

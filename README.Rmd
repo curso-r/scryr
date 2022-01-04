@@ -11,8 +11,6 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
-old <- options(pillar.width = 55)
-on.exit(options(old))
 library(dplyr)
 library(tidyr)
 ```
@@ -63,7 +61,7 @@ cards |>
   count(rarity)
 
 # Summary of full data
-glimpse(cards)
+glimpse(cards, width = 72)
 ```
 
 ## Code of Conduct
