@@ -122,82 +122,82 @@
 <span class="co">#&gt; 4 uncommon     4</span>
 
 <span class="co"># Summary of full data</span>
-<span class="fu">glimpse</span><span class="op">(</span><span class="va">cards</span><span class="op">)</span>
+<span class="fu">glimpse</span><span class="op">(</span><span class="va">cards</span>, width <span class="op">=</span> <span class="fl">72</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 52</span>
 <span class="co">#&gt; Columns: 73</span>
-<span class="co">#&gt; $ arena_id          &lt;int&gt; NA, NA, NA, 72399, NA, NA, NA, NA, NA, 70655, 70661,…</span>
-<span class="co">#&gt; $ id                &lt;chr&gt; "deaa0b9b-258e-4daf-8fec-ce64864d6bbf", "e0ddcf4a-19…</span>
-<span class="co">#&gt; $ lang              &lt;chr&gt; "en", "en", "en", "en", "en", "en", "en", "en", "en"…</span>
-<span class="co">#&gt; $ mtgo_id           &lt;int&gt; 20656, 18075, 29603, NA, NA, 51743, 40641, 32254, 43…</span>
-<span class="co">#&gt; $ mtgo_foil_id      &lt;int&gt; 20657, 18076, 29604, NA, NA, 51744, 40961, 32255, 43…</span>
-<span class="co">#&gt; $ multiverse_ids    &lt;list&gt; 43529, 39737, 159396, 489527, 420822, 378523, 23647…</span>
-<span class="co">#&gt; $ tcgplayer_id      &lt;int&gt; 11871, 10357, 18605, 216652, 124134, 78745, 46945, 3…</span>
-<span class="co">#&gt; $ cardmarket_id     &lt;int&gt; 579, 1820, 19103, 474694, 293507, 265594, 246730, 20…</span>
-<span class="co">#&gt; $ object            &lt;chr&gt; "card", "card", "card", "card", "card", "card", "car…</span>
-<span class="co">#&gt; $ oracle_id         &lt;chr&gt; "97428d25-d850-4a98-8852-9440e06a9091", "b3595359-0d…</span>
-<span class="co">#&gt; $ prints_search_uri &lt;chr&gt; "https://api.scryfall.com/cards/search?order=release…</span>
-<span class="co">#&gt; $ rulings_uri       &lt;chr&gt; "https://api.scryfall.com/cards/deaa0b9b-258e-4daf-8…</span>
-<span class="co">#&gt; $ scryfall_uri      &lt;chr&gt; "https://scryfall.com/card/5dn/63/cosmic-larva?utm_s…</span>
-<span class="co">#&gt; $ uri               &lt;chr&gt; "https://api.scryfall.com/cards/deaa0b9b-258e-4daf-8…</span>
-<span class="co">#&gt; $ all_parts         &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NU…</span>
-<span class="co">#&gt; $ cmc               &lt;dbl&gt; 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5…</span>
-<span class="co">#&gt; $ color_identity    &lt;list&gt; "R", "R", "R", "R", &lt;"R", "W"&gt;, &lt;"B", "R"&gt;, &lt;"R", "…</span>
-<span class="co">#&gt; $ colors            &lt;list&gt; "R", "R", "R", "R", &lt;"R", "W"&gt;, &lt;"B", "R"&gt;, &lt;"R", "…</span>
-<span class="co">#&gt; $ edhrec_rank       &lt;int&gt; 12005, 11426, 15672, 14411, 1109, 2141, 8418, 16089,…</span>
-<span class="co">#&gt; $ keywords          &lt;list&gt; "Trample", &lt;"Morph", "Haste", "Trample"&gt;, &lt;NULL&gt;, "…</span>
-<span class="co">#&gt; $ layout            &lt;chr&gt; "normal", "normal", "normal", "normal", "normal", "n…</span>
-<span class="co">#&gt; $ legalities        &lt;list&gt; [&lt;tbl_df[1 x 18]&gt;], [&lt;tbl_df[1 x 18]&gt;], [&lt;tbl_df[1 …</span>
-<span class="co">#&gt; $ mana_cost         &lt;chr&gt; "{1}{R}{R}", "{1}{R}{R}{R}", "{2}{R}{R}", "{3}{R}", …</span>
-<span class="co">#&gt; $ name              &lt;chr&gt; "Cosmic Larva", "Blistering Firecat", "Deep-Slumber …</span>
-<span class="co">#&gt; $ oracle_text       &lt;chr&gt; "Trample\nAt the beginning of your upkeep, sacrifice…</span>
-<span class="co">#&gt; $ oversized         &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</span>
-<span class="co">#&gt; $ power             &lt;chr&gt; "7", "7", "7", "7", "7", "7", "7", "7", "7", "7", "7…</span>
-<span class="co">#&gt; $ produced_mana     &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NU…</span>
-<span class="co">#&gt; $ reserved          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</span>
-<span class="co">#&gt; $ toughness         &lt;chr&gt; "6", "1", "7", "3", "4", "5", "7", "7", "7", "3", "6…</span>
-<span class="co">#&gt; $ type_line         &lt;chr&gt; "Creature — Beast", "Creature — Elemental Cat", "Cre…</span>
-<span class="co">#&gt; $ artist            &lt;chr&gt; "Jeff Easley", "Arnie Swekel", "Steve Prescott", "Ja…</span>
-<span class="co">#&gt; $ artist_ids        &lt;list&gt; "da17055e-693c-461a-b132-67dd88b42ca6", "af10ecf2-e…</span>
-<span class="co">#&gt; $ booster           &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, FA…</span>
-<span class="co">#&gt; $ border_color      &lt;chr&gt; "black", "black", "black", "black", "black", "black"…</span>
-<span class="co">#&gt; $ card_back_id      &lt;chr&gt; "0aeebaf5-8c7d-4636-9e82-8c27447861f7", "0aeebaf5-8c…</span>
-<span class="co">#&gt; $ collector_number  &lt;chr&gt; "63", "189", "89", "337", "205", "151", "221", "49",…</span>
-<span class="co">#&gt; $ digital           &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</span>
-<span class="co">#&gt; $ foil              &lt;lgl&gt; TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE, TRUE, F…</span>
-<span class="co">#&gt; $ nonfoil           &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…</span>
-<span class="co">#&gt; $ finishes          &lt;list&gt; &lt;"nonfoil", "foil"&gt;, &lt;"nonfoil", "foil"&gt;, &lt;"nonfoil…</span>
-<span class="co">#&gt; $ flavor_name       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span>
-<span class="co">#&gt; $ flavor_text       &lt;chr&gt; "For millennia they wandered from plane to plane, de…</span>
-<span class="co">#&gt; $ frame_effects     &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, "nyxtouched", "nyxt…</span>
-<span class="co">#&gt; $ frame             &lt;chr&gt; "2003", "1997", "2003", "2015", "2015", "2003", "200…</span>
-<span class="co">#&gt; $ full_art          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</span>
-<span class="co">#&gt; $ games             &lt;list&gt; &lt;"paper", "mtgo"&gt;, &lt;"paper", "mtgo"&gt;, &lt;"paper", "mt…</span>
-<span class="co">#&gt; $ highres_image     &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE…</span>
-<span class="co">#&gt; $ illustration_id   &lt;chr&gt; "a9d4728d-bc0a-4a44-9943-587b10994d2d", "6dd1c14f-ed…</span>
-<span class="co">#&gt; $ image_status      &lt;chr&gt; "highres_scan", "highres_scan", "highres_scan", "hig…</span>
-<span class="co">#&gt; $ image_uris        &lt;list&gt; [&lt;tbl_df[1 x 6]&gt;], [&lt;tbl_df[1 x 6]&gt;], [&lt;tbl_df[1 x …</span>
-<span class="co">#&gt; $ prices            &lt;list&gt; [&lt;tbl_df[1 x 5]&gt;], [&lt;tbl_df[1 x 5]&gt;], [&lt;tbl_df[1 x …</span>
-<span class="co">#&gt; $ printed_name      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span>
-<span class="co">#&gt; $ promo             &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</span>
-<span class="co">#&gt; $ promo_types       &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NU…</span>
-<span class="co">#&gt; $ purchase_uris     &lt;list&gt; [&lt;tbl_df[1 x 3]&gt;], [&lt;tbl_df[1 x 3]&gt;], [&lt;tbl_df[1 x …</span>
-<span class="co">#&gt; $ rarity            &lt;chr&gt; "rare", "rare", "rare", "uncommon", "mythic", "mythi…</span>
-<span class="co">#&gt; $ related_uris      &lt;list&gt; [&lt;tbl_df[1 x 5]&gt;], [&lt;tbl_df[1 x 5]&gt;], [&lt;tbl_df[1 x …</span>
-<span class="co">#&gt; $ released_at       &lt;date&gt; 2004-06-04, 2002-10-07, 2008-05-02, 2020-07-17, 201…</span>
-<span class="co">#&gt; $ reprint           &lt;lgl&gt; FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, FALSE, FALSE…</span>
-<span class="co">#&gt; $ scryfall_set_uri  &lt;chr&gt; "https://scryfall.com/sets/5dn?utm_source=api", "htt…</span>
-<span class="co">#&gt; $ set_name          &lt;chr&gt; "Fifth Dawn", "Onslaught", "Shadowmoor", "Jumpstart"…</span>
-<span class="co">#&gt; $ set_search_uri    &lt;chr&gt; "https://api.scryfall.com/cards/search?order=set&amp;q=e…</span>
-<span class="co">#&gt; $ set_type          &lt;chr&gt; "expansion", "expansion", "expansion", "draft_innova…</span>
-<span class="co">#&gt; $ set_uri           &lt;chr&gt; "https://api.scryfall.com/sets/e4bc1b87-5476-463c-86…</span>
-<span class="co">#&gt; $ set               &lt;chr&gt; "5dn", "ons", "shm", "jmp", "c16", "bng", "cmd", "ar…</span>
-<span class="co">#&gt; $ set_id            &lt;chr&gt; "e4bc1b87-5476-463c-8640-4c414ecf1763", "914a6c6d-cb…</span>
-<span class="co">#&gt; $ story_spotlight   &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</span>
-<span class="co">#&gt; $ textless          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</span>
-<span class="co">#&gt; $ variation         &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FAL…</span>
-<span class="co">#&gt; $ security_stamp    &lt;chr&gt; NA, NA, NA, NA, "oval", NA, NA, NA, NA, NA, "oval", …</span>
-<span class="co">#&gt; $ watermark         &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span>
-<span class="co">#&gt; $ preview           &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NU…</span></code></pre></div>
+<span class="co">#&gt; $ arena_id          &lt;int&gt; NA, NA, NA, 72399, NA, NA, NA, NA, NA, 70655…</span>
+<span class="co">#&gt; $ id                &lt;chr&gt; "deaa0b9b-258e-4daf-8fec-ce64864d6bbf", "e0d…</span>
+<span class="co">#&gt; $ lang              &lt;chr&gt; "en", "en", "en", "en", "en", "en", "en", "e…</span>
+<span class="co">#&gt; $ mtgo_id           &lt;int&gt; 20656, 18075, 29603, NA, NA, 51743, 40641, 3…</span>
+<span class="co">#&gt; $ mtgo_foil_id      &lt;int&gt; 20657, 18076, 29604, NA, NA, 51744, 40961, 3…</span>
+<span class="co">#&gt; $ multiverse_ids    &lt;list&gt; 43529, 39737, 159396, 489527, 420822, 37852…</span>
+<span class="co">#&gt; $ tcgplayer_id      &lt;int&gt; 11871, 10357, 18605, 216652, 124134, 78745, …</span>
+<span class="co">#&gt; $ cardmarket_id     &lt;int&gt; 579, 1820, 19103, 474694, 293507, 265594, 24…</span>
+<span class="co">#&gt; $ object            &lt;chr&gt; "card", "card", "card", "card", "card", "car…</span>
+<span class="co">#&gt; $ oracle_id         &lt;chr&gt; "97428d25-d850-4a98-8852-9440e06a9091", "b35…</span>
+<span class="co">#&gt; $ prints_search_uri &lt;chr&gt; "https://api.scryfall.com/cards/search?order…</span>
+<span class="co">#&gt; $ rulings_uri       &lt;chr&gt; "https://api.scryfall.com/cards/deaa0b9b-258…</span>
+<span class="co">#&gt; $ scryfall_uri      &lt;chr&gt; "https://scryfall.com/card/5dn/63/cosmic-lar…</span>
+<span class="co">#&gt; $ uri               &lt;chr&gt; "https://api.scryfall.com/cards/deaa0b9b-258…</span>
+<span class="co">#&gt; $ all_parts         &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NU…</span>
+<span class="co">#&gt; $ cmc               &lt;dbl&gt; 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5,…</span>
+<span class="co">#&gt; $ color_identity    &lt;list&gt; "R", "R", "R", "R", &lt;"R", "W"&gt;, &lt;"B", "R"&gt;,…</span>
+<span class="co">#&gt; $ colors            &lt;list&gt; "R", "R", "R", "R", &lt;"R", "W"&gt;, &lt;"B", "R"&gt;,…</span>
+<span class="co">#&gt; $ edhrec_rank       &lt;int&gt; 12005, 11426, 15672, 14411, 1109, 2141, 8418…</span>
+<span class="co">#&gt; $ keywords          &lt;list&gt; "Trample", &lt;"Morph", "Haste", "Trample"&gt;, &lt;…</span>
+<span class="co">#&gt; $ layout            &lt;chr&gt; "normal", "normal", "normal", "normal", "nor…</span>
+<span class="co">#&gt; $ legalities        &lt;list&gt; [&lt;tbl_df[1 x 18]&gt;], [&lt;tbl_df[1 x 18]&gt;], [&lt;t…</span>
+<span class="co">#&gt; $ mana_cost         &lt;chr&gt; "{1}{R}{R}", "{1}{R}{R}{R}", "{2}{R}{R}", "{…</span>
+<span class="co">#&gt; $ name              &lt;chr&gt; "Cosmic Larva", "Blistering Firecat", "Deep-…</span>
+<span class="co">#&gt; $ oracle_text       &lt;chr&gt; "Trample\nAt the beginning of your upkeep, s…</span>
+<span class="co">#&gt; $ oversized         &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FA…</span>
+<span class="co">#&gt; $ power             &lt;chr&gt; "7", "7", "7", "7", "7", "7", "7", "7", "7",…</span>
+<span class="co">#&gt; $ produced_mana     &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NU…</span>
+<span class="co">#&gt; $ reserved          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FA…</span>
+<span class="co">#&gt; $ toughness         &lt;chr&gt; "6", "1", "7", "3", "4", "5", "7", "7", "7",…</span>
+<span class="co">#&gt; $ type_line         &lt;chr&gt; "Creature — Beast", "Creature — Elemental Ca…</span>
+<span class="co">#&gt; $ artist            &lt;chr&gt; "Jeff Easley", "Arnie Swekel", "Steve Presco…</span>
+<span class="co">#&gt; $ artist_ids        &lt;list&gt; "da17055e-693c-461a-b132-67dd88b42ca6", "af…</span>
+<span class="co">#&gt; $ booster           &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, FALSE, …</span>
+<span class="co">#&gt; $ border_color      &lt;chr&gt; "black", "black", "black", "black", "black",…</span>
+<span class="co">#&gt; $ card_back_id      &lt;chr&gt; "0aeebaf5-8c7d-4636-9e82-8c27447861f7", "0ae…</span>
+<span class="co">#&gt; $ collector_number  &lt;chr&gt; "63", "189", "89", "337", "205", "151", "221…</span>
+<span class="co">#&gt; $ digital           &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FA…</span>
+<span class="co">#&gt; $ foil              &lt;lgl&gt; TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, FALSE,…</span>
+<span class="co">#&gt; $ nonfoil           &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TR…</span>
+<span class="co">#&gt; $ finishes          &lt;list&gt; &lt;"nonfoil", "foil"&gt;, &lt;"nonfoil", "foil"&gt;, &lt;…</span>
+<span class="co">#&gt; $ flavor_name       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span>
+<span class="co">#&gt; $ flavor_text       &lt;chr&gt; "For millennia they wandered from plane to p…</span>
+<span class="co">#&gt; $ frame_effects     &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, "nyxtouched…</span>
+<span class="co">#&gt; $ frame             &lt;chr&gt; "2003", "1997", "2003", "2015", "2015", "200…</span>
+<span class="co">#&gt; $ full_art          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FA…</span>
+<span class="co">#&gt; $ games             &lt;list&gt; &lt;"paper", "mtgo"&gt;, &lt;"paper", "mtgo"&gt;, &lt;"pap…</span>
+<span class="co">#&gt; $ highres_image     &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TR…</span>
+<span class="co">#&gt; $ illustration_id   &lt;chr&gt; "a9d4728d-bc0a-4a44-9943-587b10994d2d", "6dd…</span>
+<span class="co">#&gt; $ image_status      &lt;chr&gt; "highres_scan", "highres_scan", "highres_sca…</span>
+<span class="co">#&gt; $ image_uris        &lt;list&gt; [&lt;tbl_df[1 x 6]&gt;], [&lt;tbl_df[1 x 6]&gt;], [&lt;tbl…</span>
+<span class="co">#&gt; $ prices            &lt;list&gt; [&lt;tbl_df[1 x 5]&gt;], [&lt;tbl_df[1 x 5]&gt;], [&lt;tbl…</span>
+<span class="co">#&gt; $ printed_name      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span>
+<span class="co">#&gt; $ promo             &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FA…</span>
+<span class="co">#&gt; $ promo_types       &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NU…</span>
+<span class="co">#&gt; $ purchase_uris     &lt;list&gt; [&lt;tbl_df[1 x 3]&gt;], [&lt;tbl_df[1 x 3]&gt;], [&lt;tbl…</span>
+<span class="co">#&gt; $ rarity            &lt;chr&gt; "rare", "rare", "rare", "uncommon", "mythic"…</span>
+<span class="co">#&gt; $ related_uris      &lt;list&gt; [&lt;tbl_df[1 x 5]&gt;], [&lt;tbl_df[1 x 5]&gt;], [&lt;tbl…</span>
+<span class="co">#&gt; $ released_at       &lt;date&gt; 2004-06-04, 2002-10-07, 2008-05-02, 2020-07…</span>
+<span class="co">#&gt; $ reprint           &lt;lgl&gt; FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, FALS…</span>
+<span class="co">#&gt; $ scryfall_set_uri  &lt;chr&gt; "https://scryfall.com/sets/5dn?utm_source=ap…</span>
+<span class="co">#&gt; $ set_name          &lt;chr&gt; "Fifth Dawn", "Onslaught", "Shadowmoor", "Ju…</span>
+<span class="co">#&gt; $ set_search_uri    &lt;chr&gt; "https://api.scryfall.com/cards/search?order…</span>
+<span class="co">#&gt; $ set_type          &lt;chr&gt; "expansion", "expansion", "expansion", "draf…</span>
+<span class="co">#&gt; $ set_uri           &lt;chr&gt; "https://api.scryfall.com/sets/e4bc1b87-5476…</span>
+<span class="co">#&gt; $ set               &lt;chr&gt; "5dn", "ons", "shm", "jmp", "c16", "bng", "c…</span>
+<span class="co">#&gt; $ set_id            &lt;chr&gt; "e4bc1b87-5476-463c-8640-4c414ecf1763", "914…</span>
+<span class="co">#&gt; $ story_spotlight   &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FA…</span>
+<span class="co">#&gt; $ textless          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FA…</span>
+<span class="co">#&gt; $ variation         &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FA…</span>
+<span class="co">#&gt; $ security_stamp    &lt;chr&gt; NA, NA, NA, NA, "oval", NA, NA, NA, NA, NA, …</span>
+<span class="co">#&gt; $ watermark         &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span>
+<span class="co">#&gt; $ preview           &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NU…</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
@@ -254,7 +254,7 @@
 <li>
 <a href="https://lente.dev" class="external-link">Caio Lente</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-8473-069X" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>
-<a href="https://curso-r.com" class="external-link"><img src="/reference/figures/curso-r.png" width="80"></a> <br><small class="roles"> Copyright holder, funder </small>  </li>
+<a href="https://curso-r.com" class="external-link"><img src="/scry/reference/figures/curso-r.png" width="80"></a> <br><small class="roles"> Copyright holder, funder </small>  </li>
 </ul>
 </div>
 
@@ -272,7 +272,7 @@
 
     <footer><div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by <a href="https://lente.dev" class="external-link">Caio Lente</a>, <a href="https://curso-r.com" class="external-link"><img src="/reference/figures/curso-r.png" width="80"></a>.</p>
+<p>Developed by <a href="https://lente.dev" class="external-link">Caio Lente</a>, <a href="https://curso-r.com" class="external-link"><img src="/scry/reference/figures/curso-r.png" width="80"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
