@@ -30,10 +30,10 @@ below. Our regular expressions have the following configuration and limits:
   beyond the ASCII range.
 * Backreferences are not supported (`\1`, `\2`, etc)
 * All regular expressions are case-insensitive (`i`).
-* All regular expressions are “multiline” mode (`m`). Line anchors will match
+* All regular expressions are "multiline" mode (`m`). Line anchors will match
   paragraphs in Oracle text, instead of the entire block
 * All characters in your expression are significant and whitespace will be
-  matched (sometimes listed as “tight mode”)
+  matched (sometimes listed as "tight mode")
 * You cannot add configuration to regular expressions on Scryfall. For example
   `o:/tap/` will work while `o:/tap/gi` will not.
 * Scryfall regular expressions are match-only. Scryfall does not support
@@ -49,7 +49,7 @@ Scryfall includes the following additional, non-standard regex features:
 
 | Syntax | Feature                                                                                   |
 | ------ | ----------------------------------------------------------------------------------------- |
-| `~`    | An automatic alias for the current card name or “this spell” if the card mentions itself. |
+| `~`    | An automatic alias for the current card name or "this spell" if the card mentions itself. |
 | `\sm`  | Short-hand escape for any mana symbol                                                     |
 | `\ss`  | Short-hand escape for any card symbol                                                     |
 | `\spt` | Short-hand escape for a X/X power/toughness expression                                    |

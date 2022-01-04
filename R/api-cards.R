@@ -114,7 +114,7 @@
 #'   this card is multifaced.
 #'   * `artist` \[chr\]: The name of the illustrator of this card face. Newly
 #'     spoiled cards may not have this field yet.
-#'   * `cmc` \[num\]: The mana value of this particular face, if the card is
+#'   * `cmc` \[dbl\]: The mana value of this particular face, if the card is
 #'     reversible.
 #'   * `color_indicator` \[list\]: The colors in this face's color indicator, if
 #'     any.

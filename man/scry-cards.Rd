@@ -162,7 +162,7 @@ this card is multifaced.
 \itemize{
 \item \code{artist} [chr]: The name of the illustrator of this card face. Newly
 spoiled cards may not have this field yet.
-\item \code{cmc} [num]: The mana value of this particular face, if the card is
+\item \code{cmc} [dbl]: The mana value of this particular face, if the card is
 reversible.
 \item \code{color_indicator} [list]: The colors in this face's color indicator, if
 any.

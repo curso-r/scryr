@@ -176,7 +176,7 @@ search.
 | ------------------------ | -------------------------------------------------- |
 | [`is:funny`](https://scryfall.com/search?q=is%3Afunny)                         | All funny cards                                    |
 | [`t:scheme`](https://scryfall.com/search?q=t%3Ascheme)                         | Scheme cards                                       |
-| [`power include:extras`](https://scryfall.com/search?q=power+include%3Aextras) | Cards with “power” in their name, including extras |
+| [`power include:extras`](https://scryfall.com/search?q=power+include%3Aextras) | Cards with "power" in their name, including extras |
 
 ## Rarity
 
@@ -475,7 +475,7 @@ Loose name words can also be inverted with `-`
 
 | Expression                   | Meaning                                            |
 | ---------------------------- | -------------------------------------------------- |
-| [`-fire c:r t:instant`](https://scryfall.com/search?q=-fire+c%3Ar+t%3Ainstant)           | Red instants without the word “fire” in their name |
+| [`-fire c:r t:instant`](https://scryfall.com/search?q=-fire+c%3Ar+t%3Ainstant)           | Red instants without the word "fire" in their name |
 | [`o:changeling -t:creature`](https://scryfall.com/search?q=o%3Achangeling+-t%3Acreature) | Changeling cards that aren't creatures             |
 | [`not:reprint e:c16`](https://scryfall.com/search?q=not%3Areprint+e%3Ac16)               | Cards in Commander 2016 that aren't reprints       |
 
@@ -497,7 +497,7 @@ Full documentation for this keyword is available on in `vignette("regex")`.
 | ------------------------ | --------------------------------------------------- |
 | [`t:creature o:/^{T}:/`](https://scryfall.com/search?q=t%3Acreature+o%3A%2F%5E%7BT%7D%3A%2F) | Creatures that tap with no other payment            |
 | [`t:instant o:/\spp/`](https://scryfall.com/search?q=t%3Ainstant+o%3A%2F%5Cspp%2F)           | Instants that provide +X/+X effects                 |
-| [`name:/\bizzet\b/`](https://scryfall.com/search?q=name%3A%2F%5Cbizzet%5Cb%2F)               | Card names with “izzet” but not words like “mizzet” |
+| [`name:/\bizzet\b/`](https://scryfall.com/search?q=name%3A%2F%5Cbizzet%5Cb%2F)               | Card names with "izzet" but not words like "mizzet" |
 
 ## Exact Names
 
