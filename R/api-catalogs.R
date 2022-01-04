@@ -1,9 +1,52 @@
 #' Retrieve catalog objects
 #'
 #' @description
-#' A Catalog object contains an array of Magic datapoints (words, card values,
-#' etc). Catalog objects are provided by the API as aids for building other
-#' Magic software and understanding possible values for a field on Card objects.
+#' Scryfall has multiple catalog datapoints (words, card values, etc). They are
+#' provided by the API as aids for building other Magic software and
+#' understanding possible values for a field on Card objects.
+#'
+#' @param name A string with the name of the catalog to return. Can be one of:
+#' * `card-names`: Returns all nontoken English card names in Scryfall's
+#'   database. Values are updated as soon as a new card is entered for spoiler
+#'   seasons.
+#' * `artist-names`: Returns all canonical artist names in Scryfall's database.
+#'   This catalog won't include duplicate, misspelled, or funny names for
+#'   artists. Values are updated as soon as a new card is entered for spoiler
+#'   seasons.
+#' * `word-bank`: Returns all English words, of length 2 or more, that could
+#'   appear in a card name. Values are drawn from cards currently in Scryfall's
+#'   database. Values are updated as soon as a new card is entered for spoiler
+#'   seasons.
+#' * `creature-types`: Returns all creature types in Scryfall's database. Values
+#'   are updated as soon as a new card is entered for spoiler seasons.
+#' * `planeswalker-types`: Returns all Planeswalker types in Scryfall's
+#'   database. Values are updated as soon as a new card is entered for spoiler
+#'   seasons.
+#' * `land-types`: Returns all Land types in Scryfall's database. Values are
+#'   updated as soon as a new card is entered for spoiler seasons.
+#' * `artifact-types`: Returns all artifact types in Scryfall's database. Values
+#'   are updated as soon as a new card is entered for spoiler seasons.
+#' * `enchantment-types`: Returns all enchantment types in Scryfall's database.
+#'   Values are updated as soon as a new card is entered for spoiler seasons.
+#' * `spell-types`: Returns all spell types in Scryfall's database. Values are
+#'   updated as soon as a new card is entered for spoiler seasons.
+#' * `powers`: Returns all possible values for a creature or vehicle's power in
+#'   Scryfall's database. Values are updated as soon as a new card is entered
+#'   for spoiler seasons.
+#' * `toughnesses`: Returns all possible values for a creature or vehicle's
+#'   toughness in Scryfall's database. Values are updated as soon as a new card
+#'   is entered for spoiler seasons.
+#' * `loyalties`: Returns all possible values for a Planeswalker's loyalty in
+#'   Scryfall's database. Values are updated as soon as a new card is entered
+#'   for spoiler seasons.
+#' * `watermarks`: Returns all card watermarks in Scryfall's database. Values
+#'   are updated as soon as a new card is entered for spoiler seasons.
+#' * `keyword-abilities`: Returns all keyword abilities in Scryfall's database.
+#'   Values are updated as soon as a new card is entered for spoiler seasons.
+#' * `keyword-actions`: Returns all keyword actions in Scryfall's database.
+#'   Values are updated as soon as a new card is entered for spoiler seasons.
+#' * `ability-words`: Returns all ability words in Scryfall's database. Values
+#'   are updated as soon as a new card is entered for spoiler seasons.
 #'
 #' @return A string vector.
 #'
@@ -18,96 +61,6 @@ scry_catalogs_impl <- function(endpoint) {
 
 #' @rdname scry-catalogs
 #' @export
-scry_catalogs_card_names <- function() {
-  scry_catalogs_impl("/card-names")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_artist_names <- function() {
-  scry_catalogs_impl("/artist-names")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_word_bank <- function() {
-  scry_catalogs_impl("/word-bank")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_creature_types <- function() {
-  scry_catalogs_impl("/creature-types")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_planeswalker_types <- function() {
-  scry_catalogs_impl("/planeswalker-types")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_land_types <- function() {
-  scry_catalogs_impl("/land-types")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_artifact_types <- function() {
-  scry_catalogs_impl("/artifact-types")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_enchantment_types <- function() {
-  scry_catalogs_impl("/enchantment-types")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_spell_types <- function() {
-  scry_catalogs_impl("/spell-types")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_powers <- function() {
-  scry_catalogs_impl("/powers")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_toughnesses <- function() {
-  scry_catalogs_impl("/toughnesses")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_loyalties <- function() {
-  scry_catalogs_impl("/loyalties")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_watermarks <- function() {
-  scry_catalogs_impl("/watermarks")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_keyword_abilities <- function() {
-  scry_catalogs_impl("/keyword-abilities")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_keyword_actions <- function() {
-  scry_catalogs_impl("/keyword-actions")
-}
-
-#' @rdname scry-catalogs
-#' @export
-scry_catalogs_ability_words <- function() {
-  scry_catalogs_impl("/ability-words")
+scry_catalog <- function(name) {
+  scry_catalogs_impl(paste0("/", name))
 }

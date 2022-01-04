@@ -2,63 +2,64 @@
 % Please edit documentation in R/api-catalogs.R
 \name{scry-catalogs}
 \alias{scry-catalogs}
-\alias{scry_catalogs_card_names}
-\alias{scry_catalogs_artist_names}
-\alias{scry_catalogs_word_bank}
-\alias{scry_catalogs_creature_types}
-\alias{scry_catalogs_planeswalker_types}
-\alias{scry_catalogs_land_types}
-\alias{scry_catalogs_artifact_types}
-\alias{scry_catalogs_enchantment_types}
-\alias{scry_catalogs_spell_types}
-\alias{scry_catalogs_powers}
-\alias{scry_catalogs_toughnesses}
-\alias{scry_catalogs_loyalties}
-\alias{scry_catalogs_watermarks}
-\alias{scry_catalogs_keyword_abilities}
-\alias{scry_catalogs_keyword_actions}
-\alias{scry_catalogs_ability_words}
+\alias{scry_catalog}
 \title{Retrieve catalog objects}
 \usage{
-scry_catalogs_card_names()
-
-scry_catalogs_artist_names()
-
-scry_catalogs_word_bank()
-
-scry_catalogs_creature_types()
-
-scry_catalogs_planeswalker_types()
-
-scry_catalogs_land_types()
-
-scry_catalogs_artifact_types()
-
-scry_catalogs_enchantment_types()
-
-scry_catalogs_spell_types()
-
-scry_catalogs_powers()
-
-scry_catalogs_toughnesses()
-
-scry_catalogs_loyalties()
-
-scry_catalogs_watermarks()
-
-scry_catalogs_keyword_abilities()
-
-scry_catalogs_keyword_actions()
-
-scry_catalogs_ability_words()
+scry_catalog(name)
+}
+\arguments{
+\item{name}{A string with the name of the catalog to return. Can be one of:
+\itemize{
+\item \code{card-names}: Returns all nontoken English card names in Scryfall's
+database. Values are updated as soon as a new card is entered for spoiler
+seasons.
+\item \code{artist-names}: Returns all canonical artist names in Scryfall's database.
+This catalog won't include duplicate, misspelled, or funny names for
+artists. Values are updated as soon as a new card is entered for spoiler
+seasons.
+\item \code{word-bank}: Returns all English words, of length 2 or more, that could
+appear in a card name. Values are drawn from cards currently in Scryfall's
+database. Values are updated as soon as a new card is entered for spoiler
+seasons.
+\item \code{creature-types}: Returns all creature types in Scryfall's database. Values
+are updated as soon as a new card is entered for spoiler seasons.
+\item \code{planeswalker-types}: Returns all Planeswalker types in Scryfall's
+database. Values are updated as soon as a new card is entered for spoiler
+seasons.
+\item \code{land-types}: Returns all Land types in Scryfall's database. Values are
+updated as soon as a new card is entered for spoiler seasons.
+\item \code{artifact-types}: Returns all artifact types in Scryfall's database. Values
+are updated as soon as a new card is entered for spoiler seasons.
+\item \code{enchantment-types}: Returns all enchantment types in Scryfall's database.
+Values are updated as soon as a new card is entered for spoiler seasons.
+\item \code{spell-types}: Returns all spell types in Scryfall's database. Values are
+updated as soon as a new card is entered for spoiler seasons.
+\item \code{powers}: Returns all possible values for a creature or vehicle's power in
+Scryfall's database. Values are updated as soon as a new card is entered
+for spoiler seasons.
+\item \code{toughnesses}: Returns all possible values for a creature or vehicle's
+toughness in Scryfall's database. Values are updated as soon as a new card
+is entered for spoiler seasons.
+\item \code{loyalties}: Returns all possible values for a Planeswalker's loyalty in
+Scryfall's database. Values are updated as soon as a new card is entered
+for spoiler seasons.
+\item \code{watermarks}: Returns all card watermarks in Scryfall's database. Values
+are updated as soon as a new card is entered for spoiler seasons.
+\item \code{keyword-abilities}: Returns all keyword abilities in Scryfall's database.
+Values are updated as soon as a new card is entered for spoiler seasons.
+\item \code{keyword-actions}: Returns all keyword actions in Scryfall's database.
+Values are updated as soon as a new card is entered for spoiler seasons.
+\item \code{ability-words}: Returns all ability words in Scryfall's database. Values
+are updated as soon as a new card is entered for spoiler seasons.
+}}
 }
 \value{
 A string vector.
 }
 \description{
-A Catalog object contains an array of Magic datapoints (words, card values,
-etc). Catalog objects are provided by the API as aids for building other
-Magic software and understanding possible values for a field on Card objects.
+Scryfall has multiple catalog datapoints (words, card values, etc). They are
+provided by the API as aids for building other Magic software and
+understanding possible values for a field on Card objects.
 }
 \references{
 \url{https://scryfall.com/docs/api/catalogs}
