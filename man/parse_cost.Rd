@@ -7,31 +7,32 @@
 parse_cost(cost)
 }
 \arguments{
-\item{cost}{The mana string to parse. For more information, see section
-below.}
+\item{cost}{The mana string to parse. For more information, see details.}
 }
 \value{
 A data frame with 1 row and the following columns:
 \itemize{
-\item \code{object} [chr]: A content type for this object, always \code{mana_cost}.
 \item \code{cost} [chr]: The normalized cost, with correctly-ordered and wrapped
 mana symbols.
 \item \code{colors} [list]: The colors of the given cost.
 \item \code{cmc} [dbl]: The converted mana cost. If you submit Un-set mana symbols,
 this decimal could include fractional parts.
-\item \code{colorless} [lgl]: True if the cost is colorless.
-\item \code{monocolored} [lgl]: True if the cost is monocolored.
-\item \code{multicolored} [lgl]: True if the cost is multicolored.
+\item \code{colorless} [lgl]: Whether the cost is colorless.
+\item \code{monocolored} [lgl]: Whether if the cost is monocolored.
+\item \code{multicolored} [lgl]: Whether if the cost is multicolored.
 }
 }
 \description{
-Parses the given mana \code{cost} parameter and returns Scryfall's interpretation.
+Parses the given mana \code{cost} argument and returns Scryfall's interpretation.
 }
 \details{
-The server understands most community shorthand for mana costs (such as 2WW
-for {2}{W}{W}). Symbols can also be out of order, lowercase, or have multiple
-colorless costs (such as 2{g}2 for {4}{G}).
+The server understands most community shorthand for mana costs (such as \verb{2WW}
+for \verb{\{2\}\{W\}\{W\}}). Symbols can also be out of order, lowercase, or have
+multiple colorless costs (such as \verb{2\{g\}2} for \verb{\{4\}\{G\}}).
 
 If part of the string could not be understood, the server will return an
 error describing the problem.
+}
+\references{
+\url{https://scryfall.com/docs/api/card-symbols/parse-mana}
 }

@@ -10,40 +10,34 @@ scry_symbology()
 \value{
 A data frame with 1 row and the following columns:
 \itemize{
-\item \code{object} [chr]: A content type for this object, always \code{card_symbol}.
-\item \code{symbol} [chr]: The plaintext symbol. Often surrounded with curly braces
-\code{{}}. Note that not all symbols are ASCII text (for example, \verb{\{∞\}}).
-\item \code{svg_uri} [chr]: A URI to an SVG image of this symbol on Scryfall’s CDNs.
+\item \code{symbol} [chr]: The plaintext symbol. Often surrounded with curly braces.
+Note that not all symbols are ASCII text (for example, \verb{\{∞\}}).
+\item \code{colors} [list]: A vector of colors that this symbol represents.
+\item \code{cmc} [dbl]: A decimal number representing this symbol’s converted mana
+cost. Note that mana symbols from funny sets can have fractional converted
+mana costs.
 \item \code{loose_variant} [chr]: An alternate version of this symbol, if it is
 possible to write it without curly braces.
 \item \code{english} [chr]: An English snippet that describes this symbol.
-Appropriate for use in \code{alt} text or other accessible communication
-formats.
-\item \code{transposable} [lgl]: True if it is possible to write this symbol
-“backwards”. For example, the official symbol \code{{U/P}} is sometimes written
-as \code{{P/U}} or \verb{\{P\\U\}} in informal settings. Note that the Scryfall API
-\strong{never} writes symbols backwards in other responses. This field is
-provided for informational purposes.
-\item \code{represents_mana} [lgl]: True if this is a mana symbol.
-\item \code{cmc} [num]: A decimal number representing this symbol’s converted mana
-cost. Note that mana symbols from funny sets can have fractional converted
-mana costs.
-\item \code{appears_in_mana_costs} [lgl]: True if this symbol appears in a mana cost
-on any Magic card. For example \code{{20}} has this field set to \code{false} because
-\code{{20}} only appears in Oracle text, not mana costs.
-\item \code{cmc} [dbl]: The mana value of this symbol.
-\item \code{funny} [lgl]: True if this symbol is only used on funny cards or
-Un-cards.
-\item \code{colors} [list]: An array of colors that this symbol represents.
-\item \code{gatherer_alternates} [list]: An array of plaintext versions of this
+Appropriate for use in alt text or other accessible communication formats.
+\item \code{gatherer_alternates} [list]: A vector of plaintext versions of this
 symbol that Gatherer uses on old cards to describe original printed text.
-For example: \code{{W}} has \verb{["oW", "ooW"]} as alternates.
+For example: \code{{W}} has \verb{<"oW", "ooW">} as alternates.
+\item \code{transposable} [lgl]: Whether it is possible to write this symbol
+"backwards". For example, the official symbol \code{{U/P}} is sometimes written
+as \code{{P/U}} or \verb{\{P\\U\}} in informal settings.
+\item \code{represents_mana} [lgl]: Whether this is a mana symbol.
+\item \code{appears_in_mana_costs} [lgl]: Whether this symbol appears in a mana cost
+on any \emph{Magic} card. For example \code{{20}} has this field set to \code{FALSE}
+because \code{{20}} only appears in Oracle text, not mana costs.
+\item \code{funny} [lgl]: Whether this symbol is only used on funny cards or
+Un-cards.
+\item \code{svg_uri} [chr]: A URI to an SVG image of this symbol on Scryfall’s CDNs.
 }
 }
 \description{
-A Card Symbol object represents an illustrated symbol that may appear in
-card's mana cost or Oracle text. Symbols are based on the notation used in
-the Comprehensive Rules.
+An illustrated symbol may appear in card's mana cost or Oracle text. Symbols
+are based on the notation used in the Comprehensive Rules.
 
 For more information about how the Scryfall API represents mana and costs,
 see \code{vignette("colors")}.
