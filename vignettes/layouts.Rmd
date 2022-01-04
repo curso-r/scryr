@@ -11,6 +11,9 @@ vignette: >
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 library(scry)
 glimpse <- dplyr::glimpse
+
+old <- options(pillar.width = 60)
+on.exit(options(old))
 ```
 
 The `layout` property categorizes the arrangement of card parts, faces, and
@@ -24,28 +27,28 @@ Specifically:
 - Cards with the layout `meld` will always have a `related_cards` property
   pointing to the other meld parts.
 
-| Layout               | Description                                        | Examples                                                                   |
-| -------------------- | -------------------------------------------------- | -------------------------------------------------------------------------- |
-| `normal`             | A standard Magic card with one face                | [Example Cards](https://scryfall.com/search?q=layout%3Anormal)             |
-| `split`              | A split-faced card                                 | [Example Cards](https://scryfall.com/search?q=layout%3Asplit)              |
-| `flip`               | Cards that invert vertically with the flip keyword | [Example Cards](https://scryfall.com/search?q=layout%3Aflip)               |
-| `transform`          | Double-sided cards that transform                  | [Example Cards](https://scryfall.com/search?q=layout%3Atransform)          |
-| `modal_dfc`          | Double-sided cards that can be played either-side  | [Example Cards](https://scryfall.com/search?q=layout%3Amodal_dfc)          |
-| `meld`               | Cards with meld parts printed on the back          | [Example Cards](https://scryfall.com/search?q=layout%3Ameld)               |
-| `leveler`            | Cards with Level Up                                | [Example Cards](https://scryfall.com/search?q=layout%3Aleveler)            |
-| `class`              | Class-type enchantment cards                       | [Example Cards](https://scryfall.com/search?q=layout%3Aclass)              |
-| `saga`               | Saga-type cards                                    | [Example Cards](https://scryfall.com/search?q=layout%3Asaga)               |
-| `adventure`          | Cards with an Adventure spell part                 | [Example Cards](https://scryfall.com/search?q=layout%3Aadventure)          |
-| `planar`             | Plane and Phenomenon-type cards                    | [Example Cards](https://scryfall.com/search?q=layout%3Aplanar)             |
-| `scheme`             | Scheme-type cards                                  | [Example Cards](https://scryfall.com/search?q=layout%3Ascheme)             |
-| `vanguard`           | Vanguard-type cards                                | [Example Cards](https://scryfall.com/search?q=layout%3Avanguard)           |
-| `token`              | Token cards                                        | [Example Cards](https://scryfall.com/search?q=layout%3Atoken)              |
-| `double_faced_token` | Tokens with another token printed on the back      | [Example Cards](https://scryfall.com/search?q=layout%3Adouble_faced_token) |
-| `emblem`             | Emblem cards                                       | [Example Cards](https://scryfall.com/search?q=layout%3Aemblem)             |
-| `augment`            | Cards with Augment                                 | [Example Cards](https://scryfall.com/search?q=layout%3Aaugment)            |
-| `host`               | Host-type cards                                    | [Example Cards](https://scryfall.com/search?q=layout%3Ahost)               |
-| `art_series`         | Art Series collectable double-faced cards          | [Example Cards](https://scryfall.com/search?q=layout%3Aart_series)         |
-| `reversible_card`    | A Magic card with two sides that are unrelated     | [Example Cards](https://scryfall.com/search?q=layout%3Areversible_card)    |
+| Layout                                                                            | Description                                        |
+| --------------------------------------------------------------------------------- | -------------------------------------------------- |
+| [`normal`](https://scryfall.com/search?q=layout%3Anormal)                         | A standard Magic card with one face                |
+| [`split`](https://scryfall.com/search?q=layout%3Asplit)                           | A split-faced card                                 |
+| [`flip`](https://scryfall.com/search?q=layout%3Aflip)                             | Cards that invert vertically with the flip keyword |
+| [`transform`](https://scryfall.com/search?q=layout%3Atransform)                   | Double-sided cards that transform                  |
+| [`modal_dfc`](https://scryfall.com/search?q=layout%3Amodal_dfc)                   | Double-sided cards that can be played either-side  |
+| [`meld`](https://scryfall.com/search?q=layout%3Ameld)                             | Cards with meld parts printed on the back          |
+| [`leveler`](https://scryfall.com/search?q=layout%3Aleveler)                       | Cards with Level Up                                |
+| [`class`](https://scryfall.com/search?q=layout%3Aclass)                           | Class-type enchantment cards                       |
+| [`saga`](https://scryfall.com/search?q=layout%3Asaga)                             | Saga-type cards                                    |
+| [`adventure`](https://scryfall.com/search?q=layout%3Aadventure)                   | Cards with an Adventure spell part                 |
+| [`planar`](https://scryfall.com/search?q=layout%3Aplanar)                         | Plane and Phenomenon-type cards                    |
+| [`scheme`](https://scryfall.com/search?q=layout%3Ascheme)                         | Scheme-type cards                                  |
+| [`vanguard`](https://scryfall.com/search?q=layout%3Avanguard)                     | Vanguard-type cards                                |
+| [`token`](https://scryfall.com/search?q=layout%3Atoken)                           | Token cards                                        |
+| [`double_faced_token`](https://scryfall.com/search?q=layout%3Adouble_faced_token) | Tokens with another token printed on the back      |
+| [`emblem`](https://scryfall.com/search?q=layout%3Aemblem)                         | Emblem cards                                       |
+| [`augment`](https://scryfall.com/search?q=layout%3Aaugment)                       | Cards with Augment                                 |
+| [`host`](https://scryfall.com/search?q=layout%3Ahost)                             | Host-type cards                                    |
+| [`art_series`](https://scryfall.com/search?q=layout%3Aart_series)                 | Art Series collectable double-faced cards          |
+| [`reversible_card`](https://scryfall.com/search?q=layout%3Areversible_card)       | A Magic card with two sides that are unrelated     |
 
 ## Card Faces
 

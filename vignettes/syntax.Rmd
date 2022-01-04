@@ -32,12 +32,12 @@ against _ranges_ of colors.
 
 Find cards that have a color indicator with `has:indicator`.
 
-| Expression            | Meaning                                             | Examples                                                                 |
-| --------------------- | --------------------------------------------------- | ------------------------------------------------------------------------ |
-| `c:rg`                | Cards that are red and green                        | [Example Cards](https://scryfall.com/search?q=c%3Arg)                    |
-| `color>=uw -c:red`    | Cards that are at least white and blue, but not red | [Example Cards](https://scryfall.com/search?q=color%3E%3Duw+-c%3Ared)    |
-| `id<=esper t:instant` | Instants you can play with an Esper commander       | [Example Cards](https://scryfall.com/search?q=id%3C%3Desper+t%3Ainstant) |
-| `id:c t:land`         | Land cards with colorless identity                  | [Example Cards](https://scryfall.com/search?q=id%3Ac+t%3Aland)           |
+| Expression                                                                       | Meaning                                             |
+| -------------------------------------------------------------------------------- | --------------------------------------------------- |
+| [`c:rg`](https://scryfall.com/search?q=c%3Arg)                                   | Cards that are red and green                        |
+| [`color>=uw -c:red`](https://scryfall.com/search?q=color%3E%3Duw+-c%3Ared)       | Cards that are at least white and blue, but not red |
+| [`id<=esper t:instant`](https://scryfall.com/search?q=id%3C%3Desper+t%3Ainstant) | Instants you can play with an Esper commander       |
+| [`id:c t:land`](https://scryfall.com/search?q=id%3Ac+t%3Aland)                   | Land cards with colorless identity                  |
 
 ## Card Types
 
@@ -46,10 +46,10 @@ search for any supertype, card type, or subtype.
 
 Using only partial words is allowed.
 
-| Expression             | Meaning                            | Examples                                                                |
-| ---------------------- | ---------------------------------- | ----------------------------------------------------------------------- |
-| `t:merfolk t:legend`   | Legendary merfolk cards            | [Example Cards](https://scryfall.com/search?q=t%3Amerfolk+t%3Alegend)   |
-| `t:goblin -t:creature` | Goblin cards that aren't creatures | [Example Cards](https://scryfall.com/search?q=t%3Agoblin+-t%3Acreature) |
+| Expression                                                                       | Meaning                            |
+| -------------------------------------------------------------------------------- | ---------------------------------- |
+| [`t:merfolk t:legend`](https://scryfall.com/search?q=t%3Amerfolk+t%3Alegend)     | Legendary merfolk cards            |
+| [`t:goblin -t:creature`](https://scryfall.com/search?q=t%3Agoblin+-t%3Acreature) | Goblin cards that aren't creatures |
 
 ## Card Text
 
@@ -69,10 +69,10 @@ text.
 
 You can also use `keyword:` to search for cards with a specific keyword ability.
 
-| Expression                            | Meaning                                 | Examples                                                                                 |
-| ------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `o:draw t:creature`                   | Creatures that deal with drawing cards  | [Example Cards](https://scryfall.com/search?q=o%3Adraw+t%3Acreature)                     |
-| `o:"~ enters the battlefield tapped"` | Cards that enter the battlefield tapped | [Example Cards](https://scryfall.com/search?q=o%3A%22~+enters+the+battlefield+tapped%22) |
+| Expression                                                                                                       | Meaning                                 |
+| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| [`o:draw t:creature`](https://scryfall.com/search?q=o%3Adraw+t%3Acreature)                                       | Creatures that deal with drawing cards  |
+| [`o:"~ enters the battlefield tapped"`](https://scryfall.com/search?q=o%3A%22~+enters+the+battlefield+tapped%22) | Cards that enter the battlefield tapped |
 
 ## Mana Costs
 
@@ -105,15 +105,15 @@ devotion to two, with `devotion:` or a comparison operator.
 
 You can also find cards that produce specific types of mana, with `produces:`
 
-| Expression                 | Meaning                                                               | Examples                                                                                    |
-| -------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `mana:{G}{U}`              | Cards with one green and blue mana in their costs                     | [Example Cards](https://scryfall.com/search?q=mana%3A%7BG%7D%7BU%7D)                        |
-| `m:2WW`                    | Cards with two generic and two white mana in their cost               | [Example Cards](https://scryfall.com/search?q=m%3A2WW)                                      |
-| `m>3WU`                    | Cards that cost more than three generic, one white, and one blue mana | [Example Cards](https://scryfall.com/search?q=m%3E3WU)                                      |
-| `m:{R/P}`                  | Cards with one Phyrexian red mana in their cost                       | [Example Cards](https://scryfall.com/search?q=m%3A%7BR%2FP%7D)                              |
-| `c:u cmc=5`                | Blue cards with converted mana cost 5                                 | [Example Cards](https://scryfall.com/search?q=c%3Au+cmc%3D5)                                |
-| `devotion:{u/b}{u/b}{u/b}` | Cards that contribute 3 to devotion to black and blue                 | [Example Cards](https://scryfall.com/search?q=devotion%3A%7Bu%2Fb%7D%7Bu%2Fb%7D%7Bu%2Fb%7D) |
-| `produces=wu`              | Cards that produce blue and white mana                                | [Example Cards](https://scryfall.com/search?q=produces%3Dwu)                                |
+| Expression                                                                                               | Meaning                                                               |
+| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [`mana:{G}{U}`](https://scryfall.com/search?q=mana%3A%7BG%7D%7BU%7D)                                     | Cards with one green and blue mana in their costs                     |
+| [`m:2WW`](https://scryfall.com/search?q=m%3A2WW)                                                         | Cards with two generic and two white mana in their cost               |
+| [`m>3WU`](https://scryfall.com/search?q=m%3E3WU)                                                         | Cards that cost more than three generic, one white, and one blue mana |
+| [`m:{R/P}`](https://scryfall.com/search?q=m%3A%7BR%2FP%7D)                                               | Cards with one Phyrexian red mana in their cost                       |
+| [`c:u cmc=5`](https://scryfall.com/search?q=c%3Au+cmc%3D5)                                               | Blue cards with converted mana cost 5                                 |
+| [`devotion:{u/b}{u/b}{u/b}`](https://scryfall.com/search?q=devotion%3A%7Bu%2Fb%7D%7Bu%2Fb%7D%7Bu%2Fb%7D) | Cards that contribute 3 to devotion to black and blue                 |
+| [`produces=wu`](https://scryfall.com/search?q=produces%3Dwu)                                             | Cards that produce blue and white mana                                |
 
 ## Power, Toughness, and Loyalty
 
@@ -123,11 +123,11 @@ power and toughness, `pt`/`powtou`, or starting loyalty, `loyalty`/`loy`.
 
 You can compare the values with each other or with a provided number.
 
-| Expression               | Meaning                               | Examples                                                                    |
-| ------------------------ | ------------------------------------- | --------------------------------------------------------------------------- |
-| `pow>=8`                 | Cards with 8 or more power            | [Example Cards](https://scryfall.com/search?q=pow%3E%3D8)                   |
-| `pow>tou c:w t:creature` | White creatures that are top-heavy    | [Example Cards](https://scryfall.com/search?q=pow%3Etou+c%3Aw+t%3Acreature) |
-| `t:planeswalker loy=3`   | Planeswalkers that start at 3 loyalty | [Example Cards](https://scryfall.com/search?q=t%3Aplaneswalker+loy%3D3)     |
+| Expression                                                                             | Meaning                               |
+| -------------------------------------------------------------------------------------- | ------------------------------------- |
+| [`pow>=8`](https://scryfall.com/search?q=pow%3E%3D8)                                   | Cards with 8 or more power            |
+| [`pow>tou c:w t:creature`](https://scryfall.com/search?q=pow%3Etou+c%3Aw+t%3Acreature) | White creatures that are top-heavy    |
+| [`t:planeswalker loy=3`](https://scryfall.com/search?q=t%3Aplaneswalker+loy%3D3)       | Planeswalkers that start at 3 loyalty |
 
 ## Multi-faced Cards
 
@@ -136,10 +136,10 @@ You can find cards that have more than one face with `is:split` (split cards),
 that meld), `is:leveler` (cards with Level Up), `is:dfc` (double-faced cards),
 and `is:mdfc` (modal double-faced cards).
 
-| Expression | Meaning           | Examples                                                  |
-| ---------- | ----------------- | --------------------------------------------------------- |
-| `is:meld`  | Cards that meld   | [Example Cards](https://scryfall.com/search?q=is%3Ameld)  |
-| `is:split` | Split-faced cards | [Example Cards](https://scryfall.com/search?q=is%3Asplit) |
+| Expression                                              | Meaning           |
+| ------------------------------------------------------- | ----------------- |
+| [`is:meld`](https://scryfall.com/search?q=is%3Ameld)    | Cards that meld   |
+| [`is:split`](https://scryfall.com/search?q=is%3Asplit)  | Split-faced cards |
 
 ## Spells, Permanents, and Effects
 
@@ -150,11 +150,11 @@ creatures that can be in your party with `is:party`, modal effects with
 `is:modal`, vanilla creatures with `is:vanilla`, or French vanilla cards with
 `is:frenchvanilla`.
 
-| Expression              | Meaning                                           | Examples                                                                     |
-| ----------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `c>=br is:spell f:duel` | Black and red multicolor spells in Duel Commander | [Example Cards](https://scryfall.com/search?q=c%3E%3Dbr+is%3Aspell+f%3Aduel) |
-| `is:permanent t:rebel`  | Rebel permanents                                  | [Example Cards](https://scryfall.com/search?q=is%3Apermanent+t%3Arebel)      |
-| `is:vanilla`            | Vanilla creatures                                 | [Example Cards](https://scryfall.com/search?q=is%3Avanilla)                  |
+| Expression                                                                             | Meaning                                           |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| [`c>=br is:spell f:duel`](https://scryfall.com/search?q=c%3E%3Dbr+is%3Aspell+f%3Aduel) | Black and red multicolor spells in Duel Commander |
+| [`is:permanent t:rebel`](https://scryfall.com/search?q=is%3Apermanent+t%3Arebel)       | Rebel permanents                                  |
+| [`is:vanilla`](https://scryfall.com/search?q=is%3Avanilla)                             | Vanilla creatures                                 |
 
 ## Extra Cards and Funny Cards
 
@@ -172,11 +172,11 @@ mentioning their set.
 You may also use `include:extras` to reveal absolutely every card when you
 search.
 
-| Expression             | Meaning                                            | Examples                                                              |
-| ---------------------- | -------------------------------------------------- | --------------------------------------------------------------------- |
-| `is:funny`             | All funny cards                                    | [Example Cards](https://scryfall.com/search?q=is%3Afunny)             |
-| `t:scheme`             | Scheme cards                                       | [Example Cards](https://scryfall.com/search?q=t%3Ascheme)             |
-| `power include:extras` | Cards with “power” in their name, including extras | [Example Cards](https://scryfall.com/search?q=power+include%3Aextras) |
+| Expression                                                                     | Meaning                                            |
+| ------------------------------------------------------------------------------ | -------------------------------------------------- |
+| [`is:funny`](https://scryfall.com/search?q=is%3Afunny)                         | All funny cards                                    |
+| [`t:scheme`](https://scryfall.com/search?q=t%3Ascheme)                         | Scheme cards                                       |
+| [`power include:extras`](https://scryfall.com/search?q=power+include%3Aextras) | Cards with “power” in their name, including extras |
 
 ## Rarity
 
@@ -189,12 +189,12 @@ time. You can find cards that have ever been printed in a given rarity using
 `in:` (for example, `in:rare` to find cards that have ever been printed at
 rare.)
 
-| Expression                       | Meaning                                                       | Examples                                                                            |
-| -------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `r:common t:artifact`            | Common artifacts                                              | [Example Cards](https://scryfall.com/search?q=r%3Acommon+t%3Aartifact)              |
-| `r>=r`                           | Cards at rare rarity or above (i.e., rares and mythics)       | [Example Cards](https://scryfall.com/search?q=r%3E%3Dr)                             |
-| `rarity:common e:ima new:rarity` | Cards printed as commons for the first time in Iconic Masters | [Example Cards](https://scryfall.com/search?q=rarity%3Acommon+e%3Aima+new%3Ararity) |
-| `in:rare -rarity:rare`           | Non-rare printings of cards that have been printed at rare    | [Example Cards](https://scryfall.com/search?q=in%3Arare+-rarity%3Arare)             |
+| Expression                                                                                             | Meaning                                                       |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| [`r:common t:artifact`](https://scryfall.com/search?q=r%3Acommon+t%3Aartifact)                         | Common artifacts                                              |
+| [`r>=r`](https://scryfall.com/search?q=r%3E%3Dr)                                                       | Cards at rare rarity or above (i.e., rares and mythics)       |
+| [`rarity:common e:ima new:rarity`](https://scryfall.com/search?q=rarity%3Acommon+e%3Aima+new%3Ararity) | Cards printed as commons for the first time in Iconic Masters |
+| [`in:rare -rarity:rare`](https://scryfall.com/search?q=in%3Arare+-rarity%3Arare)                       | Non-rare printings of cards that have been printed at rare    |
 
 ## Sets and Blocks
 
@@ -228,14 +228,14 @@ You can also search for individual cards that were sold in certain places with
 `is:league`, `is:buyabox`, `is:giftbox`, `is:intro_pack`, `is:gameday`,
 `is:prerelease`, or `is:release`, among others.
 
-| Expression                     | Meaning                                                       | Examples                                                                        |
-| ------------------------------ | ------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `e:war`                        | Cards from War of the Spark                                   | [Example Cards](https://scryfall.com/search?q=e%3Awar)                          |
-| `e:war is:booster`             | Cards available inside War of the Spark booster boxes         | [Example Cards](https://scryfall.com/search?q=e%3Awar+is%3Abooster)             |
-| `b:wwk`                        | Cards in Zendikar Block (but using the Worldwake code)        | [Example Cards](https://scryfall.com/search?q=b%3Awwk)                          |
-| `in:lea in:m15`                | Cards that were in both Alpha and Magic 2015                  | [Example Cards](https://scryfall.com/search?q=in%3Alea+in%3Am15)                |
-| `t:legendary -in:booster`      | Legendary cards that have never been printed in a booster set | [Example Cards](https://scryfall.com/search?q=t%3Alegendary+-in%3Abooster)      |
-| `is:datestamped is:prerelease` | Prerelease promos with a date stamp                           | [Example Cards](https://scryfall.com/search?q=is%3Adatestamped+is%3Aprerelease) |
+| Expression                                                                                       | Meaning                                                       |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| [`e:war`](https://scryfall.com/search?q=e%3Awar)                                                 | Cards from War of the Spark                                   |
+| [`e:war is:booster`](https://scryfall.com/search?q=e%3Awar+is%3Abooster)                         | Cards available inside War of the Spark booster boxes         |
+| [`b:wwk`](https://scryfall.com/search?q=b%3Awwk)                                                 | Cards in Zendikar Block (but using the Worldwake code)        |
+| [`in:lea in:m15`](https://scryfall.com/search?q=in%3Alea+in%3Am15)                               | Cards that were in both Alpha and Magic 2015                  |
+| [`t:legendary -in:booster`](https://scryfall.com/search?q=t%3Alegendary+-in%3Abooster)           | Legendary cards that have never been printed in a booster set |
+| [`is:datestamped is:prerelease`](https://scryfall.com/search?q=is%3Adatestamped+is%3Aprerelease) | Prerelease promos with a date stamp                           |
 
 ## Cubes
 
@@ -244,10 +244,10 @@ supported cubes are `arena`, `grixis`, `legacy`, `chuck`, `twisted`, `protour`,
 `uncommon`, `april`, `modern`, `amaz`, `tinkerer`, `livethedream`, `chromatic`,
 and `vintage`.
 
-| Expression                   | Meaning                          | Examples                                                                      |
-| ---------------------------- | -------------------------------- | ----------------------------------------------------------------------------- |
-| `cube:vintage`               | Cards in the Vintage Cube        | [Example Cards](https://scryfall.com/search?q=cube%3Avintage)                 |
-| `cube:modern t:planeswalker` | Planeswalkers in the Modern Cube | [Example Cards](https://scryfall.com/search?q=cube%3Amodern+t%3Aplaneswalker) |
+| Expression                                                                                   | Meaning                          |
+| -------------------------------------------------------------------------------------------- | -------------------------------- |
+| [`cube:vintage`](https://scryfall.com/search?q=cube%3Avintage)                               | Cards in the Vintage Cube        |
+| [`cube:modern t:planeswalker`](https://scryfall.com/search?q=cube%3Amodern+t%3Aplaneswalker) | Planeswalkers in the Modern Cube |
 
 ## Format Legality
 
@@ -270,12 +270,12 @@ Duel Commander.
 
 Finally, you can find cards on the Reserved List with `is:reserved`.
 
-| Expression                | Meaning                          | Examples                                                                     |
-| ------------------------- | -------------------------------- | ---------------------------------------------------------------------------- |
-| `c:g t:creature f:pauper` | Green creatures in Pauper format | [Example Cards](https://scryfall.com/search?q=c%3Ag+t%3Acreature+f%3Apauper) |
-| `banned:legacy`           | Cards banned in Legacy format    | [Example Cards](https://scryfall.com/search?q=banned%3Alegacy)               |
-| `is:commander`            | Cards that can be your commander | [Example Cards](https://scryfall.com/search?q=is%3Acommander)                |
-| `is:reserved`             | Cards on the Reserved List       | [Example Cards](https://scryfall.com/search?q=is%3Areserved)                 |
+| Expression                                                                               | Meaning                          |
+| ---------------------------------------------------------------------------------------- | -------------------------------- |
+| [`c:g t:creature f:pauper`](https://scryfall.com/search?q=c%3Ag+t%3Acreature+f%3Apauper) | Green creatures in Pauper format |
+| [`banned:legacy`](https://scryfall.com/search?q=banned%3Alegacy)                         | Cards banned in Legacy format    |
+| [`is:commander`](https://scryfall.com/search?q=is%3Acommander)                           | Cards that can be your commander |
+| [`is:reserved`](https://scryfall.com/search?q=is%3Areserved)                             | Cards on the Reserved List       |
 
 ## USD/EUR/TIX prices
 
@@ -285,10 +285,10 @@ them with a numeric expression (`>`, `<`, `=`, `>=`, `<=`, and `!=`).
 You can find the cheapest print of each card with `cheapest:usd`,
 `cheapest:eur`, and `cheapest:tix`.
 
-| Expression        | Meaning                                         | Examples                                                                                    |
-| ----------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `tix>15.00`       | Cards that cost more than 15 TIX at MTGO stores | [Example Cards](https://scryfall.com/search?as=checklist&order=tix&q=tix%3E15.00)           |
-| `usd>=0.50 e:ema` | Cards worth 50¢ or more in Eternal Masters      | [Example Cards](https://scryfall.com/search?as=checklist&order=usd&q=usd%3E%3D0.50+e%3Aema) |
+| Expression                                                                                      | Meaning                                         |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| [`tix>15.00`](https://scryfall.com/search?as=checklist&order=tix&q=tix%3E15.00)                 | Cards that cost more than 15 TIX at MTGO stores |
+| [`usd>=0.50 e:ema`](https://scryfall.com/search?as=checklist&order=usd&q=usd%3E%3D0.50+e%3Aema) | Cards worth 50¢ or more in Eternal Masters      |
 
 ## Artist, Flavor Text and Watermark
 
@@ -311,15 +311,15 @@ with brand-new flavor text using `new:flavor`.
 You can compare how many different illustrations a give card has with things
 like `illustrations>1`.
 
-| Expression                                  | Meaning                                                | Examples                                                                                         |
-| ------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `a:"proce"`                                 | Cards illustrated by Vincent Proce                     | [Example Cards](https://scryfall.com/search?q=a%3A%22proce%22)                                   |
-| `ft:mishra`                                 | Cards that mention Mishra in their flavor text         | [Example Cards](https://scryfall.com/search?q=ft%3Amishra)                                       |
-| `ft:designed e:m15`                         | Cards created by guest designers in Magic 2015         | [Example Cards](https://scryfall.com/search?q=ft%3Adesigned+e%3Am15)                             |
-| `wm:orzhov`                                 | Cards with Orzhov guild watermark                      | [Example Cards](https://scryfall.com/search?q=wm%3Aorzhov)                                       |
-| `e:m10 new:art is:reprint`                  | Reprints with new art in Magic 2010                    | [Example Cards](https://scryfall.com/search?q=e%3Am10+new%3Aart+is%3Areprint)                    |
-| `new:art -new:artist st:masters game:paper` | Cards in masters sets with new art by the same artist  | [Example Cards](https://scryfall.com/search?q=new%3Aart+-new%3Aartist+st%3Amasters+game%3Apaper) |
-| `new:flavor e:m15 is:reprint`               | Reprint cards in Magic 2015 which have new flavor text | [Example Cards](https://scryfall.com/search?q=new%3Aflavor+e%3Am15+is%3Areprint)                 |
+| Expression                                                                                                                     | Meaning                                                |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
+| [`a:"proce"`](https://scryfall.com/search?q=a%3A%22proce%22)                                                                   | Cards illustrated by Vincent Proce                     |
+| [`ft:mishra`](https://scryfall.com/search?q=ft%3Amishra)                                                                       | Cards that mention Mishra in their flavor text         |
+| [`ft:designed e:m15`](https://scryfall.com/search?q=ft%3Adesigned+e%3Am15)                                                     | Cards created by guest designers in Magic 2015         |
+| [`wm:orzhov`](https://scryfall.com/search?q=wm%3Aorzhov)                                                                       | Cards with Orzhov guild watermark                      |
+| [`e:m10 new:art is:reprint`](https://scryfall.com/search?q=e%3Am10+new%3Aart+is%3Areprint)                                     | Reprints with new art in Magic 2010                    |
+| [`new:art -new:artist st:masters game:paper`](https://scryfall.com/search?q=new%3Aart+-new%3Aartist+st%3Amasters+game%3Apaper) | Cards in masters sets with new art by the same artist  |
+| [`new:flavor e:m15 is:reprint`](https://scryfall.com/search?q=new%3Aflavor+e%3Am15+is%3Areprint)                               | Reprint cards in Magic 2015 which have new flavor text |
 
 ## Border, Frame, Foil & Resolution
 
@@ -345,14 +345,14 @@ You can find cards in our database with high-resolution images using `is:hires`.
 Search for a card's security stamp with `stamp:oval`, `stamp:acorn`,
 `stamp:triangle`, or `stamp:arena`
 
-| Expression                               | Meaning                                                             | Examples                                                                                      |
-| ---------------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `border:white t:creature`                | White-bordered creature cards                                       | [Example Cards](https://scryfall.com/search?q=border%3Awhite+t%3Acreature)                    |
-| `is:new r:mythic`                        | Mythic cards with the 2015 holofoil-stamp frame                     | [Example Cards](https://scryfall.com/search?q=is%3Anew+r%3Amythic)                            |
-| `is:old t:artifact`                      | Artifacts in either the 1993 or 1997 variant of the 'classic' frame | [Example Cards](https://scryfall.com/search?q=is%3Aold+t%3Aartifact)                          |
-| `is:hires`                               | Cards with high-resolution scans                                    | [Example Cards](https://scryfall.com/search?q=is%3Ahires)                                     |
-| `is:foil e:c16`                          | Commander 2016 cards printed in foil                                | [Example Cards](https://scryfall.com/search?q=is%3Afoil+e%3Ac16)                              |
-| `frame:2003 new:frame in:fut is:reprint` | Future cards printed later in other frames                          | [Example Cards](https://scryfall.com/search?q=frame%3A2003+new%3Aframe+in%3Afut+is%3Areprint) |
+| Expression                                                                                                               | Meaning                                                             |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| [`border:white t:creature`](https://scryfall.com/search?q=border%3Awhite+t%3Acreature)                                   | White-bordered creature cards                                       |
+| [`is:new r:mythic`](https://scryfall.com/search?q=is%3Anew+r%3Amythic)                                                   | Mythic cards with the 2015 holofoil-stamp frame                     |
+| [`is:old t:artifact`](https://scryfall.com/search?q=is%3Aold+t%3Aartifact)                                               | Artifacts in either the 1993 or 1997 variant of the 'classic' frame |
+| [`is:hires`](https://scryfall.com/search?q=is%3Ahires)                                                                   | Cards with high-resolution scans                                    |
+| [`is:foil e:c16`](https://scryfall.com/search?q=is%3Afoil+e%3Ac16)                                                       | Commander 2016 cards printed in foil                                |
+| [`frame:2003 new:frame in:fut is:reprint`](https://scryfall.com/search?q=frame%3A2003+new%3Aframe+in%3Afut+is%3Areprint) | Future cards printed later in other frames                          |
 
 ## Games, Promos, & Spotlights
 
@@ -372,12 +372,12 @@ Find cards that are Story Spotlights with `is:spotlight`.
 Find cards that Scryfall has had the honor of previewing with
 `is:scryfallpreview`.
 
-| Expression          | Meaning                                  | Examples                                                             |
-| ------------------- | ---------------------------------------- | -------------------------------------------------------------------- |
-| `game:arena`        | Cards available on MTG:Arena             | [Example Cards](https://scryfall.com/search?q=game%3Aarena)          |
-| `-in:mtgo f:legacy` | Legacy legal cards not available on MTGO | [Example Cards](https://scryfall.com/search?q=-in%3Amtgo+f%3Alegacy) |
-| `is:promo`          | Promotional cards                        | [Example Cards](https://scryfall.com/search?q=is%3Apromo)            |
-| `is:spotlight`      | Story Spotlight cards                    | [Example Cards](https://scryfall.com/search?q=is%3Aspotlight)        |
+| Expression                                                                 | Meaning                                  |
+| -------------------------------------------------------------------------- | ---------------------------------------- |
+| [`game:arena`](https://scryfall.com/search?q=game%3Aarena)                 | Cards available on MTG:Arena             |
+| [`-in:mtgo f:legacy`](https://scryfall.com/search?q=-in%3Amtgo+f%3Alegacy) | Legacy legal cards not available on MTGO |
+| [`is:promo`](https://scryfall.com/search?q=is%3Apromo)                     | Promotional cards                        |
+| [`is:spotlight`](https://scryfall.com/search?q=is%3Aspotlight)             | Story Spotlight cards                    |
 
 ## Year
 
@@ -385,12 +385,12 @@ You can use numeric expressions (`>`, `<`, `=`, `>=`, `<=`, and `!=`) to find
 cards that were released relative to a certain year or a `yyyy-mm-dd` date. You
 can also use any set code to stand in for the set's release date.
 
-| Expression         | Meaning                                            | Examples                                                            |
-| ------------------ | -------------------------------------------------- | ------------------------------------------------------------------- |
-| `year<=1994`       | Cards from 1994 and before                         | [Example Cards](https://scryfall.com/search?q=year%3C%3D1994)       |
-| `year=2022`        | Cards released this year                           | [Example Cards](https://scryfall.com/search?q=year%3D2022)          |
-| `date>=2015-08-18` | Cards printed on or after August 18, 2015          | [Example Cards](https://scryfall.com/search?q=date%3E%3D2015-08-18) |
-| `date>ori`         | cards printed in sets released after Magic Origins | [Example Cards](https://scryfall.com/search?q=date%3Eori)           |
+| Expression                                                               | Meaning                                            |
+| ------------------------------------------------------------------------ | -------------------------------------------------- |
+| [`year<=1994`](https://scryfall.com/search?q=year%3C%3D1994)             | Cards from 1994 and before                         |
+| [`year=2022`](https://scryfall.com/search?q=year%3D2022)                 | Cards released this year                           |
+| [`date>=2015-08-18`](https://scryfall.com/search?q=date%3E%3D2015-08-18) | Cards printed on or after August 18, 2015          |
+| [`date>ori`](https://scryfall.com/search?q=date%3Eori)                   | cards printed in sets released after Magic Origins |
 
 ## Tagger Tags
 
@@ -403,10 +403,10 @@ describe the function of the card.
 Data for these two features comes from the [Tagger
 project](https://scryfall.com/docs/tagger-tags).
 
-| Expression         | Meaning                      | Examples                                                          |
-| ------------------ | ---------------------------- | ----------------------------------------------------------------- |
-| `art:squirrel`     | Art that contains a squirrel | [Example Cards](https://scryfall.com/search?q=art%3Asquirrel)     |
-| `function:removal` | Cards that cause removal     | [Example Cards](https://scryfall.com/search?q=function%3Aremoval) |
+| Expression                                                             | Meaning                      |
+| ---------------------------------------------------------------------- | ---------------------------- |
+| [`art:squirrel`](https://scryfall.com/search?q=art%3Asquirrel)         | Art that contains a squirrel |
+| [`function:removal`](https://scryfall.com/search?q=function%3Aremoval) | Cards that cause removal     |
 
 ## Reprints
 
@@ -417,12 +417,12 @@ like `prints=1`, or the number of sets a card has been in with `sets=1`. These
 can also be compared including only paper sets with `paperprints=1` and
 `papersets=1`.
 
-| Expression          | Meaning                                                                | Examples                                                             |
-| ------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `e:c16 not:reprint` | Cards that were new in Commander 2016                                  | [Example Cards](https://scryfall.com/search?q=e%3Ac16+not%3Areprint) |
-| `e:ktk is:unique`   | Cards that were in Khans of Tarkir and not printed in any other set    | [Example Cards](https://scryfall.com/search?q=e%3Aktk+is%3Aunique)   |
-| `sets>=20`          | Cards that have been printed in 20 or more distinct sets               | [Example Cards](https://scryfall.com/search?q=sets%3E%3D20)          |
-| `e:arn papersets=1` | Cards that were printed in Arabian Nights but never reprinted in paper | [Example Cards](https://scryfall.com/search?q=e%3Aarn+papersets%3D1) |
+| Expression                                                                 | Meaning                                                                |
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`e:c16 not:reprint`](https://scryfall.com/search?q=e%3Ac16+not%3Areprint) | Cards that were new in Commander 2016                                  |
+| [`e:ktk is:unique`](https://scryfall.com/search?q=e%3Aktk+is%3Aunique)     | Cards that were in Khans of Tarkir and not printed in any other set    |
+| [`sets>=20`](https://scryfall.com/search?q=sets%3E%3D20)                   | Cards that have been printed in 20 or more distinct sets               |
+| [`e:arn papersets=1`](https://scryfall.com/search?q=e%3Aarn+papersets%3D1) | Cards that were printed in Arabian Nights but never reprinted in paper |
 
 ## Languages
 
@@ -436,12 +436,12 @@ You can also find the first printing of a card in each language using
 least once with `in:` (e.g. `in:ru` will find cards that have ever been printed
 in Russian.)
 
-| Expression                              | Meaning                                                             | Examples                                                                                   |
-| --------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `lang:japanese`                         | Cards in Japanese                                                   | [Example Cards](https://scryfall.com/search?q=lang%3Ajapanese)                             |
-| `lang:any t:planeswalker unique:prints` | Planeswalkers in any language                                       | [Example Cards](https://scryfall.com/search?q=lang%3Aany+t%3Aplaneswalker+unique%3Aprints) |
-| `lang:ko new:language t:goblin`         | The first printings of goblin cards in the Korean language          | [Example Cards](https://scryfall.com/search?q=lang%3Ako+new%3Alanguage+t%3Agoblin)         |
-| `in:ru in:zhs`                          | Cards that have been printed in both Russian and Simplified Chinese | [Example Cards](https://scryfall.com/search?q=in%3Aru+in%3Azhs)                            |
+| Expression                                                                                                           | Meaning                                                             |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [`lang:japanese`](https://scryfall.com/search?q=lang%3Ajapanese)                                                     | Cards in Japanese                                                   |
+| [`lang:any t:planeswalker unique:prints`](https://scryfall.com/search?q=lang%3Aany+t%3Aplaneswalker+unique%3Aprints) | Planeswalkers in any language                                       |
+| [`lang:ko new:language t:goblin`](https://scryfall.com/search?q=lang%3Ako+new%3Alanguage+t%3Agoblin)                 | The first printings of goblin cards in the Korean language          |
+| [`in:ru in:zhs`](https://scryfall.com/search?q=in%3Aru+in%3Azhs)                                                     | Cards that have been printed in both Russian and Simplified Chinese |
 
 ## Shortcuts and Nicknames
 
@@ -456,11 +456,11 @@ You can find some interesting land groups with `is:bikeland` (alias `cycleland`,
 
 You can find all Masterpiece Series cards with `is:masterpiece`
 
-| Expression        | Meaning                   | Examples                                                         |
-| ----------------- | ------------------------- | ---------------------------------------------------------------- |
-| `is:dual`         | Cards that are dual lands | [Example Cards](https://scryfall.com/search?q=is%3Adual)         |
-| `is:fetchland`    | Cards that are fetchlands | [Example Cards](https://scryfall.com/search?q=is%3Afetchland)    |
-| `is:colorshifted` | Colorshifted cards        | [Example Cards](https://scryfall.com/search?q=is%3Acolorshifted) |
+| Expression                                                           | Meaning                   |
+| -------------------------------------------------------------------- | ------------------------- |
+| [`is:dual`](https://scryfall.com/search?q=is%3Adual)                 | Cards that are dual lands |
+| [`is:fetchland`](https://scryfall.com/search?q=is%3Afetchland)       | Cards that are fetchlands |
+| [`is:colorshifted`](https://scryfall.com/search?q=is%3Acolorshifted) | Colorshifted cards        |
 
 ## Negating Conditions
 
@@ -473,11 +473,11 @@ The `is:` keyword has a convenient inverted mode `not:` which is the same as
 
 Loose name words can also be inverted with `-`
 
-| Expression                 | Meaning                                            | Examples                                                                    |
-| -------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------- |
-| `-fire c:r t:instant`      | Red instants without the word “fire” in their name | [Example Cards](https://scryfall.com/search?q=-fire+c%3Ar+t%3Ainstant)      |
-| `o:changeling -t:creature` | Changeling cards that aren't creatures             | [Example Cards](https://scryfall.com/search?q=o%3Achangeling+-t%3Acreature) |
-| `not:reprint e:c16`        | Cards in Commander 2016 that aren't reprints       | [Example Cards](https://scryfall.com/search?q=not%3Areprint+e%3Ac16)        |
+| Expression                                                                               | Meaning                                            |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| [`-fire c:r t:instant`](https://scryfall.com/search?q=-fire+c%3Ar+t%3Ainstant)           | Red instants without the word “fire” in their name |
+| [`o:changeling -t:creature`](https://scryfall.com/search?q=o%3Achangeling+-t%3Acreature) | Changeling cards that aren't creatures             |
+| [`not:reprint e:c16`](https://scryfall.com/search?q=not%3Areprint+e%3Ac16)               | Cards in Commander 2016 that aren't reprints       |
 
 ## Regular Expressions
 
@@ -491,13 +491,13 @@ and `$`.
 
 Forward slashes inside your regex must be escaped with `\/`.
 
-Full documentation for this keyword is available on in [vignette("regex")].
+Full documentation for this keyword is available on in `vignette("regex")`.
 
-| Expression             | Meaning                                             | Examples                                                                            |
-| ---------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `t:creature o:/^{T}:/` | Creatures that tap with no other payment            | [Example Cards](https://scryfall.com/search?q=t%3Acreature+o%3A%2F%5E%7BT%7D%3A%2F) |
-| `t:instant o:/\spp/`   | Instants that provide +X/+X effects                 | [Example Cards](https://scryfall.com/search?q=t%3Ainstant+o%3A%2F%5Cspp%2F)         |
-| `name:/\bizzet\b/`     | Card names with “izzet” but not words like “mizzet” | [Example Cards](https://scryfall.com/search?q=name%3A%2F%5Cbizzet%5Cb%2F)           |
+| Expression                                                                                   | Meaning                                             |
+| -------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| [`t:creature o:/^{T}:/`](https://scryfall.com/search?q=t%3Acreature+o%3A%2F%5E%7BT%7D%3A%2F) | Creatures that tap with no other payment            |
+| [`t:instant o:/\spp/`](https://scryfall.com/search?q=t%3Ainstant+o%3A%2F%5Cspp%2F)           | Instants that provide +X/+X effects                 |
+| [`name:/\bizzet\b/`](https://scryfall.com/search?q=name%3A%2F%5Cbizzet%5Cb%2F)               | Card names with “izzet” but not words like “mizzet” |
 
 ## Exact Names
 
@@ -506,10 +506,10 @@ exact name only.
 
 This is still case-insensitive.
 
-| Expression              | Meaning                     | Examples                                                                   |
-| ----------------------- | --------------------------- | -------------------------------------------------------------------------- |
-| `!fire`                 | The card Fire               | [Example Cards](https://scryfall.com/search?q=%21fire)                     |
-| `!"sift through sands"` | The card Sift Through Sands | [Example Cards](https://scryfall.com/search?q=%21%22sift+through+sands%22) |
+| Expression                                                                           | Meaning                     |
+| ------------------------------------------------------------------------------------ | --------------------------- |
+| [`!fire`](https://scryfall.com/search?q=%21fire)                                     | The card Fire               |
+| [`!"sift through sands"`](https://scryfall.com/search?q=%21%22sift+through+sands%22) | The card Sift Through Sands |
 
 ## Using "OR"
 
@@ -519,10 +519,10 @@ find a card.
 If you want to search over a set of options or choices, you can put the special
 word `or`/`OR` between terms.
 
-| Expression                   | Meaning                                        | Examples                                                                            |
-| ---------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `t:fish or t:bird`           | Cards that are Fish or Birds                   | [Example Cards](https://scryfall.com/search?q=t%3Afish+or+t%3Abird)                 |
-| `t:land (a:titus or a:avon)` | Lands illustrated by Titus Lunter or John Avon | [Example Cards](https://scryfall.com/search?q=t%3Aland+%28a%3Atitus+or+a%3Aavon%29) |
+| Expression                                                                                         | Meaning                                        |
+| -------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| [`t:fish or t:bird`](https://scryfall.com/search?q=t%3Afish+or+t%3Abird)                           | Cards that are Fish or Birds                   |
+| [`t:land (a:titus or a:avon)`](https://scryfall.com/search?q=t%3Aland+%28a%3Atitus+or+a%3Aavon%29) | Lands illustrated by Titus Lunter or John Avon |
 
 ## Nesting Conditions
 
@@ -531,10 +531,10 @@ most useful when combined with the `OR` keyword.
 
 Remember that terms that are _not_ separated by `OR` are still combined.
 
-| Expression                           | Meaning                    | Examples                                                                                 |
-| ------------------------------------ | -------------------------- | ---------------------------------------------------------------------------------------- |
-| `t:legendary (t:goblin or t:elf)`    | Legendary goblins or elves | [Example Cards](https://scryfall.com/search?q=t%3Alegendary+%28t%3Agoblin+or+t%3Aelf%29) |
-| `through (depths or sands or mists)` | The Unspeakable combo      | [Example Cards](https://scryfall.com/search?q=through+%28depths+or+sands+or+mists%29)    |
+| Expression                                                                                                   | Meaning                    |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| [`t:legendary (t:goblin or t:elf)`](https://scryfall.com/search?q=t%3Alegendary+%28t%3Agoblin+or+t%3Aelf%29) | Legendary goblins or elves |
+| [`through (depths or sands or mists)`](https://scryfall.com/search?q=through+%28depths+or+sands+or+mists%29) | The Unspeakable combo      |
 
 ## Display Keywords
 
@@ -558,10 +558,10 @@ Select what printings of cards to preferentially show with `prefer:oldest`,
 
 Change the order of the sorted data with `direction:asc` or `direction:desc`.
 
-| Expression                            | Meaning                                                        | Examples                                                                                 |
-| ------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `!"Lightning Bolt" unique:prints`     | Every printing of Lightning Bolt                               | [Example Cards](https://scryfall.com/search?q=%21%22Lightning+Bolt%22+unique%3Aprints)   |
-| `t:forest a:avon unique:art`          | Every unique Forest illustration by John Avon                  | [Example Cards](https://scryfall.com/search?q=t%3Aforest+a%3Aavon+unique%3Aart)          |
-| `f:modern order:rarity direction:asc` | Modern legal cards sorted by rarity, commons first             | [Example Cards](https://scryfall.com/search?q=f%3Amodern+order%3Ararity+direction%3Aasc) |
-| `t:human display:text`                | Every Human card as text-only                                  | [Example Cards](https://scryfall.com/search?q=t%3Ahuman+display%3Atext)                  |
-| `in:leb game:paper prefer:newest`     | The newest paper printing of each card in Limited Edition Beta | [Example Cards](https://scryfall.com/search?q=in%3Aleb+game%3Apaper+prefer%3Anewest)     |
+| Expression                                                                                                       | Meaning                                                        |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| [`!"Lightning Bolt" unique:prints`](https://scryfall.com/search?q=%21%22Lightning+Bolt%22+unique%3Aprints)       | Every printing of Lightning Bolt                               |
+| [`t:forest a:avon unique:art`](https://scryfall.com/search?q=t%3Aforest+a%3Aavon+unique%3Aart)                   | Every unique Forest illustration by John Avon                  |
+| [`f:modern order:rarity direction:asc`](https://scryfall.com/search?q=f%3Amodern+order%3Ararity+direction%3Aasc) | Modern legal cards sorted by rarity, commons first             |
+| [`t:human display:text`](https://scryfall.com/search?q=t%3Ahuman+display%3Atext)                                 | Every Human card as text-only                                  |
+| [`in:leb game:paper prefer:newest`](https://scryfall.com/search?q=in%3Aleb+game%3Apaper+prefer%3Anewest)         | The newest paper printing of each card in Limited Edition Beta |

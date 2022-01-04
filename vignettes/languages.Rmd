@@ -23,22 +23,22 @@ this data slowly over time.
 
 The current languages are:
 
-| Code  | Printed Code | Language            | Cards  | Examples                                                                               |
-| ----- | ------------ | ------------------- | ------ | -------------------------------------------------------------------------------------- |
-| `en`  | en           | English             | 63,650 | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Aen&unique=prints)  |
-| `es`  | sp           | Spanish             | 33,722 | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Aes&unique=prints)  |
-| `fr`  | fr           | French              | 34,481 | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Afr&unique=prints)  |
-| `de`  | de           | German              | 33,837 | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Ade&unique=prints)  |
-| `it`  | it           | Italian             | 34,135 | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Ait&unique=prints)  |
-| `pt`  | pt           | Portuguese          | 30,134 | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Apt&unique=prints)  |
-| `ja`  | jp           | Japanese            | 36,485 | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Aja&unique=prints)  |
-| `ko`  | kr           | Korean              | 14,076 | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Ako&unique=prints)  |
-| `ru`  | ru           | Russian             | 19,643 | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Aru&unique=prints)  |
-| `zhs` | cs           | Simplified Chinese  | 28,235 | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Azhs&unique=prints) |
-| `zht` | ct           | Traditional Chinese | 21,530 | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Azht&unique=prints) |
-| `he`  |              | Hebrew              | 1      | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Ahe&unique=prints)  |
-| `la`  |              | Latin               | 1      | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Ala&unique=prints)  |
-| `grc` |              | Ancient Greek       | 1      | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Agrc&unique=prints) |
-| `ar`  |              | Arabic              | 1      | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Aar&unique=prints)  |
-| `sa`  |              | Sanskrit            | 1      | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Asa&unique=prints)  |
-| `ph`  | ph           | Phyrexian           | 9      | [Example Cards](https://scryfall.com/search?order=released&q=lang%3Aph&unique=prints)  |
+| Code                                                                           | Printed Code | Language            | Cards  |
+| ------------------------------------------------------------------------------ | ------------ | ------------------- | ------ |
+| [`en`](https://scryfall.com/search?order=released&q=lang%3Aen&unique=prints)   | en           | English             | 63,650 |
+| [`es`](https://scryfall.com/search?order=released&q=lang%3Aes&unique=prints)   | sp           | Spanish             | 33,722 |
+| [`fr`](https://scryfall.com/search?order=released&q=lang%3Afr&unique=prints)   | fr           | French              | 34,481 |
+| [`de`](https://scryfall.com/search?order=released&q=lang%3Ade&unique=prints)   | de           | German              | 33,837 |
+| [`it`](https://scryfall.com/search?order=released&q=lang%3Ait&unique=prints)   | it           | Italian             | 34,135 |
+| [`pt`](https://scryfall.com/search?order=released&q=lang%3Apt&unique=prints)   | pt           | Portuguese          | 30,134 |
+| [`ja`](https://scryfall.com/search?order=released&q=lang%3Aja&unique=prints)   | jp           | Japanese            | 36,485 |
+| [`ko`](https://scryfall.com/search?order=released&q=lang%3Ako&unique=prints)   | kr           | Korean              | 14,076 |
+| [`ru`](https://scryfall.com/search?order=released&q=lang%3Aru&unique=prints)   | ru           | Russian             | 19,643 |
+| [`zhs`](https://scryfall.com/search?order=released&q=lang%3Azhs&unique=prints) | cs           | Simplified Chinese  | 28,235 |
+| [`zht`](https://scryfall.com/search?order=released&q=lang%3Azht&unique=prints) | ct           | Traditional Chinese | 21,530 |
+| [`he`](https://scryfall.com/search?order=released&q=lang%3Ahe&unique=prints)   |              | Hebrew              | 1      |
+| [`la`](https://scryfall.com/search?order=released&q=lang%3Ala&unique=prints)   |              | Latin               | 1      |
+| [`grc`](https://scryfall.com/search?order=released&q=lang%3Agrc&unique=prints) |              | Ancient Greek       | 1      |
+| [`ar`](https://scryfall.com/search?order=released&q=lang%3Aar&unique=prints)   |              | Arabic              | 1      |
+| [`sa`](https://scryfall.com/search?order=released&q=lang%3Asa&unique=prints)   |              | Sanskrit            | 1      |
+| [`ph`](https://scryfall.com/search?order=released&q=lang%3Aph&unique=prints)   | ph           | Phyrexian           | 9      |

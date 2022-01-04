@@ -9,6 +9,7 @@ Authors@R: c(
 Description: A simple, light, and robust interface between R and
     Scryfall's card data API: <https://scryfall.com/docs/api>.
 License: MIT + file LICENSE
+URL: https://curso-r.github.io/scry/
 Imports:
     dplyr,
     httr,
@@ -26,4 +27,3 @@ Config/testthat/parallel: true
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-URL: https://curso-r.github.io/scry/
