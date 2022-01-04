@@ -1,18 +1,17 @@
 parse_symbology <- function(data) {
   template <- list(
-    "object" = as.character,
     "cost" = as.character,
     "symbol" = as.character,
-    "svg_uri" = as.character,
+    "colors" = function(x) list(unlist(x)),
+    "cmc" = as.numeric,
     "loose_variant" = as.character,
     "english" = as.character,
+    "gatherer_alternates" = function(x) list(unlist(x)),
     "transposable" = as.logical,
     "represents_mana" = as.logical,
     "appears_in_mana_costs" = as.logical,
-    "cmc" = as.numeric,
     "funny" = as.logical,
-    "colors" = function(x) list(unlist(x)),
-    "gatherer_alternates" = function(x) list(unlist(x)),
+    "svg_uri" = as.character,
     "colorless" = as.logical,
     "monocolored" = as.logical,
     "multicolored" = as.logical

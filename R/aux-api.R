@@ -34,13 +34,14 @@ extract_data <- function(content, loop) {
 }
 
 bind_rows <- function(data, template) {
-  df <- purrr::map_dfr(data, function(ls) {
+  purrr::map_dfr(data, function(ls) {
     ls <- purrr::map_if(ls, is.list, purrr::compact)
+
+    col_order <- names(template)[names(template) %in% names(ls)]
+    ls <- ls[col_order]
+
     purrr::map2(template[names(ls)], ls, ~ .x(.y))
   })
-
-  col_order <- names(template)[names(template) %in% names(df)]
-  df[, col_order]
 }
 
 make_query <- function(...) {

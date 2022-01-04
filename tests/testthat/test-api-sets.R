@@ -20,8 +20,8 @@ test_that("scry-sets returns correctly", {
 
   sets <- scry_sets()
   sets <- sets[sets$released_at < "2020-12-31", ]
-  sets <- dplyr::arrange(sets, id)
-  expect_snapshot(rm_icon(sets))
+  expect_s3_class(sets, c("tbl_df", "tbl", "data.frame"))
+  expect_gte(nrow(sets), 653)
 
   expect_snapshot(rm_icon(scry_set("mmq")))
   expect_snapshot(rm_icon(scry_set(73, "tcgplayer")))
