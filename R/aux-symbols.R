@@ -1,4 +1,4 @@
-parse_symbology <- function(data) {
+parse_symbols <- function(data) {
   template <- list(
     "cost" = as.character,
     "symbol" = as.character,

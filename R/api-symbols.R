@@ -34,17 +34,17 @@
 #'
 #' @references <https://scryfall.com/docs/api/card-symbols>
 #'
-#' @name scry-symbology
+#' @name scry-symbols
 NULL
 
-scry_symbology_impl <- function(endpoint) {
-  scryfall(paste0("/symbology", endpoint), parse_symbology)
+scry_symbols_impl <- function(endpoint) {
+  scryfall(paste0("/symbology", endpoint), parse_symbols)
 }
 
-#' @rdname scry-symbology
+#' @rdname scry-symbols
 #' @export
-scry_symbology <- function() {
-  scry_symbology_impl("/")
+scry_symbols <- function() {
+  scry_symbols_impl("/")
 }
 
 #' Parse mana costs
@@ -76,5 +76,5 @@ scry_symbology <- function() {
 #'
 #' @export
 parse_cost <- function(cost) {
-  scry_symbology_impl(paste0("/parse-mana", make_query(cost = cost)))
+  scry_symbols_impl(paste0("/parse-mana", make_query(cost = cost)))
 }

@@ -51,7 +51,7 @@ For example,
 written as `{2/W}, {T}`.
 
 An exhaustive list of all symbology is provided below. You can also retrieve
-this information programmatically using the `scry_symbology()` method.
+this information programmatically using the `scry_symbols()` method.
 
 Note that some symbols use UTF-8 characters outside the ASCII range.
 
