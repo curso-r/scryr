@@ -1,8 +1,6 @@
 # Contributing to scry
 
-This outlines how to propose a change to scry. For more detailed info about
-contributing to this, and other Curso-R packages, please see the
-[**development contributing guide**](https://rstd.io/tidy-contrib).
+This outlines how to propose a change to scry.
 
 ## Fixing typos
 
