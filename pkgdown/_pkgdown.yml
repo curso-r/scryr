@@ -8,7 +8,7 @@ authors:
     href: https://lente.dev
   Curso-R:
     href: https://curso-r.com
-    html: "<img src='https://github.com/curso-r/scry/blob/main/man/figures/curso-r.png' width=80>"
+    html: "<img src='https://raw.githubusercontent.com/curso-r/scry/main/man/figures/curso-r.png' width=80>"
 
 template:
   bootstrap: 5
@@ -16,6 +16,3 @@ template:
     primary: "#0054AD"
     border-radius: 0.5rem
     btn-border-radius: 0.25rem
-
-code:
-  width: 72

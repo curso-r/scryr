@@ -52,13 +52,16 @@ scry makes it easy to process _Magic_ cards' data programatically.
 library(scry)
 
 # Find red creatures with 7 power, sorted by converted mana cost
-(cards <- scry_cards("c:red+pow=7", order = "cmc"))
+cards <- scry_cards("c:red+pow=7", order = "cmc")
 
 # Simple pipeline that counts how many cards of each rarity have a price
 cards |>
   unnest(prices) |>
   filter(!is.na(usd)) |>
   count(rarity)
+
+# Summary of full data
+glimpse(cards)
 ```
 
 There are many other endpoints that also support fully tidyverse compatible
