@@ -26,7 +26,7 @@
 #'   as `{P/U}` or `{P\U}` in informal settings.
 #' * `represents_mana` \[lgl\]: Whether this is a mana symbol.
 #' * `appears_in_mana_costs` \[lgl\]: Whether this symbol appears in a mana cost
-#'   on any _Magic_ card. For example `{20}` has this field set to `FALSE`
+#'   on any _Magic_ card. For example `{20}` has this column set to `FALSE`
 #'   because `{20}` only appears in Oracle text, not mana costs.
 #' * `funny` \[lgl\]: Whether this symbol is only used on funny cards or
 #'   Un-cards.

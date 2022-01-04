@@ -28,7 +28,7 @@ For example: \code{{W}} has \verb{<"oW", "ooW">} as alternates.
 as \code{{P/U}} or \verb{\{P\\U\}} in informal settings.
 \item \code{represents_mana} [lgl]: Whether this is a mana symbol.
 \item \code{appears_in_mana_costs} [lgl]: Whether this symbol appears in a mana cost
-on any \emph{Magic} card. For example \code{{20}} has this field set to \code{FALSE}
+on any \emph{Magic} card. For example \code{{20}} has this column set to \code{FALSE}
 because \code{{20}} only appears in Oracle text, not mana costs.
 \item \code{funny} [lgl]: Whether this symbol is only used on funny cards or
 Un-cards.
