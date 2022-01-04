@@ -27,9 +27,7 @@ library(tidyr)
 scry is a simple, light, and robust interface between R and
 [Scryfall](https://scryfall.com/)'s powerful _Magic: The Gathering_ card search
 engine. It wraps the [Scryfall API](https://scryfall.com/docs/api) and makes all
-endpoints available as simple functions that any R programmer can use; results
-are also wrapped as data frames for maximum compatibility with common data
-wrangling techniques.
+endpoints available as simple functions that any R programmer can use them.
 
 ## Installation
 
@@ -88,7 +86,7 @@ only included in the package for self-containedness' sake. Scryfall's website,
 API, and other related content are copyright of Scryfall, LLC. This software is
 not produced by, endorsed by, supported by, or affiliated with Scryfall, LLC.
 
-As per Scryfall's [terms of service](https://scryfall.com/docs/terms), card data
+As per [Scryfall's terms of service](https://scryfall.com/docs/terms), card data
 and images are provided free of charge for the primary purpose of creating
 additional _Magic_ software, performing research, or creating community content
 about _Magic_ and related products. When using scry, you must, therefore, adhere

@@ -14,9 +14,7 @@ scry is a simple, light, and robust interface between R and
 [Scryfall](https://scryfall.com/)’s powerful *Magic: The Gathering* card
 search engine. It wraps the [Scryfall
 API](https://scryfall.com/docs/api) and makes all endpoints available as
-simple functions that any R programmer can use; results are also wrapped
-as data frames for maximum compatibility with common data wrangling
-techniques.
+simple functions that any R programmer can use them.
 
 ## Installation
 
@@ -104,7 +102,7 @@ Scryfall’s website, API, and other related content are copyright of
 Scryfall, LLC. This software is not produced by, endorsed by, supported
 by, or affiliated with Scryfall, LLC.
 
-As per Scryfall’s [terms of service](https://scryfall.com/docs/terms),
+As per [Scryfall’s terms of service](https://scryfall.com/docs/terms),
 card data and images are provided free of charge for the primary purpose
 of creating additional *Magic* software, performing research, or
 creating community content about *Magic* and related products. When
