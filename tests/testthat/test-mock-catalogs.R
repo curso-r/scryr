@@ -19,7 +19,6 @@ httptest::with_mock_api({
     expect_snapshot(scry_catalog("artifact-types"))
     expect_snapshot(scry_catalog("enchantment-types"))
     expect_snapshot(scry_catalog("spell-types"))
-    expect_snapshot(scry_catalog("powers"))
     expect_snapshot(scry_catalog("toughnesses"))
     expect_snapshot(scry_catalog("loyalties"))
     expect_snapshot(scry_catalog("watermarks"))
