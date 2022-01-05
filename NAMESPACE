@@ -2,6 +2,7 @@
 
 export(autocomplete_name)
 export(parse_cost)
+export(scry_bulk_file)
 export(scry_bulk_files)
 export(scry_card)
 export(scry_card_name)

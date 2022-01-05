@@ -40,6 +40,10 @@
 #' Bulk data is only collected once every 12 hours. You can use [scry_cards()]
 #' to retrieve fresh objects instead.
 #'
+#' @param name A string with file to be downloaded. Can be any one of
+#' `Oracle Cards`, `Unique Artwork`, `Default Cards`, `All Cards` or `Rulings`.
+#' See details.
+#'
 #' @return A data frame with 1 or more rows and the following columns:
 #' * `id` \[chr\]: A unique ID for this bulk item.
 #' * `name` \[chr\]: A human-readable name for this file. See details.
@@ -56,11 +60,28 @@
 #' @examples \donttest{
 #' # Get information about bulk data files
 #' scry_bulk_files()
+#'
+#' # Download a bulk data file
+#' scry_bulk_file("Rulings")
 #' }
 #'
 #' @references <https://scryfall.com/docs/api/bulk-data>
 #'
+#' @name scry-bulk
+NULL
+
+#' @rdname scry-bulk
 #' @export
 scry_bulk_files <- function() {
   scryfall("/bulk-data/", parse_bulk)
+}
+
+#' @rdname scry-bulk
+#' @export
+scry_bulk_file <- function(name) {
+  files <- scry_bulk_files()
+  json <- httr::GET(files$download_uri[files$name == name])
+
+  data <- httr::content(json)
+  if (name == "Rulings") parse_rulings(data) else parse_cards(data)
 }
