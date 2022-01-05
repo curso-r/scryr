@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="scry">
-<title>Search Reference • scry</title>
+<title>Query Syntax • scry</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Search Reference">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Query Syntax">
 <meta property="og:description" content="scry">
 <meta property="og:image" content="https://curso-r.github.io/scry/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -43,6 +43,9 @@
     <div id="navbar" class="collapse navbar-collapse ms-2">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
+  <a class="nav-link" href="../articles/scry.html">Get started</a>
+</li>
+<li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="active nav-item dropdown">
@@ -54,7 +57,7 @@
     <a class="dropdown-item" href="../articles/languages.html">Languages</a>
     <a class="dropdown-item" href="../articles/layouts.html">Layouts and Faces</a>
     <a class="dropdown-item" href="../articles/regex.html">Regular Expressions</a>
-    <a class="dropdown-item" href="../articles/syntax.html">Search Reference</a>
+    <a class="dropdown-item" href="../articles/syntax.html">Query Syntax</a>
   </div>
 </li>
       </ul>
@@ -77,7 +80,7 @@
 </nav><div class="container template-article">
 <script src="syntax_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <main id="main"><div class="page-header">
-      <img src="../logo.png" class="logo" alt=""><h1>Search Reference</h1>
+      <img src="../logo.png" class="logo" alt=""><h1>Query Syntax</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/curso-r/scry/blob/HEAD/vignettes/syntax.Rmd" class="external-link"><code>vignettes/syntax.Rmd</code></a></small>
@@ -86,7 +89,7 @@
 
     
     
-<p>Scryfall includes a large set of keywords and expressions you can use to filter Magic cards.</p>
+<p>Scryfall includes a large set of keywords and expressions you can use to filter <em>Magic</em> cards.</p>
 <div class="section level2">
 <h2 id="colors-and-color-identity">Colors and Color Identity<a class="anchor" aria-label="anchor" href="#colors-and-color-identity"></a>
 </h2>
@@ -154,20 +157,20 @@
 <p>You can also use <code>keyword:</code> to search for cards with a specific keyword ability.</p>
 <table class="table">
 <colgroup>
-<col width="74%">
-<col width="25%">
+<col width="50%">
+<col width="50%">
 </colgroup>
 <thead><tr class="header">
-<th>Expression</th>
+<th align="left">Expression</th>
 <th>Meaning</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><a href="https://scryfall.com/search?q=o%3Adraw+t%3Acreature" class="external-link"><code>o:draw t:creature</code></a></td>
+<td align="left"><a href="https://scryfall.com/search?q=o%3Adraw+t%3Acreature" class="external-link"><code>o:draw t:creature</code></a></td>
 <td>Creatures that deal with drawing cards</td>
 </tr>
 <tr class="even">
-<td><a href="https://scryfall.com/search?q=o%3A%22~+enters+the+battlefield+tapped%22" class="external-link"><code>o:"~ enters the battlefield tapped"</code></a></td>
+<td align="left"><a href="https://scryfall.com/search?q=o%3A%22~+enters+the+battlefield+tapped%22" class="external-link"><code>o:"~ enters the battlefield tapped"</code></a></td>
 <td>Cards that enter the battlefield tapped</td>
 </tr>
 </tbody>
@@ -176,9 +179,9 @@
 <div class="section level2">
 <h2 id="mana-costs">Mana Costs<a class="anchor" aria-label="anchor" href="#mana-costs"></a>
 </h2>
-<p>Use the <code>m:</code> or <code>mana</code>: keyword to search for cards that have certain symbols in their mana costs.</p>
+<p>Use the <code>m:</code> or <code>mana:</code> keyword to search for cards that have certain symbols in their mana costs.</p>
 <p>This keyword uses the official text version of mana costs set forth in the <a href="https://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules" class="external-link">Comprehensive Rules</a>. For example, <code>{G}</code> represents a green mana.</p>
-<p>Shorthand for is allowed for symbols that aren’t split: <code>G</code> is the same as <code>{G}</code></p>
+<p>Shorthand for is allowed for symbols that aren’t split: <code>G</code> is the same as <code>{G}</code>.</p>
 <p>However, you must always wrap complex/split symbols like <code>{2/G}</code> in braces.</p>
 <p>You can search for mana costs using comparison operators; a mana cost is greater than another if it includes all the same symbols and more, and it’s less if it includes only a subset of symbols.</p>
 <p>You can find cards of a specific converted mana cost with <code>manavalue</code> or <code>mv</code>, comparing with a numeric expression (<code>&gt;</code>, <code>&lt;</code>, <code>=</code>, <code>&gt;=</code>, <code>&lt;=</code>, and <code>!=</code>). You can also find even or odd mana costs with <code>manavalue:even</code> or <code>manavalue:odd</code></p>
@@ -187,8 +190,8 @@
 <p>You can also find cards that produce specific types of mana, with <code>produces:</code></p>
 <table class="table">
 <colgroup>
-<col width="60%">
-<col width="39%">
+<col width="34%">
+<col width="65%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
@@ -255,7 +258,7 @@
 <div class="section level2">
 <h2 id="multi-faced-cards">Multi-faced Cards<a class="anchor" aria-label="anchor" href="#multi-faced-cards"></a>
 </h2>
-<p>You can find cards that have more than one face with <code>is:split</code> (split cards), <code>is:flip</code> (flip cards), <code>is:transform</code> (cards that transform), <code>is:meld</code> (cards that meld), <code>is:leveler</code> (cards with Level Up), <code>is:dfc</code> (double-faced cards), and <code>is:mdfc</code> (modal double-faced cards).</p>
+<p>You can find cards that have more than one face with <code>is:split</code> (split cards), <code>is:flip</code> (flip cards), <code>is:transform</code> (cards that transform), <code>is:meld</code> (cards that meld), <code>is:leveler</code> (cards with Level Up), <code>is:dfc</code> (double-faced cards), and <code>is:mdfc</code> (modal double-faced cards). For more information see <code><a href="../articles/layouts.html">vignette("layouts")</a></code>.</p>
 <table class="table">
 <thead><tr class="header">
 <th>Expression</th>
@@ -302,7 +305,7 @@
 <div class="section level2">
 <h2 id="extra-cards-and-funny-cards">Extra Cards and Funny Cards<a class="anchor" aria-label="anchor" href="#extra-cards-and-funny-cards"></a>
 </h2>
-<p><a href="https://scryfall.com/search?q=t:vanguard" class="external-link">Vanguard</a>, <a href="https://scryfall.com/search?q=t%3Aplane+-t%3Aplaneswalker" class="external-link">plane</a>, <a href="https://scryfall.com/search?q=t:scheme" class="external-link">scheme</a>, and <a href="https://scryfall.com/search?q=t:phenomenon" class="external-link">phenomenon</a> cards are hidden by default, as are cards from <a href="/search?q=st:memorabilia">“memorabilia”</a> sets. You must either search for their type (using the <code>t:</code> keyword) or a set that contains them (the <code>e:</code> keyword).</p>
+<p><a href="https://scryfall.com/search?q=t:vanguard" class="external-link">Vanguard</a>, <a href="https://scryfall.com/search?q=t%3Aplane+-t%3Aplaneswalker" class="external-link">plane</a>, <a href="https://scryfall.com/search?q=t:scheme" class="external-link">scheme</a>, and <a href="https://scryfall.com/search?q=t:phenomenon" class="external-link">phenomenon</a> cards are hidden by default, as are cards from <a href="https://scryfall.com/search?q=st:memorabilia" class="external-link">“memorabilia”</a> sets. You must either search for their type (using the <code>t:</code> keyword) or a set that contains them (the <code>e:</code> keyword).</p>
 <p>Un-cards, holiday cards, and other funny cards are findable with <code>is:funny</code> or mentioning their set.</p>
 <p>You may also use <code>include:extras</code> to reveal absolutely every card when you search.</p>
 <table class="table">
@@ -329,12 +332,12 @@
 <div class="section level2">
 <h2 id="rarity">Rarity<a class="anchor" aria-label="anchor" href="#rarity"></a>
 </h2>
-<p>Use <code>r:</code> or <code>rarity:</code> to find cards by their print rarity. You can search for <code>common</code>, <code>uncommon</code>, <code>rare</code>, ‘special’, <code>mythic</code>, and ‘bonus’. You can also use comparison operators like <code>&lt;</code> and <code>&gt;=</code>.</p>
+<p>Use <code>r:</code> or <code>rarity:</code> to find cards by their print rarity. You can search for <code>common</code>, <code>uncommon</code>, <code>rare</code>, <code>special</code>, <code>mythic</code>, and <code>bonus</code>. You can also use comparison operators like <code>&lt;</code> and <code>&gt;=</code>.</p>
 <p>Use <code>new:rarity</code> to find reprint cards printed at a new rarity for the first time. You can find cards that have ever been printed in a given rarity using <code>in:</code> (for example, <code>in:rare</code> to find cards that have ever been printed at rare.)</p>
 <table class="table">
 <colgroup>
-<col width="62%">
-<col width="37%">
+<col width="41%">
+<col width="58%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
@@ -363,17 +366,17 @@
 <div class="section level2">
 <h2 id="sets-and-blocks">Sets and Blocks<a class="anchor" aria-label="anchor" href="#sets-and-blocks"></a>
 </h2>
-<p>Use <code>s:</code>, <code>e:</code>, <code>set:</code>, or <code>edition:</code> to find cards using their Magic set code.</p>
+<p>Use <code>s:</code>, <code>e:</code>, <code>set:</code>, or <code>edition:</code> to find cards using their <em>Magic</em> set code.</p>
 <p>Use <code>cn:</code> or <code>number:</code> to find cards by collector number within a set. Combine this with <code>s:</code> to find specific card editions. Searching by ranges with a syntax like <code>cn&gt;50</code> is also possible.</p>
-<p>Use <code>b:</code> or <code>block:</code> to find cards in a Magic block by providing the three-letter code for any set in that block.</p>
+<p>Use <code>b:</code> or <code>block:</code> to find cards in a <em>Magic</em> block by providing the three-letter code for any set in that block.</p>
 <p>The <code>in:</code> keyword finds cards that once “passed through” the given set code. For example <code>in:lea</code> would only match cards that once appeared in Alpha.</p>
 <p>You can search for cards based on the type of product they appear in. This includes some high-level categories (<code>st:boxset</code>, <code>st:multiplayer</code>, <code>st:beginner</code>), the primary product types (<code>st:core</code> and <code>st:expansion</code>), series of products (<code>st:masters</code>, <code>st:unset</code>, <code>st:portal</code>, <code>st:commander</code>, <code>st:duel_deck</code>, <code>st:from_the_vault</code>, or <code>st:premium_deck</code>) or categories of promo cards (<code>st:fnm</code>, <code>st:judge_gift</code>, <code>st:arena_league</code>, <code>st:player_rewards</code>, <code>st:media_insert</code>, <code>st:tourney</code>, <code>st:gateway</code>, <code>st:wpn</code>, <code>st:instore</code>, <code>st:convention</code>, <code>st:set_promo</code>, <code>st:duels</code>, <code>st:event</code>, <code>st:premiere_shop</code>, or <code>st:masterpiece</code> — whew!)</p>
 <p>The <code>in:</code> keyword also supports these set types, so you can search for cards with no printings in a set type with a query like <code>-in:core</code>.</p>
 <p>You can also search for individual cards that were sold in certain places with <code>is:booster</code> or <code>is:planeswalker_deck</code>, or specific types of set promos with <code>is:league</code>, <code>is:buyabox</code>, <code>is:giftbox</code>, <code>is:intro_pack</code>, <code>is:gameday</code>, <code>is:prerelease</code>, or <code>is:release</code>, among others.</p>
 <table class="table">
 <colgroup>
-<col width="61%">
 <col width="38%">
+<col width="61%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
@@ -494,8 +497,8 @@
 <p>You can compare how many different illustrations a give card has with things like <code>illustrations&gt;1</code>.</p>
 <table class="table">
 <colgroup>
-<col width="70%">
-<col width="30%">
+<col width="53%">
+<col width="46%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
@@ -545,8 +548,8 @@
 <p>Search for a card’s security stamp with <code>stamp:oval</code>, <code>stamp:acorn</code>, <code>stamp:triangle</code>, or <code>stamp:arena</code></p>
 <table class="table">
 <colgroup>
-<col width="64%">
-<col width="35%">
+<col width="50%">
+<col width="50%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
@@ -583,7 +586,7 @@
 <div class="section level2">
 <h2 id="games-promos-spotlights">Games, Promos, &amp; Spotlights<a class="anchor" aria-label="anchor" href="#games-promos-spotlights"></a>
 </h2>
-<p>You can find specific prints available in different Magic game environments with the <code>game:</code> keyword. The games <code>paper</code>, <code>mtgo</code>, and <code>arena</code> are supported.</p>
+<p>You can find specific prints available in different <em>Magic</em> game environments with the <code>game:</code> keyword. The games <code>paper</code>, <code>mtgo</code>, and <code>arena</code> are supported.</p>
 <p>You can filter by a card’s availability in a game with the <code>in:</code> keyword. The games <code>paper</code>, <code>mtgo</code>, and <code>arena</code> are supported.</p>
 <p>Find prints that are only available digitally (MTGO and Arena) with <code>is:digital</code>.</p>
 <p>Find promotional cards (in any environment) with <code>is:promo</code>.</p>
@@ -630,7 +633,7 @@
 </tr>
 <tr class="even">
 <td><a href="https://scryfall.com/search?q=year%3D2022" class="external-link"><code>year=2022</code></a></td>
-<td>Cards released this year</td>
+<td>Cards released in 2022</td>
 </tr>
 <tr class="odd">
 <td><a href="https://scryfall.com/search?q=date%3E%3D2015-08-18" class="external-link"><code>date&gt;=2015-08-18</code></a></td>
@@ -672,8 +675,8 @@
 <p>You can find reprints with <code>is:reprint</code>, cards that were new in their set with <code>not:reprint</code>, and cards that have only been in a single set with <code>is:unique</code>. You can also compare the number of times a card has been printed with syntax like <code>prints=1</code>, or the number of sets a card has been in with <code>sets=1</code>. These can also be compared including only paper sets with <code>paperprints=1</code> and <code>papersets=1</code>.</p>
 <table class="table">
 <colgroup>
-<col width="51%">
-<col width="48%">
+<col width="25%">
+<col width="74%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
@@ -707,8 +710,8 @@
 <p>You can also find the first printing of a card in each language using <code>new:language</code> and all printings of a card that’s been printed in a language at least once with <code>in:</code> (e.g. <code>in:ru</code> will find cards that have ever been printed in Russian.)</p>
 <table class="table">
 <colgroup>
-<col width="63%">
-<col width="36%">
+<col width="51%">
+<col width="48%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>
@@ -766,7 +769,7 @@
 </h2>
 <p>All keywords except for <code>include</code> can be negated by prefixing them with a hyphen (<code>-</code>). This inverts the meaning of the keyword to reject cards that matched what you’ve searched for.</p>
 <p>The <code>is:</code> keyword has a convenient inverted mode <code>not:</code> which is the same as <code>-is:</code>. Conversely, <code>-not:</code> is the same as <code>is:</code>.</p>
-<p>Loose name words can also be inverted with <code>-</code></p>
+<p>Loose name words can also be inverted with <code>-</code>.</p>
 <table class="table">
 <thead><tr class="header">
 <th>Expression</th>
@@ -792,8 +795,8 @@
 <h2 id="regular-expressions">Regular Expressions<a class="anchor" aria-label="anchor" href="#regular-expressions"></a>
 </h2>
 <p>You can use forward slashes <code>//</code> instead of quotes with the <code>type:</code>, <code>t:</code>, <code>oracle:</code>, <code>o:</code>, <code>flavor:</code>, <code>ft:</code>, and <code>name:</code> keywords to match those parts of a card with a regular expression.</p>
-<p>Scryfall supports many regex features such as <code>.*?</code>, option groups <code>(a|b)</code>, brackets <code>[ab]</code>, character classes <code>\d</code>, <code>\w</code>, and anchors <code>(?!)</code>, <code>\b</code>, <code>^</code>, and <code>$</code>.</p>
-<p>Forward slashes inside your regex must be escaped with <code>\/</code>.</p>
+<p>Scryfall supports many regex features such as <code>.*?</code>, option groups <code>(a|b)</code>, brackets <code>[ab]</code>, character classes <code>\\d</code>, <code>\\w</code>, and anchors <code>(?!)</code>, <code>\\b</code>, <code>^</code>, and <code>$</code>.</p>
+<p>Forward slashes inside your regex must be escaped with <code>\\/</code>.</p>
 <p>Full documentation for this keyword is available on in <code><a href="../articles/regex.html">vignette("regex")</a></code>.</p>
 <table class="table">
 <thead><tr class="header">
@@ -806,11 +809,11 @@
 <td>Creatures that tap with no other payment</td>
 </tr>
 <tr class="even">
-<td><a href="https://scryfall.com/search?q=t%3Ainstant+o%3A%2F%5Cspp%2F" class="external-link"><code>t:instant o:/\spp/</code></a></td>
+<td><a href="https://scryfall.com/search?q=t%3Ainstant+o%3A%2F%5Cspp%2F" class="external-link"><code>t:instant o:/\\spp/</code></a></td>
 <td>Instants that provide +X/+X effects</td>
 </tr>
 <tr class="odd">
-<td><a href="https://scryfall.com/search?q=name%3A%2F%5Cbizzet%5Cb%2F" class="external-link"><code>name:/\bizzet\b/</code></a></td>
+<td><a href="https://scryfall.com/search?q=name%3A%2F%5Cbizzet%5Cb%2F" class="external-link"><code>name:/\\bizzet\\b/</code></a></td>
 <td>Card names with “izzet” but not words like “mizzet”</td>
 </tr>
 </tbody>
@@ -864,7 +867,7 @@
 <h2 id="nesting-conditions">Nesting Conditions<a class="anchor" aria-label="anchor" href="#nesting-conditions"></a>
 </h2>
 <p>You may nest conditions inside parenthesis <code>( )</code> to group them together. This is most useful when combined with the <code>OR</code> keyword.</p>
-<p>Remember that terms that are <em>not</em> separated by <code>OR</code> are still combined.</p>
+<p>Remember that terms that are <strong>not</strong> separated by <code>OR</code> are still combined.</p>
 <table class="table">
 <thead><tr class="header">
 <th>Expression</th>
@@ -885,7 +888,7 @@
 <div class="section level2">
 <h2 id="display-keywords">Display Keywords<a class="anchor" aria-label="anchor" href="#display-keywords"></a>
 </h2>
-<p>You can enter your display options for searches as keywords rather than using the controls on the page.</p>
+<p>You can enter your display options for searches as keywords rather than using <code><a href="../reference/scry-cards.html">scry_cards()</a></code>’s arguments.</p>
 <p>Select how duplicate results are eliminated with <code>unique:cards</code>, <code>unique:prints</code> (previously <code>++</code>), or <code>unique:art</code> (also <code>@@</code>).</p>
 <p>Change how results are shown with <code>display:grid</code>, <code>display:checklist</code>, <code>display:full</code>, or <code>display:text</code>.</p>
 <p>Change how results are sorted with <code>order:artist</code>, <code>order:cmc</code>, <code>order:power</code>, <code>order:toughness</code>, <code>order:set</code>, <code>order:name</code>, <code>order:usd</code>, <code>order:tix</code>, <code>order:eur</code>, <code>order:rarity</code>, <code>order:color</code>, <code>order:released</code>, <code>order:spoiled</code>, <code>order:edhrec</code>, or <code>order:review</code>.</p>
@@ -893,8 +896,8 @@
 <p>Change the order of the sorted data with <code>direction:asc</code> or <code>direction:desc</code>.</p>
 <table class="table">
 <colgroup>
-<col width="64%">
-<col width="35%">
+<col width="48%">
+<col width="51%">
 </colgroup>
 <thead><tr class="header">
 <th>Expression</th>

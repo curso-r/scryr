@@ -40,6 +40,9 @@
     <loc>https://curso-r.github.io/scry/articles/regex.html</loc>
   </url>
   <url>
+    <loc>https://curso-r.github.io/scry/articles/scry.html</loc>
+  </url>
+  <url>
     <loc>https://curso-r.github.io/scry/articles/syntax.html</loc>
   </url>
   <url>
@@ -47,6 +50,9 @@
   </url>
   <url>
     <loc>https://curso-r.github.io/scry/index.html</loc>
+  </url>
+  <url>
+    <loc>https://curso-r.github.io/scry/reference/autocomplete_name.html</loc>
   </url>
   <url>
     <loc>https://curso-r.github.io/scry/reference/index.html</loc>
@@ -67,7 +73,7 @@
     <loc>https://curso-r.github.io/scry/reference/scry-sets.html</loc>
   </url>
   <url>
-    <loc>https://curso-r.github.io/scry/reference/scry-symbology.html</loc>
+    <loc>https://curso-r.github.io/scry/reference/scry-symbols.html</loc>
   </url>
   <url>
     <loc>https://curso-r.github.io/scry/reference/scry_bulk_data.html</loc>

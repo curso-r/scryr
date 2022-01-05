@@ -43,6 +43,9 @@
     <div id="navbar" class="collapse navbar-collapse ms-2">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
+  <a class="nav-link" href="../articles/scry.html">Get started</a>
+</li>
+<li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="active nav-item dropdown">
@@ -54,7 +57,7 @@
     <a class="dropdown-item" href="../articles/languages.html">Languages</a>
     <a class="dropdown-item" href="../articles/layouts.html">Layouts and Faces</a>
     <a class="dropdown-item" href="../articles/regex.html">Regular Expressions</a>
-    <a class="dropdown-item" href="../articles/syntax.html">Search Reference</a>
+    <a class="dropdown-item" href="../articles/syntax.html">Query Syntax</a>
   </div>
 </li>
       </ul>
@@ -86,14 +89,14 @@
 
     
     
-<p>Scryfall produces multiple sizes of images and image crops for each Card object. Links to these images are available in each Card objects’ <code>image_uris</code> properties.</p>
+<p>Scryfall produces multiple sizes of images and image crops for each card. Links to these images are available in each card’s <code>image_uris</code> column.</p>
 <p>The image formats are:</p>
 <table class="table">
 <colgroup>
-<col width="44%">
-<col width="3%">
+<col width="7%">
+<col width="18%">
 <col width="2%">
-<col width="50%">
+<col width="71%">
 </colgroup>
 <thead><tr class="header">
 <th>Image</th>
@@ -143,7 +146,7 @@
 <div class="section level2">
 <h2 id="image-statuses">Image Statuses<a class="anchor" aria-label="anchor" href="#image-statuses"></a>
 </h2>
-<p>As a card goes through spoiler season or other data entry, it may have no imagery for a period, or low-quality imagery. You can get a computer-readable value of the image’s state using the <code>image_status</code> field on card objects.</p>
+<p>As a card goes through spoiler season or other data entry, it may have no imagery for a period, or low-quality imagery. You can get a computer-readable value of the image’s state using the <code>image_status</code> column on cards.</p>
 <p>The statuses are:</p>
 <table class="table">
 <colgroup>
@@ -195,7 +198,6 @@
 <ul>
 <li>List the artist name and copyright elsewhere in the same interface presenting the art crop, or use the full card image elsewhere in the same interface. Users should be able to identify the artist and source of the image somehow.</li>
 </ul>
-<p>If you believe there is a problem with a card image we have provided, please use the “Report Card Issue” button at the bottom of every card page.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

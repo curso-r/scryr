@@ -43,6 +43,9 @@
     <div id="navbar" class="collapse navbar-collapse ms-2">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
+  <a class="nav-link" href="../articles/scry.html">Get started</a>
+</li>
+<li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="active nav-item dropdown">
@@ -54,7 +57,7 @@
     <a class="dropdown-item" href="../articles/languages.html">Languages</a>
     <a class="dropdown-item" href="../articles/layouts.html">Layouts and Faces</a>
     <a class="dropdown-item" href="../articles/regex.html">Regular Expressions</a>
-    <a class="dropdown-item" href="../articles/syntax.html">Search Reference</a>
+    <a class="dropdown-item" href="../articles/syntax.html">Query Syntax</a>
   </div>
 </li>
       </ul>
@@ -99,13 +102,13 @@
 </h2>
 <p>Scryfall supports most POSIX regular expression constructs, many are detailed below. Our regular expressions have the following configuration and limits:</p>
 <ul>
-<li>If your expression includes forward slashes <code>/</code> they must be escaped: <code>\/</code>
+<li>If your expression includes forward slashes <code>/</code> they must be escaped: <code>\\/</code>
 </li>
 <li>Scryfall regular expressions are Unicode-aware. The <code>.</code> will match characters beyond the ASCII range.</li>
-<li>Backreferences are not supported (<code>\1</code>, <code>\2</code>, etc)</li>
+<li>Backreferences are not supported (<code>\\1</code>, <code>\\2</code>, etc).</li>
 <li>All regular expressions are case-insensitive (<code>i</code>).</li>
-<li>All regular expressions are “multiline” mode (<code>m</code>). Line anchors will match paragraphs in Oracle text, instead of the entire block</li>
-<li>All characters in your expression are significant and whitespace will be matched (sometimes listed as “tight mode”)</li>
+<li>All regular expressions are “multiline” mode (<code>m</code>). Line anchors will match paragraphs in Oracle text, instead of the entire block.</li>
+<li>All characters in your expression are significant and whitespace will be matched (sometimes listed as “tight mode”).</li>
 <li>You cannot add configuration to regular expressions on Scryfall. For example <code>o:/tap/</code> will work while <code>o:/tap/gi</code> will not.</li>
 <li>Scryfall regular expressions are match-only. Scryfall does not support extracting data from capture groups or performing substitutions.</li>
 <li>Scryfall uses only the <code>\n</code> character for newlines in all text fields across our entire database. No fields include <code>\r</code> or <code>\f</code>.</li>
@@ -118,8 +121,8 @@
 <p>Scryfall includes the following additional, non-standard regex features:</p>
 <table class="table">
 <colgroup>
-<col width="6%">
-<col width="93%">
+<col width="7%">
+<col width="92%">
 </colgroup>
 <thead><tr class="header">
 <th>Syntax</th>
@@ -128,26 +131,26 @@
 <tbody>
 <tr class="odd">
 <td><code>~</code></td>
-<td>An automatic alias for the current card name or “this spell” if the card mentions itself.</td>
+<td>An automatic alias for the current card name or “this spell” if the card mentions itself</td>
 </tr>
 <tr class="even">
-<td><code>\sm</code></td>
+<td><code>\\sm</code></td>
 <td>Short-hand escape for any mana symbol</td>
 </tr>
 <tr class="odd">
-<td><code>\ss</code></td>
+<td><code>\\ss</code></td>
 <td>Short-hand escape for any card symbol</td>
 </tr>
 <tr class="even">
-<td><code>\spt</code></td>
+<td><code>\\spt</code></td>
 <td>Short-hand escape for a X/X power/toughness expression</td>
 </tr>
 <tr class="odd">
-<td><code>\spp</code></td>
+<td><code>\\spp</code></td>
 <td>Short-hand escape for a +X/+X power/toughness expression</td>
 </tr>
 <tr class="even">
-<td><code>\smm</code></td>
+<td><code>\\smm</code></td>
 <td>Short-hand escape for a -X/-X power/toughness expression</td>
 </tr>
 </tbody>
@@ -156,10 +159,11 @@
 <div class="section level2">
 <h2 id="atoms">Atoms<a class="anchor" aria-label="anchor" href="#atoms"></a>
 </h2>
+<p>The following atoms are supported:</p>
 <table class="table">
 <colgroup>
-<col width="5%">
-<col width="94%">
+<col width="6%">
+<col width="93%">
 </colgroup>
 <thead><tr class="header">
 <th>Atom</th>
@@ -189,10 +193,10 @@
 </tr>
 <tr class="even">
 <td><code>(re|fe)</code></td>
-<td>A group that matches either the expression <code>re</code> or <code>fe</code>. <code>|</code> is the pipe character.</td>
+<td>A group that matches either the expression <code>re</code> or <code>fe</code>. <code>|</code> is the pipe character</td>
 </tr>
 <tr class="odd">
-<td><code>\k</code></td>
+<td><code>\\k</code></td>
 <td>A literal escaped <code>k</code> (or any other character)</td>
 </tr>
 <tr class="even">
@@ -325,8 +329,8 @@
 <p>The following character classes are supported:</p>
 <table class="table">
 <colgroup>
-<col width="7%">
-<col width="92%">
+<col width="8%">
+<col width="91%">
 </colgroup>
 <thead><tr class="header">
 <th>Class</th>
@@ -334,25 +338,25 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>\n</code></td>
+<td><code>\\n</code></td>
 <td>Matches a newline</td>
 </tr>
 <tr class="even">
-<td><code>\s</code></td>
+<td><code>\\s</code></td>
 <td>Matches any whitespace</td>
 </tr>
 <tr class="odd">
-<td><code>\d</code></td>
-<td>Matches a single digit character: <code>0–9</code>
+<td><code>\\d</code></td>
+<td>Matches a single digit character: <code>0-9</code>
 </td>
 </tr>
 <tr class="even">
-<td><code>\w</code></td>
+<td><code>\\w</code></td>
 <td>Matches any word character: <code>A</code> through <code>z</code> and <code>0</code> through <code>9</code>
 </td>
 </tr>
 <tr class="odd">
-<td><code>\uHHHH</code></td>
+<td><code>\\uHHHH</code></td>
 <td>Matches a character whose hexadecimal value is <code>HHHH</code>, where <code>HHHH</code> is exactly four hexadecimal digits</td>
 </tr>
 </tbody>

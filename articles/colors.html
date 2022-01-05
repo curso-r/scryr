@@ -43,6 +43,9 @@
     <div id="navbar" class="collapse navbar-collapse ms-2">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
+  <a class="nav-link" href="../articles/scry.html">Get started</a>
+</li>
+<li class="nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="active nav-item dropdown">
@@ -54,7 +57,7 @@
     <a class="dropdown-item" href="../articles/languages.html">Languages</a>
     <a class="dropdown-item" href="../articles/layouts.html">Layouts and Faces</a>
     <a class="dropdown-item" href="../articles/regex.html">Regular Expressions</a>
-    <a class="dropdown-item" href="../articles/syntax.html">Search Reference</a>
+    <a class="dropdown-item" href="../articles/syntax.html">Query Syntax</a>
   </div>
 </li>
       </ul>
@@ -88,11 +91,11 @@
     
 <p>While Magic cards can represent costs and colors using printed symbols, the <a href="https://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules" class="external-link">Comprehensive Rules</a> and Scryfall’s API use a text representation of these values.</p>
 <div class="section level2">
-<h2 id="color-arrays">Color Arrays<a class="anchor" aria-label="anchor" href="#color-arrays"></a>
+<h2 id="color-vectors">Color Vectors<a class="anchor" aria-label="anchor" href="#color-vectors"></a>
 </h2>
-<p>Whenever the API presents set of Magic colors, the field will be an array that uses the uppercase, single-character abbreviations for those colors. For example, <code>["W","U"]</code> represents something that is both white and blue. Colorless sources are denoted with an empty array <code>[]</code>.</p>
-<p>Common places were you might see this kind of array are a Card object’s <code>colors</code> and <code>color_identity</code>. When a color field is <code>null</code> or missing, it implies that that information is not pertinent for the current object. It does not imply that the object is colorless.</p>
-<p>Color arrays are not guaranteed to be in a particular order.</p>
+<p>Whenever the API presents set of <em>Magic</em> colors, the column will be a vector that uses the uppercase, single-character abbreviations for those colors. For example, <code>&lt;"W", "U"&gt;</code> represents something that is both white and blue. Colorless sources are denoted with an empty vector <code>NULL</code>.</p>
+<p>Common places were you might see this kind of vector are <code><a href="../reference/scry-cards.html">scry_cards()</a></code>’s <code>colors</code> and <code>color_identity</code>. When a color column is <code>NULL</code> or <code>NA</code>, it implies that that information is not pertinent for the current object. It does not imply that the object is colorless.</p>
+<p>Color vectors are <strong>not guaranteed to be in a particular order</strong>.</p>
 <p>A list of color representations is provided below:</p>
 <table class="table">
 <thead><tr class="header">
@@ -105,31 +108,31 @@
 <tr class="odd">
 <td><a href="https://scryfall.com/search?order=edhrec&amp;q=o%3A%22%7BW%7D%22+OR+m%3A%7BW%7D" class="external-link"><code>W</code></a></td>
 <td>White</td>
-<td><a href="https://scryfall.com/search?q=%21%22Plains%22+unique%3Aprints" class="external-link">Plains</a></td>
+<td>Plains</td>
 <td><img src="symbols/W.svg" style="width: auto;height: 20px;"></td>
 </tr>
 <tr class="even">
 <td><a href="https://scryfall.com/search?order=edhrec&amp;q=o%3A%22%7BU%7D%22+OR+m%3A%7BU%7D" class="external-link"><code>U</code></a></td>
 <td>Blue</td>
-<td><a href="https://scryfall.com/search?q=%21%22Island%22+unique%3Aprints" class="external-link">Island</a></td>
+<td>Island</td>
 <td><img src="symbols/U.svg" style="width: auto;height: 20px;"></td>
 </tr>
 <tr class="odd">
 <td><a href="https://scryfall.com/search?order=edhrec&amp;q=o%3A%22%7BB%7D%22+OR+m%3A%7BB%7D" class="external-link"><code>B</code></a></td>
 <td>Black</td>
-<td><a href="https://scryfall.com/search?q=%21%22Swamp%22+unique%3Aprints" class="external-link">Swamp</a></td>
+<td>Swamp</td>
 <td><img src="symbols/B.svg" style="width: auto;height: 20px;"></td>
 </tr>
 <tr class="even">
 <td><a href="https://scryfall.com/search?order=edhrec&amp;q=o%3A%22%7BR%7D%22+OR+m%3A%7BR%7D" class="external-link"><code>R</code></a></td>
 <td>Red</td>
-<td><a href="https://scryfall.com/search?q=%21%22Mountain%22+unique%3Aprints" class="external-link">Mountain</a></td>
+<td>Mountain</td>
 <td><img src="symbols/R.svg" style="width: auto;height: 20px;"></td>
 </tr>
 <tr class="odd">
 <td><a href="https://scryfall.com/search?order=edhrec&amp;q=o%3A%22%7BG%7D%22+OR+m%3A%7BG%7D" class="external-link"><code>G</code></a></td>
 <td>Green</td>
-<td><a href="https://scryfall.com/search?q=%21%22Forest%22+unique%3Aprints" class="external-link">Forest</a></td>
+<td>Forest</td>
 <td><img src="symbols/G.svg" style="width: auto;height: 20px;"></td>
 </tr>
 </tbody>
@@ -139,7 +142,7 @@
 <h2 id="mana-costs-and-other-symbology">Mana Costs and Other Symbology<a class="anchor" aria-label="anchor" href="#mana-costs-and-other-symbology"></a>
 </h2>
 <p>Whenever the API presents mana costs and other card symbols, it does so using the official plaintext notation for that symbol set forth in the <a href="https://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules" class="external-link">Comprehensive Rules</a>. For example, “<img src="symbols/2W.svg" style="width: auto;height: 20px;">, <img src="symbols/T.svg" style="width: auto;height: 20px;">” is written as <code>{2/W}, {T}</code>.</p>
-<p>An exhaustive list of all symbology is provided below. You can also retrieve this information programmatically using the <code><a href="../reference/scry-symbology.html">scry_symbology()</a></code> method.</p>
+<p>An exhaustive list of all symbology is provided below. You can also retrieve this information programmatically using the <code><a href="../reference/scry-symbols.html">scry_symbols()</a></code> function.</p>
 <p>Note that some symbols use UTF-8 characters outside the ASCII range.</p>
 <table class="table">
 <thead><tr class="header">
