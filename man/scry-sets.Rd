@@ -8,32 +8,28 @@
 \usage{
 scry_sets()
 
-scry_set(id, source = c("scryfall", "tcgplayer"))
+scry_set(id, source = "code")
 }
 \arguments{
-\item{id}{Unique set indentifier. May refer to distinct \code{source}s:
-\itemize{
-\item A three to five-letter set code.
-\item A Scryfall ID.
-\item A \code{tcgplayer_id} or \code{groupId} (if \code{source = "tcgplayer"}).
-}}
+\item{id}{Unique set indentifier. May refer to any supported \code{source}.}
 
-\item{source}{Source to which \code{id} refers. Can be either \code{scryfall} or
-\code{tcgplayer}.}
+\item{source}{Source to which \code{id} refers. Can be any one of \code{code} (the
+regular three to five-letter set code), \code{scryfall} or \code{tcgplayer}. See
+details.}
 }
 \value{
 A data frame with 1 or more rows and the following columns:
 \itemize{
-\item \code{object} [chr]: A content type for this object, always \code{set}.
 \item \code{id} [chr]: A unique ID for this set on Scryfall that will not change.
-\item \code{code} [chr]: The unique three to five-letter code for this set.
+\item \code{code} [chr]: The unique three to five-letter code for this set. See
+details.
+\item \code{name} [chr]: The English name of the set.
 \item \code{mtgo_code} [chr]: The unique code for this set on MTGO, which may differ
 from the regular code.
 \item \code{arena_code} [chr]: The unique code for this set on MTG Arena, which may
 differ from the regular code.
 \item \code{tcgplayer_id} [int]: This set’s ID on TCGplayer’s API, also known as the
 \code{groupId}.
-\item \code{name} [chr]: The English name of the set.
 \item \code{uri} [chr]: A link to this set object on Scryfall’s API.
 \item \code{scryfall_uri} [chr]: A link to this set’s permapage on Scryfall’s
 \item \code{search_uri} [chr]: A Scryfall API URI that you can request to begin
@@ -43,40 +39,40 @@ printed in the set (in GMT-8 Pacific time).
 \item \code{set_type} [chr]: Scryfall provides an overall categorization for each
 Set in the \code{set_type} property. The options are:
 \itemize{
-\item \code{core}: A yearly Magic core set (Tenth Edition, etc)
-\item \code{expansion}: A rotational expansion set in a block (Zendikar, etc)
-\item \code{masters}: A reprint set that contains no new cards (Modern Masters, etc)
-\item \code{masterpiece}: Masterpiece Series premium foil cards
-\item \code{arsenal}: A Commander-oriented gift set
-\item \code{from_the_vault}: From the Vault gift sets
-\item \code{spellbook}: Spellbook series gift sets
-\item \code{premium_deck}: Premium Deck Series decks
-\item \code{duel_deck}: Duel Decks
-\item \code{draft_innovation}: Special draft sets, like Conspiracy and Battlebond
-\item \code{treasure_chest}: Magic Online treasure chest prize sets
-\item \code{commander}: Commander preconstructed decks
-\item \code{planechase}: Planechase sets
-\item \code{archenemy}: Archenemy sets
-\item \code{vanguard}: Vanguard card sets
-\item \code{funny}: A funny un-set or set with funny promos (Unglued, Happy
-Holidays, etc)
-\item \code{starter}: A starter/introductory set (Portal, etc)
-\item \code{box}: A gift box set
-\item \code{promo}: A set that contains purely promotional cards
-\item \code{token}: A set made up of tokens and emblems.
-\item \code{memorabilia}: A set made up of gold-bordered, oversize, or trophy cards
-that are not legal
+\item \code{core}: A yearly Magic core set (Tenth Edition, etc).
+\item \code{expansion}: A rotational expansion set in a block (Zendikar, etc).
+\item \code{masters}: A reprint set that contains no new cards (Modern Masters,
+etc).
+\item \code{masterpiece}: Masterpiece Series premium foil cards.
+\item \code{arsenal}: A Commander-oriented gift set.
+\item \code{from_the_vault}: From the Vault gift sets.
+\item \code{spellbook}: Spellbook series gift sets.
+\item \code{premium_deck}: Premium Deck Series decks.
+\item \code{duel_deck}: Duel Decks.
+\item \code{draft_innovation}: Special draft sets, like Conspiracy and Battlebond.
+\item \code{treasure_chest}: Magic Online treasure chest prize sets.
+\item \code{commander}: Commander preconstructed decks.
+\item \code{planechase}: Planechase sets.
+\item \code{archenemy}: Archenemy sets.
+\item \code{vanguard}: Vanguard card sets.
+\item \code{funny}: A funny un-set or set with funny promos (Unglued, Happy.
+Holidays, etc).
+\item \code{starter}: A starter/introductory set (Portal, etc).
+\item \code{box}: A gift box set.
+\item \code{promo}: A set that contains purely promotional cards.
+\item \code{token}: A set made up of tokens and emblems..
+\item \code{memorabilia}: A set made up of gold-bordered, oversize, or trophy cards.
+that are not legal.
 }
 \item \code{card_count} [int]: The number of cards in this set.
 \item \code{parent_set_code} [chr]: The set code for the parent set, if any. \code{promo}
 and \code{token} sets often have a parent set.
 \item \code{printed_size} [int]: The denominator for the set’s printed collector
 numbers.
-\item \code{digital} [lgl]: True if this set was only released in a video game.
-\item \code{nonfoil_only} [lgl]: True if this set contains only nonfoil cards.
-website.
-\item \code{foil_only} [lgl]: True if this set contains only foil cards.
-\item \code{block_code} [chr]: Nullable  The block code for this set, if any.
+\item \code{digital} [lgl]: Whether this set was only released in a video game.
+\item \code{nonfoil_only} [lgl]: Whether this set contains only nonfoil cards.
+\item \code{foil_only} [lgl]: Whether this set contains only foil cards.
+\item \code{block_code} [chr]: The block code for this set, if any.
 \item \code{block} [chr]: The block or group name code for this set, if any.
 \item \code{icon_svg_uri} [chr]: A URI to an SVG file for this set’s icon on
 Scryfall’s CDN. Hotlinking this image isn’t recommended, because it may
@@ -85,11 +81,11 @@ your particular user interface needs.
 }
 }
 \description{
-A Set object represents a group of related Magic cards. All Card objects on
-Scryfall belong to exactly one set.
+A Set represents a group of related Magic cards. All cards on Scryfall belong
+to exactly one set.
 }
 \details{
-Due to Magic's long and complicated history, Scryfall includes many
+Due to \emph{Magic}'s long and complicated history, Scryfall includes many
 un-official sets as a way to group promotional or outlier cards together.
 Such sets will likely have a code that begins with \code{p} or \code{t}, such as \code{pcel}
 or \code{tori}. Official sets always have a three-letter set code, such as \code{zen}.

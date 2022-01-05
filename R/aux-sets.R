@@ -1,12 +1,11 @@
 parse_sets <- function(data) {
   template <- list(
-    "object" = as.character,
     "id" = as.character,
     "code" = as.character,
+    "name" = as.character,
     "mtgo_code" = as.character,
     "arena_code" = as.character,
     "tcgplayer_id" = as.integer,
-    "name" = as.character,
     "uri" = as.character,
     "scryfall_uri" = as.character,
     "search_uri" = as.character,
