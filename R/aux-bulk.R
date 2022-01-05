@@ -5,12 +5,11 @@ as_time <- function(x) {
 
 parse_bulk <- function(data) {
   template <- list(
-    "object" = as.character,
+    "name" = as.character,
     "id" = as.character,
     "type" = as.character,
     "updated_at" = function(x) as_time(gsub("([\\+\\-][0-9]{2}):", " \\1", x)),
     "uri" = as.character,
-    "name" = as.character,
     "description" = as.character,
     "compressed_size" = as.integer,
     "download_uri" = as.character,

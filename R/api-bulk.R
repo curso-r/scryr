@@ -2,7 +2,7 @@
 #'
 #' @description
 #' Scryfall provides daily exports of our card data in bulk files. Each of these
-#' files is represented as a `bulk_data` object via the API.
+#' files is represented as a `bulk_data` object via the API. See details.
 #'
 #' @details
 #' URLs for files change their timestamp each day, and can be fetched
@@ -37,18 +37,17 @@
 #'   cards](https://scryfall.com/search?q=t%3Avanguard),
 #'   [tokens](https://scryfall.com/search?q=t%3Atoken),
 #'   [emblems](https://scryfall.com/search?q=t%3Aemblem), and [funny
-#'   cards](https://scryfall.com/search?q=is%3Afunny). Make sure you’ve reviewed
-#'   documentation for [scry_cards()].
+#'   cards](https://scryfall.com/search?q=is%3Afunny).
 #'
 #' Bulk data is only collected once every 12 hours. You can use [scry_cards()]
 #' to retrieve fresh objects instead.
 #'
 #' @return A data frame with 1 or more rows and the following columns:
 #' * `id` \[chr\]: A unique ID for this bulk item.
+#' * `name` \[chr\]: A human-readable name for this file. See details.
 #' * `type` \[chr\]: A computer-readable string for the kind of bulk item.
 #' * `updated_at` \[dttm\]: The time when this file was last updated.
 #' * `uri` \[chr\]: The Scryfall API URI for this file.
-#' * `name` \[chr\]: A human-readable name for this file.
 #' * `description` \[chr\]: A human-readable description for this file.
 #' * `compressed_size` \[int\]: The size of this file in integer bytes.
 #' * `download_uri` \[chr\]: The URI that hosts this bulk file for fetching.

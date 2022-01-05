@@ -10,10 +10,10 @@ scry_bulk_data()
 A data frame with 1 or more rows and the following columns:
 \itemize{
 \item \code{id} [chr]: A unique ID for this bulk item.
+\item \code{name} [chr]: A human-readable name for this file. See details.
 \item \code{type} [chr]: A computer-readable string for the kind of bulk item.
 \item \code{updated_at} [dttm]: The time when this file was last updated.
 \item \code{uri} [chr]: The Scryfall API URI for this file.
-\item \code{name} [chr]: A human-readable name for this file.
 \item \code{description} [chr]: A human-readable description for this file.
 \item \code{compressed_size} [int]: The size of this file in integer bytes.
 \item \code{download_uri} [chr]: The URI that hosts this bulk file for fetching.
@@ -24,7 +24,7 @@ to transmit this file when you download it.
 }
 \description{
 Scryfall provides daily exports of our card data in bulk files. Each of these
-files is represented as a \code{bulk_data} object via the API.
+files is represented as a \code{bulk_data} object via the API. See details.
 }
 \details{
 URLs for files change their timestamp each day, and can be fetched
@@ -58,8 +58,7 @@ sufficient.
 \item Every card type in every product is included, including \href{https://scryfall.com/search?q=t\%3Aplane+or+t\%3Aphenom}{planar cards},
 \href{https://scryfall.com/search?q=t\%3Ascheme}{schemes}, \href{https://scryfall.com/search?q=t\%3Avanguard}{Vanguard cards},
 \href{https://scryfall.com/search?q=t\%3Atoken}{tokens},
-\href{https://scryfall.com/search?q=t\%3Aemblem}{emblems}, and \href{https://scryfall.com/search?q=is\%3Afunny}{funny cards}. Make sure you’ve reviewed
-documentation for \code{\link[=scry_cards]{scry_cards()}}.
+\href{https://scryfall.com/search?q=t\%3Aemblem}{emblems}, and \href{https://scryfall.com/search?q=is\%3Afunny}{funny cards}.
 }
 
 Bulk data is only collected once every 12 hours. You can use \code{\link[=scry_cards]{scry_cards()}}
