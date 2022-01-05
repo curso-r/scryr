@@ -9,7 +9,8 @@
 #'
 #' @return A data frame with 1 row and the following columns:
 #' * `symbol` \[chr\]: The plaintext symbol. Often surrounded with curly braces.
-#'   Note that not all symbols are ASCII text (for example, `{∞}`).
+#'   Note that not all symbols are ASCII text (for example, the infinity
+#'   symbol).
 #' * `colors` \[list\]: A vector of colors that this symbol represents.
 #' * `cmc` \[dbl\]: A decimal number representing this symbol’s converted mana
 #'   cost. Note that mana symbols from funny sets can have fractional converted

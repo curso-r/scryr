@@ -11,7 +11,8 @@ scry_symbols()
 A data frame with 1 row and the following columns:
 \itemize{
 \item \code{symbol} [chr]: The plaintext symbol. Often surrounded with curly braces.
-Note that not all symbols are ASCII text (for example, \verb{\{∞\}}).
+Note that not all symbols are ASCII text (for example, the infinity
+symbol).
 \item \code{colors} [list]: A vector of colors that this symbol represents.
 \item \code{cmc} [dbl]: A decimal number representing this symbol’s converted mana
 cost. Note that mana symbols from funny sets can have fractional converted

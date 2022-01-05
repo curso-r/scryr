@@ -196,7 +196,7 @@
 #'   this card.
 #' * `collector_number` \[chr\]: This card's collector number. Note that
 #'   collector numbers can contain non-numeric characters, such as letters or
-#'   `★`.
+#'   starts.
 #' * `content_warning` \[lgl\]: `TRUE` if you should consider avoiding use of
 #'   this print downstream.
 #' * `digital` \[lgl\]: Whether this card was only released in a video game.

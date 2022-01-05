@@ -244,7 +244,7 @@ cards may not have this column yet.
 this card.
 \item \code{collector_number} [chr]: This card's collector number. Note that
 collector numbers can contain non-numeric characters, such as letters or
-\verb{★}.
+starts.
 \item \code{content_warning} [lgl]: \code{TRUE} if you should consider avoiding use of
 this print downstream.
 \item \code{digital} [lgl]: Whether this card was only released in a video game.
