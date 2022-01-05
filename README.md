@@ -5,8 +5,6 @@
 
 <!-- badges: start -->
 
-[![CRAN
-status](https://www.r-pkg.org/badges/version/scry)](https://CRAN.R-project.org/package=scry)
 [![R-CMD-check](https://github.com/curso-r/scry/workflows/R-CMD-check/badge.svg)](https://github.com/curso-r/scry/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/curso-r/scry/branch/main/graph/badge.svg)](https://app.codecov.io/gh/curso-r/scry?branch=main)
