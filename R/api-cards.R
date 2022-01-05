@@ -41,7 +41,7 @@
 #' * `review`: Sort cards how podcasts review sets, usually color & CMC, lowest
 #'   → highest, with Booster Fun cards at the end.
 #' @param dir The direction to sort cards. The options are:
-#' * `auto`: Scryfall will automatically choose the most inuitive direction to
+#' * `auto`: Scryfall will automatically choose the most intuitive direction to
 #'   sort.
 #' * `asc`: Sort ascending (the direction of the arrows in the previous
 #'   argument).
@@ -56,13 +56,13 @@
 #' [Hairy Runesword](https://scryfall.com/card/drk/107%E2%80%A0/runesword).
 #' @param page The results' page number to return. If `NULL` (the default), all
 #' available results will be returned.
-#' @param id Unique card indentifier. May refer to any supported `source`.
+#' @param id Unique card identifier. May refer to any supported `source`.
 #' @param source Source to which `id` refers. Can be any one of `scryfall`,
 #' `multiverse`, `mtgo`, `arena`, `tcgplayer` or `cardmarket`.
 #' @param name A string with a card's name (or part of it).
 #' @param mode Search mode. Can be either `fuzzy` (`name` may be part of a
 #' card's name, allows misspellings and partial words to be provided too) or
-#' `exact` (`name` has to match exactly, case insenstive).
+#' `exact` (`name` has to match exactly, case insensitive).
 #' @param set The three to five-letter set code.
 #' @param number The card's collector number for a set.
 #' @param lang The 2-3 character language code. For more information, see
@@ -185,7 +185,8 @@
 #'   * `printed_text` \[chr\]: The localized text printed on this face, if any.
 #'   * `printed_type_line` \[chr\]: The localized type line printed on this
 #'     face, if any.
-#'   * `watermark` \[chr\]: The watermark on this particulary card face, if any.
+#'   * `watermark` \[chr\]: The watermark on this particularly card face, if
+#'     any.
 #' * `artist` \[chr\]: The name of the illustrator of this card. Newly spoiled
 #'   cards may not have this column yet.
 #' * `booster` \[lgl\]: Whether this card is found in boosters.

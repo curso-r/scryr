@@ -27,7 +27,7 @@ A data frame with 1 or more rows and the following columns:
 \item \code{source} [chr]: A computer-readable string indicating which company
 produced this ruling, either \code{wotc} or \code{scryfall}. See details.
 \item \code{published_at} [date]: The date when the ruling or note was published.
-\item \code{comment} [tbl]: The text of the ruling.
+\item \code{comment} [chr]: The text of the ruling.
 }
 }
 \description{

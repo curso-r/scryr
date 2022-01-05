@@ -71,7 +71,7 @@ last.
 
 \item{dir}{The direction to sort cards. The options are:
 \itemize{
-\item \code{auto}: Scryfall will automatically choose the most inuitive direction to
+\item \code{auto}: Scryfall will automatically choose the most intuitive direction to
 sort.
 \item \code{asc}: Sort ascending (the direction of the arrows in the previous
 argument).
@@ -92,7 +92,7 @@ like the
 \item{page}{The results' page number to return. If \code{NULL} (the default), all
 available results will be returned.}
 
-\item{id}{Unique card indentifier. May refer to any supported \code{source}.}
+\item{id}{Unique card identifier. May refer to any supported \code{source}.}
 
 \item{source}{Source to which \code{id} refers. Can be any one of \code{scryfall},
 \code{multiverse}, \code{mtgo}, \code{arena}, \code{tcgplayer} or \code{cardmarket}.}
@@ -101,7 +101,7 @@ available results will be returned.}
 
 \item{mode}{Search mode. Can be either \code{fuzzy} (\code{name} may be part of a
 card's name, allows misspellings and partial words to be provided too) or
-\code{exact} (\code{name} has to match exactly, case insenstive).}
+\code{exact} (\code{name} has to match exactly, case insensitive).}
 
 \item{set}{The three to five-letter set code.}
 
@@ -232,7 +232,8 @@ then the \code{image_uris} column will be part of the parent object instead.
 \item \code{printed_text} [chr]: The localized text printed on this face, if any.
 \item \code{printed_type_line} [chr]: The localized type line printed on this
 face, if any.
-\item \code{watermark} [chr]: The watermark on this particulary card face, if any.
+\item \code{watermark} [chr]: The watermark on this particularly card face, if
+any.
 }
 \item \code{artist} [chr]: The name of the illustrator of this card. Newly spoiled
 cards may not have this column yet.

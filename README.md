@@ -35,10 +35,10 @@ devtools::install_github("curso-r/scry")
 
 ## Usage
 
-scry makes it easy to process *Magic* cards’ data programatically. There
-are many endpoints that fully support tidyverse compatible analyses. For
-more information, start with `vignette("scry")` or the [full
-documentation](https://curso-r.github.io/scry/).
+scry makes it easy to process *Magic* cards’ data programmatically.
+There are many endpoints that fully support tidyverse compatible
+analyses. For more information, start with `vignette("scry")` or the
+[full documentation](https://curso-r.github.io/scry/).
 
 ``` r
 library(scry)

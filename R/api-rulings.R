@@ -20,7 +20,7 @@
 #' * `source` \[chr\]: A computer-readable string indicating which company
 #'   produced this ruling, either `wotc` or `scryfall`. See details.
 #' * `published_at` \[date\]: The date when the ruling or note was published.
-#' * `comment` \[tbl\]: The text of the ruling.
+#' * `comment` \[chr\]: The text of the ruling.
 #'
 #' @examples \donttest{
 #' # Get rulings for a card

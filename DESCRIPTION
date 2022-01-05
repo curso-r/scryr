@@ -1,5 +1,5 @@
 Package: scry
-Title: An Interface To Scryfall
+Title: An Interface to the 'Scryfall' API
 Version: 0.0.0.9000
 Authors@R: c(
     person("Caio", "Lente", , "clente@curso-r.com", role = c("aut", "cre"),
@@ -9,7 +9,7 @@ Authors@R: c(
     person("Curso-R", role = c("cph", "fnd"))
   )
 Description: A simple, light, and robust interface between R and
-    Scryfall's card data API: <https://scryfall.com/docs/api>.
+    the 'Scryfall' card data API <https://scryfall.com/docs/api>.
 License: MIT + file LICENSE
 URL: https://curso-r.github.io/scry/, https://github.com/curso-r/scry
 Imports:
