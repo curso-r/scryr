@@ -10,7 +10,7 @@ articles:
   regex: regex.html
   scryr: scryr.html
   syntax: syntax.html
-last_built: 2022-01-05T20:29Z
+last_built: 2022-01-05T20:49Z
 urls:
   reference: https://curso-r.github.io/scryr/reference
   article: https://curso-r.github.io/scryr/articles
