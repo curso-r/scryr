@@ -16,19 +16,19 @@ While Magic cards can represent costs and colors using printed symbols, the
 [Comprehensive Rules](https://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules)
 and Scryfall's API use a text representation of these values.
 
-## Color Arrays
+## Color Vectors
 
-Whenever the API presents set of Magic colors, the field will be an array that
-uses the uppercase, single-character abbreviations for those colors. For
-example, `["W","U"]` represents something that is both white and blue. Colorless
-sources are denoted with an empty array `[]`.
+Whenever the API presents set of _Magic_ colors, the column will be a vector
+that uses the uppercase, single-character abbreviations for those colors. For
+example, `<"W", "U">` represents something that is both white and blue.
+Colorless sources are denoted with an empty vector `NULL`.
 
-Common places were you might see this kind of array are a Card object's `colors`
-and `color_identity`. When a color field is `null` or missing, it implies that
-that information is not pertinent for the current object. It does not imply that
-the object is colorless.
+Common places were you might see this kind of vector are `scry_cards()`'s
+`colors` and `color_identity`. When a color column is `NULL` or `NA`, it implies
+that that information is not pertinent for the current object. It does not imply
+that the object is colorless.
 
-Color arrays are not guaranteed to be in a particular order.
+Color vectors are **not guaranteed to be in a particular order**.
 
 A list of color representations is provided below:
 
@@ -51,7 +51,7 @@ For example,
 written as `{2/W}, {T}`.
 
 An exhaustive list of all symbology is provided below. You can also retrieve
-this information programmatically using the `scry_symbols()` method.
+this information programmatically using the `scry_symbols()` function.
 
 Note that some symbols use UTF-8 characters outside the ASCII range.
 

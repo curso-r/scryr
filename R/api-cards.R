@@ -127,7 +127,7 @@
 #'   `productId`.
 #' * `cardmarket_id` \[int\]: This card's ID on Cardmarket's API, also known as
 #'   the `idProduct`.
-#' * `uri` \[chr\]: A link to this card object on Scryfall's API.
+#' * `uri` \[chr\]: A link to this card on Scryfall's API.
 #' * `scryfall_uri` \[chr\]: A link to this card's permapage on Scryfall's
 #' * `rulings_uri` \[chr\]: A link to this card's rulings list on Scryfall's
 #'   API. For more information see [scry_ruling()]
@@ -246,8 +246,8 @@
 #' * `set_search_uri` \[chr\]: A link to where you can begin paginating this
 #'   card's set on the Scryfall API.
 #' * `set_type` \[chr\]: The type of set this printing is in.
-#' * `set_uri` \[chr\]: A link to this card's set object on Scryfall's API. For
-#'   more information see `?scry_sets()`.
+#' * `set_uri` \[chr\]: A link to this card's set on Scryfall's API. For more
+#'   information see `?scry_sets()`.
 #' * `set_id` \[chr\]: This card's set Scryfall ID.
 #' * `story_spotlight` \[lgl\]: Whether this card is a Story Spotlight.
 #' * `textless` \[lgl\]: Whether the card is printed without text.

@@ -26,7 +26,7 @@
 #'   differ from the regular code.
 #' * `tcgplayer_id` \[int\]: This set’s ID on TCGplayer’s API, also known as the
 #'   `groupId`.
-#' * `uri` \[chr\]: A link to this set object on Scryfall’s API.
+#' * `uri` \[chr\]: A link to this set on Scryfall’s API.
 #' * `scryfall_uri` \[chr\]: A link to this set’s permapage on Scryfall’s
 #' * `search_uri` \[chr\]: A Scryfall API URI that you can request to begin
 #'   paginating over the cards in this set.

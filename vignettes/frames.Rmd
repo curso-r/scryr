@@ -8,12 +8,12 @@ vignette: >
 ---
 
 Scryfall tracks the appearance of card's bounding frame programmatically with
-the `frame` and `frame_effects` fields.
+the `frame` and `frame_effects` columns.
 
 ## Frames
 
-The `frame` field tracks the edition of the card frame of used for the re/print
-in question. The overall Magic frame has gone though several major revisions in
+The `frame` column tracks the edition of the card frame used for the re/print in
+question. The overall _Magic_ frame has gone though several major revisions in
 the game's lifetime.
 
 | Frame    | Description                                                                                                    |
@@ -26,7 +26,7 @@ the game's lifetime.
 
 ## Frame Effects
 
-The `frame_effects` field tracks additional frame artwork applied over a
+The `frame_effects` column tracks additional frame artwork applied over a
 particular frame. For example, there are both 2003 and 2015-frame cards with the
 Nyx-touched effect.
 

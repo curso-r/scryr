@@ -25,15 +25,15 @@ you can make with regular expressions:
 Scryfall supports most POSIX regular expression constructs, many are detailed
 below. Our regular expressions have the following configuration and limits:
 
-* If your expression includes forward slashes `/` they must be escaped: `\/`
+* If your expression includes forward slashes `/` they must be escaped: `\\/`
 * Scryfall regular expressions are Unicode-aware. The `.` will match characters
   beyond the ASCII range.
-* Backreferences are not supported (`\1`, `\2`, etc)
+* Backreferences are not supported (`\\1`, `\\2`, etc).
 * All regular expressions are case-insensitive (`i`).
 * All regular expressions are "multiline" mode (`m`). Line anchors will match
-  paragraphs in Oracle text, instead of the entire block
+  paragraphs in Oracle text, instead of the entire block.
 * All characters in your expression are significant and whitespace will be
-  matched (sometimes listed as "tight mode")
+  matched (sometimes listed as "tight mode").
 * You cannot add configuration to regular expressions on Scryfall. For example
   `o:/tap/` will work while `o:/tap/gi` will not.
 * Scryfall regular expressions are match-only. Scryfall does not support
@@ -47,27 +47,29 @@ below. Our regular expressions have the following configuration and limits:
 
 Scryfall includes the following additional, non-standard regex features:
 
-| Syntax | Feature                                                                                   |
-| ------ | ----------------------------------------------------------------------------------------- |
-| `~`    | An automatic alias for the current card name or "this spell" if the card mentions itself. |
-| `\sm`  | Short-hand escape for any mana symbol                                                     |
-| `\ss`  | Short-hand escape for any card symbol                                                     |
-| `\spt` | Short-hand escape for a X/X power/toughness expression                                    |
-| `\spp` | Short-hand escape for a +X/+X power/toughness expression                                  |
-| `\smm` | Short-hand escape for a -X/-X power/toughness expression                                  |
+| Syntax  | Feature                                                                                  |
+| ------- | ---------------------------------------------------------------------------------------- |
+| `~`     | An automatic alias for the current card name or "this spell" if the card mentions itself |
+| `\\sm`  | Short-hand escape for any mana symbol                                                    |
+| `\\ss`  | Short-hand escape for any card symbol                                                    |
+| `\\spt` | Short-hand escape for a X/X power/toughness expression                                   |
+| `\\spp` | Short-hand escape for a +X/+X power/toughness expression                                 |
+| `\\smm` | Short-hand escape for a -X/-X power/toughness expression                                 |
 
 ## Atoms
 
-| Atom      | Description                                                                                                                                         |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `.`       | Any single character                                                                                                                                |
-| `[kf]`    | Bracket expression matching a single character which is `k` or `f` (or any other group of literal characters)                                       |
-| `[^kf]`   | Bracket expression matching a single character which **is not** `k` or `f` (or any other group of literal characters)                               |
-| `[f-k]`   | Bracket expression matching a single character which is between `f` through `k` in Unicode, inclusive (or any other range of of literal characters) |
-| `(re)`    | A group that matches the expression `re`                                                                                                            |
-| `(re|fe)` | A group that matches either the expression `re` or `fe`. `|` is the pipe character.                                                                 |
-| `\k`      | A literal escaped `k` (or any other character)                                                                                                      |
-| `k`       | The character `k` (or another non-meta character)                                                                                                   |
+The following atoms are supported:
+
+| Atom       | Description                                                                                                                                         |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.`        | Any single character                                                                                                                                |
+| `[kf]`     | Bracket expression matching a single character which is `k` or `f` (or any other group of literal characters)                                       |
+| `[^kf]`    | Bracket expression matching a single character which **is not** `k` or `f` (or any other group of literal characters)                               |
+| `[f-k]`    | Bracket expression matching a single character which is between `f` through `k` in Unicode, inclusive (or any other range of of literal characters) |
+| `(re)`     | A group that matches the expression `re`                                                                                                            |
+| `(re|fe)`  | A group that matches either the expression `re` or `fe`. `|` is the pipe character                                                                  |
+| `\\k`      | A literal escaped `k` (or any other character)                                                                                                      |
+| `k`        | The character `k` (or another non-meta character)                                                                                                   |
 
 ## Quantifiers
 
@@ -106,10 +108,10 @@ The following anchors/lookarounds are supported:
 
 The following character classes are supported:
 
-| Class    | Description                                                                                            |
-| -------- | ------------------------------------------------------------------------------------------------------ |
-| `\n`     | Matches a newline                                                                                      |
-| `\s`     | Matches any whitespace                                                                                 |
-| `\d`     | Matches a single digit character: `0–9`                                                                |
-| `\w`     | Matches any word character: `A` through `z` and `0` through `9`                                        |
-| `\uHHHH` | Matches a character whose hexadecimal value is `HHHH`, where `HHHH` is exactly four hexadecimal digits |
+| Class     | Description                                                                                            |
+| --------- | ------------------------------------------------------------------------------------------------------ |
+| `\\n`     | Matches a newline                                                                                      |
+| `\\s`     | Matches any whitespace                                                                                 |
+| `\\d`     | Matches a single digit character: `0-9`                                                                |
+| `\\w`     | Matches any word character: `A` through `z` and `0` through `9`                                        |
+| `\\uHHHH` | Matches a character whose hexadecimal value is `HHHH`, where `HHHH` is exactly four hexadecimal digits |

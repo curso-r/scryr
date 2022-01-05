@@ -30,7 +30,7 @@ from the regular code.
 differ from the regular code.
 \item \code{tcgplayer_id} [int]: This set’s ID on TCGplayer’s API, also known as the
 \code{groupId}.
-\item \code{uri} [chr]: A link to this set object on Scryfall’s API.
+\item \code{uri} [chr]: A link to this set on Scryfall’s API.
 \item \code{scryfall_uri} [chr]: A link to this set’s permapage on Scryfall’s
 \item \code{search_uri} [chr]: A Scryfall API URI that you can request to begin
 paginating over the cards in this set.

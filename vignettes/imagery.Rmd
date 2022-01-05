@@ -7,9 +7,8 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Scryfall produces multiple sizes of images and image crops for each Card object.
-Links to these images are available in each Card objects' `image_uris`
-properties.
+Scryfall produces multiple sizes of images and image crops for each card. Links
+to these images are available in each card's `image_uris` column.
 
 The image formats are:
 
@@ -26,7 +25,7 @@ The image formats are:
 
 As a card goes through spoiler season or other data entry, it may have no
 imagery for a period, or low-quality imagery. You can get a computer-readable
-value of the image's state using the `image_status` field on card objects.
+value of the image's state using the `image_status` column on cards.
 
 The statuses are:
 
@@ -60,6 +59,3 @@ In particular, when using the `art_crop`:
 * List the artist name and copyright elsewhere in the same interface presenting
 the art crop, or use the full card image elsewhere in the same interface. Users
 should be able to identify the artist and source of the image somehow.
-
-If you believe there is a problem with a card image we have provided, please use
-the "Report Card Issue" button at the bottom of every card page.

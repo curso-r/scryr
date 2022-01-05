@@ -171,7 +171,7 @@ tokens, and other esoteric objects that do not have these identifiers.
 \code{productId}.
 \item \code{cardmarket_id} [int]: This card's ID on Cardmarket's API, also known as
 the \code{idProduct}.
-\item \code{uri} [chr]: A link to this card object on Scryfall's API.
+\item \code{uri} [chr]: A link to this card on Scryfall's API.
 \item \code{scryfall_uri} [chr]: A link to this card's permapage on Scryfall's
 \item \code{rulings_uri} [chr]: A link to this card's rulings list on Scryfall's
 API. For more information see \code{\link[=scry_ruling]{scry_ruling()}}
@@ -293,8 +293,8 @@ website.
 \item \code{set_search_uri} [chr]: A link to where you can begin paginating this
 card's set on the Scryfall API.
 \item \code{set_type} [chr]: The type of set this printing is in.
-\item \code{set_uri} [chr]: A link to this card's set object on Scryfall's API. For
-more information see \code{?scry_sets()}.
+\item \code{set_uri} [chr]: A link to this card's set on Scryfall's API. For more
+information see \code{?scry_sets()}.
 \item \code{set_id} [chr]: This card's set Scryfall ID.
 \item \code{story_spotlight} [lgl]: Whether this card is a Story Spotlight.
 \item \code{textless} [lgl]: Whether the card is printed without text.

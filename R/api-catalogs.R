@@ -3,7 +3,7 @@
 #' @description
 #' Scryfall has multiple catalog datapoints (words, card values, etc). They are
 #' provided by the API as aids for building other Magic software and
-#' understanding possible values for a field on Card objects.
+#' understanding possible values for a column.
 #'
 #' @param name A string with the name of the catalog to return. Can be one of:
 #' * `card-names`: Returns all nontoken English card names in Scryfall's

@@ -30,23 +30,21 @@ files is represented as a \code{bulk_data} object via the API. See details.
 URLs for files change their timestamp each day, and can be fetched
 programmatically. The currently available files are the following:
 \itemize{
-\item Oracle Cards: A JSON file containing one Scryfall card object for each
-Oracle ID on Scryfall. The chosen sets for the cards are an attempt to
-return the most up-to-date recognizable version of the card.
-\item Unique Artwork: A JSON file of Scryfall card objects that together contain
-all unique artworks. The chosen cards promote the best image scans.
-\item Default Cards: A JSON file containing every card object on Scryfall in
-English or the printed language if the card is only available in one
-language.
-\item All Cards: A JSON file containing every card object on Scryfall in every
-language.
+\item Oracle Cards: A JSON file containing one Scryfall card for each Oracle ID
+on Scryfall. The chosen sets for the cards are an attempt to return the
+most up-to-date recognizable version of the card.
+\item Unique Artwork: A JSON file of Scryfall cards that together contain all
+unique artworks. The chosen cards promote the best image scans.
+\item Default Cards: A JSON file containing every card on Scryfall in English or
+the printed language if the card is only available in one language.
+\item All Cards: A JSON file containing every card on Scryfall in every language.
 \item Rulings: A JSON file containing all Rulings on Scryfall. Each ruling refers
 to cards via an \code{oracle_id}.
 }
 
 Please note:
 \itemize{
-\item Card objects in bulk data include price information, but \strong{prices should be
+\item Cards in bulk data include price information, but \strong{prices should be
 considered dangerously stale after 24 hours}. Only use bulk price
 information to track trends or provide a general estimate of card value.
 Prices are not updated frequently enough to power a storefront or sales

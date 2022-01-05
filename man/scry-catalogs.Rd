@@ -59,7 +59,7 @@ A string vector.
 \description{
 Scryfall has multiple catalog datapoints (words, card values, etc). They are
 provided by the API as aids for building other Magic software and
-understanding possible values for a field on Card objects.
+understanding possible values for a column.
 }
 \references{
 \url{https://scryfall.com/docs/api/catalogs}

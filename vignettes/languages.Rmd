@@ -10,15 +10,15 @@ vignette: >
 Scryfall archives Magic cards in 17 languages (including some unofficial
 languages).
 
-Each Card object indicates its language in the `lang` property using an ISO-like
-code. When available, cards may also include their printed text in
-`printed_name`, `printed_type_line`, and `printed_text` fields.
+Each card indicates its language in the `lang` column using an ISO-like code.
+When available, cards may also include their printed text in `printed_name`,
+`printed_type_line`, and `printed_text` columns.
 
 Please note that Oracle text is always English, per game rules. Cards printed in
 non-English languages are a translation of the Oracle text at the time the card
 was printed, but these texts do not receive errata.
 
-Our support for multiple languages in older sets is limited. We are expanding
+Support for multiple languages in older sets is limited. Scryfall is expanding
 this data slowly over time.
 
 The current languages are:
