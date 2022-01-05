@@ -196,9 +196,8 @@
 #' * `collector_number` \[chr\]: This card's collector number. Note that
 #'   collector numbers can contain non-numeric characters, such as letters or
 #'   `★`.
-#' * `content_warning` \[lgl\]: `TRUE` if you should consider [avoiding use of
-#'   this print](https://scryfall.com/blog/regarding-wotc-s-recent-statement-on-depictions-of-racism-220)
-#'   downstream.
+#' * `content_warning` \[lgl\]: `TRUE` if you should consider avoiding use of
+#'   this print downstream.
 #' * `digital` \[lgl\]: Whether this card was only released in a video game.
 #' * `finishes` \[list\]: A vector of computer-readable flags that indicate if
 #'   this card can come in `foil`, `nonfoil`, `etched`, or `glossy` finishes.

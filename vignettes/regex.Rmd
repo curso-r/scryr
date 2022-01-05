@@ -98,7 +98,7 @@ The following anchors/lookarounds are supported:
 | --------- | -------------------------------------------------------------------------------- |
 | `^`       | Matches at the beginning of a line or the beginning of the field                 |
 | `$`       | Matches at the end of a line or the end of the field                             |
-| `\b`      | Matches the boundary of a word                                                   |
+| `\\b`     | Matches the boundary of a word                                                   |
 | `(?=re)`  | Positive lookahead: matches at any point where a substring matching `re` begins  |
 | `(?!re)`  | Negative lookahead: matches at any point where no substring matching `re` begins |
 | `(?<=re)` | Positive lookbehind: matches at any point where a substring matching `re` ends   |

@@ -244,8 +244,8 @@ this card.
 \item \code{collector_number} [chr]: This card's collector number. Note that
 collector numbers can contain non-numeric characters, such as letters or
 \verb{★}.
-\item \code{content_warning} [lgl]: \code{TRUE} if you should consider \href{https://scryfall.com/blog/regarding-wotc-s-recent-statement-on-depictions-of-racism-220}{avoiding use of this print}
-downstream.
+\item \code{content_warning} [lgl]: \code{TRUE} if you should consider avoiding use of
+this print downstream.
 \item \code{digital} [lgl]: Whether this card was only released in a video game.
 \item \code{finishes} [list]: A vector of computer-readable flags that indicate if
 this card can come in \code{foil}, \code{nonfoil}, \code{etched}, or \code{glossy} finishes.

@@ -1,15 +1,18 @@
-aux_parse_preview <- function(x) {
-  x <- tibble::as_tibble(x)
-  x$previewed_at <- as.Date(x$previewed_at)
-
-  return(x)
-}
-
-aux_parse_all_parts <- function(x) {
-  purrr::map_dfc(purrr::transpose(x), purrr::flatten_chr)
-}
-
 parse_cards <- function(data) {
+
+  # Preview data should be a date
+  aux_parse_preview <- function(x) {
+    x <- tibble::as_tibble(x)
+    x$previewed_at <- as.Date(x$previewed_at)
+
+    return(x)
+  }
+
+  # Parts should all be chr
+  aux_parse_all_parts <- function(x) {
+    purrr::map_dfc(purrr::transpose(x), purrr::flatten_chr)
+  }
+
   template <- list(
     "id" = as.character,
     "name" = as.character,
@@ -71,7 +74,7 @@ parse_cards <- function(data) {
     "image_status" = as.character,
     "image_uris" = function(x) list(tibble::as_tibble(x)),
     "preview" = function(x) list(aux_parse_preview(x)),
-    "prices" = function(x) list(tibble::as_tibble(x)),
+    "prices" = function(x) list(tibble::as_tibble(purrr::map(x, as.numeric))),
     "printed_name" = as.character,
     "printed_text" = as.character,
     "printed_type_line" = as.character,
@@ -97,6 +100,8 @@ parse_cards <- function(data) {
   )
 
   df <- bind_rows(data, template)
+
+  # Card faces are cards inside cards
   if (!is.null(df[["card_faces"]])) {
     df$card_faces <- purrr::map_if(
       df$card_faces, ~ !is.null(.x),
