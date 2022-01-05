@@ -90,6 +90,16 @@ un-official sets as a way to group promotional or outlier cards together.
 Such sets will likely have a code that begins with \code{p} or \code{t}, such as \code{pcel}
 or \code{tori}. Official sets always have a three-letter set code, such as \code{zen}.
 }
+\examples{
+\donttest{
+# Get all sets
+scry_sets()
+
+# Get set using an ID
+scry_set("vow")
+}
+
+}
 \references{
 \url{https://scryfall.com/docs/api/sets}
 }

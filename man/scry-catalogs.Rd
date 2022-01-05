@@ -61,6 +61,13 @@ Scryfall has multiple catalog datapoints (words, card values, etc). They are
 provided by the API as aids for building other \emph{Magic} software and
 understanding possible values for a column.
 }
+\examples{
+\donttest{
+# Get information from a catalog
+scry_catalog("keyword-actions")
+}
+
+}
 \references{
 \url{https://scryfall.com/docs/api/catalogs}
 }

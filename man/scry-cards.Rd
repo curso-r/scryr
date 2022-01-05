@@ -313,6 +313,25 @@ could obtain and add to their collection (with a few minor exceptions).
 Cards are the API's most complex object. You are encouraged to thoroughly
 read this document and also \code{vignette("layouts")}.
 }
+\examples{
+\donttest{
+# Get all legendary vampires
+scry_cards("t:vampire t:legend")
+
+# Get card using an ID
+scry_card("913dd06f-ed2f-4128-9c9d-9cd0d8a55425")
+
+# Get card using a name
+scry_card_named("Anje Falkenrath")
+
+# Get card using a collector number and a set
+scry_card_number(37, "c19")
+
+# Just get a random legendary vampires
+scry_card_random("t:vampire t:legend")
+}
+
+}
 \references{
 \url{https://scryfall.com/docs/api/cards}
 }

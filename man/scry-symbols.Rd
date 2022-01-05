@@ -42,6 +42,13 @@ are based on the notation used in the Comprehensive Rules.
 For more information about how the Scryfall API represents mana and costs,
 see \code{vignette("colors")}.
 }
+\examples{
+\donttest{
+# Get information about symbols
+scry_symbols()
+}
+
+}
 \references{
 \url{https://scryfall.com/docs/api/card-symbols}
 }

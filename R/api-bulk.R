@@ -53,6 +53,11 @@
 #' * `content_encoding` \[chr\]: The Content-Encoding encoding that will be used
 #'   to transmit this file when you download it.
 #'
+#' @examples \donttest{
+#' # Get information about bulk data files
+#' scry_bulk_data()
+#' }
+#'
 #' @references <https://scryfall.com/docs/api/bulk-data>
 #'
 #' @export

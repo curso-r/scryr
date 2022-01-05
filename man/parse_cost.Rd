@@ -33,6 +33,13 @@ multiple colorless costs (such as \verb{2\{g\}2} for \verb{\{4\}\{G\}}).
 If part of the string could not be understood, the server will return an
 error describing the problem.
 }
+\examples{
+\donttest{
+# Parse mana costs
+parse_cost("2g2")
+}
+
+}
 \references{
 \url{https://scryfall.com/docs/api/card-symbols/parse-mana}
 }

@@ -32,6 +32,11 @@
 #'   Un-cards.
 #' * `svg_uri` \[chr\]: A URI to an SVG image of this symbol on Scryfall’s CDNs.
 #'
+#' @examples \donttest{
+#' # Get information about symbols
+#' scry_symbols()
+#' }
+#'
 #' @references <https://scryfall.com/docs/api/card-symbols>
 #'
 #' @name scry-symbols
@@ -71,6 +76,11 @@ scry_symbols <- function() {
 #' * `colorless` \[lgl\]: Whether the cost is colorless.
 #' * `monocolored` \[lgl\]: Whether if the cost is monocolored.
 #' * `multicolored` \[lgl\]: Whether if the cost is multicolored.
+#'
+#' @examples \donttest{
+#' # Parse mana costs
+#' parse_cost("2g2")
+#' }
 #'
 #' @references <https://scryfall.com/docs/api/card-symbols/parse-mana>
 #'

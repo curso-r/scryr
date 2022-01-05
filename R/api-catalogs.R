@@ -50,6 +50,11 @@
 #'
 #' @return A string vector.
 #'
+#' @examples \donttest{
+#' # Get information from a catalog
+#' scry_catalog("keyword-actions")
+#' }
+#'
 #' @references <https://scryfall.com/docs/api/catalogs>
 #'
 #' @name scry-catalogs

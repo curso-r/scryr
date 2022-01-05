@@ -102,7 +102,7 @@ results with its `q` argument.
 # Get all sets
 scry_sets()
 
-# Het a single set with an ID
+# Get a single set with an ID
 scry_set("vow")
 ```
 

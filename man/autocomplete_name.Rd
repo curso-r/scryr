@@ -28,6 +28,13 @@ Spaces, punctuation, and capitalization are ignored.
 If \code{name} is less than 2 characters long, or if no names match, the vector
 will contain 0 elements (instead of returning any errors).
 }
+\examples{
+\donttest{
+# Get all related card names
+autocomplete_name("falken")
+}
+
+}
 \references{
 \url{https://scryfall.com/docs/api/cards/autocomplete}
 }

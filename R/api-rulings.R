@@ -22,6 +22,11 @@
 #' * `published_at` \[date\]: The date when the ruling or note was published.
 #' * `comment` \[tbl\]: The text of the ruling.
 #'
+#' @examples \donttest{
+#' # Get rulings for a card
+#' scry_ruling("913dd06f-ed2f-4128-9c9d-9cd0d8a55425")
+#' }
+#'
 #' @references <https://scryfall.com/docs/api/rulings>
 #'
 #' @name scry-rulings

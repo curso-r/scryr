@@ -39,6 +39,13 @@ Rulings with a \code{scryfall} source have been added by the Scryfall team, eith
 to provide additional context for the card, or explain how the card works in
 an unofficial format (such as Duel Commander).
 }
+\examples{
+\donttest{
+# Get rulings for a card
+scry_ruling("913dd06f-ed2f-4128-9c9d-9cd0d8a55425")
+}
+
+}
 \references{
 \url{https://scryfall.com/docs/api/rulings}
 }

@@ -73,6 +73,14 @@
 #'   change slightly over time. You should download it and use it locally for
 #'   your particular user interface needs.
 #'
+#' @examples \donttest{
+#' # Get all sets
+#' scry_sets()
+#'
+#' # Get set using an ID
+#' scry_set("vow")
+#' }
+#'
 #' @references <https://scryfall.com/docs/api/sets>
 #'
 #' @name scry-sets
