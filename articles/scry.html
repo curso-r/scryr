@@ -89,8 +89,8 @@
 
     
     
-<p>scry is a lightweight wrapper around <a href="https://scryfall.com/" class="external-link">Scryfall</a>’s, an amazing (and free!) <em>Magic: The Gathering</em> API. With scry you can ingest card data as tidy data frames, allowing for frictionless integration with tidyverse pipelines.</p>
-<p>Currently, there are 2 main endpoints: <code>cards</code> and <code>sets</code>. The other 4 endpoints (<code>bulk_data</code>, <code>catalogs</code>, <code>rulings</code>, and <code>symbols</code>) are mostly auxiliary to the main ones.</p>
+<p>scry is a lightweight wrapper around <a href="https://scryfall.com/" class="external-link">Scryfall</a>, an amazing (and free!) <em>Magic: The Gathering</em> API. With scry you can ingest card data as tidy data frames, allowing for frictionless integration with tidyverse pipelines.</p>
+<p>Currently there are 2 main endpoints: <code>cards</code> and <code>sets</code>. The other 4 endpoints (<code>bulk_data</code>, <code>catalogs</code>, <code>rulings</code>, and <code>symbols</code>) are mostly auxiliary to the main ones.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Start scry and helpers</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span>
@@ -152,7 +152,7 @@
 <span class="co">#&gt; [1] "Anje Falkenrath"</span>
 
 <span class="co"># Using a name</span>
-<span class="fu"><a href="../reference/scry-cards.html">scry_card_named</a></span><span class="op">(</span><span class="st">"Anje Falkenrath"</span><span class="op">)</span><span class="op">$</span><span class="va">name</span>
+<span class="fu"><a href="../reference/scry-cards.html">scry_card_name</a></span><span class="op">(</span><span class="st">"Anje Falkenrath"</span><span class="op">)</span><span class="op">$</span><span class="va">name</span>
 <span class="co">#&gt; [1] "Anje Falkenrath"</span>
 
 <span class="co"># Using a collector number and a set</span>
@@ -161,7 +161,7 @@
 
 <span class="co"># Just get a random vampire commander</span>
 <span class="fu"><a href="../reference/scry-cards.html">scry_card_random</a></span><span class="op">(</span><span class="st">"t:vampire t:legend"</span><span class="op">)</span><span class="op">$</span><span class="va">name</span>
-<span class="co">#&gt; [1] "Sengir, the Dark Baron"</span></code></pre></div>
+<span class="co">#&gt; [1] "Rayami, First of the Fallen"</span></code></pre></div>
 <p>If you’re unsure of exactly what card you’re looking for, don’t worry. Scryfall also has an endpoint that tries to autocomplete the name of a card and scry makes it available so that you don’t have to ever leave R to look for a card.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># There she is</span>
@@ -245,9 +245,9 @@
 <span class="co">#&gt; [1] "{4}{G}"</span>
 
 <span class="co"># Get names of bulk files</span>
-<span class="fu"><a href="../reference/scry_bulk_data.html">scry_bulk_data</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">names</span>
-<span class="co">#&gt; Warning: Unknown or uninitialised column: `names`.</span>
-<span class="co">#&gt; NULL</span></code></pre></div>
+<span class="fu"><a href="../reference/scry_bulk_data.html">scry_bulk_data</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">name</span>
+<span class="co">#&gt; [1] "Oracle Cards"   "Unique Artwork" "Default Cards"  "All Cards"     </span>
+<span class="co">#&gt; [5] "Rulings"</span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
