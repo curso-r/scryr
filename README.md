@@ -1,16 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# scry <a href="https://curso-r.github.io/scry/"><img src="man/figures/logo.png" align="right" height="138" /></a>
+# scryr <a href="https://curso-r.github.io/scryr/"><img src="man/figures/logo.png" align="right" height="138" /></a>
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/curso-r/scry/workflows/R-CMD-check/badge.svg)](https://github.com/curso-r/scry/actions)
+[![R-CMD-check](https://github.com/curso-r/scryr/workflows/R-CMD-check/badge.svg)](https://github.com/curso-r/scryr/actions)
 [![Codecov test
-coverage](https://codecov.io/gh/curso-r/scry/branch/main/graph/badge.svg)](https://app.codecov.io/gh/curso-r/scry?branch=main)
+coverage](https://codecov.io/gh/curso-r/scryr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/curso-r/scryr?branch=main)
 <!-- badges: end -->
 
-scry is a simple, light, and robust interface between R and
+scryr is a simple, light, and robust interface between R and
 [Scryfall](https://scryfall.com/)’s powerful *Magic: The Gathering* card
 search engine. It wraps the [Scryfall
 API](https://scryfall.com/docs/api) and makes all endpoints available as
@@ -20,26 +20,26 @@ simple functions that any R programmer can use.
 
 ``` r
 # Install released version from CRAN
-install.packages("scry")
+install.packages("scryr")
 ```
 
-You can install the development version of scry from
+You can install the development version of scryr from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("curso-r/scry")
+devtools::install_github("curso-r/scryr")
 ```
 
 ## Usage
 
-scry makes it easy to process *Magic* cards’ data programmatically.
+scryr makes it easy to process *Magic* cards’ data programmatically.
 There are many endpoints that fully support tidyverse compatible
-analyses. For more information, start with `vignette("scry")` or the
-[full documentation](https://curso-r.github.io/scry/).
+analyses. For more information, start with `vignette("scryr")` or the
+[full documentation](https://curso-r.github.io/scryr/).
 
 ``` r
-library(scry)
+library(scryr)
 
 # Find red creatures with 7 power, sorted by converted mana cost
 cards <- scry_cards("c:red+pow=7", order = "cmc")
@@ -137,14 +137,14 @@ glimpse(cards)
 
 ## Code of Conduct
 
-Please note that the scry project is released with a [Contributor Code
-of Conduct](https://curso-r.github.io/scry/CODE_OF_CONDUCT.html). By
+Please note that the scryr project is released with a [Contributor Code
+of Conduct](https://curso-r.github.io/scryr/CODE_OF_CONDUCT.html). By
 contributing to this project, you agree to abide by its terms.
 
 ## Copyright Notice
 
-Portions of scry are unofficial Fan Content permitted under the [Wizards
-of the Coast Fan Content
+Portions of scryr are unofficial Fan Content permitted under the
+[Wizards of the Coast Fan Content
 Policy](https://company.wizards.com/en/legal/fancontentpolicy). The
 literal and graphical information presented on this package and its
 documentation pages about *Magic: The Gathering*, including card images,
@@ -152,8 +152,8 @@ the mana symbols, and Oracle text, is copyright of Wizards of the Coast,
 LLC, a subsidiary of Hasbro, Inc. This software is not produced by,
 endorsed by, supported by, or affiliated with Wizards of the Coast, LLC.
 
-Most of scry’s documentation is taken from Scryfall’s developer docs and
-are only included in the package for self-containedness’ sake.
+Most of scryr’s documentation is taken from Scryfall’s developer docs
+and are only included in the package for self-containedness’ sake.
 Scryfall’s website, API, and other related content are copyright of
 Scryfall, LLC. This software is not produced by, endorsed by, supported
 by, or affiliated with Scryfall, LLC.
@@ -162,7 +162,7 @@ As per [Scryfall’s terms of service](https://scryfall.com/docs/terms),
 card data and images are provided free of charge for the primary purpose
 of creating additional *Magic* software, performing research, or
 creating community content about *Magic* and related products. When
-using scry, you must, therefore, adhere to both Scryfall’s and Wizards
+using scryr, you must, therefore, adhere to both Scryfall’s and Wizards
 of the Coast’s guidelines:
 
 -   You may not require anyone to make payments, take surveys, agree to

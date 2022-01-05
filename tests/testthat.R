@@ -1,4 +1,4 @@
 library(testthat)
-library(scry)
+library(scryr)
 
-test_check("scry")
+test_check("scryr")

@@ -1,6 +1,6 @@
-# Contributing to scry
+# Contributing to scryr
 
-This outlines how to propose a change to scry.
+This outlines how to propose a change to scryr.
 
 ## Fixing typos
 
@@ -22,7 +22,7 @@ a unit test, if needed).
 ### Pull request process
 
 * Fork the package and clone onto your computer. If you haven't done this
-  before, we recommend using `usethis::create_from_github("curso-r/scry", fork =
+  before, we recommend using `usethis::create_from_github("curso-r/scryr", fork =
   TRUE)`.
 
 * Install all development dependencies with `devtools::install_dev_deps()`, and
@@ -58,6 +58,6 @@ a unit test, if needed).
 
 ## Code of Conduct
 
-Please note that the scry project is released with a [Contributor Code of
+Please note that the scryr project is released with a [Contributor Code of
 Conduct](CODE_OF_CONDUCT.md). By contributing to this project you agree to abide
 by its terms.

@@ -1,8 +1,8 @@
 ---
-title: "Overview of scry"
+title: "Overview of scryr"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Overview of scry}
+  %\VignetteIndexEntry{Overview of scryr}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,8 +14,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-scry is a lightweight wrapper around [Scryfall](https://scryfall.com/), an
-amazing (and free!) _Magic: The Gathering_ API. With scry you can ingest card
+scryr is a lightweight wrapper around [Scryfall](https://scryfall.com/), an
+amazing (and free!) _Magic: The Gathering_ API. With scryr you can ingest card
 data as tidy data frames, allowing for frictionless integration with tidyverse
 pipelines.
 
@@ -24,9 +24,9 @@ Currently there are 2 main endpoints: `cards` and `sets`. The other 4 endpoints
 main ones.
 
 ```{r setup, message = FALSE}
-# Start scry and helpers
+# Start scryr and helpers
 library(dplyr)
-library(scry)
+library(scryr)
 ```
 
 ## Cards
@@ -48,7 +48,7 @@ print(vampires)
 ```
 
 Note that many columns are list-columns with deeply nested information inside.
-This is a result of Scryfall's data model and is the reason why scry needs
+This is a result of Scryfall's data model and is the reason why scryr needs
 tibbles to work. But don't be alarmed! It's all pretty consistent.
 
 ```{r}
@@ -82,7 +82,7 @@ scry_card_random("t:vampire t:legend")$name
 ```
 
 If you're unsure of exactly what card you're looking for, don't worry. Scryfall
-also has an endpoint that tries to autocomplete the name of a card and scry
+also has an endpoint that tries to autocomplete the name of a card and scryr
 makes it available so that you don't have to ever leave R to look for a card.
 
 ```{r}
@@ -109,7 +109,7 @@ scry_set("vow")
 ## Other Endpoints
 
 All other endpoints return way less information than the two above. Here is a
-short demonstration of what else you can do with the rest of scry:
+short demonstration of what else you can do with the rest of scryr:
 
 ```{r}
 # Get information from a catalog

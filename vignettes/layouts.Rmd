@@ -9,7 +9,7 @@ vignette: >
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
-library(scry)
+library(scryr)
 glimpse <- purrr::partial(dplyr::glimpse, width = 72)
 ```
 

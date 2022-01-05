@@ -1,4 +1,4 @@
-url: https://curso-r.github.io/scry/
+url: https://curso-r.github.io/scryr/
 
 home:
   title: An Interface To Scryfall
@@ -8,7 +8,7 @@ authors:
     href: https://lente.dev
   Curso-R:
     href: https://curso-r.com
-    html: "<img src='/scry/reference/figures/curso-r.png' width=80>"
+    html: "<img src='/scryr/reference/figures/curso-r.png' width=80>"
 
 template:
   bootstrap: 5

@@ -9,7 +9,7 @@ vignette: >
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
-library(scry)
+library(scryr)
 ```
 
 While Magic cards can represent costs and colors using printed symbols, the

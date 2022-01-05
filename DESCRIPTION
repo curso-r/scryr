@@ -1,4 +1,4 @@
-Package: scry
+Package: scryr
 Title: An Interface to the 'Scryfall' API
 Version: 0.0.0.9000
 Authors@R: c(
@@ -11,7 +11,7 @@ Authors@R: c(
 Description: A simple, light, and robust interface between R and
     the 'Scryfall' card data API <https://scryfall.com/docs/api>.
 License: MIT + file LICENSE
-URL: https://curso-r.github.io/scry/, https://github.com/curso-r/scry
+URL: https://curso-r.github.io/scryr/, https://github.com/curso-r/scryr
 Imports:
     dplyr,
     httr,
