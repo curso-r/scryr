@@ -1,0 +1,16 @@
+{
+    "object": "catalog",
+    "uri": "https://api.scryfall.com/catalog/artifact-types",
+    "total_values": 9,
+    "data": [
+        "Blood",
+        "Clue",
+        "Contraption",
+        "Equipment",
+        "Food",
+        "Fortification",
+        "Gold",
+        "Treasure",
+        "Vehicle"
+    ]
+}

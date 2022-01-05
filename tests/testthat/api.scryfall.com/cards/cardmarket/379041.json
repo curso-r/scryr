@@ -1,0 +1,132 @@
+{
+    "object": "card",
+    "id": "77972745-8689-4733-9a9d-39ae9d6273a2",
+    "oracle_id": "9d6686a0-1648-42f6-a606-16d2a84138a7",
+    "multiverse_ids": [
+        466852
+    ],
+    "mtgo_id": 73095,
+    "arena_id": 69883,
+    "tcgplayer_id": 192742,
+    "cardmarket_id": 379041,
+    "name": "Embodiment of Agonies",
+    "lang": "en",
+    "released_at": "2019-07-12",
+    "uri": "https://api.scryfall.com/cards/77972745-8689-4733-9a9d-39ae9d6273a2",
+    "scryfall_uri": "https://scryfall.com/card/m20/98/embodiment-of-agonies?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+        "small": "https://c1.scryfall.com/file/scryfall-cards/small/front/7/7/77972745-8689-4733-9a9d-39ae9d6273a2.jpg?1592516666",
+        "normal": "https://c1.scryfall.com/file/scryfall-cards/normal/front/7/7/77972745-8689-4733-9a9d-39ae9d6273a2.jpg?1592516666",
+        "large": "https://c1.scryfall.com/file/scryfall-cards/large/front/7/7/77972745-8689-4733-9a9d-39ae9d6273a2.jpg?1592516666",
+        "png": "https://c1.scryfall.com/file/scryfall-cards/png/front/7/7/77972745-8689-4733-9a9d-39ae9d6273a2.png?1592516666",
+        "art_crop": "https://c1.scryfall.com/file/scryfall-cards/art_crop/front/7/7/77972745-8689-4733-9a9d-39ae9d6273a2.jpg?1592516666",
+        "border_crop": "https://c1.scryfall.com/file/scryfall-cards/border_crop/front/7/7/77972745-8689-4733-9a9d-39ae9d6273a2.jpg?1592516666"
+    },
+    "mana_cost": "{1}{B}{B}",
+    "cmc": 3.0,
+    "type_line": "Creature — Demon",
+    "oracle_text": "Flying, deathtouch\nEmbodiment of Agonies enters the battlefield with a +1/+1 counter on it for each different mana cost among nonland cards in your graveyard. (For example, {2}{B} and {1}{B}{B} are different mana costs.)",
+    "power": "0",
+    "toughness": "0",
+    "colors": [
+        "B"
+    ],
+    "color_identity": [
+        "B"
+    ],
+    "keywords": [
+        "Deathtouch",
+        "Flying"
+    ],
+    "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "legal",
+        "commander": "legal",
+        "brawl": "not_legal",
+        "historicbrawl": "legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal"
+    },
+    "games": [
+        "arena",
+        "paper",
+        "mtgo"
+    ],
+    "reserved": false,
+    "foil": true,
+    "nonfoil": true,
+    "finishes": [
+        "nonfoil",
+        "foil"
+    ],
+    "oversized": false,
+    "promo": false,
+    "reprint": false,
+    "variation": false,
+    "set_id": "4a787360-9767-4f44-80b1-2405dc5e39c7",
+    "set": "m20",
+    "set_name": "Core Set 2020",
+    "set_type": "core",
+    "set_uri": "https://api.scryfall.com/sets/4a787360-9767-4f44-80b1-2405dc5e39c7",
+    "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Am20&unique=prints",
+    "scryfall_set_uri": "https://scryfall.com/sets/m20?utm_source=api",
+    "rulings_uri": "https://api.scryfall.com/cards/77972745-8689-4733-9a9d-39ae9d6273a2/rulings",
+    "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A9d6686a0-1648-42f6-a606-16d2a84138a7&unique=prints",
+    "collector_number": "98",
+    "digital": false,
+    "rarity": "rare",
+    "flavor_text": "\"I feel your pain. It's exquisite.\"",
+    "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+    "artist": "Igor Kieryluk",
+    "artist_ids": [
+        "9c3e9d17-509f-485c-9360-46d897ce716b"
+    ],
+    "illustration_id": "2dffb63c-8358-41bb-ae70-be209a2e1615",
+    "border_color": "black",
+    "frame": "2015",
+    "security_stamp": "oval",
+    "full_art": false,
+    "textless": false,
+    "booster": true,
+    "story_spotlight": false,
+    "edhrec_rank": 5420,
+    "preview": {
+        "source": "Amaz",
+        "source_uri": "https://twitter.com/Amaz/status/1142999906581225473",
+        "previewed_at": "2019-06-23"
+    },
+    "prices": {
+        "usd": "0.35",
+        "usd_foil": "0.55",
+        "usd_etched": null,
+        "eur": "0.20",
+        "eur_foil": "0.60",
+        "tix": "0.02"
+    },
+    "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=466852",
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Embodiment+of+Agonies&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Embodiment+of+Agonies&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Embodiment+of+Agonies",
+        "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Embodiment+of+Agonies"
+    },
+    "purchase_uris": {
+        "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=192742&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Embodiment+of+Agonies&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/73095?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+    }
+}

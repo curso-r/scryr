@@ -1,3 +1,6 @@
+skip_on_cran()
+httptest::skip_if_disconnected()
+
 # RETURNS ----------------------------------------------------------------------
 
 test_that("scry-bulk returns correctly", {

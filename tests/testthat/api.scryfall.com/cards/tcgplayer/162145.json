@@ -1,0 +1,129 @@
+{
+    "object": "card",
+    "id": "45420f5e-f7f8-4db7-9b54-e2fa1be22094",
+    "oracle_id": "409305b3-5373-4376-8096-c04a73184cef",
+    "multiverse_ids": [
+        443091
+    ],
+    "mtgo_id": 67871,
+    "arena_id": 67510,
+    "tcgplayer_id": 162145,
+    "cardmarket_id": 319842,
+    "name": "Rona, Disciple of Gix",
+    "lang": "en",
+    "released_at": "2018-04-27",
+    "uri": "https://api.scryfall.com/cards/45420f5e-f7f8-4db7-9b54-e2fa1be22094",
+    "scryfall_uri": "https://scryfall.com/card/dom/203/rona-disciple-of-gix?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+        "small": "https://c1.scryfall.com/file/scryfall-cards/small/front/4/5/45420f5e-f7f8-4db7-9b54-e2fa1be22094.jpg?1562734878",
+        "normal": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/5/45420f5e-f7f8-4db7-9b54-e2fa1be22094.jpg?1562734878",
+        "large": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/5/45420f5e-f7f8-4db7-9b54-e2fa1be22094.jpg?1562734878",
+        "png": "https://c1.scryfall.com/file/scryfall-cards/png/front/4/5/45420f5e-f7f8-4db7-9b54-e2fa1be22094.png?1562734878",
+        "art_crop": "https://c1.scryfall.com/file/scryfall-cards/art_crop/front/4/5/45420f5e-f7f8-4db7-9b54-e2fa1be22094.jpg?1562734878",
+        "border_crop": "https://c1.scryfall.com/file/scryfall-cards/border_crop/front/4/5/45420f5e-f7f8-4db7-9b54-e2fa1be22094.jpg?1562734878"
+    },
+    "mana_cost": "{1}{U}{B}",
+    "cmc": 3.0,
+    "type_line": "Legendary Creature — Human Artificer",
+    "oracle_text": "When Rona, Disciple of Gix enters the battlefield, you may exile target historic card from your graveyard. (Artifacts, legendaries, and Sagas are historic.)\nYou may cast spells from among cards exiled with Rona.\n{4}, {T}: Exile the top card of your library.",
+    "power": "2",
+    "toughness": "2",
+    "colors": [
+        "B",
+        "U"
+    ],
+    "color_identity": [
+        "B",
+        "U"
+    ],
+    "keywords": [
+
+    ],
+    "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "not_legal",
+        "historicbrawl": "legal",
+        "alchemy": "not_legal",
+        "paupercommander": "restricted",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal"
+    },
+    "games": [
+        "arena",
+        "paper",
+        "mtgo"
+    ],
+    "reserved": false,
+    "foil": true,
+    "nonfoil": true,
+    "finishes": [
+        "nonfoil",
+        "foil"
+    ],
+    "oversized": false,
+    "promo": false,
+    "reprint": false,
+    "variation": false,
+    "set_id": "be1daba3-51c9-4e7e-9212-36e68addc26c",
+    "set": "dom",
+    "set_name": "Dominaria",
+    "set_type": "expansion",
+    "set_uri": "https://api.scryfall.com/sets/be1daba3-51c9-4e7e-9212-36e68addc26c",
+    "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adom&unique=prints",
+    "scryfall_set_uri": "https://scryfall.com/sets/dom?utm_source=api",
+    "rulings_uri": "https://api.scryfall.com/cards/45420f5e-f7f8-4db7-9b54-e2fa1be22094/rulings",
+    "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A409305b3-5373-4376-8096-c04a73184cef&unique=prints",
+    "collector_number": "203",
+    "digital": false,
+    "rarity": "uncommon",
+    "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+    "artist": "Tommy Arnold",
+    "artist_ids": [
+        "1130bcd0-c8b1-48be-85d7-3ddb2abc6b1a"
+    ],
+    "illustration_id": "3bbaac19-62b4-44a2-8fe4-6a5cb0fcdbcf",
+    "border_color": "black",
+    "frame": "2015",
+    "frame_effects": [
+        "legendary"
+    ],
+    "full_art": false,
+    "textless": false,
+    "booster": true,
+    "story_spotlight": false,
+    "edhrec_rank": 10154,
+    "prices": {
+        "usd": "0.08",
+        "usd_foil": "0.28",
+        "usd_etched": null,
+        "eur": "0.05",
+        "eur_foil": "0.76",
+        "tix": "0.04"
+    },
+    "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=443091",
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Rona%2C+Disciple+of+Gix&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Rona%2C+Disciple+of+Gix&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Rona%2C+Disciple+of+Gix",
+        "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Rona%2C+Disciple+of+Gix"
+    },
+    "purchase_uris": {
+        "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=162145&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Rona%2C+Disciple+of+Gix&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/67871?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+    }
+}

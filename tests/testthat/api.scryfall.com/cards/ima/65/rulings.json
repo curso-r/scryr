@@ -1,0 +1,20 @@
+{
+    "object": "list",
+    "has_more": false,
+    "data": [
+        {
+            "object": "ruling",
+            "oracle_id": "74d3277a-38e5-4732-afed-084a56148f20",
+            "source": "wotc",
+            "published_at": "2020-11-10",
+            "comment": "If the target spell is an illegal target by the time Mana Drain tries to resolve, Mana Drain doesn’t resolve. You don’t add mana at the beginning of your next main phase. If the target is legal but not countered (most likely because an effect says that the spell can’t be countered), you do add mana."
+        },
+        {
+            "object": "ruling",
+            "oracle_id": "74d3277a-38e5-4732-afed-084a56148f20",
+            "source": "wotc",
+            "published_at": "2020-11-10",
+            "comment": "Mana Drain’s delayed triggered ability will usually trigger at the beginning of your precombat main phase. However, if you cast Mana Drain during your precombat main phase or during your combat phase, its delayed triggered ability will trigger at the beginning of that turn’s postcombat main phase."
+        }
+    ]
+}

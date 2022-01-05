@@ -1,0 +1,62 @@
+{
+    "object": "list",
+    "has_more": false,
+    "data": [
+        {
+            "object": "ruling",
+            "oracle_id": "9fe1f3ef-2c30-4ccc-9a67-5349e98e2502",
+            "source": "wotc",
+            "published_at": "2018-04-27",
+            "comment": "Each of Song of Freyalise’s chapter abilities affects only creatures you control at the time it resolves. Creatures you begin to control later in the turn won’t gain abilities or get a +1/+1 counter."
+        },
+        {
+            "object": "ruling",
+            "oracle_id": "9fe1f3ef-2c30-4ccc-9a67-5349e98e2502",
+            "source": "wotc",
+            "published_at": "2018-04-27",
+            "comment": "As a Saga enters the battlefield, its controller puts a lore counter on it. As your precombat main phase begins (immediately after your draw step), you put another lore counter on each Saga you control. Putting a lore counter on a Saga in either of these ways doesn’t use the stack."
+        },
+        {
+            "object": "ruling",
+            "oracle_id": "9fe1f3ef-2c30-4ccc-9a67-5349e98e2502",
+            "source": "wotc",
+            "published_at": "2018-04-27",
+            "comment": "Each symbol on the left of a Saga’s text box represents a chapter ability. A chapter ability is a triggered ability that triggers when a lore counter that is put on the Saga causes the number of lore counters on the Saga to become equal to or greater than the ability’s chapter number. Chapter abilities are put onto the stack and may be responded to."
+        },
+        {
+            "object": "ruling",
+            "oracle_id": "9fe1f3ef-2c30-4ccc-9a67-5349e98e2502",
+            "source": "wotc",
+            "published_at": "2018-04-27",
+            "comment": "A chapter ability doesn’t trigger if a lore counter is put on a Saga that already had a number of lore counters greater than or equal to that chapter’s number. For example, the third lore counter put on a Saga causes the III chapter ability to trigger, but I and II won’t trigger again."
+        },
+        {
+            "object": "ruling",
+            "oracle_id": "9fe1f3ef-2c30-4ccc-9a67-5349e98e2502",
+            "source": "wotc",
+            "published_at": "2018-04-27",
+            "comment": "Once a chapter ability has triggered, the ability on the stack won’t be affected if the Saga gains or loses counters, or if it leaves the battlefield."
+        },
+        {
+            "object": "ruling",
+            "oracle_id": "9fe1f3ef-2c30-4ccc-9a67-5349e98e2502",
+            "source": "wotc",
+            "published_at": "2018-04-27",
+            "comment": "If multiple chapter abilities trigger at the same time, their controller puts them on the stack in any order. If any of them require targets, those targets are chosen as you put the abilities on the stack, before any of those abilities resolve."
+        },
+        {
+            "object": "ruling",
+            "oracle_id": "9fe1f3ef-2c30-4ccc-9a67-5349e98e2502",
+            "source": "wotc",
+            "published_at": "2018-04-27",
+            "comment": "If counters are removed from a Saga, the appropriate chapter abilities will trigger again when the Saga receives lore counters. Removing lore counters won’t cause a previous chapter ability to trigger."
+        },
+        {
+            "object": "ruling",
+            "oracle_id": "9fe1f3ef-2c30-4ccc-9a67-5349e98e2502",
+            "source": "wotc",
+            "published_at": "2018-04-27",
+            "comment": "Once the number of lore counters on a Saga is greater than or equal to the greatest number among its chapter abilities—in the Dominaria set, this is always three—the Saga’s controller sacrifices it as soon as its chapter ability has left the stack, most likely by resolving or being countered. This state-based action doesn’t use the stack."
+        }
+    ]
+}

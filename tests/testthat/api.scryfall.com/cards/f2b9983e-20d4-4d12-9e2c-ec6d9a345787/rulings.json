@@ -1,0 +1,20 @@
+{
+    "object": "list",
+    "has_more": false,
+    "data": [
+        {
+            "object": "ruling",
+            "oracle_id": "f5ca7b13-8003-4361-b827-7095c89f2750",
+            "source": "wotc",
+            "published_at": "2004-10-04",
+            "comment": "It must flip like a coin and not like a Frisbee."
+        },
+        {
+            "object": "ruling",
+            "oracle_id": "f5ca7b13-8003-4361-b827-7095c89f2750",
+            "source": "wotc",
+            "published_at": "2004-10-04",
+            "comment": "Only cards touched when it stops moving are affected. Not ones touched while it is moving."
+        }
+    ]
+}

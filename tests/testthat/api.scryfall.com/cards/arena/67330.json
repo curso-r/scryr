@@ -1,0 +1,128 @@
+{
+    "object": "card",
+    "id": "645cfc1b-76f2-4823-9fb0-03cb009f8b32",
+    "oracle_id": "ed66cd31-958f-4b28-82a3-e04acc819afc",
+    "multiverse_ids": [
+        443001
+    ],
+    "mtgo_id": 67691,
+    "arena_id": 67330,
+    "tcgplayer_id": 164756,
+    "cardmarket_id": 355353,
+    "name": "Yargle, Glutton of Urborg",
+    "lang": "en",
+    "released_at": "2018-04-27",
+    "uri": "https://api.scryfall.com/cards/645cfc1b-76f2-4823-9fb0-03cb009f8b32",
+    "scryfall_uri": "https://scryfall.com/card/dom/113/yargle-glutton-of-urborg?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+        "small": "https://c1.scryfall.com/file/scryfall-cards/small/front/6/4/645cfc1b-76f2-4823-9fb0-03cb009f8b32.jpg?1562736801",
+        "normal": "https://c1.scryfall.com/file/scryfall-cards/normal/front/6/4/645cfc1b-76f2-4823-9fb0-03cb009f8b32.jpg?1562736801",
+        "large": "https://c1.scryfall.com/file/scryfall-cards/large/front/6/4/645cfc1b-76f2-4823-9fb0-03cb009f8b32.jpg?1562736801",
+        "png": "https://c1.scryfall.com/file/scryfall-cards/png/front/6/4/645cfc1b-76f2-4823-9fb0-03cb009f8b32.png?1562736801",
+        "art_crop": "https://c1.scryfall.com/file/scryfall-cards/art_crop/front/6/4/645cfc1b-76f2-4823-9fb0-03cb009f8b32.jpg?1562736801",
+        "border_crop": "https://c1.scryfall.com/file/scryfall-cards/border_crop/front/6/4/645cfc1b-76f2-4823-9fb0-03cb009f8b32.jpg?1562736801"
+    },
+    "mana_cost": "{4}{B}",
+    "cmc": 5.0,
+    "type_line": "Legendary Creature — Frog Spirit",
+    "oracle_text": "",
+    "power": "9",
+    "toughness": "3",
+    "colors": [
+        "B"
+    ],
+    "color_identity": [
+        "B"
+    ],
+    "keywords": [
+
+    ],
+    "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "legal",
+        "gladiator": "legal",
+        "pioneer": "legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "not_legal",
+        "historicbrawl": "legal",
+        "alchemy": "not_legal",
+        "paupercommander": "restricted",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "not_legal"
+    },
+    "games": [
+        "arena",
+        "paper",
+        "mtgo"
+    ],
+    "reserved": false,
+    "foil": true,
+    "nonfoil": true,
+    "finishes": [
+        "nonfoil",
+        "foil"
+    ],
+    "oversized": false,
+    "promo": false,
+    "reprint": false,
+    "variation": false,
+    "set_id": "be1daba3-51c9-4e7e-9212-36e68addc26c",
+    "set": "dom",
+    "set_name": "Dominaria",
+    "set_type": "expansion",
+    "set_uri": "https://api.scryfall.com/sets/be1daba3-51c9-4e7e-9212-36e68addc26c",
+    "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Adom&unique=prints",
+    "scryfall_set_uri": "https://scryfall.com/sets/dom?utm_source=api",
+    "rulings_uri": "https://api.scryfall.com/cards/645cfc1b-76f2-4823-9fb0-03cb009f8b32/rulings",
+    "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aed66cd31-958f-4b28-82a3-e04acc819afc&unique=prints",
+    "collector_number": "113",
+    "digital": false,
+    "rarity": "uncommon",
+    "flavor_text": "When Belzenlok's lieutenant Yar-Kul grew too ambitious, the Demonlord transformed him into a maggot. The frog that ate the maggot grew and grew, until a ravenous spirit burst from its body.",
+    "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+    "artist": "Jehan Choo",
+    "artist_ids": [
+        "515df9fe-9c29-4e75-9e49-6ce5be4ec8c8"
+    ],
+    "illustration_id": "5271a81d-7925-4880-be23-9214d4500570",
+    "border_color": "black",
+    "frame": "2015",
+    "frame_effects": [
+        "legendary"
+    ],
+    "full_art": false,
+    "textless": false,
+    "booster": true,
+    "story_spotlight": false,
+    "edhrec_rank": 7182,
+    "prices": {
+        "usd": "0.19",
+        "usd_foil": "1.39",
+        "usd_etched": null,
+        "eur": "0.02",
+        "eur_foil": "0.34",
+        "tix": "0.03"
+    },
+    "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=443001",
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Yargle%2C+Glutton+of+Urborg&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Yargle%2C+Glutton+of+Urborg&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Yargle%2C+Glutton+of+Urborg",
+        "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Yargle%2C+Glutton+of+Urborg"
+    },
+    "purchase_uris": {
+        "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=164756&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Yargle%2C+Glutton+of+Urborg&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/67691?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+    }
+}

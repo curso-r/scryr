@@ -1,0 +1,11 @@
+{
+    "object": "catalog",
+    "uri": "https://api.scryfall.com/catalog/spell-types",
+    "total_values": 4,
+    "data": [
+        "Adventure",
+        "Arcane",
+        "Lesson",
+        "Trap"
+    ]
+}

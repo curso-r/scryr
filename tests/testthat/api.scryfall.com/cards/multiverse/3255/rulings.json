@@ -1,0 +1,13 @@
+{
+    "object": "list",
+    "has_more": false,
+    "data": [
+        {
+            "object": "ruling",
+            "oracle_id": "ee6099b0-fb1f-42f1-b862-7708c6e36d05",
+            "source": "wotc",
+            "published_at": "2004-10-04",
+            "comment": "The ability is a mana ability, so it is activated and resolves as a mana ability, but it can only be activated at times when you can cast an instant. Yes, this is a bit weird."
+        }
+    ]
+}

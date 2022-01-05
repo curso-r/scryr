@@ -1,0 +1,20 @@
+{
+    "object": "set",
+    "id": "2ec77b94-6d47-4891-a480-5d0b4e5c9372",
+    "code": "uma",
+    "mtgo_code": "uma",
+    "arena_code": "uma",
+    "tcgplayer_id": 2360,
+    "name": "Ultimate Masters",
+    "uri": "https://api.scryfall.com/sets/2ec77b94-6d47-4891-a480-5d0b4e5c9372",
+    "scryfall_uri": "https://scryfall.com/sets/uma",
+    "search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Auma&unique=prints",
+    "released_at": "2018-12-07",
+    "set_type": "masters",
+    "card_count": 254,
+    "printed_size": 254,
+    "digital": false,
+    "nonfoil_only": false,
+    "foil_only": false,
+    "icon_svg_uri": "https://c2.scryfall.com/file/scryfall-symbols/sets/uma.svg?1641186000"
+}

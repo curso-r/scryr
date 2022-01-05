@@ -1,0 +1,124 @@
+{
+    "object": "card",
+    "id": "1b8de79d-5efe-4e21-8614-786689fcad58",
+    "oracle_id": "d21a89eb-7c5b-459a-acc7-12b20b13bf79",
+    "multiverse_ids": [
+        409574
+    ],
+    "mtgo_id": 59695,
+    "mtgo_foil_id": 59696,
+    "tcgplayer_id": 110736,
+    "cardmarket_id": 287037,
+    "name": "Strip Mine",
+    "lang": "en",
+    "released_at": "2015-10-02",
+    "uri": "https://api.scryfall.com/cards/1b8de79d-5efe-4e21-8614-786689fcad58",
+    "scryfall_uri": "https://scryfall.com/card/exp/43/strip-mine?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+        "small": "https://c1.scryfall.com/file/scryfall-cards/small/front/1/b/1b8de79d-5efe-4e21-8614-786689fcad58.jpg?1562900778",
+        "normal": "https://c1.scryfall.com/file/scryfall-cards/normal/front/1/b/1b8de79d-5efe-4e21-8614-786689fcad58.jpg?1562900778",
+        "large": "https://c1.scryfall.com/file/scryfall-cards/large/front/1/b/1b8de79d-5efe-4e21-8614-786689fcad58.jpg?1562900778",
+        "png": "https://c1.scryfall.com/file/scryfall-cards/png/front/1/b/1b8de79d-5efe-4e21-8614-786689fcad58.png?1562900778",
+        "art_crop": "https://c1.scryfall.com/file/scryfall-cards/art_crop/front/1/b/1b8de79d-5efe-4e21-8614-786689fcad58.jpg?1562900778",
+        "border_crop": "https://c1.scryfall.com/file/scryfall-cards/border_crop/front/1/b/1b8de79d-5efe-4e21-8614-786689fcad58.jpg?1562900778"
+    },
+    "mana_cost": "",
+    "cmc": 0.0,
+    "type_line": "Land",
+    "oracle_text": "{T}: Add {C}.\n{T}, Sacrifice Strip Mine: Destroy target land.",
+    "colors": [
+
+    ],
+    "color_identity": [
+
+    ],
+    "keywords": [
+
+    ],
+    "produced_mana": [
+        "C"
+    ],
+    "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "not_legal",
+        "gladiator": "not_legal",
+        "pioneer": "not_legal",
+        "modern": "not_legal",
+        "legacy": "banned",
+        "pauper": "not_legal",
+        "vintage": "restricted",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "not_legal",
+        "historicbrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "banned",
+        "oldschool": "not_legal",
+        "premodern": "banned"
+    },
+    "games": [
+        "paper",
+        "mtgo"
+    ],
+    "reserved": false,
+    "foil": true,
+    "nonfoil": false,
+    "finishes": [
+        "foil"
+    ],
+    "oversized": false,
+    "promo": false,
+    "reprint": true,
+    "variation": false,
+    "set_id": "f6ccda04-e8ef-4260-8453-9408d788bacf",
+    "set": "exp",
+    "set_name": "Zendikar Expeditions",
+    "set_type": "masterpiece",
+    "set_uri": "https://api.scryfall.com/sets/f6ccda04-e8ef-4260-8453-9408d788bacf",
+    "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aexp&unique=prints",
+    "scryfall_set_uri": "https://scryfall.com/sets/exp?utm_source=api",
+    "rulings_uri": "https://api.scryfall.com/cards/1b8de79d-5efe-4e21-8614-786689fcad58/rulings",
+    "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ad21a89eb-7c5b-459a-acc7-12b20b13bf79&unique=prints",
+    "collector_number": "43",
+    "digital": false,
+    "rarity": "mythic",
+    "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+    "artist": "Howard Lyon",
+    "artist_ids": [
+        "6dd06426-59fe-4b9c-aad5-6da8446a5c3d"
+    ],
+    "illustration_id": "4729ec53-1be1-4c3f-ab58-b456c96ac8b0",
+    "border_color": "black",
+    "frame": "2015",
+    "security_stamp": "oval",
+    "full_art": false,
+    "textless": false,
+    "booster": true,
+    "story_spotlight": false,
+    "edhrec_rank": 181,
+    "prices": {
+        "usd": null,
+        "usd_foil": "96.49",
+        "usd_etched": null,
+        "eur": null,
+        "eur_foil": "64.75",
+        "tix": "2.44"
+    },
+    "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=409574",
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Strip+Mine&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Strip+Mine&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Strip+Mine",
+        "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Strip+Mine"
+    },
+    "purchase_uris": {
+        "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=110736&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Strip+Mine&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/59695?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+    }
+}

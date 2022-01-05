@@ -1,0 +1,122 @@
+{
+    "object": "card",
+    "id": "4704bf02-c6be-4983-9bc7-a1d464d21b31",
+    "oracle_id": "ae86965c-3330-48bf-abf7-3142c61099ea",
+    "multiverse_ids": [
+        3304
+    ],
+    "mtgo_id": 7219,
+    "mtgo_foil_id": 7220,
+    "tcgplayer_id": 5187,
+    "cardmarket_id": 8084,
+    "name": "Purraj of Urborg",
+    "lang": "en",
+    "released_at": "1996-10-08",
+    "uri": "https://api.scryfall.com/cards/4704bf02-c6be-4983-9bc7-a1d464d21b31",
+    "scryfall_uri": "https://scryfall.com/card/mir/135/purraj-of-urborg?utm_source=api",
+    "layout": "normal",
+    "highres_image": true,
+    "image_status": "highres_scan",
+    "image_uris": {
+        "small": "https://c1.scryfall.com/file/scryfall-cards/small/front/4/7/4704bf02-c6be-4983-9bc7-a1d464d21b31.jpg?1562718807",
+        "normal": "https://c1.scryfall.com/file/scryfall-cards/normal/front/4/7/4704bf02-c6be-4983-9bc7-a1d464d21b31.jpg?1562718807",
+        "large": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/7/4704bf02-c6be-4983-9bc7-a1d464d21b31.jpg?1562718807",
+        "png": "https://c1.scryfall.com/file/scryfall-cards/png/front/4/7/4704bf02-c6be-4983-9bc7-a1d464d21b31.png?1562718807",
+        "art_crop": "https://c1.scryfall.com/file/scryfall-cards/art_crop/front/4/7/4704bf02-c6be-4983-9bc7-a1d464d21b31.jpg?1562718807",
+        "border_crop": "https://c1.scryfall.com/file/scryfall-cards/border_crop/front/4/7/4704bf02-c6be-4983-9bc7-a1d464d21b31.jpg?1562718807"
+    },
+    "mana_cost": "{3}{B}{B}",
+    "cmc": 5.0,
+    "type_line": "Legendary Creature — Cat Warrior",
+    "oracle_text": "Purraj of Urborg has first strike as long as it's attacking.\nWhenever a player casts a black spell, you may pay {B}. If you do, put a +1/+1 counter on Purraj of Urborg.",
+    "power": "2",
+    "toughness": "3",
+    "colors": [
+        "B"
+    ],
+    "color_identity": [
+        "B"
+    ],
+    "keywords": [
+
+    ],
+    "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "historic": "not_legal",
+        "gladiator": "not_legal",
+        "pioneer": "not_legal",
+        "modern": "not_legal",
+        "legacy": "legal",
+        "pauper": "not_legal",
+        "vintage": "legal",
+        "penny": "legal",
+        "commander": "legal",
+        "brawl": "not_legal",
+        "historicbrawl": "not_legal",
+        "alchemy": "not_legal",
+        "paupercommander": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal",
+        "premodern": "legal"
+    },
+    "games": [
+        "paper",
+        "mtgo"
+    ],
+    "reserved": true,
+    "foil": false,
+    "nonfoil": true,
+    "finishes": [
+        "nonfoil"
+    ],
+    "oversized": false,
+    "promo": false,
+    "reprint": false,
+    "variation": false,
+    "set_id": "5f06acf3-8123-4a78-b2e7-089b0b775a4a",
+    "set": "mir",
+    "set_name": "Mirage",
+    "set_type": "expansion",
+    "set_uri": "https://api.scryfall.com/sets/5f06acf3-8123-4a78-b2e7-089b0b775a4a",
+    "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Amir&unique=prints",
+    "scryfall_set_uri": "https://scryfall.com/sets/mir?utm_source=api",
+    "rulings_uri": "https://api.scryfall.com/cards/4704bf02-c6be-4983-9bc7-a1d464d21b31/rulings",
+    "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aae86965c-3330-48bf-abf7-3142c61099ea&unique=prints",
+    "collector_number": "135",
+    "digital": false,
+    "rarity": "rare",
+    "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+    "artist": "John Matson",
+    "artist_ids": [
+        "a1685587-4b55-446b-b420-c37b202ed3f1"
+    ],
+    "illustration_id": "612a3ab2-8c27-4b45-a8ac-e9d1ace8faa2",
+    "border_color": "black",
+    "frame": "1997",
+    "full_art": false,
+    "textless": false,
+    "booster": true,
+    "story_spotlight": false,
+    "edhrec_rank": 19306,
+    "prices": {
+        "usd": "3.04",
+        "usd_foil": null,
+        "usd_etched": null,
+        "eur": "1.60",
+        "eur_foil": null,
+        "tix": "0.03"
+    },
+    "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=3304",
+        "tcgplayer_infinite_articles": "https://infinite.tcgplayer.com/search?contentMode=article&game=magic&partner=scryfall&q=Purraj+of+Urborg&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "tcgplayer_infinite_decks": "https://infinite.tcgplayer.com/search?contentMode=deck&game=magic&partner=scryfall&q=Purraj+of+Urborg&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Purraj+of+Urborg",
+        "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Purraj+of+Urborg"
+    },
+    "purchase_uris": {
+        "tcgplayer": "https://shop.tcgplayer.com/product/productsearch?id=5187&utm_campaign=affiliate&utm_medium=api&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Purraj+of+Urborg&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards/7219?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+    }
+}

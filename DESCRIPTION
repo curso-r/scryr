@@ -4,8 +4,8 @@ Version: 0.0.0.9000
 Authors@R: c(
     person("Caio", "Lente", , "clente@curso-r.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8473-069X")),
-    person("Scryfall", role = c("cph")),
-    person("Wizards of the Coast", role = c("cph")),
+    person("Scryfall", role = "cph"),
+    person("Wizards of the Coast", role = "cph"),
     person("Curso-R", role = c("cph", "fnd"))
   )
 Description: A simple, light, and robust interface between R and
@@ -19,6 +19,7 @@ Imports:
     tibble
 Suggests:
     covr,
+    httptest,
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)

@@ -1,3 +1,6 @@
+skip_on_cran()
+httptest::skip_if_disconnected()
+
 # ERRORS -----------------------------------------------------------------------
 
 test_that("scry-catalogs errors correctly", {
