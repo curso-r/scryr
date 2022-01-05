@@ -7,7 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Scryfall archives Magic cards in 17 languages (including some unofficial
+Scryfall archives _Magic_ cards in 17 languages (including some unofficial
 languages).
 
 Each card indicates its language in the `lang` column using an ISO-like code.

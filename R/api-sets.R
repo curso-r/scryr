@@ -1,8 +1,8 @@
 #' Retrieve information about sets
 #'
 #' @description
-#' A Set represents a group of related Magic cards. All cards on Scryfall belong
-#' to exactly one set.
+#' A Set represents a group of related _Magic_ cards. All cards on Scryfall
+#' belong to exactly one set.
 #'
 #' @details
 #' Due to _Magic_'s long and complicated history, Scryfall includes many
@@ -34,7 +34,7 @@
 #'   printed in the set (in GMT-8 Pacific time).
 #' * `set_type` \[chr\]: Scryfall provides an overall categorization for each
 #'   Set in the `set_type` property. The options are:
-#'   * `core`: A yearly Magic core set (Tenth Edition, etc).
+#'   * `core`: A yearly _Magic_ core set (Tenth Edition, etc).
 #'   * `expansion`: A rotational expansion set in a block (Zendikar, etc).
 #'   * `masters`: A reprint set that contains no new cards (Modern Masters,
 #'     etc).

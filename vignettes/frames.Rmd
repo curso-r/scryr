@@ -18,10 +18,10 @@ the game's lifetime.
 
 | Frame    | Description                                                                                                    |
 | -------- | -------------------------------------------------------------------------------------------------------------- |
-| [`1993`](https://scryfall.com/search?q=frame%3A1993)     | The original Magic card frame, starting from Limited Edition Alpha.                                            |
+| [`1993`](https://scryfall.com/search?q=frame%3A1993)     | The original _Magic_ card frame, starting from Limited Edition Alpha.                                          |
 | [`1997`](https://scryfall.com/search?q=frame%3A1997)     | The updated classic frame starting from Mirage block                                                           |
-| [`2003`](https://scryfall.com/search?q=frame%3A2003)     | The "modern" Magic card frame, introduced in Eighth Edition and Mirrodin block.                                |
-| [`2015`](https://scryfall.com/search?q=frame%3A2015)     | The holofoil-stamp Magic card frame, introduced in Magic 2015.                                                 |
+| [`2003`](https://scryfall.com/search?q=frame%3A2003)     | The "modern" _Magic_ card frame, introduced in Eighth Edition and Mirrodin block.                              |
+| [`2015`](https://scryfall.com/search?q=frame%3A2015)     | The holofoil-stamp _Magic_ card frame, introduced in Magic 2015.                                               |
 | [`future`](https://scryfall.com/search?q=frame%3Afuture) | The frame used on cards [from the future](https://mtg.fandom.com/wiki/Timeshifted#Timeshifted_in_Future_Sight) |
 
 ## Frame Effects

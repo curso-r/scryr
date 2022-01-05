@@ -5,8 +5,8 @@
 \alias{scry_cards}
 \alias{scry_card}
 \alias{scry_card_named}
-\alias{scry_card_random}
 \alias{scry_card_number}
+\alias{scry_card_random}
 \title{Retrieve information about cards}
 \usage{
 scry_cards(
@@ -24,9 +24,9 @@ scry_card(id, source = "scryfall")
 
 scry_card_named(name, mode = c("fuzzy", "exact"), set = NULL)
 
-scry_card_random(q = NULL)
-
 scry_card_number(number, set, lang = "en")
+
+scry_card_random(q = NULL)
 }
 \arguments{
 \item{q}{A search query using the same fulltext search system that Scryfall

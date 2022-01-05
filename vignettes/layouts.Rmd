@@ -26,7 +26,7 @@ Specifically:
 
 | Layout                 | Description                                        |
 | ---------------------- | -------------------------------------------------- |
-| [`normal`](https://scryfall.com/search?q=layout%3Anormal)                         | A standard Magic card with one face                |
+| [`normal`](https://scryfall.com/search?q=layout%3Anormal)                         | A standard _Magic_ card with one face              |
 | [`split`](https://scryfall.com/search?q=layout%3Asplit)                           | A split-faced card                                 |
 | [`flip`](https://scryfall.com/search?q=layout%3Aflip)                             | Cards that invert vertically with the flip keyword |
 | [`transform`](https://scryfall.com/search?q=layout%3Atransform)                   | Double-sided cards that transform                  |
@@ -45,7 +45,7 @@ Specifically:
 | [`augment`](https://scryfall.com/search?q=layout%3Aaugment)                       | Cards with Augment                                 |
 | [`host`](https://scryfall.com/search?q=layout%3Ahost)                             | Host-type cards                                    |
 | [`art_series`](https://scryfall.com/search?q=layout%3Aart_series)                 | Art Series collectable double-faced cards          |
-| [`reversible_card`](https://scryfall.com/search?q=layout%3Areversible_card)       | A Magic card with two sides that are unrelated     |
+| [`reversible_card`](https://scryfall.com/search?q=layout%3Areversible_card)       | A _Magic_ card with two sides that are unrelated   |
 
 ## Card Faces
 
@@ -96,7 +96,7 @@ glimpse(scry_card("ba09360a-067e-48a5-bdc5-a19fd066a785"))
 ```
 
 **Reversible cards** _(casual term)_: This term is used by both Scryfall and
-WotC to describe a piece of cardstock with two distinct Magic cards or tokens
+WotC to describe a piece of cardstock with two distinct _Magic_ cards or tokens
 printed on opposite sides. The two halves of the card are not related to each
 other in any way and are treated as two separate objects for gameplay or
 deckbuilding. The overall card will have its `layout` set to "reversible_card",

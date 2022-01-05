@@ -58,7 +58,7 @@ A string vector.
 }
 \description{
 Scryfall has multiple catalog datapoints (words, card values, etc). They are
-provided by the API as aids for building other Magic software and
+provided by the API as aids for building other \emph{Magic} software and
 understanding possible values for a column.
 }
 \references{

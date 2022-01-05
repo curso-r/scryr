@@ -311,15 +311,15 @@ scry_card_named <- function(name, mode = c("fuzzy", "exact"), set = NULL) {
 
 #' @rdname scry-cards
 #' @export
-scry_card_random <- function(q = NULL) {
-  query <- make_query(q = q)
-  scry_cards_impl(paste0("/random", query))
+scry_card_number <- function(number, set, lang = "en") {
+  scry_cards_impl(paste0("/", set, "/", number, "/", lang))
 }
 
 #' @rdname scry-cards
 #' @export
-scry_card_number <- function(number, set, lang = "en") {
-  scry_cards_impl(paste0("/", set, "/", number, "/", lang))
+scry_card_random <- function(q = NULL) {
+  query <- make_query(q = q)
+  scry_cards_impl(paste0("/random", query))
 }
 
 #' Autocomplete the name of a card

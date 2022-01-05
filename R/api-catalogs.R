@@ -2,7 +2,7 @@
 #'
 #' @description
 #' Scryfall has multiple catalog datapoints (words, card values, etc). They are
-#' provided by the API as aids for building other Magic software and
+#' provided by the API as aids for building other _Magic_ software and
 #' understanding possible values for a column.
 #'
 #' @param name A string with the name of the catalog to return. Can be one of:

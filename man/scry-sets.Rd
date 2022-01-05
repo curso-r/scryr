@@ -39,7 +39,7 @@ printed in the set (in GMT-8 Pacific time).
 \item \code{set_type} [chr]: Scryfall provides an overall categorization for each
 Set in the \code{set_type} property. The options are:
 \itemize{
-\item \code{core}: A yearly Magic core set (Tenth Edition, etc).
+\item \code{core}: A yearly \emph{Magic} core set (Tenth Edition, etc).
 \item \code{expansion}: A rotational expansion set in a block (Zendikar, etc).
 \item \code{masters}: A reprint set that contains no new cards (Modern Masters,
 etc).
@@ -81,8 +81,8 @@ your particular user interface needs.
 }
 }
 \description{
-A Set represents a group of related Magic cards. All cards on Scryfall belong
-to exactly one set.
+A Set represents a group of related \emph{Magic} cards. All cards on Scryfall
+belong to exactly one set.
 }
 \details{
 Due to \emph{Magic}'s long and complicated history, Scryfall includes many

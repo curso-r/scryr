@@ -360,7 +360,7 @@ Search for a card's security stamp with `stamp:oval`, `stamp:acorn`,
 
 ## Games, Promos, & Spotlights
 
-You can find specific prints available in different Magic game environments with
+You can find specific prints available in different _Magic_ game environments with
 the `game:` keyword. The games `paper`, `mtgo`, and `arena` are supported.
 
 You can filter by a card's availability in a game with the `in:` keyword. The
