@@ -8,10 +8,10 @@ articles:
   languages: languages.html
   layouts: layouts.html
   regex: regex.html
-  scry: scry.html
+  scryr: scryr.html
   syntax: syntax.html
-last_built: 2022-01-05T05:37Z
+last_built: 2022-01-05T20:29Z
 urls:
-  reference: https://curso-r.github.io/scry/reference
-  article: https://curso-r.github.io/scry/articles
+  reference: https://curso-r.github.io/scryr/reference
+  article: https://curso-r.github.io/scryr/articles
 

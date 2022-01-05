@@ -6,8 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="A simple, light, and robust interface between R and
-    Scryfall's card data API: &lt;https://scryfall.com/docs/api&gt;.">
-<title>An Interface To Scryfall • scry</title>
+    the Scryfall card data API &lt;https://scryfall.com/docs/api&gt;.">
+<title>An Interface To Scryfall • scryr</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
@@ -20,8 +20,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="An Interface To Scryfall">
 <meta property="og:description" content="A simple, light, and robust interface between R and
-    Scryfall's card data API: &lt;https://scryfall.com/docs/api&gt;.">
-<meta property="og:image" content="https://curso-r.github.io/scry/logo.png">
+    the Scryfall card data API &lt;https://scryfall.com/docs/api&gt;.">
+<meta property="og:image" content="https://curso-r.github.io/scryr/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -33,7 +33,7 @@
 
     <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
     
-    <a class="navbar-brand me-2" href="index.html">scry</a>
+    <a class="navbar-brand me-2" href="index.html">scryr</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
 
@@ -45,7 +45,7 @@
     <div id="navbar" class="collapse navbar-collapse ms-2">
       <ul class="navbar-nav me-auto">
 <li class="nav-item">
-  <a class="nav-link" href="articles/scry.html">Get started</a>
+  <a class="nav-link" href="articles/scryr.html">Get started</a>
 </li>
 <li class="nav-item">
   <a class="nav-link" href="reference/index.html">Reference</a>
@@ -69,7 +69,7 @@
 
       <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/curso-r/scry/" aria-label="github">
+  <a class="external-link nav-link" href="https://github.com/curso-r/scryr/" aria-label="github">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -83,30 +83,30 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="scry-">scry 
-<a class="anchor" aria-label="anchor" href="#scry-"></a>
+<img src="logo.png" class="logo" alt=""><h1 id="scryr-">scryr 
+<a class="anchor" aria-label="anchor" href="#scryr-"></a>
 </h1>
 </div>
 <!-- badges: start -->
 
-<p>scry is a simple, light, and robust interface between R and <a href="https://scryfall.com/" class="external-link">Scryfall</a>’s powerful <em>Magic: The Gathering</em> card search engine. It wraps the <a href="https://scryfall.com/docs/api" class="external-link">Scryfall API</a> and makes all endpoints available as simple functions that any R programmer can use.</p>
+<p>scryr is a simple, light, and robust interface between R and <a href="https://scryfall.com/" class="external-link">Scryfall</a>’s powerful <em>Magic: The Gathering</em> card search engine. It wraps the <a href="https://scryfall.com/docs/api" class="external-link">Scryfall API</a> and makes all endpoints available as simple functions that any R programmer can use.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Install released version from CRAN</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"scry"</span><span class="op">)</span></code></pre></div>
-<p>You can install the development version of scry from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"scryr"</span><span class="op">)</span></code></pre></div>
+<p>You can install the development version of scryr from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"curso-r/scry"</span><span class="op">)</span></code></pre></div>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"curso-r/scryr"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<p>scry makes it easy to process <em>Magic</em> cards’ data programatically. There are many endpoints that fully support tidyverse compatible analyses. For more information, start with <code><a href="articles/scry.html">vignette("scry")</a></code> or the <a href="https://curso-r.github.io/scry/">full documentation</a>.</p>
+<p>scryr makes it easy to process <em>Magic</em> cards’ data programmatically. There are many endpoints that fully support tidyverse compatible analyses. For more information, start with <code><a href="articles/scryr.html">vignette("scryr")</a></code> or the <a href="https://curso-r.github.io/scryr/">full documentation</a>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://curso-r.github.io/scry/">scry</a></span><span class="op">)</span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://curso-r.github.io/scryr/">scryr</a></span><span class="op">)</span>
 
 <span class="co"># Find red creatures with 7 power, sorted by converted mana cost</span>
 <span class="va">cards</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/scry-cards.html">scry_cards</a></span><span class="op">(</span><span class="st">"c:red+pow=7"</span>, order <span class="op">=</span> <span class="st">"cmc"</span><span class="op">)</span>
@@ -204,14 +204,14 @@
 <div class="section level2">
 <h2 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
 </h2>
-<p>Please note that the scry project is released with a <a href="https://curso-r.github.io/scry/CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
+<p>Please note that the scryr project is released with a <a href="https://curso-r.github.io/scryr/CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 <div class="section level2">
 <h2 id="copyright-notice">Copyright Notice<a class="anchor" aria-label="anchor" href="#copyright-notice"></a>
 </h2>
-<p>Portions of scry are unofficial Fan Content permitted under the <a href="https://company.wizards.com/en/legal/fancontentpolicy" class="external-link">Wizards of the Coast Fan Content Policy</a>. The literal and graphical information presented on this package and its documentation pages about <em>Magic: The Gathering</em>, including card images, the mana symbols, and Oracle text, is copyright of Wizards of the Coast, LLC, a subsidiary of Hasbro, Inc. This software is not produced by, endorsed by, supported by, or affiliated with Wizards of the Coast, LLC.</p>
-<p>Most of scry’s documentation is taken from Scryfall’s developer docs and are only included in the package for self-containedness’ sake. Scryfall’s website, API, and other related content are copyright of Scryfall, LLC. This software is not produced by, endorsed by, supported by, or affiliated with Scryfall, LLC.</p>
-<p>As per <a href="https://scryfall.com/docs/terms" class="external-link">Scryfall’s terms of service</a>, card data and images are provided free of charge for the primary purpose of creating additional <em>Magic</em> software, performing research, or creating community content about <em>Magic</em> and related products. When using scry, you must, therefore, adhere to both Scryfall’s and Wizards of the Coast’s guidelines:</p>
+<p>Portions of scryr are unofficial Fan Content permitted under the <a href="https://company.wizards.com/en/legal/fancontentpolicy" class="external-link">Wizards of the Coast Fan Content Policy</a>. The literal and graphical information presented on this package and its documentation pages about <em>Magic: The Gathering</em>, including card images, the mana symbols, and Oracle text, is copyright of Wizards of the Coast, LLC, a subsidiary of Hasbro, Inc. This software is not produced by, endorsed by, supported by, or affiliated with Wizards of the Coast, LLC.</p>
+<p>Most of scryr’s documentation is taken from Scryfall’s developer docs and are only included in the package for self-containedness’ sake. Scryfall’s website, API, and other related content are copyright of Scryfall, LLC. This software is not produced by, endorsed by, supported by, or affiliated with Scryfall, LLC.</p>
+<p>As per <a href="https://scryfall.com/docs/terms" class="external-link">Scryfall’s terms of service</a>, card data and images are provided free of charge for the primary purpose of creating additional <em>Magic</em> software, performing research, or creating community content about <em>Magic</em> and related products. When using scryr, you must, therefore, adhere to both Scryfall’s and Wizards of the Coast’s guidelines:</p>
 <ul>
 <li><p>You may not require anyone to make payments, take surveys, agree to subscriptions, rate your content, or create accounts in exchange for access to <em>Magic</em> data.</p></li>
 <li><p>You may not use <em>Magic</em> data to create new games, or to imply the information and images are from any other game besides <em>Magic: The Gathering</em>.</p></li>
@@ -222,8 +222,7 @@
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.bioconductor.org/packages/scry" class="external-link">View on Bioconductor</a></li>
-<li><a href="https://github.com/curso-r/scry/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/curso-r/scryr/" class="external-link">Browse source code</a></li>
 </ul>
 </div>
 
@@ -246,7 +245,7 @@
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html#citation">Citing scry</a></li>
+<li><a href="authors.html#citation">Citing scryr</a></li>
 </ul>
 </div>
 
@@ -256,7 +255,7 @@
 <li>
 <a href="https://lente.dev" class="external-link">Caio Lente</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-8473-069X" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>
-<a href="https://curso-r.com" class="external-link"><img src="/scry/reference/figures/curso-r.png" width="80"></a> <br><small class="roles"> Copyright holder, funder </small>  </li>
+<a href="https://curso-r.com" class="external-link"><img src="/scryr/reference/figures/curso-r.png" width="80"></a> <br><small class="roles"> Copyright holder, funder </small>  </li>
 <li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
@@ -264,9 +263,8 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://CRAN.R-project.org/package=scry" class="external-link"><img src="https://www.r-pkg.org/badges/version/scry" alt="CRAN status"></a></li>
-<li><a href="https://github.com/curso-r/scry/actions" class="external-link"><img src="https://github.com/curso-r/scry/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://app.codecov.io/gh/curso-r/scry?branch=main" class="external-link"><img src="https://codecov.io/gh/curso-r/scry/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://github.com/curso-r/scryr/actions" class="external-link"><img src="https://github.com/curso-r/scryr/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://app.codecov.io/gh/curso-r/scryr?branch=main" class="external-link"><img src="https://codecov.io/gh/curso-r/scryr/branch/main/graph/badge.svg" alt="Codecov test coverage"></a></li>
 </ul>
 </div>
 
@@ -276,7 +274,7 @@
 
     <footer><div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by <a href="https://lente.dev" class="external-link">Caio Lente</a>, <a href="https://curso-r.com" class="external-link"><img src="/scry/reference/figures/curso-r.png" width="80"></a>.</p>
+<p>Developed by <a href="https://lente.dev" class="external-link">Caio Lente</a>, <a href="https://curso-r.com" class="external-link"><img src="/scryr/reference/figures/curso-r.png" width="80"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
