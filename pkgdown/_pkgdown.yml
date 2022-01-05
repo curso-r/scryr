@@ -1,7 +1,7 @@
 url: https://curso-r.github.io/scry/
 
 home:
-  title: An Interface To Scryfall's API
+  title: An Interface To Scryfall
 
 authors:
   Caio Lente:
@@ -19,3 +19,13 @@ template:
 
 code:
   width: 72
+
+reference:
+- title: API Access
+  contents:
+  - starts_with("scry_")
+
+- title: Auxiliary Functions
+  contents:
+  - autocomplete_name
+  - parse_cost
