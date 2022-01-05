@@ -266,7 +266,7 @@
 #' scry_card("913dd06f-ed2f-4128-9c9d-9cd0d8a55425")
 #'
 #' # Get card using a name
-#' scry_card_named("Anje Falkenrath")
+#' scry_card_name("Anje Falkenrath")
 #'
 #' # Get card using a collector number and a set
 #' scry_card_number(37, "c19")
@@ -317,7 +317,7 @@ scry_card <- function(id, source = "scryfall") {
 
 #' @rdname scry-cards
 #' @export
-scry_card_named <- function(name, mode = c("fuzzy", "exact"), set = NULL) {
+scry_card_name <- function(name, mode = c("fuzzy", "exact"), set = NULL) {
   mode <- match.arg(mode)
 
   query <- make_query(replace_me = name, set = set)

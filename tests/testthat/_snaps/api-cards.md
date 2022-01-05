@@ -1,7 +1,7 @@
 # scry-cards returns correctly
 
     Code
-      scry_card_named("aust+com")
+      scry_card_name("aust+com")
     Output
       # A tibble: 1 x 60
         id      name  set   lang  colors color_identity mana_cost   cmc oracle_text   

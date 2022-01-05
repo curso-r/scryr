@@ -4,8 +4,8 @@ test_that("scry-cards errors correctly", {
   expect_error(scry_cards("mm:123"), "ignored")
   expect_error(scry_cards("asdf"), "any cards")
 
-  expect_error(scry_card_named("aust"), "Too many")
-  expect_error(scry_card_named("asdf"), "No cards")
+  expect_error(scry_card_name("aust"), "Too many")
+  expect_error(scry_card_name("asdf"), "No cards")
 
   expect_length(autocomplete_name("t"), 0)
   expect_length(autocomplete_name("asdf"), 0)
@@ -42,7 +42,7 @@ test_that("scry-cards returns correctly", {
   expect_s3_class(cards_random, c("tbl_df", "tbl", "data.frame"))
   expect_equal(nrow(cards_random), 1)
 
-  expect_snapshot(scry_card_named("aust+com"))
+  expect_snapshot(scry_card_name("aust+com"))
   expect_snapshot(scry_card_number(96, "xln"))
   expect_snapshot(scry_card(409574, "multiverse"))
   expect_snapshot(scry_card(54957, "mtgo"))

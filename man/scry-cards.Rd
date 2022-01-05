@@ -4,7 +4,7 @@
 \alias{scry-cards}
 \alias{scry_cards}
 \alias{scry_card}
-\alias{scry_card_named}
+\alias{scry_card_name}
 \alias{scry_card_number}
 \alias{scry_card_random}
 \title{Retrieve information about cards}
@@ -22,7 +22,7 @@ scry_cards(
 
 scry_card(id, source = "scryfall")
 
-scry_card_named(name, mode = c("fuzzy", "exact"), set = NULL)
+scry_card_name(name, mode = c("fuzzy", "exact"), set = NULL)
 
 scry_card_number(number, set, lang = "en")
 
@@ -322,7 +322,7 @@ scry_cards("t:vampire t:legend")
 scry_card("913dd06f-ed2f-4128-9c9d-9cd0d8a55425")
 
 # Get card using a name
-scry_card_named("Anje Falkenrath")
+scry_card_name("Anje Falkenrath")
 
 # Get card using a collector number and a set
 scry_card_number(37, "c19")

@@ -14,12 +14,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-scry is a lightweight wrapper around [Scryfall](https://scryfall.com/)'s, an
+scry is a lightweight wrapper around [Scryfall](https://scryfall.com/), an
 amazing (and free!) _Magic: The Gathering_ API. With scry you can ingest card
 data as tidy data frames, allowing for frictionless integration with tidyverse
 pipelines.
 
-Currently, there are 2 main endpoints: `cards` and `sets`. The other 4 endpoints
+Currently there are 2 main endpoints: `cards` and `sets`. The other 4 endpoints
 (`bulk_data`, `catalogs`, `rulings`, and `symbols`) are mostly auxiliary to the
 main ones.
 
@@ -72,7 +72,7 @@ that find a card given some sort of identifier.
 scry_card("913dd06f-ed2f-4128-9c9d-9cd0d8a55425")$name
 
 # Using a name
-scry_card_named("Anje Falkenrath")$name
+scry_card_name("Anje Falkenrath")$name
 
 # Using a collector number and a set
 scry_card_number(37, "c19")$name
@@ -125,5 +125,5 @@ scry_symbols()
 parse_cost("2g2")$cost
 
 # Get names of bulk files
-scry_bulk_data()$names
+scry_bulk_data()$name
 ```

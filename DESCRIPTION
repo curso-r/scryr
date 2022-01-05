@@ -1,5 +1,5 @@
 Package: scry
-Title: An Interface To Scryfall's API
+Title: An Interface To Scryfall
 Version: 0.0.0.9000
 Authors@R: c(
     person("Caio", "Lente", , "clente@curso-r.com", role = c("aut", "cre"),
