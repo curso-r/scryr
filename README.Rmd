@@ -46,8 +46,8 @@ devtools::install_github("curso-r/scry")
 ## Usage
 
 scry makes it easy to process _Magic_ cards' data programatically. There are
-many endpoints that fully support tidyverse compatible analyses. A complete list
-can be found on scry's [documentation](https://curso-r.github.io/scry/).
+many endpoints that fully support tidyverse compatible analyses. For more
+information, start with `vignette("scry")`.
 
 ```{r}
 library(scry)
@@ -56,9 +56,9 @@ library(scry)
 cards <- scry_cards("c:red+pow=7", order = "cmc")
 
 # Simple pipeline that counts how many cards of each rarity have a price
-cards |>
-  unnest(prices) |>
-  filter(!is.na(usd)) |>
+cards %>%
+  unnest(prices) %>%
+  filter(!is.na(usd)) %>%
   count(rarity)
 
 # Summary of full data

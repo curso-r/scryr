@@ -1,0 +1,129 @@
+---
+title: "Overview of scry"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Overview of scry}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+scry is a lightweight wrapper around [Scryfall](https://scryfall.com/)'s, an
+amazing (and free!) _Magic: The Gathering_ API. With scry you can ingest card
+data as tidy data frames, allowing for frictionless integration with tidyverse
+pipelines.
+
+Currently, there are 2 main endpoints: `cards` and `sets`. The other 4 endpoints
+(`bulk_data`, `catalogs`, `rulings`, and `symbols`) are mostly auxiliary to the
+main ones.
+
+```{r setup, message = FALSE}
+# Start scry and helpers
+library(dplyr)
+library(scry)
+```
+
+## Cards
+
+This endpoints is, by far, the most complex. Make sure to read `scry_cards()`'
+full documentation before diving in! For the curious, more relevant information
+about cards can be found in `vignette("syntax")` (_Query Syntax_) and
+`vignette("layouts")` (_Layouts and Faces_).
+
+The most important function here is `scry_cards()`. It returns a data frame of
+card data given a query:
+
+```{r}
+# Legendary vampires
+vampires <- scry_cards("t:vampire t:legend")
+
+# There are many, many columns
+print(vampires)
+```
+
+Note that many columns are list-columns with deeply nested information inside.
+This is a result of Scryfall's data model and is the reason why scry needs
+tibbles to work. But don't be alarmed! It's all pretty consistent.
+
+```{r}
+# Get Anje's related cards
+vampires %>%
+  filter(name == "Anje, Maid of Dishonor") %>%
+  pull(all_parts)
+
+# Get Anje's color identity
+vampires %>%
+  filter(name == "Anje Falkenrath") %>%
+  pull(color_identity)
+```
+
+There are also "singular" functions, that is, functions that return one card
+instead of many. They are `scry_card()` and its siblings, all of them methods
+that find a card given some sort of identifier.
+
+```{r}
+# Using an ID
+scry_card("913dd06f-ed2f-4128-9c9d-9cd0d8a55425")$name
+
+# Using a name
+scry_card_named("Anje Falkenrath")$name
+
+# Using a collector number and a set
+scry_card_number(37, "c19")$name
+
+# Just get a random vampire commander
+scry_card_random("t:vampire t:legend")$name
+```
+
+If you're unsure of exactly what card you're looking for, don't worry. Scryfall
+also has an endpoint that tries to autocomplete the name of a card and scry
+makes it available so that you don't have to ever leave R to look for a card.
+
+```{r}
+# There she is
+autocomplete_name("falken")[12]
+```
+
+## Sets
+
+The other main endpoint retrieves information about sets. There are also many
+list-columns but, again, they are all handled consistently; following in the
+footsteps of `cards`, `sets` also has a "plural" function and a "singular"
+function. Note that `scry_cards()` is the only "plural" method that can filter
+results with its `q` argument.
+
+```{r}
+# Get all sets
+scry_sets()
+
+# Het a single set with an ID
+scry_set("vow")
+```
+
+## Other Endpoints
+
+All other endpoints return way less information than the two above. Here is a
+short demonstration of what else you can do with the rest of scry:
+
+```{r}
+# Get information from a catalog
+head(scry_catalog("keyword-actions"))
+
+# Get rulings for a card
+scry_ruling("913dd06f-ed2f-4128-9c9d-9cd0d8a55425")
+
+# Get information about symbols
+scry_symbols()
+
+# Parse mana costs
+parse_cost("2g2")$cost
+
+# Get names of bulk files
+scry_bulk_data()$names
+```

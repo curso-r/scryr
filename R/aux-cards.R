@@ -5,6 +5,10 @@ aux_parse_preview <- function(x) {
   return(x)
 }
 
+aux_parse_all_parts <- function(x) {
+  purrr::map_dfc(purrr::transpose(x), purrr::flatten_chr)
+}
+
 parse_cards <- function(data) {
   template <- list(
     "id" = as.character,
@@ -42,7 +46,7 @@ parse_cards <- function(data) {
     "scryfall_uri" = as.character,
     "rulings_uri" = as.character,
     "prints_search_uri" = as.character,
-    "all_parts" = function(x) list(tibble::as_tibble(purrr::transpose(x))),
+    "all_parts" = function(x) list(aux_parse_all_parts(x)),
     "card_faces" = list,
     "artist" = as.character,
     "artist_id" = as.character,
