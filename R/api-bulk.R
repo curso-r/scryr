@@ -55,12 +55,12 @@
 #'
 #' @examples \donttest{
 #' # Get information about bulk data files
-#' scry_bulk_data()
+#' scry_bulk_files()
 #' }
 #'
 #' @references <https://scryfall.com/docs/api/bulk-data>
 #'
 #' @export
-scry_bulk_data <- function() {
+scry_bulk_files <- function() {
   scryfall("/bulk-data/", parse_bulk)
 }

@@ -1,9 +1,10 @@
-# Convert to datetime with correct formatting
-as_time <- function(x) {
-  as.POSIXct(x, format = "%FT%H:%M:%OS %z")
-}
-
 parse_bulk <- function(data) {
+
+  # Convert to datetime with correct formatting
+  as_time <- function(x) {
+    as.POSIXct(x, format = "%FT%H:%M:%OS %z")
+  }
+
   template <- list(
     "name" = as.character,
     "id" = as.character,

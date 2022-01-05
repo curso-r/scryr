@@ -125,5 +125,5 @@ scry_symbols()
 parse_cost("2g2")$cost
 
 # Get names of bulk files
-scry_bulk_data()$name
+scry_bulk_files()$name
 ```
