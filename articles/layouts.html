@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">scryr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -327,7 +327,7 @@
 <span class="co">#&gt; $ color_identity    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"G", "R"&gt;</span>
 <span class="co">#&gt; $ cmc               <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 4</span>
 <span class="co">#&gt; $ type_line         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Legendary Planeswalker — Arlinn // Legendar…</span>
-<span class="co">#&gt; $ edhrec_rank       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 4094</span>
+<span class="co">#&gt; $ edhrec_rank       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 4080</span>
 <span class="co">#&gt; $ keywords          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "Transform"</span>
 <span class="co">#&gt; $ layout            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "transform"</span>
 <span class="co">#&gt; $ legalities        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 18]&gt;]</span>
@@ -389,7 +389,7 @@
 <span class="co">#&gt; $ color_identity    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"B", "R", "W"&gt;</span>
 <span class="co">#&gt; $ cmc               <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 4</span>
 <span class="co">#&gt; $ type_line         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Legendary Creature — Human Warlock // Sorce…</span>
-<span class="co">#&gt; $ edhrec_rank       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 4947</span>
+<span class="co">#&gt; $ edhrec_rank       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 4954</span>
 <span class="co">#&gt; $ keywords          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"Magecraft", "Double strike"&gt;</span>
 <span class="co">#&gt; $ layout            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "modal_dfc"</span>
 <span class="co">#&gt; $ legalities        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 18]&gt;]</span>
@@ -444,19 +444,20 @@
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">glimpse</span><span class="op">(</span><span class="fu"><a href="../reference/scry-cards.html">scry_card</a></span><span class="op">(</span><span class="st">"3e3f0bcd-0796-494d-bf51-94b33c1671e9"</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 1</span>
-<span class="co">#&gt; Columns: 49</span>
+<span class="co">#&gt; Columns: 50</span>
 <span class="co">#&gt; $ id                <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3e3f0bcd-0796-494d-bf51-94b33c1671e9"</span>
 <span class="co">#&gt; $ name              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Propaganda // Propaganda"</span>
 <span class="co">#&gt; $ set               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "sld"</span>
 <span class="co">#&gt; $ lang              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "en"</span>
 <span class="co">#&gt; $ color_identity    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> "U"</span>
-<span class="co">#&gt; $ edhrec_rank       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 191</span>
+<span class="co">#&gt; $ edhrec_rank       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 189</span>
 <span class="co">#&gt; $ keywords          <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;NULL&gt;</span>
 <span class="co">#&gt; $ layout            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "reversible_card"</span>
 <span class="co">#&gt; $ legalities        <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[1 x 18]&gt;]</span>
 <span class="co">#&gt; $ oversized         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
 <span class="co">#&gt; $ reserved          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE</span>
 <span class="co">#&gt; $ multiverse_ids    <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;NULL&gt;</span>
+<span class="co">#&gt; $ tcgplayer_id      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 259214</span>
 <span class="co">#&gt; $ uri               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/3e3f0bcd-079…</span>
 <span class="co">#&gt; $ scryfall_uri      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://scryfall.com/card/sld/381/propagand…</span>
 <span class="co">#&gt; $ rulings_uri       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "https://api.scryfall.com/cards/3e3f0bcd-079…</span>

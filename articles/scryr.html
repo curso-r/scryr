@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">scryr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -161,7 +161,7 @@
 
 <span class="co"># Just get a random vampire commander</span>
 <span class="fu"><a href="../reference/scry-cards.html">scry_card_random</a></span><span class="op">(</span><span class="st">"t:vampire t:legend"</span><span class="op">)</span><span class="op">$</span><span class="va">name</span>
-<span class="co">#&gt; [1] "Olivia Voldaren"</span></code></pre></div>
+<span class="co">#&gt; [1] "Vito, Thorn of the Dusk Rose"</span></code></pre></div>
 <p>If you’re unsure of exactly what card you’re looking for, don’t worry. Scryfall also has an endpoint that tries to autocomplete the name of a card and scryr makes it available so that you don’t have to ever leave R to look for a card.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># There she is</span>
@@ -176,23 +176,22 @@
 <code class="sourceCode R"><span class="co"># Get all sets</span>
 <span class="fu"><a href="../reference/scry-sets.html">scry_sets</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; <span style="color: #949494;"># A tibble: 721 × 19</span></span>
-<span class="co">#&gt;    id      code  name    tcgplayer_id uri      scryfall_uri search_uri  </span>
-<span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       </span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> b314f5… unf   Unfini…         <span style="text-decoration: underline;">2</span>958 https:/… https://scr… https://api…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> a60124… tunf  Unfini…           <span style="color: #BB0000;">NA</span> https:/… https://scr… https://api…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> b11b28… pw22  Wizard…           <span style="color: #BB0000;">NA</span> https:/… https://scr… https://api…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 59a205… neo   Kamiga…         <span style="text-decoration: underline;">2</span>965 https:/… https://scr… https://api…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 5bd03f… tnec  Neon D…           <span style="color: #BB0000;">NA</span> https:/… https://scr… https://api…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 8bb113… tneo  Kamiga…           <span style="color: #BB0000;">NA</span> https:/… https://scr… https://api…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 5b4d92… nec   Neon D…           <span style="color: #BB0000;">NA</span> https:/… https://scr… https://api…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 78a7f4… cc2   Comman…         <span style="text-decoration: underline;">2</span>905 https:/… https://scr… https://api…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 5c1638… dbl   Innist…         <span style="text-decoration: underline;">2</span>942 https:/… https://scr… https://api…</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 8a6732… y22   Alchem…           <span style="color: #BB0000;">NA</span> https:/… https://scr… https://api…</span>
-<span class="co">#&gt; <span style="color: #949494;"># … with 711 more rows, and 12 more variables: released_at &lt;date&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   set_type &lt;chr&gt;, card_count &lt;int&gt;, digital &lt;lgl&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   nonfoil_only &lt;lgl&gt;, foil_only &lt;lgl&gt;, icon_svg_uri &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   parent_set_code &lt;chr&gt;, mtgo_code &lt;chr&gt;, arena_code &lt;chr&gt;,</span></span>
-<span class="co">#&gt; <span style="color: #949494;">#   block_code &lt;chr&gt;, block &lt;chr&gt;</span></span>
+<span class="co">#&gt;    id     code  name  uri   scryfall_uri search_uri released_at set_type</span>
+<span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> a6012… tunf  Unfi… http… https://scr… https://a… 2022-04-01  token   </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> b314f… unf   Unfi… http… https://scr… https://a… 2022-04-01  funny   </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> b11b2… pw22  Wiza… http… https://scr… https://a… 2022-03-05  promo   </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 5bd03… tnec  Neon… http… https://scr… https://a… 2022-02-18  token   </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 8bb11… tneo  Kami… http… https://scr… https://a… 2022-02-18  token   </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 5b4d9… nec   Neon… http… https://scr… https://a… 2022-02-18  command…</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 59a20… neo   Kami… http… https://scr… https://a… 2022-02-18  expansi…</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 78a7f… cc2   Comm… http… https://scr… https://a… 2022-01-28  command…</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 5c163… dbl   Inni… http… https://scr… https://a… 2022-01-28  draft_i…</span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 8a673… y22   Alch… http… https://scr… https://a… 2021-12-09  expansi…</span>
+<span class="co">#&gt; <span style="color: #949494;"># … with 711 more rows, and 11 more variables: card_count &lt;int&gt;,</span></span>
+<span class="co">#&gt; <span style="color: #949494;">#   parent_set_code &lt;chr&gt;, digital &lt;lgl&gt;, nonfoil_only &lt;lgl&gt;,</span></span>
+<span class="co">#&gt; <span style="color: #949494;">#   foil_only &lt;lgl&gt;, icon_svg_uri &lt;chr&gt;, tcgplayer_id &lt;int&gt;,</span></span>
+<span class="co">#&gt; <span style="color: #949494;">#   mtgo_code &lt;chr&gt;, arena_code &lt;chr&gt;, block_code &lt;chr&gt;, block &lt;chr&gt;</span></span>
 
 <span class="co"># Get a single set with an ID</span>
 <span class="fu"><a href="../reference/scry-sets.html">scry_set</a></span><span class="op">(</span><span class="st">"vow"</span><span class="op">)</span>
