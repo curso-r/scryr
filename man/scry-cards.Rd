@@ -48,25 +48,25 @@ matching prints will be returned.
 
 \item{order}{The method to sort returned cards. The options are:
 \itemize{
-\item \code{name}: Sort cards by name, A → Z.
-\item \code{set}: Sort cards by their set and collector number: AAA/#1 → ZZZ/#999.
-\item \code{released}: Sort cards by their release date: Newest → Oldest.
-\item \code{rarity}: Sort cards by their rarity: Common → Mythic.
-\item \code{color}: Sort cards by their color and color identity: WUBRG → multicolor →
-colorless.
-\item \code{usd}: Sort cards by their lowest known U.S. Dollar price: 0.01 → highest,
+\item \code{name}: Sort cards by name, A -> Z.
+\item \code{set}: Sort cards by their set and collector number: AAA/#1 -> ZZZ/#999.
+\item \code{released}: Sort cards by their release date: Newest -> Oldest.
+\item \code{rarity}: Sort cards by their rarity: Common -> Mythic.
+\item \code{color}: Sort cards by their color and color identity: WUBRG -> multicolor
+-> colorless.
+\item \code{usd}: Sort cards by their lowest known U.S. Dollar price: 0.01 -> highest,
 \code{NA} last.
-\item \code{tix}: Sort cards by their lowest known TIX price: 0.01 → highest, \code{NA}
+\item \code{tix}: Sort cards by their lowest known TIX price: 0.01 -> highest, \code{NA}
 last.
-\item \code{eur}: Sort cards by their lowest known Euro price: 0.01 → highest, \code{NA}
+\item \code{eur}: Sort cards by their lowest known Euro price: 0.01 -> highest, \code{NA}
 last.
-\item \code{cmc}: Sort cards by their converted mana cost: 0 → highest.
-\item \code{power}: Sort cards by their power: \code{NA} → highest.
-\item \code{toughness}: Sort cards by their toughness: \code{NA} → highest.
-\item \code{edhrec}: Sort cards by their EDHREC ranking: lowest → highest.
-\item \code{artist}: Sort cards by their front-side artist name: A → Z.
+\item \code{cmc}: Sort cards by their converted mana cost: 0 -> highest.
+\item \code{power}: Sort cards by their power: \code{NA} -> highest.
+\item \code{toughness}: Sort cards by their toughness: \code{NA} -> highest.
+\item \code{edhrec}: Sort cards by their EDHREC ranking: lowest -> highest.
+\item \code{artist}: Sort cards by their front-side artist name: A -> Z.
 \item \code{review}: Sort cards how podcasts review sets, usually color & CMC, lowest
-→ highest, with Booster Fun cards at the end.
+-> highest, with Booster Fun cards at the end.
 }}
 
 \item{dir}{The direction to sort cards. The options are:

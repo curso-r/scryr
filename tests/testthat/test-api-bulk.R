@@ -17,6 +17,6 @@ test_that("scry-bulk returns correctly", {
 
   rulings <- scry_bulk_file("Rulings")
   expect_s3_class(rulings, c("tbl_df", "tbl", "data.frame"))
-  expect_gte(nrow(rulings), 44486)
+  expect_gte(nrow(rulings), 44000)
   expect_equal(ncol(rulings), 4)
 })

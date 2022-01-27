@@ -22,7 +22,7 @@ glimpse <- purrr::partial(glimpse, width = 72)
 [![CRAN status](https://www.r-pkg.org/badges/version/scryr)](https://CRAN.R-project.org/package=scryr)
 [![R-CMD-check](https://github.com/curso-r/scryr/workflows/R-CMD-check/badge.svg)](https://github.com/curso-r/scryr/actions)
 [![Codecov test coverage](https://codecov.io/gh/curso-r/scryr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/curso-r/scryr?branch=main)
- [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5507/badge)](https://bestpractices.coreinfrastructure.org/projects/5507)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/5507/badge)](https://bestpractices.coreinfrastructure.org/projects/5507)
 <!-- badges: end -->
 
 scryr is a simple, light, and robust interface between R and

@@ -21,25 +21,25 @@
 #'   example, if your search matches more than one print of Pacifism, all
 #'   matching prints will be returned.
 #' @param order The method to sort returned cards. The options are:
-#' * `name`: Sort cards by name, A → Z.
-#' * `set`: Sort cards by their set and collector number: AAA/#1 → ZZZ/#999.
-#' * `released`: Sort cards by their release date: Newest → Oldest.
-#' * `rarity`: Sort cards by their rarity: Common → Mythic.
-#' * `color`: Sort cards by their color and color identity: WUBRG → multicolor →
-#'   colorless.
-#' * `usd`: Sort cards by their lowest known U.S. Dollar price: 0.01 → highest,
+#' * `name`: Sort cards by name, A -> Z.
+#' * `set`: Sort cards by their set and collector number: AAA/#1 -> ZZZ/#999.
+#' * `released`: Sort cards by their release date: Newest -> Oldest.
+#' * `rarity`: Sort cards by their rarity: Common -> Mythic.
+#' * `color`: Sort cards by their color and color identity: WUBRG -> multicolor
+#'   -> colorless.
+#' * `usd`: Sort cards by their lowest known U.S. Dollar price: 0.01 -> highest,
 #'   `NA` last.
-#' * `tix`: Sort cards by their lowest known TIX price: 0.01 → highest, `NA`
+#' * `tix`: Sort cards by their lowest known TIX price: 0.01 -> highest, `NA`
 #'   last.
-#' * `eur`: Sort cards by their lowest known Euro price: 0.01 → highest, `NA`
+#' * `eur`: Sort cards by their lowest known Euro price: 0.01 -> highest, `NA`
 #'   last.
-#' * `cmc`: Sort cards by their converted mana cost: 0 → highest.
-#' * `power`: Sort cards by their power: `NA` → highest.
-#' * `toughness`: Sort cards by their toughness: `NA` → highest.
-#' * `edhrec`: Sort cards by their EDHREC ranking: lowest → highest.
-#' * `artist`: Sort cards by their front-side artist name: A → Z.
+#' * `cmc`: Sort cards by their converted mana cost: 0 -> highest.
+#' * `power`: Sort cards by their power: `NA` -> highest.
+#' * `toughness`: Sort cards by their toughness: `NA` -> highest.
+#' * `edhrec`: Sort cards by their EDHREC ranking: lowest -> highest.
+#' * `artist`: Sort cards by their front-side artist name: A -> Z.
 #' * `review`: Sort cards how podcasts review sets, usually color & CMC, lowest
-#'   → highest, with Booster Fun cards at the end.
+#'   -> highest, with Booster Fun cards at the end.
 #' @param dir The direction to sort cards. The options are:
 #' * `auto`: Scryfall will automatically choose the most intuitive direction to
 #'   sort.
