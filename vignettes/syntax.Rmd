@@ -81,8 +81,8 @@ their mana costs.
 
 This keyword uses the official text version of mana costs set forth in the
 [Comprehensive
-Rules](https://magic.wizards.com/en/game-info/gameplay/rules-and-formats/rules).
-For example, `{G}` represents a green mana.
+Rules](https://magic.wizards.com/en/rules). For example, `{G}` represents a
+green mana.
 
 Shorthand for is allowed for symbols that aren't split: `G` is the same as
 `{G}`.
